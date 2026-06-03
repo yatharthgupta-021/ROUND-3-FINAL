@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Sam - Multiplayer Mystery Game</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <div class="portal-container">
+        <div class="portal-card glass-panel">
+            <h1 class="portal-title">ROUND 3 - TREASURE HUNT</h1>
+            <p class="portal-subtitle">Project Rewind: Monaco GP Memory Collapse</p>
+            
+            <div class="story-block">
+                <strong>🚨 CHRONO EMERGENCY BRIEFING:</strong><br>
+                A brilliant scientist created a machine called <strong>Project Rewind</strong> to preserve school memories for a friend suffering from early-stage dementia. But during a test on May 26th, 2024, the machine became unstable. The memories began overlapping and collapsing, merging with a live broadcast of the Monaco Grand Prix. One of your teammates is trapped inside the collapsing memory track!<br><br>
+                As the system crashes, your friend is slowly fading from existence. You must enter Project Rewind, solve riddles at various turns of the street circuit, collect lost memory fragments to unlock Security Clearance level 3, and pull your friend out before the memory timeline completely collapses!
+            </div>
+            
+            <div id="error-alert" style="display: none; color: var(--neon-pink); margin-bottom: 20px; font-weight: bold; font-size: 14px;"></div>
+            
+            <!-- Join Team Form -->
+            <form id="join-form" action="/api/join" method="POST" style="margin-bottom: 30px;">
+                <h3 style="margin-bottom: 20px; text-transform: uppercase; color: var(--f1-yellow); font-size: 14px; letter-spacing: 1px;">Deploy Operative Team</h3>
+                
+                <div class="form-group">
+                    <label for="team_name">Team Name</label>
+                    <input type="text" id="team_name" name="team_name" class="form-control" placeholder="Enter team name..." required autocomplete="off">
+                </div>
+                
+                <!-- Start node is automatically assigned by the server to be far from Sam -->
+                <input type="hidden" name="start_node" value="-1">
+                
+                <button type="submit" class="btn btn-primary">Initialize Operative</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Check for URL error parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            const errorAlert = document.getElementById('error-alert');
+            if (error === 'team_not_found') {
+                errorAlert.textContent = 'Error: The requested team session was not found or has been cleared.';
+            } else {
+                errorAlert.textContent = decodeURIComponent(error);
+            }
+            errorAlert.style.display = 'block';
+        }
+
+        // Intercept form submission to post via AJAX
+        document.getElementById('join-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                });
+                
+                const result = await response.json();
+                if (response.ok && result.success) {
+                    window.location.href = `/team/${encodeURIComponent(result.team_name)}`;
+                } else {
+                    const errorAlert = document.getElementById('error-alert');
+                    errorAlert.textContent = result.message || 'Failed to join game lobby.';
+                    errorAlert.style.display = 'block';
+                }
+            } catch (err) {
+                console.error(err);
+                const errorAlert = document.getElementById('error-alert');
+                errorAlert.textContent = 'Network error. Please try again.';
+                errorAlert.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

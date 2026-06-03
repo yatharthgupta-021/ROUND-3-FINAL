@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Sam - Game Master Dashboard</title>
+    <link rel="stylesheet" href="/static/css/main.css?v=4.0">
+    <style>
+        .gm-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .config-section {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        .config-title {
+            font-size: 13px;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+            padding-bottom: 4px;
+        }
+        .coord-display {
+            font-family: 'Orbitron', sans-serif;
+            background: rgba(255, 0, 127, 0.1);
+            border: 1px solid var(--neon-pink);
+            color: var(--neon-pink);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header glass-panel">
+            <div class="logo">ROUND 3 - TREASURE HUNT <span style="font-size: 12px; color: var(--text-secondary); vertical-align: middle;">[GM PORTAL]</span></div>
+            <div class="header-status">
+                <span id="game-status-badge" class="game-badge badge-setup">SETUP MODE</span>
+            </div>
+        </header>
+
+        <!-- Game Interface Grid -->
+        <div class="game-layout">
+            <!-- Left Panel: GM Configurations -->
+            <div class="panel glass-panel">
+                <div class="panel-header">
+                    <h3>CONTROL PANEL</h3>
+                </div>
+                <div class="panel-body">
+                    <!-- Global Mission Timer HUD -->
+                    <div class="hud-card glass-panel" id="card-timer" style="border-left: 4px solid var(--f1-red); margin-bottom: 16px;">
+                        <span class="hud-label">GLOBAL CLOCK TIMER</span>
+                        <span class="hud-value" id="val-timer" style="color: var(--f1-red); text-shadow: var(--shadow-glow-red);">00:00</span>
+                    </div>
+
+                    <!-- Target telemetry coords -->
+                    <div id="sam-coords-box" class="coord-display">
+                        SAM TARGET: OFF-GRID
+                    </div>
+
+                    <!-- Config Group 1: General Rules -->
+                    <div class="config-section">
+                        <div class="config-title">Mission Parameters</div>
+                        
+                        <div class="gm-setting">
+                            <label for="diagonal_allowed">Diagonal Moves</label>
+                            <input type="checkbox" id="diagonal_allowed">
+                        </div>
+                        
+                        <div class="gm-setting">
+                            <label for="sam_static">Static Sam</label>
+                            <input type="checkbox" id="sam_static">
+                        </div>
+
+                        <div class="form-group" style="margin-top: 10px; margin-bottom: 0;">
+                            <label for="sam_interval" style="font-size: 11px;">Sam Move Timer (sec)</label>
+                            <input type="number" id="sam_interval" class="form-control" value="90" style="padding: 8px 12px; font-size: 14px;">
+                        </div>
+                    </div>
+
+                    <!-- Config Group 2: Path Settings -->
+                    <div class="config-section">
+                        <div class="config-title">Sam's Movement Path</div>
+                        <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
+                            Click nodes on the map to record a custom path, or enter indices separated by commas:
+                        </p>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" id="sam_path_input" class="form-control" value="15,16,26,27,37,36,25,15" style="padding: 8px 12px; font-size: 13px;">
+                        </div>
+                        <div class="gm-setting" style="border:none; padding-top: 8px;">
+                            <label style="font-size: 12px; color: var(--neon-purple);">Path Recording Mode</label>
+                            <input type="checkbox" id="chk-record-path">
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="gm-actions">
+                        <button id="btn-start-game" class="btn btn-primary">Launch Operation</button>
+                        <button id="btn-force-sam-move" class="btn btn-secondary">Advance Sam 1 Step</button>
+                        <button id="btn-reset-game" class="btn btn-danger">Abort & Reset Grid</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel: Live Birds-Eye Map -->
+            <div class="panel map-panel">
+                <div class="map-wrapper">
+                    <!-- Dynamic SVG Map -->
+                    <svg id="map-svg" class="game-map" viewBox="0 0 1200 1000" preserveAspectRatio="xMidYMid meet">
+                        <g id="map-links-group"></g>
+                        <g id="map-nodes-group"></g>
+                        <g id="sam-marker-group"></g>
+                        <g id="teams-markers-group"></g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Panel: Live Operatives Telemetry -->
+            <div class="panel glass-panel">
+                <div class="panel-header">
+                    <h3>OPERATIVES LIVE</h3>
+                </div>
+                <div class="panel-body">
+                    <h4 style="font-size: 12px; color: var(--neon-blue); text-transform: uppercase; margin-bottom: 8px;">Registered Teams</h4>
+                    <div class="scrollable" style="max-height: 250px; overflow-y: auto; margin-bottom: 20px;">
+                        <div class="teams-grid" id="teams-telemetry-grid">
+                            <p style="color: var(--text-secondary); font-size: 13px;">No operative teams deployed yet.</p>
+                        </div>
+                    </div>
+
+                    <h4 style="font-size: 12px; color: var(--neon-purple); text-transform: uppercase; margin-bottom: 8px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">Mission Leaderboard</h4>
+                    <div class="scrollable" style="max-height: 180px; overflow-y: auto;">
+                        <table class="leaderboard-table" style="font-size: 12px;">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Team</th>
+                                    <th>Time</th>
+                                    <th>Tix</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-body">
+                                <tr>
+                                    <td colspan="4" style="color: var(--text-secondary); text-align: center;">No finishes logged yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GM Javascript Controller -->
+    <script src="/static/js/gm.js?v=4.0"></script>
+</body>
+</html>
