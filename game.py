@@ -212,132 +212,132 @@ class GameManager:
         return 999  # Unreachable
 
     def setup_story_puzzles(self):
-        # 25 storyline puzzles: mini-games, anagrams, ciphers, number sequences, wordle-style
+        # 25 HARDER puzzles: 3 Wordle grids, Atbash/Rail-fence ciphers, logic, hex, binary, coordinate rotation
         story_riddles = [
             {
+                "node": 3,
+                "q": "📋 BLACKBOARD — ROMAN NUMERAL ARITHMETIC: The teacher encoded a calculation in Roman numerals:\nXIV² ÷ (VII × II) = ?\n(XIV=14, VII=7, II=2). Calculate and enter the number.",
+                "a": "14"
+            },
+            {
                 "node": 5,
-                "q": "📚 LIBRARY — WORDLE (5 letters): I am a place where books live, with tall shelves and quiet rooms. Unscramble: R A Y R B I I L → 7 letters. Drop the last I. What 6-letter word remains? (Hint: where you are right now)",
-                "a": "library"
+                "q": "📚 LIBRARY — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  F⬛  L⬛  I⬛  R🟨  T⬛\nAttempt 2:  D🟨  R🟩  I⬛  N🟩  K⬛\nAttempt 3:  B⬛  R🟩  A🟩  N🟩  D🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: It connects Monaco to the word Prix.",
+                "a": "grand"
             },
             {
                 "node": 10,
-                "q": "🔐 TUNNEL IN — CAESAR CIPHER: A message is encoded with a shift of 3 (each letter moved 3 forward). Decode this: 'PRQDFR'. What city's Grand Prix are you reliving?",
+                "q": "🔐 TUNNEL IN — ATBASH CIPHER: In Atbash, each letter maps to its mirror position in the alphabet (A↔Z, B↔Y, C↔X, D↔W, E↔V, F↔U, G↔T, H↔S, I↔R, J↔Q, K↔P, L↔O, M↔N).\n\nDecode:  N  Z  M  Z  X  L\n\nWhere are Sam's memories set?",
                 "a": "monaco"
             },
             {
+                "node": 11,
+                "q": "🚇 TUNNEL MID — THREE-PART RIDDLE:\n🕐 I have hands, but I cannot clap.\n👁️ I have a face, but no eyes.\n🏃 I run without legs and tick without moving.\n\nWhat am I? (one word)",
+                "a": "clock"
+            },
+            {
                 "node": 15,
-                "q": "🔢 POOL ENTRY — NUMBER SEQUENCE: Find the next number: 2, 4, 8, 16, 32, ___",
-                "a": "64"
+                "q": "🔢 POOL ENTRY — MISSING MIDDLE TERM: Find X in the sequence:\n3,  X,  48,  192,  768\nEach term is multiplied by the same constant.\nWhat is X?",
+                "a": "12"
+            },
+            {
+                "node": 18,
+                "q": "🏁 RASCASSE IN — F1 LAP FRACTION: The Monaco Grand Prix runs for 78 laps total.\nSam's driver completes exactly HALF the race before a red flag stops it.\nAfter the restart, they complete exactly ONE THIRD of the total race distance.\nHow many laps in total have been completed?",
+                "a": "65"
             },
             {
                 "node": 20,
-                "q": "⚗️ RASCASSE — ANAGRAM: Rearrange all the letters of 'CHMESTIRY' to spell a school subject you study with test tubes and Bunsen burners.",
+                "q": "⚗️ RASCASSE — RAIL FENCE CIPHER (2 rails): A school subject was encrypted by splitting letters across 2 rails:\nRail 1 (positions 0,2,4,6,8):  C  E  I  T  Y\nRail 2 (positions 1,3,5,7):    H  M  S  R\n\nWeave them back together alternating Rail1, Rail2 to decode the 9-letter school subject.",
                 "a": "chemistry"
             },
             {
+                "node": 24,
+                "q": "🏆 PODIUM — SKIP ALPHABET BACKWARDS: The sequence skips every other letter going backwards from Z:\nZ,  X,  V,  T,  R,  ___\nWhat is the next letter?",
+                "a": "p"
+            },
+            {
                 "node": 25,
-                "q": "🔢 GARAGES — MATH SEQUENCE: A racing driver completes laps in: 78s, 75s, 72s, 69s... following a pattern. How many seconds does his 5th lap take?",
-                "a": "66"
+                "q": "🔢 GARAGES — SECTOR TIME MATHS: A driver's three sector times are 28.4s, 31.2s, and 19.4s.\nHis rival is exactly 0.3s FASTER in every single sector.\nWhat is the rival's TOTAL lap time? (answer as a decimal, e.g. 00.0)",
+                "a": "78.1"
             },
             {
                 "node": 30,
-                "q": "🔢 SANDBOX — GRID PUZZLE: On a 5×5 grid, you start at position (1,1). Move 3 steps right and 2 steps up. What is your final position? Answer as 'X,Y'.",
-                "a": "4,3"
+                "q": "🔢 SANDBOX — COORDINATE ROTATION: You stand at grid point (2, 3).\nRotate 90° CLOCKWISE about the origin using the formula:\n(x, y)  →  (y, −x)\nWhat is your new position? Answer as 'X,Y' (e.g. 3,-2).",
+                "a": "3,-2"
             },
             {
                 "node": 35,
-                "q": "🔡 LAB SPUR — LETTER DROP: Remove TWO letters from 'SCIENCES' to leave a word meaning to notice or observe. What is the 5-letter word?",
-                "a": "scene"
+                "q": "🔡 LAB SPUR — HIDDEN WORD: A 7-letter school subject is hiding as consecutive letters inside a longer word.\nFind it inside:  B I O S C I E N C E\n(Hint: it begins at the 4th letter of the word above)",
+                "a": "science"
             },
             {
                 "node": 40,
-                "q": "💻 COMPUTER — BINARY DECODE: Convert this binary number to decimal: 01001010. (Hint: 64+8+2)",
-                "a": "74"
+                "q": "💻 COMPUTER — HEXADECIMAL DECODE: Computers store values in hex. Convert to decimal:\n0x2F\n(Hint: 0x2F = 2 × 16 + 15 = ?)",
+                "a": "47"
             },
             {
                 "node": 45,
-                "q": "🎵 BACKSTAGE — ANAGRAM: Rearrange ALL letters of 'F L U T E' (5 letters) to find a woodwind instrument. What is it?",
+                "q": "🎵 BACKSTAGE — NOTE-NUMBER CIPHER: Using the cipher A=1, B=2 ... Z=26, decode these 5 numbers to name a woodwind instrument:\n6  ·  12  ·  21  ·  20  ·  5\nWhat instrument is it?",
                 "a": "flute"
             },
             {
                 "node": 50,
-                "q": "🏫 PRINCIPAL'S OFFICE — MORSE CODE: Decode this message: dot-dot-dot / dash-dash-dash / dot-dot-dot. What international distress signal did you just read?",
-                "a": "sos"
+                "q": "🏫 PRINCIPAL'S OFFICE — MORSE CODE: Decode this Morse transmission:\n-.-. .-.. --- ... .\n(C=-.-.  L=.-..  O=---  S=...  E=.)\nWhat 5-letter word did you decode? Sam is this many steps away.",
+                "a": "close"
             },
             {
                 "node": 53,
-                "q": "🏥 CLINIC — WORDLE (6 letters): I store your past experiences and allow you to recall them. Unscramble: M E M O R Y. What is the word?",
-                "a": "memory"
+                "q": "🏥 CLINIC — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  C⬛  R⬛  A⬛  N⬛  E⬛\nAttempt 2:  S🟨  H🟩  O🟩  U⬛  T🟩\nAttempt 3:  F⬛  R⬛  O🟩  S🟩  T🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: Sam is fading like one. Something that haunts a memory.",
+                "a": "ghost"
             },
             {
                 "node": 55,
-                "q": "🔒 LOCKER SPUR — COMBINATION LOCK: The locker code is the answer to: (12 × 8) + (10 ÷ 2). Enter the 3-digit number.",
-                "a": "101"
+                "q": "🔒 LOCKER SPUR — 3-DIGIT COMBINATION LOCK:\nClue 1: The three digits add up to 15.\nClue 2: The FIRST digit is the square root of 9.\nClue 3: The LAST digit equals the first digit plus 1.\nEnter the 3-digit code (no spaces, e.g. 123).",
+                "a": "384"
             },
             {
                 "node": 57,
-                "q": "🌿 GREENHOUSE — ANAGRAM CHAIN: Step 1: Unscramble 'PHLOOCRLYLH' (11 letters) — the green pigment in leaves. Step 2: What are the first 5 letters of that word?",
-                "a": "chlor"
+                "q": "🌿 GREENHOUSE — CHEMISTRY & COMMON NAME: Na is the symbol for Sodium. Cl is the symbol for Chlorine.\nWhen they combine they form the compound NaCl.\nWhat is the common everyday name for NaCl? (one word)",
+                "a": "salt"
             },
             {
                 "node": 60,
-                "q": "🏀 TRACK — WORDLE (10 letters): Unscramble 'LBKBTELAAS' to find the sport played on this track. Hint: you shoot through a hoop.",
-                "a": "basketball"
+                "q": "🏎️ TRACK — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  T⬛  R🟩  A🟩  C⬛  K🟨\nAttempt 2:  G⬛  R🟩  A🟩  Z⬛  E🟩\nAttempt 3:  D⬛  R🟩  A🟩  K🟩  E🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: What every F1 driver hits hard at the end of a straight.",
+                "a": "brake"
             },
             {
                 "node": 62,
-                "q": "📜 SWINGS — ANAGRAM: Rearrange the letters 'Y S T R O I H' to name a school subject about the past.",
+                "q": "📜 SWINGS — NUMBER-LETTER CIPHER (A=1 ... Z=26): Decode this number sequence:\n8  ·  9  ·  19  ·  20  ·  15  ·  18  ·  25\nWhat 7-letter school subject does it spell?",
                 "a": "history"
             },
             {
                 "node": 65,
-                "q": "🌍 MARSHAL 2 — GEOGRAPHY CIPHER: Each letter is shifted by 1 backward (B→A, C→B...). Decode: 'QBDJGJD' to find the world's largest ocean.",
+                "q": "🌍 MARSHAL 2 — NATO PHONETIC ALPHABET: Take only the FIRST letter of each NATO code word below:\nPAPA — ALFA — CHARLIE — INDIA — FOXTROT — INDIA — CHARLIE\nWhat 7-letter word (the world's largest ocean) do the first letters spell?",
                 "a": "pacific"
             },
             {
+                "node": 66,
+                "q": "🚦 MARSHAL 3 — BINARY → LETTER CIPHER: Convert each 5-bit binary number to decimal, then use A=1...Z=26 to find each letter:\n10011  →  ?  →  ?\n00001  →  ?  →  ?\n01101  →  ?  →  ?\nThe 3 letters spell the name of the person you are here to find!",
+                "a": "sam"
+            },
+            {
                 "node": 70,
-                "q": "☕ CAFE — ODD ONE OUT: Which does NOT belong? CAT, DOG, FISH, TABLE, BIRD. Type the odd one out.",
-                "a": "table"
+                "q": "☕ CAFE — LOGIC SEATING PUZZLE: Five people sit in a row.\nClue 1: Amy sits 1st, Dan sits 5th (last).\nClue 2: Ben sits 2nd.\nClue 3: Eva sits directly between Ben and Cal.\nWho sits in the MIDDLE (3rd seat)? (one name)",
+                "a": "eva"
             },
             {
                 "node": 72,
-                "q": "⛲ FOUNTAIN — NUMBER PATTERN: What comes next? 1, 1, 2, 3, 5, 8, 13, ___",
-                "a": "21"
+                "q": "⛲ FOUNTAIN — INTERLEAVED SEQUENCES: Two sequences are woven together alternately:\nSquares:  1,  4,  9,  16,  25 ...\nEvens:    2,  4,  6,   8,  10 ...\nMerged sequence: 1, 2, 4, 4, 9, 6, 16, 8, ___\nWhat is the next number?",
+                "a": "25"
             },
             {
                 "node": 75,
-                "q": "💨 BREEZE WALK — WORD LADDER: Change one letter at a time: COLD → CORD → WORD → WARD → ____. What 4-letter word meaning 'hot' completes the ladder?",
-                "a": "warm"
+                "q": "💨 BREEZE WALK — WORD CHAIN: Change exactly ONE letter at each step to make a new valid word:\nCARE  →  CORE  →  GORE  →  ?ONE\nThe final word means 'departed' or 'no longer here'.\nWhat is it?",
+                "a": "gone"
             },
             {
                 "node": 78,
-                "q": "⚓ YACHT — CHESS RIDDLE: I move in an L-shape: 2 squares one way, 1 square perpendicular. I can jump over other pieces. What chess piece am I? (one word)",
-                "a": "knight"
-            },
-            {
-                "node": 3,
-                "q": "📋 BLACKBOARD — EQUATION SCRAMBLE: The teacher wrote a scrambled equation: '? × 6 = 54 ÷ 1'. Solve for the missing number.",
-                "a": "9"
-            },
-            {
-                "node": 11,
-                "q": "🚇 TUNNEL MID — RIDDLE IN THE DARK: I have cities but no houses, mountains but no trees, water but no fish, and roads but no cars. What am I?",
-                "a": "map"
-            },
-            {
-                "node": 18,
-                "q": "🏁 RASCASSE IN — FLAG CODE: Each color of the F1 flag has a meaning. A yellow flag means: Danger – No Overtaking. What does a RED flag mean in F1? (one word)",
-                "a": "stop"
-            },
-            {
-                "node": 24,
-                "q": "🏆 PODIUM — LETTER SEQUENCE: Find the pattern: A, C, E, G, ___. What is the next letter?",
-                "a": "i"
-            },
-            {
-                "node": 66,
-                "q": "🚦 MARSHAL 3 — SHORTCUT CIPHER: Using A=1, B=2...Z=26, decode: 19-1-13. This 3-letter name is who you are searching for!",
-                "a": "sam"
+                "q": "⚓ YACHT — KNIGHT'S TOUR: A chess knight starts at square A1.\nMove 1: 2 RIGHT + 1 UP  →  C2\nMove 2: 1 RIGHT + 2 UP  →  D4\nMove 3: 1 LEFT  + 2 UP  →  ???\nWhat square does the knight land on? (answer in chess notation, e.g. c6)",
+                "a": "c6"
             }
         ]
         
