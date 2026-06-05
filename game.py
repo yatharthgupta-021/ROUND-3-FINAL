@@ -285,6 +285,11 @@ class GameManager:
                 "a": "close"
             },
             {
+                "node": 52,
+                "q": "👑 ARMCHAIR — MORSE CODE: The legendary king of Monaco, the crown jewel of motorsport, is encoded below. Decode the full name:\n.- -.-- .-. - --- -.  ...  . -. -. .-\nWho is he? (First name + Last name)",
+                "a": "ayrton senna"
+            },
+            {
                 "node": 53,
                 "q": "🏥 CLINIC — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  C⬛  R⬛  A⬛  N⬛  E⬛\nAttempt 2:  S🟨  H🟩  O🟩  U⬛  T🟩\nAttempt 3:  F⬛  R⬛  O🟩  S🟩  T🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: Sam is fading like one. Something that haunts a memory.",
                 "a": "ghost"
