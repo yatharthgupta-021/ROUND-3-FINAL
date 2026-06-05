@@ -147,8 +147,10 @@ class GameManager:
             
         # Define graph connections (loops + spurs)
         connections = []
-        # Main track serpentine loop (0 to 67)
+        # Main track serpentine loop (0 to 67), EXCLUDING 7-8
         for i in range(67):
+            if i == 7:  # Remove connection 7->8
+                continue
             connections.append((i, i + 1))
         connections.append((67, 0))  # Vertically closes loop along x=0
         
@@ -160,6 +162,12 @@ class GameManager:
         # Custom user requested connections
         connections.append((79, 8))
         connections.append((70, 35))
+        
+        # Additional shortcut connections
+        connections.append((66, 28))  # Marshal 3 <-> Boardwalk shortcut
+        connections.append((42, 44))  # Podium <-> Art shortcut
+        connections.append((18, 24))  # Rascasse In <-> Podium shortcut
+        connections.append((3, 11))   # Blackboard <-> Tunnel Mid shortcut
             
         # Adjacency list
         self.adj_list = {i: [] for i in range(80)}
@@ -204,107 +212,132 @@ class GameManager:
         return 999  # Unreachable
 
     def setup_story_puzzles(self):
-        # 20 storyline-specific puzzles: focused on school days, childhood memories, cartoons, and memory restoration
+        # 25 storyline puzzles: mini-games, anagrams, ciphers, number sequences, wordle-style
         story_riddles = [
             {
                 "node": 5,
-                "q": "Casino Square Library: In school, you read a classic book about a boy wizard who attends Hogwarts. What is his last name?",
-                "a": "potter"
+                "q": "📚 LIBRARY — WORDLE (5 letters): I am a place where books live, with tall shelves and quiet rooms. Unscramble: R A Y R B I I L → 7 letters. Drop the last I. What 6-letter word remains? (Hint: where you are right now)",
+                "a": "library"
             },
             {
                 "node": 10,
-                "q": "Sainte Devote Sandbox: During recess, children build sandcastles. What is the standard geometric shape of a sandbox with four equal sides and 90-degree angles?",
-                "a": "square"
+                "q": "🔐 TUNNEL IN — CAESAR CIPHER: A message is encoded with a shift of 3 (each letter moved 3 forward). Decode this: 'PRQDFR'. What city's Grand Prix are you reliving?",
+                "a": "monaco"
             },
             {
                 "node": 15,
-                "q": "Beau Rivage S-Bends: A memory fragment shows children playing hopscotch. If you jump on 3 squares, then 2, then 4, how many total squares did you land on?",
-                "a": "9"
+                "q": "🔢 POOL ENTRY — NUMBER SEQUENCE: Find the next number: 2, 4, 8, 16, 32, ___",
+                "a": "64"
             },
             {
                 "node": 20,
-                "q": "Science Lab: Water has 2 hydrogen atoms and 1 oxygen atom. Write its chemical formula.",
-                "a": "h2o"
+                "q": "⚗️ RASCASSE — ANAGRAM: Rearrange all the letters of 'CHMESTIRY' to spell a school subject you study with test tubes and Bunsen burners.",
+                "a": "chemistry"
             },
             {
                 "node": 25,
-                "q": "Tunnel Entry: A voice echoes: 'I tawt I taw a puddy tat!' What yellow cartoon canary says this?",
-                "a": "tweety"
+                "q": "🔢 GARAGES — MATH SEQUENCE: A racing driver completes laps in: 78s, 75s, 72s, 69s... following a pattern. How many seconds does his 5th lap take?",
+                "a": "66"
             },
             {
                 "node": 30,
-                "q": "Math Classroom: Solve: 15 multiplied by 4, plus 20.",
-                "a": "80"
+                "q": "🔢 SANDBOX — GRID PUZZLE: On a 5×5 grid, you start at position (1,1). Move 3 steps right and 2 steps up. What is your final position? Answer as 'X,Y'.",
+                "a": "4,3"
             },
             {
                 "node": 35,
-                "q": "Principal's Office: A rule is written: 'No running in the corridors.' What is the opposite of 'running'?",
-                "a": "walking"
+                "q": "🔡 LAB SPUR — LETTER DROP: Remove TWO letters from 'SCIENCES' to leave a word meaning to notice or observe. What is the 5-letter word?",
+                "a": "scene"
             },
             {
                 "node": 40,
-                "q": "Computer Room: What 3-letter abbreviation stands for the central processing unit of a computer?",
-                "a": "cpu"
+                "q": "💻 COMPUTER — BINARY DECODE: Convert this binary number to decimal: 01001010. (Hint: 64+8+2)",
+                "a": "74"
             },
             {
                 "node": 45,
-                "q": "Music Room: What musical instrument has 88 keys and black and white notes?",
-                "a": "piano"
+                "q": "🎵 BACKSTAGE — ANAGRAM: Rearrange ALL letters of 'F L U T E' (5 letters) to find a woodwind instrument. What is it?",
+                "a": "flute"
             },
             {
                 "node": 50,
-                "q": "Art Studio: Mixing the primary colors Blue and Yellow produces what color?",
-                "a": "green"
+                "q": "🏫 PRINCIPAL'S OFFICE — MORSE CODE: Decode this message: dot-dot-dot / dash-dash-dash / dot-dot-dot. What international distress signal did you just read?",
+                "a": "sos"
             },
             {
                 "node": 53,
-                "q": "School Clinic: The clinic clock is ticking. What 5-letter word describes the mental ability to store and recall information?",
+                "q": "🏥 CLINIC — WORDLE (6 letters): I store your past experiences and allow you to recall them. Unscramble: M E M O R Y. What is the word?",
                 "a": "memory"
             },
             {
                 "node": 55,
-                "q": "Locker Corridor: Each locker has a number. If your locker number is the sum of 45 and 55, what is it?",
-                "a": "100"
+                "q": "🔒 LOCKER SPUR — COMBINATION LOCK: The locker code is the answer to: (12 × 8) + (10 ÷ 2). Enter the 3-digit number.",
+                "a": "101"
             },
             {
                 "node": 57,
-                "q": "Biology Greenhouse: What green pigment in leaves allows plants to absorb light for photosynthesis?",
-                "a": "chlorophyll"
+                "q": "🌿 GREENHOUSE — ANAGRAM CHAIN: Step 1: Unscramble 'PHLOOCRLYLH' (11 letters) — the green pigment in leaves. Step 2: What are the first 5 letters of that word?",
+                "a": "chlor"
             },
             {
                 "node": 60,
-                "q": "Gymnasium: What sport involves shooting a ball through a high hoop with a net?",
+                "q": "🏀 TRACK — WORDLE (10 letters): Unscramble 'LBKBTELAAS' to find the sport played on this track. Hint: you shoot through a hoop.",
                 "a": "basketball"
             },
             {
                 "node": 62,
-                "q": "Detention Room: The teacher writes a word scrambler: 'Y S T R O I H'. Unscramble this school subject.",
+                "q": "📜 SWINGS — ANAGRAM: Rearrange the letters 'Y S T R O I H' to name a school subject about the past.",
                 "a": "history"
             },
             {
                 "node": 65,
-                "q": "Geography Lab: A large globe spins in the corner. What is the name of the largest ocean on Earth?",
+                "q": "🌍 MARSHAL 2 — GEOGRAPHY CIPHER: Each letter is shifted by 1 backward (B→A, C→B...). Decode: 'QBDJGJD' to find the world's largest ocean.",
                 "a": "pacific"
             },
             {
                 "node": 70,
-                "q": "Recess Playgrounds: A cartoon mouse named Jerry is always escaping from a cat named...?",
-                "a": "tom"
+                "q": "☕ CAFE — ODD ONE OUT: Which does NOT belong? CAT, DOG, FISH, TABLE, BIRD. Type the odd one out.",
+                "a": "table"
             },
             {
                 "node": 72,
-                "q": "English Lit Corner: A quote from a play: 'To be, or not to be.' What famous English playwright wrote this?",
-                "a": "shakespeare"
+                "q": "⛲ FOUNTAIN — NUMBER PATTERN: What comes next? 1, 1, 2, 3, 5, 8, 13, ___",
+                "a": "21"
             },
             {
                 "node": 75,
-                "q": "Detention blackboard: Write the name of Sam's memory stabilization machine. (Two words)",
-                "a": "project rewind"
+                "q": "💨 BREEZE WALK — WORD LADDER: Change one letter at a time: COLD → CORD → WORD → WARD → ____. What 4-letter word meaning 'hot' completes the ladder?",
+                "a": "warm"
             },
             {
                 "node": 78,
-                "q": "Recess Swings: Children play a game with white and black pieces where the goal is to trap the opponent's king. What is the game?",
-                "a": "chess"
+                "q": "⚓ YACHT — CHESS RIDDLE: I move in an L-shape: 2 squares one way, 1 square perpendicular. I can jump over other pieces. What chess piece am I? (one word)",
+                "a": "knight"
+            },
+            {
+                "node": 3,
+                "q": "📋 BLACKBOARD — EQUATION SCRAMBLE: The teacher wrote a scrambled equation: '? × 6 = 54 ÷ 1'. Solve for the missing number.",
+                "a": "9"
+            },
+            {
+                "node": 11,
+                "q": "🚇 TUNNEL MID — RIDDLE IN THE DARK: I have cities but no houses, mountains but no trees, water but no fish, and roads but no cars. What am I?",
+                "a": "map"
+            },
+            {
+                "node": 18,
+                "q": "🏁 RASCASSE IN — FLAG CODE: Each color of the F1 flag has a meaning. A yellow flag means: Danger – No Overtaking. What does a RED flag mean in F1? (one word)",
+                "a": "stop"
+            },
+            {
+                "node": 24,
+                "q": "🏆 PODIUM — LETTER SEQUENCE: Find the pattern: A, C, E, G, ___. What is the next letter?",
+                "a": "i"
+            },
+            {
+                "node": 66,
+                "q": "🚦 MARSHAL 3 — SHORTCUT CIPHER: Using A=1, B=2...Z=26, decode: 19-1-13. This 3-letter name is who you are searching for!",
+                "a": "sam"
             }
         ]
         
