@@ -284,7 +284,7 @@ function renderMap(data) {
         circle.setAttribute('r', isCurrent ? '32' : '24');
         g.appendChild(circle);
         
-        // Add text label
+        // Add text label (node number only — name shown in tooltip)
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('class', 'node-label');
         text.setAttribute('x', coords.x);
@@ -292,17 +292,9 @@ function renderMap(data) {
         text.textContent = node.id;
         g.appendChild(text);
         
-        // Add landmark name label below circle
-        const labelText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        labelText.setAttribute('class', 'node-name-label');
-        labelText.setAttribute('x', coords.x);
-        labelText.setAttribute('y', coords.y + 38);
-        labelText.textContent = node.name;
-        g.appendChild(labelText);
-        
-        // Tooltip text for location name
+        // Tooltip text for location name (on hover)
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        title.textContent = node.name;
+        title.textContent = `${node.id}: ${node.name}`;
         g.appendChild(title);
         
         // Add click events to move if adjacent
@@ -402,7 +394,7 @@ puzzleForm.addEventListener('submit', async (e) => {
         const result = await response.json();
         if (response.ok && result.success) {
             puzzleModal.classList.remove('active');
-            alert(`Decryption successful! Clue Unlocked: \n\n"${result.intel}"`);
+            showIntelModal(result.intel);
         } else {
             puzzleError.textContent = result.message || 'Incorrect decryption key.';
             puzzleError.style.display = 'block';
@@ -413,6 +405,55 @@ puzzleForm.addEventListener('submit', async (e) => {
         puzzleError.style.display = 'block';
     }
 });
+
+// ── Intel Success Modal ──────────────────────────────────────────────────────
+const intelModal        = document.getElementById('intel-modal');
+const intelClueList     = document.getElementById('intel-clue-list');
+const intelClearanceBdg = document.getElementById('intel-clearance-badge');
+const btnCloseIntel     = document.getElementById('btn-close-intel');
+
+function showIntelModal(intelText) {
+    // Parse the intel text
+    // Expected format: "🔒 Decrypted Intel (Clearance Level: X/3):\n- clue1\n- clue2\n- clue3"
+    intelClueList.innerHTML = '';
+
+    const lines = intelText.split('\n');
+    let clearanceText = 'Clearance Level Updated';
+    const clueLines = [];
+
+    lines.forEach(line => {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('🔒')) {
+            // Extract clearance level e.g. "Clearance Level: 2/3"
+            const match = trimmed.match(/(\d+\/\d+)/);
+            if (match) clearanceText = `Clearance Level ${match[1]} Unlocked`;
+        } else if (trimmed.startsWith('-')) {
+            clueLines.push(trimmed.replace(/^-\s*/, ''));
+        }
+    });
+
+    if (intelClearanceBdg) intelClearanceBdg.textContent = clearanceText;
+
+    clueLines.forEach(clue => {
+        const li = document.createElement('li');
+        li.className = 'intel-clue-item';
+        li.textContent = clue;
+        intelClueList.appendChild(li);
+    });
+
+    if (intelModal) intelModal.classList.add('active');
+}
+
+if (btnCloseIntel) {
+    btnCloseIntel.addEventListener('click', () => {
+        intelModal.classList.remove('active');
+    });
+}
+if (intelModal) {
+    intelModal.addEventListener('click', e => {
+        if (e.target === intelModal) intelModal.classList.remove('active');
+    });
+}
 
 // Bypass/Close Puzzle Modal
 btnBypassPuzzle.addEventListener('click', async () => {
@@ -463,30 +504,30 @@ function getLandmarkName(id) {
     return `Location ${id}`;
 }
 
-// Rule Book Modal Toggle
-const btnRules = document.getElementById('btn-rules');
-const rulesModal = document.getElementById('rules-modal');
+// ── Rule Book Modal ──────────────────────────────────────────────────────────
+const btnRules     = document.getElementById('btn-rules');
+const rulesModal   = document.getElementById('rules-modal');
 const btnCloseRules = document.getElementById('btn-close-rules');
 
-console.log("Rule Book elements check:", { btnRules, rulesModal, btnCloseRules });
-
 if (btnRules && rulesModal && btnCloseRules) {
-    btnRules.addEventListener('click', () => {
-        console.log("Rule Book opened");
-        rulesModal.classList.add('active');
+    btnRules.addEventListener('click', () => rulesModal.classList.add('active'));
+    btnCloseRules.addEventListener('click', () => rulesModal.classList.remove('active'));
+    rulesModal.addEventListener('click', e => {
+        if (e.target === rulesModal) rulesModal.classList.remove('active');
     });
-    btnCloseRules.addEventListener('click', () => {
-        console.log("Rule Book closed");
-        rulesModal.classList.remove('active');
+}
+
+// ── Circuit Map Popup ─────────────────────────────────────────────────────────
+const btnCircuitMap     = document.getElementById('btn-circuit-map');
+const mapPopup          = document.getElementById('map-popup');
+const btnCloseMapPopup  = document.getElementById('btn-close-map-popup');
+
+if (btnCircuitMap && mapPopup) {
+    btnCircuitMap.addEventListener('click', () => mapPopup.classList.add('active'));
+    btnCloseMapPopup.addEventListener('click', () => mapPopup.classList.remove('active'));
+    mapPopup.addEventListener('click', e => {
+        if (e.target === mapPopup) mapPopup.classList.remove('active');
     });
-    rulesModal.addEventListener('click', (e) => {
-        if (e.target === rulesModal) {
-            console.log("Rule Book closed by background click");
-            rulesModal.classList.remove('active');
-        }
-    });
-} else {
-    console.error("Rule Book elements missing from DOM!");
 }
 
 // Initialise Connect
