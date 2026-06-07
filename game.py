@@ -34,107 +34,107 @@ class GameManager:
         self.winners: List[Dict[str, Any]] = []
 
     def setup_monaco_map(self):
-        # 80 Nodes layout definition on a 10x12 grid (x: 0..9, y: 0..11)
+        # 80 Nodes — names taken directly from the Circuit de Monaco location map
         node_defs = [
             # Row 0: y=0 (x: 0..7)
-            (0, "Start", 0, 0),
-            (1, "Pit Exit", 1, 0),
-            (2, "Hill Class", 2, 0),
-            (3, "Blackboard", 3, 0),
-            (4, "Casino", 4, 0),
-            (5, "Library", 5, 0),
-            (6, "Playground", 6, 0),
-            (7, "Lab", 7, 0),
-            
+            (0,  "Port Hercules N.",    0, 0),
+            (1,  "La Condamine",        1, 0),
+            (2,  "Rue Grimaldi",        2, 0),
+            (3,  "Casino Square",       3, 0),
+            (4,  "Café de Paris",       4, 0),
+            (5,  "Monte-Carlo Hotel",   5, 0),
+            (6,  "Portier",             6, 0),
+            (7,  "Tunnel Entrance",     7, 0),
+
             # Row 1: y=1 (x: 7..1, reversed)
-            (8, "Math", 7, 1),
-            (9, "Cafeteria", 6, 1),
-            (10, "Tunnel In", 5, 1),
-            (11, "Tunnel Mid", 4, 1),
-            (12, "Tunnel Out", 3, 1),
-            (13, "Yard", 2, 1),
-            (14, "Harbor", 1, 1),
-            
+            (8,  "Nouveau Chicane",     7, 1),
+            (9,  "Louis II Stadium",    6, 1),
+            (10, "Fontvieille",         5, 1),
+            (11, "Jardin Exotique",     4, 1),
+            (12, "Princess Antoinette", 3, 1),
+            (13, "Larvotto Beach",      2, 1),
+            (14, "Blvd. Princesse Ch.", 1, 1),
+
             # Row 2: y=2 (x: 1..7)
-            (15, "Pool Entry", 1, 2),
-            (16, "Pool Apex", 2, 2),
-            (17, "Pool Exit", 3, 2),
-            (18, "Rascasse In", 4, 2),
-            (19, "Wall", 5, 2),
-            (20, "Rascasse", 6, 2),
-            (21, "Noghes", 7, 2),
-            
+            (15, "Blvd. des Moulins",  1, 2),
+            (16, "Saint-Charles Ch.",  2, 2),
+            (17, "Rotonde",            3, 2),
+            (18, "Grimaldi Forum",     4, 2),
+            (19, "Sporting MC",        5, 2),
+            (20, "Pointe Paillon",     6, 2),
+            (21, "Plage du Larvotto",  7, 2),
+
             # Row 3: y=3 (x: 7..1, reversed)
-            (22, "Pit Entry", 7, 3),
-            (23, "Straight", 6, 3),
-            (24, "Podium", 5, 3),
-            (25, "Garages", 4, 3),
-            (26, "Paddock", 3, 3),
-            (27, "Yacht Club", 2, 3),
-            (28, "Boardwalk", 1, 3),
-            
+            (22, "Le Méridien Beach",  7, 3),
+            (23, "Ave. Princesse Gr.", 6, 3),
+            (24, "Japanese Garden",    5, 3),
+            (25, "Blvd. du Larvotto", 4, 3),
+            (26, "Fontvieille Spurs",  3, 3),
+            (27, "Larvotto (East)",    2, 3),
+            (28, "Chapteau Fontvieille", 1, 3),
+
             # Row 4: y=4 (x: 1..7)
-            (29, "Run-off", 1, 4),
-            (30, "Sandbox", 2, 4),
-            (31, "Corridor", 3, 4),
-            (32, "Class", 4, 4),
-            (33, "Library Rm", 5, 4),
-            (34, "Playground Rm", 6, 4),
-            (35, "Lab Spur", 7, 4),
-            
+            (29, "Yacht Club Monaco",  1, 4),
+            (30, "Piscine Olympique",  2, 4),
+            (31, "Quai Antoine 1er",   3, 4),
+            (32, "Saint-Elvire",       4, 4),
+            (33, "Tabac Corner",       5, 4),
+            (34, "Fairmont Hairpin",   6, 4),
+            (35, "Saint Martin Gdns.", 7, 4),
+
             # Row 5: y=5 (x: 7..1, reversed)
-            (36, "Math Sec", 7, 5),
-            (37, "Cafe Table", 6, 5),
-            (38, "Swing", 5, 5),
-            (39, "Chem Bench", 4, 5),
-            (40, "Computer", 3, 5),
-            (41, "Playroom", 2, 5),
-            (42, "Podium", 1, 5),
-            
+            (36, "Chemin des Révoires", 7, 5),
+            (37, "Ave. Princesse Gr.",  6, 5),
+            (38, "Exotic Garden",       5, 5),
+            (39, "Fort Antoine Thtre.", 4, 5),
+            (40, "Prince's Palace",     3, 5),
+            (41, "Stade Louis II N.",   2, 5),
+            (42, "Musée Océanographique", 1, 5),
+
             # Row 6: y=6 (x: 1..9)
-            (43, "Piano", 1, 6),
-            (44, "Art", 2, 6),
-            (45, "Backstage", 3, 6),
-            (46, "Lockers", 4, 6),
-            (47, "Globe", 5, 6),
-            (48, "Headset", 6, 6),
-            (49, "Bookshelf", 7, 6),
-            (50, "Principal", 8, 6),
-            (51, "Couch", 9, 6),
-            
+            (43, "Terrasse Fontvieille", 1, 6),
+            (44, "Stade Louis II",       2, 6),
+            (45, "Côtes d'Azur W.",      3, 6),
+            (46, "Ave. de la Quarant.",  4, 6),
+            (47, "Jardin du Casino",     5, 6),
+            (48, "Place d'Armes",        6, 6),
+            (49, "Blvd. Princesse Ch.",  7, 6),
+            (50, "Avenue Beaux-Arts",    8, 6),
+            (51, "Rue de Millo",         9, 6),
+
             # Row 7: y=7 (x: 9..1, reversed)
-            (52, "Armchair", 9, 7),
-            (53, "Clinic", 8, 7),
-            (54, "Detention", 7, 7),
-            (55, "Locker Spur", 6, 7),
-            (56, "Equipment", 5, 7),
-            (57, "Greenhouse", 4, 7),
-            (58, "Physics", 3, 7),
-            (59, "Gym", 2, 7),
-            (60, "Track", 1, 7),
-            
+            (52, "Saint Dévote Ch.",        9, 7),
+            (53, "Gare de Monaco",          8, 7),
+            (54, "Avenue du Portier",       7, 7),
+            (55, "MC Bay Resort",           6, 7),
+            (56, "Ave. Princesse Gr. W.",   5, 7),
+            (57, "Terrasses Fontvieille",   4, 7),
+            (58, "Marché Condamine",        3, 7),
+            (59, "Rue Suffren Raymond",     2, 7),
+            (60, "Place d'Armes S.",        1, 7),
+
             # Column 0: x=0, y=7..1 (going up)
-            (61, "Gate", 0, 7),
-            (62, "Swings", 0, 6),
-            (63, "Slides", 0, 5),
-            (64, "Grandstand", 0, 4),
-            (65, "Marshal 2", 0, 3),
-            (66, "Marshal 3", 0, 2),
-            (67, "Marshal 4", 0, 1),
-            
+            (61, "Rue du Portier",      0, 7),
+            (62, "La Costa Props.",     0, 6),
+            (63, "Villa Sassone",       0, 5),
+            (64, "Blvd. de Belgique",   0, 4),
+            (65, "Quai Albert 1er",     0, 3),
+            (66, "Yacht Club (West)",   0, 2),
+            (67, "Tête de Chien",       0, 1),
+
             # Spur: Columns 8 and 9, Rows 0 to 5
-            (68, "Chapel", 8, 3),
-            (69, "Monument", 8, 4),
-            (70, "Cafe", 8, 5),
-            (71, "Restaurant", 9, 5),
-            (72, "Fountain", 9, 4),
-            (73, "Hotel", 9, 3),
-            (74, "Garden", 9, 2),
-            (75, "Breeze Walk", 8, 2),
-            (76, "Ventilation", 8, 1),
-            (77, "Chicane", 9, 1),
-            (78, "Yacht", 9, 0),
-            (79, "Cafe Bar", 8, 0)
+            (68, "Digue Rainier III",      8, 3),
+            (69, "Port de Fontvieille",    8, 4),
+            (70, "Marina Fontvieille",     8, 5),
+            (71, "Rocher Princesse Gr.",   9, 5),
+            (72, "Parc Princesse Ant.",    9, 4),
+            (73, "Grimaldi Castle Hill",   9, 3),
+            (74, "Chemin des Serres",      9, 2),
+            (75, "Avenue Albert II",       8, 2),
+            (76, "Blvd. Rainier III",      8, 1),
+            (77, "Port Hercules W.",       9, 1),
+            (78, "Place du Palais",        9, 0),
+            (79, "Blvd. d'Italie",         8, 0)
         ]
         
         for nid, name, x, y in node_defs:
@@ -216,132 +216,137 @@ class GameManager:
         story_riddles = [
             {
                 "node": 3,
-                "q": "📋 BLACKBOARD — ROMAN NUMERAL ARITHMETIC: The teacher encoded a calculation in Roman numerals:\nXIV² ÷ (VII × II) = ?\n(XIV=14, VII=7, II=2). Calculate and enter the number.",
+                "q": "🎲 CASINO SQUARE — ROMAN NUMERAL ARITHMETIC: The famous Casino Square is at 55 metres elevation — the highest point of the circuit. Solve this encoded calculation:\nXIV² ÷ (VII × II) = ?\n(XIV=14, VII=7, II=2). Calculate and enter the number.",
                 "a": "14"
             },
             {
                 "node": 5,
-                "q": "📚 LIBRARY — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  F⬛  L⬛  I⬛  R🟨  T⬛\nAttempt 2:  D🟨  R🟩  I⬛  N🟩  K⬛\nAttempt 3:  B⬛  R🟩  A🟩  N🟩  D🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: It connects Monaco to the word Prix.",
+                "q": "🏨 MONTE-CARLO HOTEL — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  F⬛  L⬛  I⬛  R🟨  T⬛\nAttempt 2:  D🟨  R🟩  I⬛  N🟩  K⬛\nAttempt 3:  B⬛  R🟩  A🟩  N🟩  D🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: It connects Monaco to the word Prix.",
                 "a": "grand"
             },
             {
                 "node": 10,
-                "q": "🔐 TUNNEL IN — ATBASH CIPHER: In Atbash, each letter maps to its mirror position in the alphabet (A↔Z, B↔Y, C↔X, D↔W, E↔V, F↔U, G↔T, H↔S, I↔R, J↔Q, K↔P, L↔O, M↔N).\n\nDecode:  N  Z  M  Z  X  L\n\nWhere are Sam's memories set?",
+                "q": "🌿 FONTVIEILLE — ATBASH CIPHER: In Atbash, each letter maps to its mirror position in the alphabet (A↔Z, B↔Y, C↔X, D↔W, E↔V, F↔U, G↔T, H↔S, I↔R, J↔Q, K↔P, L↔O, M↔N).\n\nDecode:  N  Z  M  Z  X  L\n\nWhere are Sam's memories set?",
                 "a": "monaco"
             },
             {
                 "node": 11,
-                "q": "🚇 TUNNEL MID — THREE-PART RIDDLE:\n🕐 I have hands, but I cannot clap.\n👁️ I have a face, but no eyes.\n🏃 I run without legs and tick without moving.\n\nWhat am I? (one word)",
+                "q": "🌺 JARDIN EXOTIQUE — THREE-PART RIDDLE:\n🕐 I have hands, but I cannot clap.\n👁️ I have a face, but no eyes.\n🏃 I run without legs and tick without moving.\n\nWhat am I? (one word)",
                 "a": "clock"
             },
             {
                 "node": 15,
-                "q": "🔢 POOL ENTRY — MISSING MIDDLE TERM: Find X in the sequence:\n3,  X,  48,  192,  768\nEach term is multiplied by the same constant.\nWhat is X?",
+                "q": "🛤️ BLVD. DES MOULINS — MISSING MIDDLE TERM: Find X in the sequence:\n3,  X,  48,  192,  768\nEach term is multiplied by the same constant.\nWhat is X?",
                 "a": "12"
             },
             {
                 "node": 18,
-                "q": "🏁 RASCASSE IN — F1 LAP FRACTION: The Monaco Grand Prix runs for 78 laps total.\nSam's driver completes exactly HALF the race before a red flag stops it.\nAfter the restart, they complete exactly ONE THIRD of the total race distance.\nHow many laps in total have been completed?",
+                "q": "🏛️ GRIMALDI FORUM — F1 LAP FRACTION: The Monaco Grand Prix runs for 78 laps total.\nSam's driver completes exactly HALF the race before a red flag stops it.\nAfter the restart, they complete exactly ONE THIRD of the total race distance.\nHow many laps in total have been completed?",
                 "a": "65"
             },
             {
                 "node": 20,
-                "q": "⚗️ RASCASSE — RAIL FENCE CIPHER (2 rails): A school subject was encrypted by splitting letters across 2 rails:\nRail 1 (positions 0,2,4,6,8):  C  E  I  T  Y\nRail 2 (positions 1,3,5,7):    H  M  S  R\n\nWeave them back together alternating Rail1, Rail2 to decode the 9-letter school subject.",
+                "q": "🏖️ POINTE PAILLON — RAIL FENCE CIPHER (2 rails): A school subject was encrypted by splitting letters across 2 rails:\nRail 1 (positions 0,2,4,6,8):  C  E  I  T  Y\nRail 2 (positions 1,3,5,7):    H  M  S  R\n\nWeave them back together alternating Rail1, Rail2 to decode the 9-letter school subject.",
                 "a": "chemistry"
             },
             {
                 "node": 24,
-                "q": "🏆 PODIUM — SKIP ALPHABET BACKWARDS: The sequence skips every other letter going backwards from Z:\nZ,  X,  V,  T,  R,  ___\nWhat is the next letter?",
+                "q": "🌸 JAPANESE GARDEN — SKIP ALPHABET BACKWARDS: The sequence skips every other letter going backwards from Z:\nZ,  X,  V,  T,  R,  ___\nWhat is the next letter?",
                 "a": "p"
             },
             {
                 "node": 25,
-                "q": "🔢 GARAGES — SECTOR TIME MATHS: A driver's three sector times are 28.4s, 31.2s, and 19.4s.\nHis rival is exactly 0.3s FASTER in every single sector.\nWhat is the rival's TOTAL lap time? (answer as a decimal, e.g. 00.0)",
+                "q": "🌊 BLVD. DU LARVOTTO — SECTOR TIME MATHS: A driver's three sector times are 28.4s, 31.2s, and 19.4s.\nHis rival is exactly 0.3s FASTER in every single sector.\nWhat is the rival's TOTAL lap time? (answer as a decimal, e.g. 00.0)",
                 "a": "78.1"
             },
             {
                 "node": 30,
-                "q": "🔢 SANDBOX — COORDINATE ROTATION: You stand at grid point (2, 3).\nRotate 90° CLOCKWISE about the origin using the formula:\n(x, y)  →  (y, −x)\nWhat is your new position? Answer as 'X,Y' (e.g. 3,-2).",
+                "q": "🏊 PISCINE OLYMPIQUE — COORDINATE ROTATION: You stand at grid point (2, 3).\nRotate 90° CLOCKWISE about the origin using the formula:\n(x, y)  →  (y, −x)\nWhat is your new position? Answer as 'X,Y' (e.g. 3,-2).",
                 "a": "3,-2"
             },
             {
+                "node": 34,
+                "q": "🏎️ FAIRMONT HAIRPIN — THE SLOWEST CORNER IN F1: The Fairmont Hairpin (formerly Loews Hairpin) is the tightest corner in all of Formula 1. Cars crawl through at barely 50 km/h.\n\nIn the 2024 Monaco GP, drivers completed 78 laps. If a driver spent exactly 4 seconds navigating the hairpin on each lap, how many TOTAL seconds did they spend inside the Fairmont Hairpin across the entire race?\n(78 × 4 = ?)",
+                "a": "312"
+            },
+            {
                 "node": 35,
-                "q": "🔡 LAB SPUR — HIDDEN WORD: A 7-letter school subject is hiding as consecutive letters inside a longer word.\nFind it inside:  B I O S C I E N C E\n(Hint: it begins at the 4th letter of the word above)",
+                "q": "🌳 SAINT MARTIN GDNS. — HIDDEN WORD: A 7-letter school subject is hiding as consecutive letters inside a longer word.\nFind it inside:  B I O S C I E N C E\n(Hint: it begins at the 4th letter of the word above)",
                 "a": "science"
             },
             {
                 "node": 40,
-                "q": "💻 COMPUTER — HEXADECIMAL DECODE: Computers store values in hex. Convert to decimal:\n0x2F\n(Hint: 0x2F = 2 × 16 + 15 = ?)",
+                "q": "👑 PRINCE'S PALACE — HEXADECIMAL DECODE: Computers store values in hex. Convert to decimal:\n0x2F\n(Hint: 0x2F = 2 × 16 + 15 = ?)",
                 "a": "47"
             },
             {
-                "node": 45,
-                "q": "🎵 BACKSTAGE — NOTE-NUMBER CIPHER: Using the cipher A=1, B=2 ... Z=26, decode these 5 numbers to name a woodwind instrument:\n6  ·  12  ·  21  ·  20  ·  5\nWhat instrument is it?",
+                "node": 42,
+                "q": "🐠 MUSÉE OCÉANOGRAPHIQUE — NOTE-NUMBER CIPHER: Using the cipher A=1, B=2 ... Z=26, decode these 5 numbers to name a woodwind instrument:\n6  ·  12  ·  21  ·  20  ·  5\nWhat instrument is it?",
                 "a": "flute"
             },
             {
                 "node": 50,
-                "q": "🏫 PRINCIPAL'S OFFICE — MORSE CODE: Decode this Morse transmission:\n-.-. .-.. --- ... .\n(C=-.-.  L=.-..  O=---  S=...  E=.)\nWhat 5-letter word did you decode? Sam is this many steps away.",
+                "q": "🎨 AVENUE BEAUX-ARTS — MORSE CODE: Decode this Morse transmission:\n-.-. .-.. --- ... .\n(C=-.-.  L=.-..  O=---  S=...  E=.)\nWhat 5-letter word did you decode? Sam is this many steps away.",
                 "a": "close"
             },
             {
                 "node": 52,
-                "q": "👑 ARMCHAIR — MORSE CODE: The legendary king of Monaco, the crown jewel of motorsport, is encoded below. Decode the full name:\n.- -.-- .-. - --- -.  ...  . -. -. .-\nWho is he? (First name + Last name)",
+                "q": "⛪ SAINT DÉVOTE CHURCH — MORSE CODE: Saint Dévote is Corner 1 of the Monaco Grand Prix — the very first turn where legends are made. One driver won here a record 6 times and is forever known as the King of Monaco.\n\nHis name is encoded below. Decode it:\n.- -.-- .-. - --- -.  ...  . -. -. .-\nWho is he? (First name + Last name)",
                 "a": "ayrton senna"
             },
             {
                 "node": 53,
-                "q": "🏥 CLINIC — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  C⬛  R⬛  A⬛  N⬛  E⬛\nAttempt 2:  S🟨  H🟩  O🟩  U⬛  T🟩\nAttempt 3:  F⬛  R⬛  O🟩  S🟩  T🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: Sam is fading like one. Something that haunts a memory.",
+                "q": "🚉 GARE DE MONACO — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  C⬛  R⬛  A⬛  N⬛  E⬛\nAttempt 2:  S🟨  H🟩  O🟩  U⬛  T🟩\nAttempt 3:  F⬛  R⬛  O🟩  S🟩  T🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: Sam is fading like one. Something that haunts a memory.",
                 "a": "ghost"
             },
             {
                 "node": 55,
-                "q": "🔒 LOCKER SPUR — 3-DIGIT COMBINATION LOCK:\nClue 1: The three digits add up to 15.\nClue 2: The FIRST digit is the square root of 9.\nClue 3: The LAST digit equals the first digit plus 1.\nEnter the 3-digit code (no spaces, e.g. 123).",
+                "q": "🏖️ MC BAY RESORT — 3-DIGIT COMBINATION LOCK:\nClue 1: The three digits add up to 15.\nClue 2: The FIRST digit is the square root of 9.\nClue 3: The LAST digit equals the first digit plus 1.\nEnter the 3-digit code (no spaces, e.g. 123).",
                 "a": "384"
             },
             {
                 "node": 57,
-                "q": "🌿 GREENHOUSE — CHEMISTRY & COMMON NAME: Na is the symbol for Sodium. Cl is the symbol for Chlorine.\nWhen they combine they form the compound NaCl.\nWhat is the common everyday name for NaCl? (one word)",
+                "q": "🌿 TERRASSES FONTVIEILLE — CHEMISTRY & COMMON NAME: Na is the symbol for Sodium. Cl is the symbol for Chlorine.\nWhen they combine they form the compound NaCl.\nWhat is the common everyday name for NaCl? (one word)",
                 "a": "salt"
             },
             {
                 "node": 60,
-                "q": "🏎️ TRACK — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  T⬛  R🟩  A🟩  C⬛  K🟨\nAttempt 2:  G⬛  R🟩  A🟩  Z⬛  E🟩\nAttempt 3:  D⬛  R🟩  A🟩  K🟩  E🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: What every F1 driver hits hard at the end of a straight.",
+                "q": "🏁 PLACE D'ARMES S. — WORDLE (5 letters):\n🟩=correct spot | 🟨=wrong spot | ⬛=not in word\n\nAttempt 1:  T⬛  R🟩  A🟩  C⬛  K🟨\nAttempt 2:  G⬛  R🟩  A🟩  Z⬛  E🟩\nAttempt 3:  D⬛  R🟩  A🟩  K🟩  E🟩\nAttempt 4:  ?🟩  ?🟩  ?🟩  ?🟩  ?🟩  ← TYPE THE WORD!\n\n💡 Hint: What every F1 driver hits hard at the end of a straight.",
                 "a": "brake"
             },
             {
                 "node": 62,
-                "q": "📜 SWINGS — NUMBER-LETTER CIPHER (A=1 ... Z=26): Decode this number sequence:\n8  ·  9  ·  19  ·  20  ·  15  ·  18  ·  25\nWhat 7-letter school subject does it spell?",
+                "q": "🏠 LA COSTA PROPS. — NUMBER-LETTER CIPHER (A=1 ... Z=26): Decode this number sequence:\n8  ·  9  ·  19  ·  20  ·  15  ·  18  ·  25\nWhat 7-letter school subject does it spell?",
                 "a": "history"
             },
             {
                 "node": 65,
-                "q": "🌍 MARSHAL 2 — NATO PHONETIC ALPHABET: Take only the FIRST letter of each NATO code word below:\nPAPA — ALFA — CHARLIE — INDIA — FOXTROT — INDIA — CHARLIE\nWhat 7-letter word (the world's largest ocean) do the first letters spell?",
+                "q": "⚓ QUAI ALBERT 1ER — NATO PHONETIC ALPHABET: Take only the FIRST letter of each NATO code word below:\nPAPA — ALFA — CHARLIE — INDIA — FOXTROT — INDIA — CHARLIE\nWhat 7-letter word (the world's largest ocean) do the first letters spell?",
                 "a": "pacific"
             },
             {
                 "node": 66,
-                "q": "🚦 MARSHAL 3 — BINARY → LETTER CIPHER: Convert each 5-bit binary number to decimal, then use A=1...Z=26 to find each letter:\n10011  →  ?  →  ?\n00001  →  ?  →  ?\n01101  →  ?  →  ?\nThe 3 letters spell the name of the person you are here to find!",
+                "q": "⛵ YACHT CLUB (WEST) — BINARY → LETTER CIPHER: Convert each 5-bit binary number to decimal, then use A=1...Z=26 to find each letter:\n10011  →  ?  →  ?\n00001  →  ?  →  ?\n01101  →  ?  →  ?\nThe 3 letters spell the name of the person you are here to find!",
                 "a": "sam"
             },
             {
                 "node": 70,
-                "q": "☕ CAFE — LOGIC SEATING PUZZLE: Five people sit in a row.\nClue 1: Amy sits 1st, Dan sits 5th (last).\nClue 2: Ben sits 2nd.\nClue 3: Eva sits directly between Ben and Cal.\nWho sits in the MIDDLE (3rd seat)? (one name)",
+                "q": "⚓ MARINA FONTVIEILLE — LOGIC SEATING PUZZLE: Five people sit in a row.\nClue 1: Amy sits 1st, Dan sits 5th (last).\nClue 2: Ben sits 2nd.\nClue 3: Eva sits directly between Ben and Cal.\nWho sits in the MIDDLE (3rd seat)? (one name)",
                 "a": "eva"
             },
             {
                 "node": 72,
-                "q": "⛲ FOUNTAIN — INTERLEAVED SEQUENCES: Two sequences are woven together alternately:\nSquares:  1,  4,  9,  16,  25 ...\nEvens:    2,  4,  6,   8,  10 ...\nMerged sequence: 1, 2, 4, 4, 9, 6, 16, 8, ___\nWhat is the next number?",
+                "q": "🌿 PARC PRINCESSE ANT. — INTERLEAVED SEQUENCES: Two sequences are woven together alternately:\nSquares:  1,  4,  9,  16,  25 ...\nEvens:    2,  4,  6,   8,  10 ...\nMerged sequence: 1, 2, 4, 4, 9, 6, 16, 8, ___\nWhat is the next number?",
                 "a": "25"
             },
             {
                 "node": 75,
-                "q": "💨 BREEZE WALK — WORD CHAIN: Change exactly ONE letter at each step to make a new valid word:\nCARE  →  CORE  →  GORE  →  ?ONE\nThe final word means 'departed' or 'no longer here'.\nWhat is it?",
+                "q": "🛣️ AVENUE ALBERT II — WORD CHAIN: Change exactly ONE letter at each step to make a new valid word:\nCARE  →  CORE  →  GORE  →  ?ONE\nThe final word means 'departed' or 'no longer here'.\nWhat is it?",
                 "a": "gone"
             },
             {
                 "node": 78,
-                "q": "⚓ YACHT — KNIGHT'S TOUR: A chess knight starts at square A1.\nMove 1: 2 RIGHT + 1 UP  →  C2\nMove 2: 1 RIGHT + 2 UP  →  D4\nMove 3: 1 LEFT  + 2 UP  →  ???\nWhat square does the knight land on? (answer in chess notation, e.g. c6)",
+                "q": "🏰 PLACE DU PALAIS — KNIGHT'S TOUR: A chess knight starts at square A1.\nMove 1: 2 RIGHT + 1 UP  →  C2\nMove 2: 1 RIGHT + 2 UP  →  D4\nMove 3: 1 LEFT  + 2 UP  →  ???\nWhat square does the knight land on? (answer in chess notation, e.g. c6)",
                 "a": "c6"
             }
         ]
