@@ -14,7 +14,6 @@ const samStaticChk = document.getElementById('sam_static');
 const samIntervalInput = document.getElementById('sam_interval');
 const samPathInput = document.getElementById('sam_path_input');
 const recordPathChk = document.getElementById('chk-record-path');
-const btnStartGame = document.getElementById('btn-start-game');
 const btnForceSamMove = document.getElementById('btn-force-sam-move');
 const btnResetGame = document.getElementById('btn-reset-game');
 
@@ -164,17 +163,14 @@ function handleStateUpdate(data) {
     if (data.game_status === 'setup') {
         statusBadge.textContent = 'SETUP MODE';
         statusBadge.className = 'game-badge badge-setup';
-        btnStartGame.disabled = false;
         enableConfigControls(true);
     } else if (data.game_status === 'active') {
         statusBadge.textContent = 'MISSION ACTIVE';
         statusBadge.className = 'game-badge badge-active';
-        btnStartGame.disabled = true;
         enableConfigControls(false);
     } else if (data.game_status === 'ended') {
         statusBadge.textContent = 'MISSION ENDED';
         statusBadge.className = 'game-badge badge-ended';
-        btnStartGame.disabled = true;
         enableConfigControls(false);
     }
     
@@ -582,19 +578,6 @@ recordPathChk.addEventListener('change', (e) => {
 });
 
 // Game actions events
-btnStartGame.addEventListener('click', async () => {
-    try {
-        const response = await fetch('/api/gm/start', { method: 'POST' });
-        const result = await response.json();
-        if (response.ok && result.success) {
-            console.log('Operation launched!');
-        } else {
-            alert(result.message || 'Cannot start operation.');
-        }
-    } catch (err) {
-        console.error(err);
-    }
-});
 
 btnForceSamMove.addEventListener('click', () => {
     if (ws && ws.readyState === WebSocket.OPEN) {
