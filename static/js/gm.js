@@ -630,7 +630,12 @@ fetchState();
 connectWebSocket();
 // Periodic timer tick update for countdown display in title box
 setInterval(() => {
-    if (currentGameState) {
-        handleStateUpdate(currentGameState);
+    if (currentGameState && currentGameState.game_status === 'active' && !currentGameState.sam_static) {
+        currentGameState.seconds_since_sam_move = (currentGameState.seconds_since_sam_move || 0) + 1;
+        
+        let text = `SAM TARGET: ${currentGameState.sam_coords.name} (X:${currentGameState.sam_coords.x}, Y:${currentGameState.sam_coords.y})`;
+        const timeLeft = Math.max(0, currentGameState.sam_movement_interval - currentGameState.seconds_since_sam_move);
+        text += ` [Move in: ${timeLeft}s]`;
+        samCoordsBox.textContent = text;
     }
 }, 1000);

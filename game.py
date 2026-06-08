@@ -772,6 +772,7 @@ class GameManager:
             },
             "sam_path": self.sam_path,
             "sam_movement_interval": self.sam_movement_interval,
+            "seconds_since_sam_move": int(time.time() - self.last_sam_move_time),
             "elapsed_seconds": elapsed_seconds,
             "teams": teams_data,
             "map_nodes": map_data,
