@@ -126,7 +126,7 @@ function handleStateUpdate(data) {
         updateTimerDisplay(elapsedSeconds);
         
         // Start or sync local ticking interval if active
-        if (data.game_status === 'active') {
+        if (data.game_status === 'active' && data.started) {
             if (!timerIntervalId) {
                 timerIntervalId = setInterval(() => {
                     elapsedSeconds += 1;
@@ -298,7 +298,7 @@ function renderMap(data) {
         g.appendChild(title);
         
         // Add click events to move if adjacent
-        if (isAdjacent && !data.is_eliminated && !data.found_sam && data.game_status === 'active') {
+        if (isAdjacent && !data.is_eliminated && !data.found_sam && data.game_status === 'active' && data.started) {
             g.addEventListener('click', () => handleMove(node.id));
         }
         
@@ -354,7 +354,7 @@ function drawLink(coordsA, coordsB, isDiagonal, idA, idB, data) {
 
 // Move Team via API call
 async function handleMove(nodeId) {
-    if (!currentGameState || currentGameState.game_status !== 'active') return;
+    if (!currentGameState || currentGameState.game_status !== 'active' || !currentGameState.started) return;
     
     try {
         const response = await fetch('/api/team/move', {

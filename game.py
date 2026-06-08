@@ -441,18 +441,6 @@ class GameManager:
             self.start_time = time.time()
             self.last_sam_move_time = time.time()
             self.sam_current_node = self.sam_start_node
-            
-        # Reset teams join/start timers for all teams that haven't started yet
-        start_time = time.time()
-        for team in self.teams.values():
-            if not team.get("started", False):
-                team["started"] = True
-                team["start_time"] = start_time
-                team["join_time"] = start_time
-                team["tickets"] = 50
-                team["is_eliminated"] = False
-                team["found_sam"] = False
-                team["moves_since_last_intel"] = 0
 
     def handle_team_win(self, team_name: str):
         team = self.teams.get(team_name)

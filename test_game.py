@@ -48,6 +48,7 @@ class TestFindSamGame(unittest.TestCase):
         
         # Start game
         self.game.start_game()
+        self.game.start_team("Alpha")
         self.assertEqual(self.game.game_status, "active")
 
         # Find a non-adjacent node
@@ -71,6 +72,7 @@ class TestFindSamGame(unittest.TestCase):
         # Force team position adjacent to Sam (node 52 connects to 53)
         self.game.teams["Alpha"]["current_node"] = 52
         self.game.start_game()
+        self.game.start_team("Alpha")
 
         # Alpha moves from 52 to 53 - should fail due to clearance
         res = self.game.move_team("Alpha", 53)
@@ -95,6 +97,7 @@ class TestFindSamGame(unittest.TestCase):
         
         # Load puzzle on node 5 (already loaded by setup_story_puzzles)
         self.game.start_game()
+        self.game.start_team("Alpha")
 
         # Move to node 5
         res = self.game.move_team("Alpha", 5)
