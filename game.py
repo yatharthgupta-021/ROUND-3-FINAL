@@ -360,7 +360,7 @@ class GameManager:
             }
 
     def add_team(self, team_name: str, start_node: int = -1) -> bool:
-        if self.game_status != "setup":
+        if self.game_status == "ended":
             return False
         if team_name in self.teams:
             return False
@@ -395,7 +395,9 @@ class GameManager:
             "is_eliminated": False,
             "found_sam": False,
             "moves_since_last_intel": 0,
-            "active_puzzle_node": None
+            "active_puzzle_node": None,
+            "started": False,
+            "start_time": 0.0
         }
         
         # Provide starting location info
@@ -410,29 +412,55 @@ class GameManager:
         if team_name in self.teams:
             del self.teams[team_name]
 
+    def start_team(self, team_name: str) -> bool:
+        team = self.teams.get(team_name)
+        if not team:
+            return False
+        
+        # If the global game is in setup, transition it to active
+        if self.game_status == "setup":
+            self.game_status = "active"
+            self.start_time = time.time()
+            self.last_sam_move_time = time.time()
+            self.sam_current_node = self.sam_start_node
+            
+        if not team.get("started", False):
+            team["started"] = True
+            team["start_time"] = time.time()
+            team["join_time"] = team["start_time"]
+            team["tickets"] = 50
+            team["is_eliminated"] = False
+            team["found_sam"] = False
+            team["moves_since_last_intel"] = 0
+            return True
+        return False
+
     def start_game(self):
         if self.game_status == "setup":
             self.game_status = "active"
             self.start_time = time.time()
             self.last_sam_move_time = time.time()
+            self.sam_current_node = self.sam_start_node
             
-            # Reset teams join/start timers
-            start_time = time.time()
-            for team in self.teams.values():
+        # Reset teams join/start timers for all teams that haven't started yet
+        start_time = time.time()
+        for team in self.teams.values():
+            if not team.get("started", False):
+                team["started"] = True
+                team["start_time"] = start_time
                 team["join_time"] = start_time
                 team["tickets"] = 50
                 team["is_eliminated"] = False
                 team["found_sam"] = False
                 team["moves_since_last_intel"] = 0
-            
-            self.sam_current_node = self.sam_start_node
 
     def handle_team_win(self, team_name: str):
         team = self.teams.get(team_name)
         if team and not team["found_sam"] and not team["is_eliminated"]:
             team["found_sam"] = True
             team["finish_time"] = time.time()
-            duration = team["finish_time"] - self.start_time
+            team_start = team.get("start_time", 0.0) or self.start_time
+            duration = team["finish_time"] - team_start
             
             if not any(w["team_name"] == team_name for w in self.winners):
                 self.winners.append({
@@ -455,6 +483,9 @@ class GameManager:
         team = self.teams.get(team_name)
         if not team:
             return {"success": False, "message": "Team not found"}
+            
+        if not team.get("started", False):
+            return {"success": False, "message": "❌ SECURITY LOCK: You must click 'Start Mission' to begin."}
             
         if team["is_eliminated"] or team["found_sam"]:
             return {"success": False, "message": "Team is inactive or has already finished"}
@@ -656,9 +687,11 @@ class GameManager:
         winner_announced = len(self.winners) >= 3 or (total_teams > 0 and finished_or_eliminated == total_teams and len(self.winners) > 0)
         
         if team["found_sam"] or team["is_eliminated"]:
-            elapsed_seconds = int(team["finish_time"] - self.start_time)
+            team_start = team.get("start_time", 0.0) or self.start_time
+            elapsed_seconds = int(team["finish_time"] - team_start)
         else:
-            elapsed_seconds = int(time.time() - self.start_time) if self.game_status == "active" else 0
+            team_start = team.get("start_time", 0.0)
+            elapsed_seconds = int(time.time() - team_start) if team_start > 0.0 else 0
             
         links = []
         for u in self.adj_list:
@@ -691,12 +724,14 @@ class GameManager:
             "elapsed_seconds": elapsed_seconds,
             "map_nodes": map_data,
             "links": links,
-            "diagonal_nodes_allowed": self.diagonal_allowed
+            "diagonal_nodes_allowed": self.diagonal_allowed,
+            "started": team.get("started", False)
         }
  
     def get_gm_view_data(self, connected_teams: List[str] = None) -> Dict[str, Any]:
         teams_data = {}
         for name, data in self.teams.items():
+            team_start = data.get("start_time", 0.0) or self.start_time
             teams_data[name] = {
                 "current_node": data["current_node"],
                 "history": data["history"],
@@ -705,8 +740,9 @@ class GameManager:
                 "found_sam": data["found_sam"],
                 "puzzles_solved_count": len(data["puzzles_solved"]),
                 "last_active": data.get("finish_time", 0.0) or data.get("join_time", 0.0),
-                "elapsed_seconds": int((data.get("finish_time", 0.0) or time.time()) - self.start_time) if self.game_status == "active" else 0,
-                "is_online": (connected_teams is not None and name in connected_teams)
+                "elapsed_seconds": int((data.get("finish_time", 0.0) or time.time()) - team_start) if data.get("started", False) else 0,
+                "is_online": (connected_teams is not None and name in connected_teams),
+                "started": data.get("started", False)
             }
             
         map_data = []

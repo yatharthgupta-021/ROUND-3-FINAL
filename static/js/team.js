@@ -142,17 +142,17 @@ function handleStateUpdate(data) {
     }
     
     // Update Badge Status
-    if (data.game_status === 'setup') {
+    if (data.game_status === 'ended') {
+        statusBadge.textContent = 'MISSION COMPLETED';
+        statusBadge.className = 'game-badge badge-ended';
+        lobbyOverlay.style.display = 'none';
+    } else if (!data.started) {
         statusBadge.textContent = 'SETUP LOBBY';
         statusBadge.className = 'game-badge badge-setup';
         lobbyOverlay.style.display = 'flex';
-    } else if (data.game_status === 'active') {
+    } else {
         statusBadge.textContent = 'MISSION RUNNING';
         statusBadge.className = 'game-badge badge-active';
-        lobbyOverlay.style.display = 'none';
-    } else if (data.game_status === 'ended') {
-        statusBadge.textContent = 'MISSION COMPLETED';
-        statusBadge.className = 'game-badge badge-ended';
         lobbyOverlay.style.display = 'none';
     }
     
@@ -527,6 +527,30 @@ if (btnCircuitMap && mapPopup) {
     btnCloseMapPopup.addEventListener('click', () => mapPopup.classList.remove('active'));
     mapPopup.addEventListener('click', e => {
         if (e.target === mapPopup) mapPopup.classList.remove('active');
+    });
+}
+
+// ── Start Mission Button ──────────────────────────────────────────────────────
+const btnStartMission = document.getElementById('btn-start-mission');
+
+if (btnStartMission) {
+    btnStartMission.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/api/team/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ team_name: teamName })
+            });
+            if (response.ok) {
+                console.log('Mission started successfully');
+            } else {
+                const errorData = await response.json();
+                alert(errorData.detail || 'Failed to start mission.');
+            }
+        } catch (err) {
+            console.error('Error starting mission:', err);
+            alert('Connection error. Please try again.');
+        }
     });
 }
 

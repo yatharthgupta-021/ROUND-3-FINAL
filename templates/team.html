@@ -63,11 +63,11 @@
                 </div>
 
                 <!-- Lobby Overlay (Pre-game) -->
-                <div id="lobby-overlay" class="glass-panel" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(5,5,8,0.92);border:none;text-align:center;z-index:100;padding:40px;overflow-y:auto;">
-                    <h2 style="color:var(--neon-blue);margin-bottom:8px;font-size:28px;text-shadow:var(--shadow-glow-blue);">WAITING FOR MISSION LAUNCH</h2>
-                    <p style="color:var(--text-secondary);max-width:500px;line-height:1.6;margin-bottom:20px;font-size:14px;">The Game Master is currently configuring the system. Read the Mission Rules carefully before launch:</p>
-                    <div class="glass-panel" style="max-width:500px;text-align:left;padding:20px;margin-bottom:20px;border:1px solid rgba(0,240,255,0.2);background:rgba(0,0,0,0.4);">
-                        <h3 style="color:var(--f1-yellow);font-size:15px;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;">📖 Mission Rule Book</h3>
+                <div id="lobby-overlay" class="glass-panel" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(5,5,8,0.95);border:none;text-align:center;z-index:100;padding:40px;overflow-y:auto;">
+                    <h2 style="color:var(--neon-blue);margin-bottom:8px;font-size:28px;text-shadow:var(--shadow-glow-blue);text-transform:uppercase;">Mission Briefing</h2>
+                    <p style="color:var(--text-secondary);max-width:500px;line-height:1.6;margin-bottom:20px;font-size:14px;">Read the Mission Rule Book carefully. Deploy your team into the memory-lane grid when you are ready to begin:</p>
+                    <div class="glass-panel" style="max-width:500px;text-align:left;padding:20px;margin-bottom:25px;border:1px solid rgba(0,240,255,0.25);background:rgba(0,0,0,0.5);box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);">
+                        <h3 style="color:var(--f1-yellow);font-size:15px;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid rgba(255,199,0,0.2);padding-bottom:6px;">📖 Mission Rule Book</h3>
                         <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.6;list-style-type:square;">
                             <li style="margin-bottom:6px;"><strong>Objective</strong>: Find Sam and move onto his node to rescue him.</li>
                             <li style="margin-bottom:6px;"><strong>Movement</strong>: Click highlighted adjacent circles to move. Each move costs <strong>1 Ticket</strong> (starts at 50).</li>
@@ -76,9 +76,8 @@
                             <li style="margin-bottom:6px;"><strong>Clearance Level 3</strong>: You must solve enough riddles to gain clearance before reaching Sam.</li>
                         </ul>
                     </div>
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div style="border:2px solid var(--neon-blue);border-top:2px solid transparent;border-radius:50%;width:24px;height:24px;animation:spin 1s linear infinite;"></div>
-                        <span style="color:var(--neon-blue);font-size:13px;font-weight:bold;letter-spacing:0.5px;text-transform:uppercase;">Awaiting GM Authorization...</span>
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+                        <button id="btn-start-mission" class="btn btn-primary" style="width:auto;padding:16px 36px;font-size:16px;font-weight:bold;letter-spacing:1px;background:linear-gradient(135deg, var(--neon-blue), var(--neon-purple));border:1px solid var(--neon-blue);box-shadow:var(--shadow-glow-blue);">🚀 START MISSION</button>
                     </div>
                 </div>
             </div>

@@ -162,6 +162,9 @@ class SolveModel(BaseModel):
 class BypassModel(BaseModel):
     team_name: str
 
+class StartTeamModel(BaseModel):
+    team_name: str
+
 # HTML Routes
 @app.get("/", response_class=HTMLResponse)
 async def get_index(request: Request):
@@ -194,8 +197,8 @@ async def join_team(team_name: str = Form(...), start_node: int = Form(-1)):
     if not team_name:
         return JSONResponse({"success": False, "message": "Invalid team name"}, status_code=400)
     
-    if game_manager.game_status != "setup":
-        return JSONResponse({"success": False, "message": "Game has already started"}, status_code=400)
+    if game_manager.game_status == "ended":
+        return JSONResponse({"success": False, "message": "Game has already ended"}, status_code=400)
         
     success = game_manager.add_team(team_name, start_node)
     if success:
@@ -263,6 +266,16 @@ async def bypass_puzzle(bypass: BypassModel):
     game_manager.save_state(db_file)
     await update_all_clients()
     return {"success": True}
+
+@app.post("/api/team/start")
+async def start_team_mission(payload: StartTeamModel):
+    success = game_manager.start_team(payload.team_name)
+    if success:
+        game_manager.save_state(db_file)
+        await update_all_clients()
+        return {"success": True}
+    else:
+        raise HTTPException(status_code=400, detail="Unable to start mission or team not found")
 
 # WebSockets
 @app.websocket("/ws/gm")

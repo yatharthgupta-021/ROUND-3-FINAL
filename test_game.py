@@ -10,7 +10,7 @@ class TestFindSamGame(unittest.TestCase):
         self.assertEqual(len(self.game.nodes), 80)
         self.assertEqual(self.game.nodes[0]["x"], 0)
         self.assertEqual(self.game.nodes[0]["y"], 0)
-        self.assertEqual(self.game.nodes[45]["name"], "Backstage")
+        self.assertEqual(self.game.nodes[45]["name"], "Côtes d'Azur W.")
 
     def test_adjacent_nodes(self):
         # Node 15 is Piscine Swimming Pool Entry at x=8, y=1.
@@ -108,7 +108,7 @@ class TestFindSamGame(unittest.TestCase):
         self.assertEqual(self.game.teams["Alpha"]["active_puzzle_node"], 5)
 
         # Solve with correct answer
-        solve_res = self.game.solve_puzzle("Alpha", "potter")
+        solve_res = self.game.solve_puzzle("Alpha", "grand")
         self.assertTrue(solve_res["success"])
         self.assertIn(5, self.game.teams["Alpha"]["puzzles_solved"])
         self.assertIsNone(self.game.teams["Alpha"]["active_puzzle_node"])
@@ -117,6 +117,43 @@ class TestFindSamGame(unittest.TestCase):
         self.assertEqual(len(intel_clues), 3)
         for clue in intel_clues:
             self.assertIn("Decrypted Intel", clue["text"])
+
+    def test_team_specific_start(self):
+        # Add team and check initial states
+        self.assertTrue(self.game.add_team("Beta"))
+        team = self.game.teams["Beta"]
+        self.assertFalse(team["started"])
+        self.assertEqual(team["start_time"], 0.0)
+        
+        # Make a move node that is adjacent
+        start_node = team["current_node"]
+        adj = self.game.get_adjacent_nodes(start_node)
+        target = adj[0]
+        
+        # Try to move before starting when game is active - should fail
+        self.game.game_status = "active"
+        move_res = self.game.move_team("Beta", target)
+        self.assertFalse(move_res["success"])
+        self.assertIn("must click 'Start Mission'", move_res["message"])
+        
+        # Reset game status to setup to test start_team transitioning it to active
+        self.game.game_status = "setup"
+        
+        # Start team
+        self.assertTrue(self.game.start_team("Beta"))
+        self.assertTrue(team["started"])
+        self.assertGreater(team["start_time"], 0.0)
+        self.assertEqual(self.game.game_status, "active")
+        
+        # Try to move after starting - should succeed
+        move_res = self.game.move_team("Beta", target)
+        self.assertTrue(move_res["success"])
+        self.assertEqual(team["current_node"], target)
+        
+        # Test team view data started flag and elapsed seconds calculation
+        view_data = self.game.get_team_view_data("Beta")
+        self.assertTrue(view_data["started"])
+        self.assertGreaterEqual(view_data["elapsed_seconds"], 0)
 
 if __name__ == "__main__":
     unittest.main()
