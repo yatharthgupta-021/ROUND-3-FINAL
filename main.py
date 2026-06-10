@@ -3,7 +3,7 @@ import time
 import asyncio
 import logging
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Form, HTTPException
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
@@ -166,6 +166,10 @@ class StartTeamModel(BaseModel):
     team_name: str
 
 # HTML Routes
+@app.get("/robots.txt", response_class=PlainTextResponse)
+async def get_robots_txt():
+    return PlainTextResponse("User-agent: *\nDisallow: /")
+
 @app.get("/", response_class=HTMLResponse)
 async def get_index(request: Request):
     return templates.TemplateResponse(request=request, name="index.html")
