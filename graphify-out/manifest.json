@@ -1,0 +1,82 @@
+{
+  "game.py": {
+    "mtime": 1781002449.0627725,
+    "ast_hash": "384fbe28198acb7436442cb53a7c1f52",
+    "semantic_hash": ""
+  },
+  "main.py": {
+    "mtime": 1781002449.072417,
+    "ast_hash": "c04711f62e13b44e00bd973f38467483",
+    "semantic_hash": ""
+  },
+  "static/js/gm.js": {
+    "mtime": 1781002449.094584,
+    "ast_hash": "a5402a2a345206bc81faf4e8cdc69d62",
+    "semantic_hash": ""
+  },
+  "static/js/team.js": {
+    "mtime": 1781002449.0992885,
+    "ast_hash": "adfd6efd1b488d9121327d94a3dab06a",
+    "semantic_hash": ""
+  },
+  "test_game.py": {
+    "mtime": 1781002449.1065419,
+    "ast_hash": "c39c32673ddabf4e02679d7f2cd35791",
+    "semantic_hash": ""
+  },
+  "tests/test_graph.py": {
+    "mtime": 1781002449.1105447,
+    "ast_hash": "71a38c2d64856e03b3c1e567e1d56479",
+    "semantic_hash": ""
+  },
+  "tests/test_layout.py": {
+    "mtime": 1781002449.112734,
+    "ast_hash": "3ce4bc729b844e77651855fa99249488",
+    "semantic_hash": ""
+  },
+  "tests/test_serpentine.py": {
+    "mtime": 1781002449.1157055,
+    "ast_hash": "7a0b37f725744247d228398aaf1c7875",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1781003054.808798,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1781003054.8160734,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1781002449.0562282,
+    "ast_hash": "8c6cc0afc84d7075ecb9cd60d6e3911c",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1781002449.072417,
+    "ast_hash": "fe47a3b817b427eaf3d96bc68436f9c6",
+    "semantic_hash": ""
+  },
+  "templates/gm.html": {
+    "mtime": 1781002449.099726,
+    "ast_hash": "8fbde8f31898d46a99f131995b1381bd",
+    "semantic_hash": ""
+  },
+  "templates/index.html": {
+    "mtime": 1781002449.099726,
+    "ast_hash": "6945ab2d677d8bf3df9666ef4d040c85",
+    "semantic_hash": ""
+  },
+  "templates/team.html": {
+    "mtime": 1781002449.105574,
+    "ast_hash": "904c233d56277ae3c5b1f2437e336558",
+    "semantic_hash": ""
+  },
+  "static/assets/circuit_de_monaco.jpg": {
+    "mtime": 1781002449.087813,
+    "ast_hash": "17b844ae6a8f83c37bb2dd922f2c6fe6",
+    "semantic_hash": ""
+  }
+}
