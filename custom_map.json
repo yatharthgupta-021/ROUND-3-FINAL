@@ -1,0 +1,1170 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "Auditorium Rainier III",
+      "x": 22,
+      "y": 11
+    },
+    {
+      "id": 1,
+      "name": "Monaco Le Grand Tour Stop",
+      "x": 25,
+      "y": 10
+    },
+    {
+      "id": 2,
+      "name": "Casino de Monte-Carlo",
+      "x": 28,
+      "y": 11
+    },
+    {
+      "id": 3,
+      "name": "Monsen Cathedral",
+      "x": 24,
+      "y": 13
+    },
+    {
+      "id": 4,
+      "name": "Botanical Centre de Jardin Exotique",
+      "x": 27,
+      "y": 13
+    },
+    {
+      "id": 5,
+      "name": "Chapiteau Espace Fontvieille",
+      "x": 33,
+      "y": 10
+    },
+    {
+      "id": 6,
+      "name": "Open Air Cinemas",
+      "x": 21,
+      "y": 15
+    },
+    {
+      "id": 7,
+      "name": "Cinema des Beaux-Arts",
+      "x": 13,
+      "y": 17
+    },
+    {
+      "id": 8,
+      "name": "Prince's Car Collection",
+      "x": 9,
+      "y": 19
+    },
+    {
+      "id": 9,
+      "name": "Sainte-Devote Church",
+      "x": 30,
+      "y": 15
+    },
+    {
+      "id": 10,
+      "name": "Espace Leo Ferri",
+      "x": 31,
+      "y": 18
+    },
+    {
+      "id": 11,
+      "name": "Francis Bacon MB Art Foundation",
+      "x": 34,
+      "y": 22
+    },
+    {
+      "id": 12,
+      "name": "Grimaldi Forum Monaco",
+      "x": 38,
+      "y": 17
+    },
+    {
+      "id": 13,
+      "name": "Oceanographical Institute of Monaco",
+      "x": 40,
+      "y": 25
+    },
+    {
+      "id": 14,
+      "name": "Rainier III Seaelogical Garden",
+      "x": 40,
+      "y": 20
+    },
+    {
+      "id": 15,
+      "name": "Jardin Exotique",
+      "x": 42,
+      "y": 23
+    },
+    {
+      "id": 16,
+      "name": "Jardin Exotique (2)",
+      "x": 17,
+      "y": 22
+    },
+    {
+      "id": 17,
+      "name": "Museum of Prehistoric Anthropology",
+      "x": 20,
+      "y": 25
+    },
+    {
+      "id": 18,
+      "name": "Museum of Old Monaco",
+      "x": 33,
+      "y": 8
+    },
+    {
+      "id": 19,
+      "name": "NMNM Villa Paloma",
+      "x": 36,
+      "y": 13
+    },
+    {
+      "id": 20,
+      "name": "NMNM Villa Sauber",
+      "x": 57,
+      "y": 19
+    },
+    {
+      "id": 21,
+      "name": "Audiovisual Museum",
+      "x": 55,
+      "y": 28
+    },
+    {
+      "id": 22,
+      "name": "Museum of Stamps and Coins",
+      "x": 51,
+      "y": 22
+    },
+    {
+      "id": 23,
+      "name": "Monaco Tourist Office",
+      "x": 48,
+      "y": 31
+    },
+    {
+      "id": 24,
+      "name": "Tourist Office Railway Station",
+      "x": 41,
+      "y": 11
+    },
+    {
+      "id": 25,
+      "name": "Prince's Palace",
+      "x": 54,
+      "y": 26
+    },
+    {
+      "id": 26,
+      "name": "Princess Grace Irish Library",
+      "x": 7,
+      "y": 30
+    },
+    {
+      "id": 27,
+      "name": "Princess Grace Rose Garden",
+      "x": 10,
+      "y": 33
+    },
+    {
+      "id": 28,
+      "name": "Sporting Monte-Carlo",
+      "x": 49,
+      "y": 28
+    },
+    {
+      "id": 29,
+      "name": "Quasi Anteinet I Exhibition Hall",
+      "x": 50,
+      "y": 10
+    },
+    {
+      "id": 30,
+      "name": "Stade Louis II",
+      "x": 48,
+      "y": 15
+    },
+    {
+      "id": 31,
+      "name": "Stade Louis II (2)",
+      "x": 20,
+      "y": 9
+    },
+    {
+      "id": 32,
+      "name": "Fort Antoine Theatre",
+      "x": 19,
+      "y": 12
+    },
+    {
+      "id": 33,
+      "name": "Princess Grace Theatre",
+      "x": 23,
+      "y": 27
+    },
+    {
+      "id": 34,
+      "name": "Theatre des Varietes",
+      "x": 18,
+      "y": 7
+    },
+    {
+      "id": 35,
+      "name": "Monaco Tourist Train",
+      "x": 24,
+      "y": 14
+    },
+    {
+      "id": 36,
+      "name": "Monte-Carlo Country Club",
+      "x": 26,
+      "y": 6
+    },
+    {
+      "id": 37,
+      "name": "Monte-Carlo Golf Club",
+      "x": 22,
+      "y": 20
+    },
+    {
+      "id": 38,
+      "name": "Princess Antoinette Mini Golf",
+      "x": 36,
+      "y": 25
+    },
+    {
+      "id": 39,
+      "name": "Hercole Fitness Club",
+      "x": 25,
+      "y": 21
+    },
+    {
+      "id": 40,
+      "name": "Stade Louis II Sports Hall",
+      "x": 35,
+      "y": 28
+    },
+    {
+      "id": 41,
+      "name": "Tennis Club de Monaco",
+      "x": 27,
+      "y": 7
+    },
+    {
+      "id": 42,
+      "name": "Yacht Club de Monaco",
+      "x": 7,
+      "y": 24
+    },
+    {
+      "id": 43,
+      "name": "MenaMore Statlee",
+      "x": 28,
+      "y": 32
+    },
+    {
+      "id": 44,
+      "name": "Monaco Grand Prix Route",
+      "x": 16,
+      "y": 13
+    },
+    {
+      "id": 45,
+      "name": "Automobile Club de Monaco Store",
+      "x": 28,
+      "y": 17
+    },
+    {
+      "id": 46,
+      "name": "AS Monaco Store",
+      "x": 17,
+      "y": 13
+    },
+    {
+      "id": 47,
+      "name": "Fisherman's Cove",
+      "x": 15,
+      "y": 20
+    },
+    {
+      "id": 48,
+      "name": "Eclee Albert II Olympic Pool",
+      "x": 13,
+      "y": 27
+    },
+    {
+      "id": 49,
+      "name": "Saint Charles Peal",
+      "x": 16,
+      "y": 18
+    },
+    {
+      "id": 50,
+      "name": "Larvetto Beach",
+      "x": 30,
+      "y": 5
+    },
+    {
+      "id": 51,
+      "name": "Thermes Marins Monte-Carlo",
+      "x": 44,
+      "y": 17
+    },
+    {
+      "id": 52,
+      "name": "Soinier III Nautical Stadium",
+      "x": 30,
+      "y": 12
+    },
+    {
+      "id": 53,
+      "name": "Salarium",
+      "x": 7.745428992567884,
+      "y": 10.22126701440704
+    },
+    {
+      "id": 54,
+      "name": "Port de Fontvieille",
+      "x": 14.222247520189606,
+      "y": 6.644359688633837
+    },
+    {
+      "id": 55,
+      "name": "La Condamine Merket",
+      "x": 6,
+      "y": 15
+    },
+    {
+      "id": 56,
+      "name": "Monte-Carlo Market",
+      "x": 8.97379100099485,
+      "y": 2.805728412299567
+    },
+    {
+      "id": 57,
+      "name": "Casino Gardens",
+      "x": 4,
+      "y": 9
+    },
+    {
+      "id": 58,
+      "name": "Japanese Garden",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "id": 59,
+      "name": "Saint Martin Gardens",
+      "x": 15.227272062265918,
+      "y": 3.939869341332368
+    },
+    {
+      "id": 60,
+      "name": "Place du Palais",
+      "x": 15.003931852762172,
+      "y": 2.1077952581398494
+    },
+    {
+      "id": 61,
+      "name": "Place d'Armes",
+      "x": 59,
+      "y": 45
+    },
+    {
+      "id": 62,
+      "name": "Boulevard des Moulins",
+      "x": 56,
+      "y": 40
+    },
+    {
+      "id": 63,
+      "name": "Boulevard du Larvetto",
+      "x": 55,
+      "y": 48
+    },
+    {
+      "id": 64,
+      "name": "Avenus Princesse Grace",
+      "x": 30,
+      "y": 30
+    },
+    {
+      "id": 65,
+      "name": "Avenue Albert II",
+      "x": 62,
+      "y": 38
+    },
+    {
+      "id": 66,
+      "name": "Quai des Etats-Unis",
+      "x": 52,
+      "y": 36
+    },
+    {
+      "id": 67,
+      "name": "Avenues d'Ostende",
+      "x": 28.40424749824438,
+      "y": 35.52133795920383
+    },
+    {
+      "id": 68,
+      "name": "Pelmont Hakpim",
+      "x": 32,
+      "y": 35
+    },
+    {
+      "id": 69,
+      "name": "Port Hercule Breakwater",
+      "x": 33,
+      "y": 45
+    },
+    {
+      "id": 70,
+      "name": "Tunnel Entrance",
+      "x": 37,
+      "y": 42
+    },
+    {
+      "id": 71,
+      "name": "Morte-Carlo Harbour Front",
+      "x": 33,
+      "y": 37
+    },
+    {
+      "id": 72,
+      "name": "Casino Square",
+      "x": 43,
+      "y": 38
+    },
+    {
+      "id": 73,
+      "name": "Metropole Shopping Center",
+      "x": 53,
+      "y": 6
+    },
+    {
+      "id": 74,
+      "name": "One Meets-Carlo",
+      "x": 62,
+      "y": 4
+    },
+    {
+      "id": 75,
+      "name": "Mareterra Waterfront",
+      "x": 4,
+      "y": 26
+    },
+    {
+      "id": 76,
+      "name": "karvette Promenade",
+      "x": 50,
+      "y": 33
+    },
+    {
+      "id": 77,
+      "name": "Sporting Beach Area",
+      "x": 44,
+      "y": 12
+    },
+    {
+      "id": 78,
+      "name": "Monaco-Ville Old Town",
+      "x": 18,
+      "y": 30
+    },
+    {
+      "id": 79,
+      "name": "Pointe Neuse Vlawpoint",
+      "x": 60,
+      "y": 22
+    },
+    {
+      "id": 80,
+      "name": "Cap d'Ail Border Point",
+      "x": 60,
+      "y": 10
+    }
+  ],
+  "connections": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      31
+    ],
+    [
+      0,
+      32
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      35
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      35
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      4,
+      35
+    ],
+    [
+      4,
+      52
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      5,
+      24
+    ],
+    [
+      5,
+      41
+    ],
+    [
+      5,
+      52
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      35
+    ],
+    [
+      6,
+      39
+    ],
+    [
+      6,
+      45
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      46
+    ],
+    [
+      7,
+      47
+    ],
+    [
+      7,
+      49
+    ],
+    [
+      8,
+      42
+    ],
+    [
+      8,
+      47
+    ],
+    [
+      8,
+      49
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      45
+    ],
+    [
+      9,
+      52
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      10,
+      39
+    ],
+    [
+      10,
+      45
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      38
+    ],
+    [
+      11,
+      45
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      12,
+      19
+    ],
+    [
+      12,
+      51
+    ],
+    [
+      13,
+      15
+    ],
+    [
+      13,
+      23
+    ],
+    [
+      13,
+      38
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      14,
+      22
+    ],
+    [
+      14,
+      51
+    ],
+    [
+      15,
+      22
+    ],
+    [
+      15,
+      28
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      16,
+      37
+    ],
+    [
+      16,
+      39
+    ],
+    [
+      16,
+      47
+    ],
+    [
+      17,
+      33
+    ],
+    [
+      17,
+      37
+    ],
+    [
+      17,
+      39
+    ],
+    [
+      18,
+      36
+    ],
+    [
+      18,
+      41
+    ],
+    [
+      18,
+      50
+    ],
+    [
+      19,
+      24
+    ],
+    [
+      19,
+      52
+    ],
+    [
+      19,
+      77
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      20,
+      22
+    ],
+    [
+      20,
+      79
+    ],
+    [
+      20,
+      80
+    ],
+    [
+      21,
+      25
+    ],
+    [
+      21,
+      28
+    ],
+    [
+      22,
+      28
+    ],
+    [
+      22,
+      30
+    ],
+    [
+      23,
+      28
+    ],
+    [
+      23,
+      76
+    ],
+    [
+      24,
+      29
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      24,
+      77
+    ],
+    [
+      25,
+      28
+    ],
+    [
+      25,
+      79
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      26,
+      42
+    ],
+    [
+      26,
+      75
+    ],
+    [
+      27,
+      48
+    ],
+    [
+      27,
+      78
+    ],
+    [
+      28,
+      76
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      29,
+      73
+    ],
+    [
+      29,
+      77
+    ],
+    [
+      30,
+      51
+    ],
+    [
+      30,
+      77
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      31,
+      34
+    ],
+    [
+      31,
+      36
+    ],
+    [
+      32,
+      44
+    ],
+    [
+      32,
+      46
+    ],
+    [
+      32,
+      52
+    ],
+    [
+      33,
+      40
+    ],
+    [
+      33,
+      43
+    ],
+    [
+      33,
+      64
+    ],
+    [
+      33,
+      78
+    ],
+    [
+      34,
+      36
+    ],
+    [
+      34,
+      54
+    ],
+    [
+      35,
+      39
+    ],
+    [
+      35,
+      52
+    ],
+    [
+      36,
+      41
+    ],
+    [
+      36,
+      50
+    ],
+    [
+      37,
+      39
+    ],
+    [
+      37,
+      47
+    ],
+    [
+      37,
+      49
+    ],
+    [
+      38,
+      40
+    ],
+    [
+      38,
+      72
+    ],
+    [
+      39,
+      45
+    ],
+    [
+      39,
+      49
+    ],
+    [
+      40,
+      68
+    ],
+    [
+      40,
+      72
+    ],
+    [
+      41,
+      50
+    ],
+    [
+      42,
+      47
+    ],
+    [
+      42,
+      48
+    ],
+    [
+      42,
+      55
+    ],
+    [
+      42,
+      75
+    ],
+    [
+      43,
+      64
+    ],
+    [
+      43,
+      67
+    ],
+    [
+      43,
+      78
+    ],
+    [
+      44,
+      46
+    ],
+    [
+      44,
+      53
+    ],
+    [
+      45,
+      52
+    ],
+    [
+      46,
+      49
+    ],
+    [
+      46,
+      53
+    ],
+    [
+      47,
+      49
+    ],
+    [
+      48,
+      75
+    ],
+    [
+      48,
+      78
+    ],
+    [
+      50,
+      54
+    ],
+    [
+      50,
+      59
+    ],
+    [
+      50,
+      60
+    ],
+    [
+      51,
+      77
+    ],
+    [
+      52,
+      53
+    ],
+    [
+      53,
+      54
+    ],
+    [
+      53,
+      57
+    ],
+    [
+      53,
+      58
+    ],
+    [
+      54,
+      57
+    ],
+    [
+      54,
+      59
+    ],
+    [
+      55,
+      58
+    ],
+    [
+      55,
+      75
+    ],
+    [
+      56,
+      57
+    ],
+    [
+      56,
+      59
+    ],
+    [
+      57,
+      58
+    ],
+    [
+      59,
+      60
+    ],
+    [
+      61,
+      62
+    ],
+    [
+      61,
+      63
+    ],
+    [
+      62,
+      65
+    ],
+    [
+      62,
+      66
+    ],
+    [
+      63,
+      69
+    ],
+    [
+      64,
+      67
+    ],
+    [
+      64,
+      68
+    ],
+    [
+      64,
+      78
+    ],
+    [
+      66,
+      72
+    ],
+    [
+      66,
+      76
+    ],
+    [
+      67,
+      69
+    ],
+    [
+      67,
+      70
+    ],
+    [
+      67,
+      71
+    ],
+    [
+      68,
+      71
+    ],
+    [
+      68,
+      72
+    ],
+    [
+      69,
+      70
+    ],
+    [
+      70,
+      71
+    ],
+    [
+      70,
+      72
+    ],
+    [
+      72,
+      76
+    ],
+    [
+      73,
+      74
+    ],
+    [
+      73,
+      77
+    ],
+    [
+      73,
+      80
+    ],
+    [
+      74,
+      79
+    ],
+    [
+      74,
+      80
+    ]
+  ],
+  "puzzles": [],
+  "sam_start_node": 0
+}

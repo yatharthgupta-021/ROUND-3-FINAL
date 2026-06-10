@@ -30,16 +30,18 @@ const mapLinksGroup = document.getElementById('map-links-group');
 const mapNodesGroup = document.getElementById('map-nodes-group');
 const playerMarkerGroup = document.getElementById('player-marker-group');
 
-// Node rendering layout settings (10x8 grid)
-const gridPaddingX = 96;
-const gridPaddingY = 108;
-const gridSpacingX = 112;
-const gridSpacingY = 112;
+// Node rendering: custom_map coords (x: 0-64, y: 0-50) mapped to
+// the background image canvas (1092 x 1092 SVG viewBox)
+const MAP_X_MAX = 64;   // max x coord in custom_map.json
+const MAP_Y_MAX = 50;   // max y coord in custom_map.json
+const SVG_W = 1092;
+const SVG_H = 1092;
+const MAP_PAD = 12;     // pixel padding so edge nodes don't touch border
 
 function getNodeCoords(node) {
     return {
-        x: gridPaddingX + node.x * gridSpacingX,
-        y: gridPaddingY + node.y * gridSpacingY
+        x: MAP_PAD + (node.x / MAP_X_MAX) * (SVG_W - MAP_PAD * 2),
+        y: MAP_PAD + (node.y / MAP_Y_MAX) * (SVG_H - MAP_PAD * 2)
     };
 }
 
@@ -296,25 +298,25 @@ function renderMap(data) {
         g.setAttribute('class', classes);
         g.setAttribute('id', `node-${node.id}`);
         
-        // Background Circle
+        // Background Circle (smaller for dense map)
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('class', 'node-bg');
         circle.setAttribute('cx', coords.x);
         circle.setAttribute('cy', coords.y);
-        circle.setAttribute('r', isCurrent ? '32' : '24');
+        circle.setAttribute('r', isCurrent ? '18' : '14');
         g.appendChild(circle);
         
-        // Add text label (node number only — name shown in tooltip)
+        // Add text label
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('class', 'node-label');
         text.setAttribute('x', coords.x);
-        text.setAttribute('y', coords.y + 7);
+        text.setAttribute('y', coords.y + 4);
         text.textContent = node.id;
         g.appendChild(text);
         
         // Tooltip text for location name (on hover)
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        title.textContent = `${node.id}: ${node.name}`;
+        title.textContent = `${node.name}`;
         g.appendChild(title);
         
         // Add click events to move if adjacent
@@ -338,13 +340,13 @@ function renderMap(data) {
             pulse.setAttribute('class', 'beacon-pulse');
             pulse.setAttribute('cx', coords.x);
             pulse.setAttribute('cy', coords.y);
-            pulse.setAttribute('r', '38');
+            pulse.setAttribute('r', '22');
             
             const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             core.setAttribute('class', 'beacon-core');
             core.setAttribute('cx', coords.x);
             core.setAttribute('cy', coords.y);
-            core.setAttribute('r', '8');
+            core.setAttribute('r', '5');
             
             beaconGroup.appendChild(pulse);
             beaconGroup.appendChild(core);

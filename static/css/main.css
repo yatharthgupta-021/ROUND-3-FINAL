@@ -384,7 +384,7 @@ svg.game-map:active {
 /* SVG Map elements styling */
 .map-link {
     stroke: rgba(232, 0, 45, 0.45);
-    stroke-width: 6px;
+    stroke-width: 3px;
     stroke-linecap: round;
     transition: stroke 0.3s;
 }
@@ -392,7 +392,7 @@ svg.game-map:active {
 .map-link.diagonal {
     stroke: rgba(255, 199, 0, 0.4);
     stroke-dasharray: 3 5;
-    stroke-width: 5px;
+    stroke-width: 2px;
 }
 
 .map-link.visited {
@@ -415,7 +415,7 @@ svg.game-map:active {
 
 .map-node text.node-label {
     fill: #fff;
-    font-size: 20px;
+    font-size: 11px;
     font-weight: 900;
     text-anchor: middle;
     pointer-events: none;
@@ -929,10 +929,42 @@ svg.game-map:active {
     
     .app-container {
         height: auto;
+        min-height: 100vh;
         overflow: visible;
     }
     
     .panel {
-        height: 500px;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .map-panel {
+        min-height: 70vh;
+        height: 70vh;
+    }
+    
+    .map-wrapper {
+        height: 100%;
+    }
+    
+    svg.game-map {
+        touch-action: pan-x pan-y;
+    }
+    
+    .app-header {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+        padding: 10px 16px;
+    }
+    
+    .header-status {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .logo {
+        font-size: 16px;
     }
 }

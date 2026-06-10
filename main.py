@@ -165,6 +165,10 @@ class BypassModel(BaseModel):
 class StartTeamModel(BaseModel):
     team_name: str
 
+class MapUpdateModel(BaseModel):
+    nodes: List[Dict[str, Any]]
+    connections: List[List[int]]
+
 # HTML Routes
 @app.get("/robots.txt", response_class=PlainTextResponse)
 async def get_robots_txt():
@@ -221,6 +225,13 @@ async def configure_game(config: ConfigureModel):
         return {"success": True}
     else:
         return JSONResponse({"success": False, "message": "Cannot configure game after setup"}, status_code=400)
+
+@app.post("/api/gm/map/save")
+async def save_map(map_data: MapUpdateModel):
+    game_manager.update_map(map_data.nodes, map_data.connections)
+    game_manager.save_state(db_file)
+    await update_all_clients()
+    return {"success": True}
 
 @app.post("/api/gm/start")
 async def start_game():
