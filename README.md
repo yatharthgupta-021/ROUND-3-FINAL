@@ -113,6 +113,18 @@ pytest tests/
 
 ---
 
+## 🛡️ Security & Anti-Cheat
+
+To ensure fair play and prevent automated solvers (AI bots), the following security measures are implemented:
+- **Rate Limiting:** API endpoints are protected by per-IP rate limiting (120 requests/minute).
+- **Anti-AI Puzzle Timing:** Solves completed in under 5 seconds are flagged as suspicious and reported to the Game Master dashboard.
+- **Input Sanitization:** Team names and user inputs are strictly validated and escaped (`escapeHTML`) to prevent XSS.
+- **Obfuscated State:** Puzzle answers are never sent to player clients. Adjacent nodes are hidden for eliminated or winning teams.
+- **Strict Progression:** Puzzles must be solved to advance; bypassing is not permitted.
+- **CSP Headers:** Security headers (Content-Security-Policy, X-Frame-Options, etc.) are active.
+
+---
+
 ## 🛠 Tech Stack
 
 | Layer | Tech |
