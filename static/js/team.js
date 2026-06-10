@@ -434,7 +434,7 @@ const btnCloseIntel     = document.getElementById('btn-close-intel');
 
 function showIntelModal(intelText) {
     // Parse the intel text
-    // Expected format: "🔒 Decrypted Intel (Clearance Level: X/3):\n- clue1\n- clue2\n- clue3"
+    // Expected format: "🔒 Decrypted Intel (Clearance Level: X):\n- clue1\n- clue2\n- clue3"
     intelClueList.innerHTML = '';
 
     const lines = intelText.split('\n');

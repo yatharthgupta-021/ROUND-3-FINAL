@@ -403,7 +403,7 @@ class GameManager:
         # Provide starting location info
         self.teams[team_name]["clues_received"].append({
             "type": "system",
-            "text": f"📍 Project Rewind Deployed: Landed at '{self.nodes[assigned_node]['name']}' (Node {assigned_node}). Security Clearance Level 0/3.",
+            "text": f"📍 Project Rewind Deployed: Landed at '{self.nodes[assigned_node]['name']}' (Node {assigned_node}). Security Clearance Level 0.",
             "timestamp": time.time()
         })
         return True
