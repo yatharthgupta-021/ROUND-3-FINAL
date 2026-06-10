@@ -620,13 +620,13 @@ class GameManager:
             selected = random.sample(clue_pool, min(3, len(clue_pool)))
             
             # Combined text for alert popup modal
-            clue_text = f"🔒 Decrypted Intel (Clearance Level: {solved_count}/3):\n" + "\n".join(f"- {c}" for c in selected)
+            clue_text = f"🔒 Decrypted Intel (Clearance Level: {solved_count}):\n" + "\n".join(f"- {c}" for c in selected)
 
             # Append each clue as an individual entry to yield multiple separate items in team dossier
             for idx, c in enumerate(selected):
                 team["clues_received"].append({
                     "type": "intel",
-                    "text": f"🔒 Decrypted Intel {solved_count}.{idx + 1}/3: {c}",
+                    "text": f"🔒 Decrypted Intel {solved_count}.{idx + 1}: {c}",
                     "timestamp": time.time()
                 })
             

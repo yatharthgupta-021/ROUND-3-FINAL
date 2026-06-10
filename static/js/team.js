@@ -197,7 +197,7 @@ function handleStateUpdate(data) {
     const clearanceVal = document.getElementById('val-clearance');
     if (clearanceVal && data.clearance_level !== undefined) {
         const isUnlocked = data.clearance_level >= data.required_clearance;
-        clearanceVal.textContent = `Level: ${data.clearance_level}/${data.required_clearance} (${isUnlocked ? 'UNLOCKED' : 'LOCKED'})`;
+        clearanceVal.textContent = `Level: ${data.clearance_level} (${isUnlocked ? 'UNLOCKED' : 'LOCKED'})`;
         if (isUnlocked) {
             clearanceVal.style.color = 'var(--neon-green)';
             clearanceVal.style.borderColor = 'rgba(57, 255, 20, 0.3)';
@@ -444,8 +444,8 @@ function showIntelModal(intelText) {
     lines.forEach(line => {
         const trimmed = line.trim();
         if (trimmed.startsWith('🔒')) {
-            // Extract clearance level e.g. "Clearance Level: 2/3"
-            const match = trimmed.match(/(\d+\/\d+)/);
+            // Extract clearance level e.g. "Clearance Level: 2"
+            const match = trimmed.match(/Clearance Level:?\s*(\d+)/i);
             if (match) clearanceText = `Clearance Level ${match[1]} Unlocked`;
         } else if (trimmed.startsWith('-')) {
             clueLines.push(trimmed.replace(/^-\s*/, ''));
