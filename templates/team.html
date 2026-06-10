@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Find Sam - Team Screen</title>
     <link rel="stylesheet" href="/static/css/main.css?v=5.0">
 </head>
@@ -55,7 +56,14 @@
             <!-- Center Panel: Interactive Map -->
             <div class="panel map-panel">
                 <div class="map-wrapper">
-                    <svg id="map-svg" class="game-map" viewBox="0 0 1200 1000" preserveAspectRatio="xMidYMid meet">
+                    <svg id="map-svg" class="game-map" viewBox="0 0 1092 1092" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <filter id="node-shadow" x="-40%" y="-40%" width="180%" height="180%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="rgba(0,240,255,0.6)"/>
+                            </filter>
+                        </defs>
+                        <!-- Background map image -->
+                        <image href="/static/assets/background.png" x="0" y="0" width="1092" height="1092" preserveAspectRatio="xMidYMid meet" style="opacity:0.85;"/>
                         <g id="map-links-group"></g>
                         <g id="map-nodes-group"></g>
                         <g id="player-marker-group"></g>
@@ -110,7 +118,6 @@
                     </div>
                     <div id="puzzle-error" style="color:var(--neon-pink);font-size:14px;font-weight:bold;margin-bottom:15px;display:none;"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" id="btn-bypass-puzzle" style="width:auto;padding:10px 20px;display:none;">Bypass / Close</button>
                         <button type="submit" class="btn btn-primary" style="width:auto;padding:10px 20px;">Decrypt</button>
                     </div>
                 </form>

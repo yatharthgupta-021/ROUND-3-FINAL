@@ -6,6 +6,13 @@ let elapsedSeconds = 0;
 let timerIntervalId = null;
 let pathRecording = [];
 
+// XSS prevention: escape HTML entities in user-supplied strings
+function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 // DOM Elements
 const statusBadge = document.getElementById('game-status-badge');
 const samCoordsBox = document.getElementById('sam-coords-box');
@@ -20,6 +27,30 @@ const btnResetGame = document.getElementById('btn-reset-game');
 const teamsTelemetryGrid = document.getElementById('teams-telemetry-grid');
 const leaderboardBody = document.getElementById('leaderboard-body');
 
+// Map Editor
+const chkMapEditor = document.getElementById('chk-map-editor');
+const btnSaveMap = document.getElementById('btn-save-map');
+let isEditorMode = false;
+let draggedNode = null;
+let currentNodes = [];
+let currentConnections = []; // Format: [u, v]
+let customNodesCoords = {}; // node_id -> {x, y} json coords
+let editorShiftLinkTarget = null;
+
+if (chkMapEditor) {
+    chkMapEditor.addEventListener('change', (e) => {
+        isEditorMode = e.target.checked;
+        btnSaveMap.style.display = isEditorMode ? 'block' : 'none';
+        if (!isEditorMode) {
+            editorShiftLinkTarget = null;
+        }
+    });
+}
+
+if (btnSaveMap) {
+    btnSaveMap.addEventListener('click', saveMapLayout);
+}
+
 // SVG Elements
 const mapSvg = document.getElementById('map-svg');
 const mapLinksGroup = document.getElementById('map-links-group');
@@ -27,17 +58,97 @@ const mapNodesGroup = document.getElementById('map-nodes-group');
 const samMarkerGroup = document.getElementById('sam-marker-group');
 const teamsMarkersGroup = document.getElementById('teams-markers-group');
 
-// Node rendering layout settings (10x8 grid)
-const gridPaddingX = 96;
-const gridPaddingY = 108;
-const gridSpacingX = 112;
-const gridSpacingY = 112;
+// Node rendering: custom_map coords (x: 0-64, y: 0-50) mapped to
+// the background image canvas (1092 x 1092 SVG viewBox)
+const MAP_X_MAX = 64;
+const MAP_Y_MAX = 50;
+const SVG_W = 1092;
+const SVG_H = 1092;
+const MAP_PAD = 12;
 
 function getNodeCoords(node) {
+    if (customNodesCoords[node.id]) {
+        return {
+            x: MAP_PAD + (customNodesCoords[node.id].x / MAP_X_MAX) * (SVG_W - MAP_PAD * 2),
+            y: MAP_PAD + (customNodesCoords[node.id].y / MAP_Y_MAX) * (SVG_H - MAP_PAD * 2)
+        };
+    }
     return {
-        x: gridPaddingX + node.x * gridSpacingX,
-        y: gridPaddingY + node.y * gridSpacingY
+        x: MAP_PAD + (node.x / MAP_X_MAX) * (SVG_W - MAP_PAD * 2),
+        y: MAP_PAD + (node.y / MAP_Y_MAX) * (SVG_H - MAP_PAD * 2)
     };
+}
+
+function pixelToJsonCoords(x, y) {
+    return {
+        x: ((x - MAP_PAD) / (SVG_W - MAP_PAD * 2)) * MAP_X_MAX,
+        y: ((y - MAP_PAD) / (SVG_H - MAP_PAD * 2)) * MAP_Y_MAX
+    };
+}
+
+// Drag & Drop Map Editing logic
+let startDragPixel = null;
+mapSvg.addEventListener('mousemove', (e) => {
+    if (!isEditorMode || !draggedNode) return;
+    
+    // Convert screen pixel to SVG viewBox coordinate
+    const pt = mapSvg.createSVGPoint();
+    pt.x = e.clientX;
+    pt.y = e.clientY;
+    const svgP = pt.matrixTransform(mapSvg.getScreenCTM().inverse());
+    
+    // Convert to JSON coords and clamp
+    let newJsonCoords = pixelToJsonCoords(svgP.x, svgP.y);
+    newJsonCoords.x = Math.max(0, Math.min(MAP_X_MAX, newJsonCoords.x));
+    newJsonCoords.y = Math.max(0, Math.min(MAP_Y_MAX, newJsonCoords.y));
+    
+    customNodesCoords[draggedNode.id] = newJsonCoords;
+    
+    // Re-render only map elements to be fast
+    renderMap(currentGameState);
+});
+
+mapSvg.addEventListener('mouseup', () => {
+    draggedNode = null;
+});
+mapSvg.addEventListener('mouseleave', () => {
+    draggedNode = null;
+});
+
+async function saveMapLayout() {
+    if (!confirm('Are you sure you want to save this map layout permanently? This will update it for all teams.')) return;
+    
+    // Build final node list
+    const newNodes = currentNodes.map(n => {
+        let nCopy = {...n};
+        if (customNodesCoords[n.id]) {
+            nCopy.x = customNodesCoords[n.id].x;
+            nCopy.y = customNodesCoords[n.id].y;
+        }
+        delete nCopy.has_puzzle;
+        return nCopy;
+    });
+    
+    try {
+        const response = await fetch('/api/gm/map/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nodes: newNodes,
+                connections: currentConnections
+            })
+        });
+        const res = await response.json();
+        if (res.success) {
+            alert('Map layout saved successfully!');
+            customNodesCoords = {}; // Clear overrides since it's now in the backend
+        } else {
+            alert('Failed to save: ' + res.message);
+        }
+    } catch (err) {
+        console.error(err);
+        alert('Error saving map layout.');
+    }
 }
 
 let isPolling = false;
@@ -246,11 +357,11 @@ function renderTelemetry(data) {
         
         card.innerHTML = `
             <div class="team-card-header">
-                <span class="team-card-title">${name} ${details.is_online ? '<span class="status-dot online" style="color: var(--neon-green); margin-left: 6px; font-size: 14px; text-shadow: var(--shadow-glow-green);" title="Online">●</span>' : '<span class="status-dot offline" style="color: #555; margin-left: 6px; font-size: 14px;" title="Offline">●</span>'}</span>
+                <span class="team-card-title">${escapeHTML(name)} ${details.is_online ? '<span class="status-dot online" style="color: var(--neon-green); margin-left: 6px; font-size: 14px; text-shadow: var(--shadow-glow-green);" title="Online">●</span>' : '<span class="status-dot offline" style="color: #555; margin-left: 6px; font-size: 14px;" title="Offline">●</span>'}</span>
                 <span style="font-size: 11px; font-weight: 700; color: ${statusColor}; text-transform: uppercase;">${statusText}</span>
             </div>
             <div class="team-card-meta">
-                <span>Landmark: <strong>${getLandmarkName(details.current_node)} (Node ${details.current_node})</strong></span>
+                <span>Landmark: <strong>${escapeHTML(getLandmarkName(details.current_node))} (Node ${details.current_node})</strong></span>
                 <span>Tix: <strong>${details.tickets}</strong></span>
             </div>
             <div class="team-card-meta" style="margin-top: 4px;">
@@ -259,6 +370,7 @@ function renderTelemetry(data) {
             </div>
             <div class="team-card-meta" style="margin-top: 4px;">
                 <span>Moves: <strong>${details.history.length - 1}</strong></span>
+                ${details.suspicious_flags && details.suspicious_flags.length > 0 ? `<span style="color: var(--neon-pink); font-weight: bold;">⚠️ ${details.suspicious_flags.length} flag(s)</span>` : ''}
             </div>
         `;
         teamsTelemetryGrid.appendChild(card);
@@ -287,7 +399,7 @@ function renderLeaderboard(winners) {
         
         tr.innerHTML = `
             <td>${rankText}</td>
-            <td><strong>${winner.team_name}</strong></td>
+            <td><strong>${escapeHTML(winner.team_name)}</strong></td>
             <td>${winner.duration_seconds}s</td>
             <td>${winner.tickets_left}</td>
         `;
@@ -296,31 +408,55 @@ function renderLeaderboard(winners) {
 }
 
 // Render dynamic map layout in SVG
-// Render dynamic map layout in SVG
 function renderMap(data) {
     mapLinksGroup.innerHTML = '';
     mapNodesGroup.innerHTML = '';
     samMarkerGroup.innerHTML = '';
     teamsMarkersGroup.innerHTML = '';
     
-    const nodes = data.map_nodes || [];
-    const nodesById = {};
-    nodes.forEach(node => {
-        nodesById[node.id] = node;
-    });
+    currentNodes = data.map_nodes || [];
+    if (!isEditorMode) {
+        currentConnections = (data.links || []).filter(l => !l.is_diagonal).map(l => [l.source, l.target]);
+    }
     
-    // Render Connections (Links)
-    const links = data.links || [];
-    links.forEach(link => {
-        const nodeA = nodesById[link.source];
-        const nodeB = nodesById[link.target];
-        if (nodeA && nodeB) {
-            drawLink(getNodeCoords(nodeA), getNodeCoords(nodeB), link.is_diagonal, link.source, link.target, data);
+    // Draw Links
+    currentConnections.forEach(conn => {
+        const u = currentNodes.find(n => n.id === conn[0]);
+        const v = currentNodes.find(n => n.id === conn[1]);
+        if (u && v) {
+            drawLink(getNodeCoords(u), getNodeCoords(v), false, u.id, v.id, data);
         }
     });
     
+    (data.links || []).filter(l => l.is_diagonal).forEach(link => {
+        const u = currentNodes.find(n => n.id === link.source);
+        const v = currentNodes.find(n => n.id === link.target);
+        if (u && v) {
+            drawLink(getNodeCoords(u), getNodeCoords(v), true, u.id, v.id, data);
+        }
+    });
+    
+    if (isEditorMode && editorShiftLinkTarget !== null) {
+        const u = currentNodes.find(n => n.id === editorShiftLinkTarget);
+        if (u) {
+            const coords = getNodeCoords(u);
+            const previewLine = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            previewLine.setAttribute('cx', coords.x);
+            previewLine.setAttribute('cy', coords.y);
+            previewLine.setAttribute('r', '24');
+            previewLine.setAttribute('fill', 'none');
+            previewLine.setAttribute('stroke', '#bd00ff');
+            previewLine.setAttribute('stroke-width', '4');
+            previewLine.setAttribute('stroke-dasharray', '4 4');
+            mapLinksGroup.appendChild(previewLine);
+        }
+    }
+    
+    const nodesById = {};
+    currentNodes.forEach(n => nodesById[n.id] = n);
+    
     // Render Nodes (Circles)
-    nodes.forEach(node => {
+    currentNodes.forEach(node => {
         const coords = getNodeCoords(node);
         
         const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
@@ -333,38 +469,61 @@ function renderMap(data) {
         g.setAttribute('class', classes);
         g.setAttribute('id', `node-${node.id}`);
         
-        // Background Circle
+        // Background Circle (smaller for dense map)
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('class', 'node-bg');
         circle.setAttribute('cx', coords.x);
         circle.setAttribute('cy', coords.y);
-        circle.setAttribute('r', '24');
+        circle.setAttribute('r', '14');
         g.appendChild(circle);
         
         // Add text label
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('class', 'node-label');
         text.setAttribute('x', coords.x);
-        text.setAttribute('y', coords.y + 7);
+        text.setAttribute('y', coords.y + 4);
         text.textContent = node.id;
         g.appendChild(text);
-        
-        // Add landmark name label below circle
-        const labelText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        labelText.setAttribute('class', 'node-name-label');
-        labelText.setAttribute('x', coords.x);
-        labelText.setAttribute('y', coords.y + 38);
-        labelText.textContent = node.name;
-        g.appendChild(labelText);
         
         // Tooltip text for location name
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
         title.textContent = node.name;
         g.appendChild(title);
         
+        // Editor mode events
+        g.addEventListener('mousedown', (e) => {
+            if (!isEditorMode) return;
+            if (e.shiftKey) {
+                // Connection mode
+                e.preventDefault();
+                if (editorShiftLinkTarget === null) {
+                    editorShiftLinkTarget = node.id;
+                    renderMap(currentGameState);
+                } else {
+                    if (editorShiftLinkTarget !== node.id) {
+                        const u = Math.min(editorShiftLinkTarget, node.id);
+                        const v = Math.max(editorShiftLinkTarget, node.id);
+                        
+                        const existingIdx = currentConnections.findIndex(c => c[0] === u && c[1] === v);
+                        if (existingIdx >= 0) {
+                            currentConnections.splice(existingIdx, 1); // remove link
+                        } else {
+                            currentConnections.push([u, v]); // add link
+                        }
+                    }
+                    editorShiftLinkTarget = null;
+                    renderMap(currentGameState);
+                }
+            } else {
+                // Drag node mode
+                draggedNode = node;
+                e.preventDefault();
+            }
+        });
+        
         // Click event for recording Sam's path (Only in setup mode)
         g.addEventListener('click', () => {
-            if (data.game_status === 'setup' && recordPathChk.checked) {
+            if (data.game_status === 'setup' && recordPathChk.checked && !isEditorMode) {
                 handleNodePathClick(node.id);
             }
         });
@@ -385,19 +544,19 @@ function renderMap(data) {
             pulse.setAttribute('class', 'beacon-pulse');
             pulse.setAttribute('cx', coords.x);
             pulse.setAttribute('cy', coords.y);
-            pulse.setAttribute('r', '38');
+            pulse.setAttribute('r', '22');
             
             const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             core.setAttribute('class', 'beacon-core');
             core.setAttribute('cx', coords.x);
             core.setAttribute('cy', coords.y);
-            core.setAttribute('r', '9');
+            core.setAttribute('r', '6');
             
             // Sam text overlay
             const samText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
             samText.setAttribute('class', 'sam-label');
             samText.setAttribute('x', coords.x);
-            samText.setAttribute('y', coords.y - 34);
+            samText.setAttribute('y', coords.y - 20);
             samText.textContent = 'SAM';
             
             beaconGroup.appendChild(pulse);
@@ -429,8 +588,8 @@ function renderMap(data) {
                 let offset_y = 0;
                 if (teamItems.length > 1) {
                     const angle = (idx * (2 * Math.PI)) / teamItems.length;
-                    offset_x = Math.cos(angle) * 18;
-                    offset_y = Math.sin(angle) * 18;
+                    offset_x = Math.cos(angle) * 12;
+                    offset_y = Math.sin(angle) * 12;
                 }
                 
                 let dotColor = 'var(--neon-blue)';
@@ -450,7 +609,7 @@ function renderMap(data) {
                 const teamDot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
                 teamDot.setAttribute('cx', baseCoords.x + offset_x);
                 teamDot.setAttribute('cy', baseCoords.y + offset_y);
-                teamDot.setAttribute('r', '7');
+                teamDot.setAttribute('r', '5');
                 teamDot.setAttribute('fill', dotColor);
                 teamDot.setAttribute('stroke', '#fff');
                 teamDot.setAttribute('stroke-width', '1.5');
@@ -496,7 +655,7 @@ async function postConfigure() {
     
     // Parse Sam's path array
     const pathString = samPathInput.value.trim();
-    const pathArray = pathString ? pathString.split(',').map(x => parseInt(x.trim())).filter(x => !isNaN(x) && x >= 0 && x < 80) : [];
+    const pathArray = pathString ? pathString.split(',').map(x => parseInt(x.trim())).filter(x => !isNaN(x) && x >= 0) : [];
     
     const configData = {
         diagonal_allowed: diagonalChk.checked,

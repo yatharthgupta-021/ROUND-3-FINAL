@@ -1,6 +1,9 @@
+import os
 import time
 import random
 import json
+import secrets
+import hashlib
 from typing import Dict, List, Set, Any, Optional
 
 class GameManager:
@@ -12,29 +15,100 @@ class GameManager:
         self.last_sam_move_time = 0.0
         self.start_time = 0.0  # Game start timestamp
         
-        # 80 Nodes: Monaco Street Circuit + School Corridor Spurs (10x12 Grid)
+        # Nodes and adjacency loaded from custom_map.json
         self.nodes: Dict[int, Dict[str, Any]] = {}
         self.adj_list: Dict[int, List[int]] = {}
-        self.setup_monaco_map()
+        self._node_count = 0
+        self.load_custom_map()
         
-        # Sam Hiding Node (Default: Node 53 - School Clinic Bed)
-        self.sam_start_node = 53
-        self.sam_path: List[int] = [53]
+        # Sam Hiding Node (set by load_custom_map, default 0)
+        self.sam_start_node = self._default_sam_node
+        self.sam_path: List[int] = [self._default_sam_node]
         self.sam_path_index = 0
-        self.sam_current_node = 53
+        self.sam_current_node = self._default_sam_node
         
         # Teams State
         self.teams: Dict[str, Dict[str, Any]] = {}
         
-        # Puzzles and Intel Clues (Storyline Puzzles)
+        # Puzzles and Intel Clues (loaded from custom_map.json)
         self.puzzles: Dict[int, Dict[str, str]] = {}
-        self.setup_story_puzzles()
+        self._load_puzzles_from_map()
         
         # Winners tracking
         self.winners: List[Dict[str, Any]] = []
 
+    def load_custom_map(self):
+        """Load nodes and connections from custom_map.json."""
+        map_path = os.path.join(os.path.dirname(__file__), "custom_map.json")
+        with open(map_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        self.nodes = {}
+        self.adj_list = {}
+
+        for node in data["nodes"]:
+            nid = int(node["id"])
+            self.nodes[nid] = {
+                "id": nid,
+                "name": node["name"],
+                "x": node["x"],
+                "y": node["y"]
+            }
+            self.adj_list[nid] = []
+
+        for u, v in data["connections"]:
+            u, v = int(u), int(v)
+            if v not in self.adj_list[u]:
+                self.adj_list[u].append(v)
+            if u not in self.adj_list[v]:
+                self.adj_list[v].append(u)
+
+        self._node_count = len(self.nodes)
+        # Sam default node from JSON, fallback to first node id
+        self._default_sam_node = int(data.get("sam_start_node", sorted(self.nodes.keys())[0]))
+        # Store raw puzzle data for _load_puzzles_from_map
+        self._raw_puzzles = data.get("puzzles", [])
+
+    def _load_puzzles_from_map(self):
+        """Populate self.puzzles from the raw puzzle list loaded by load_custom_map."""
+        for p in self._raw_puzzles:
+            node_id = int(p["node_id"])
+            if node_id in self.nodes:
+                self.puzzles[node_id] = {
+                    "question": str(p["question"]),
+                    "answer": str(p["answer"]),
+                    "intel": ""
+                }
+
+    def update_map(self, new_nodes: List[Dict[str, Any]], new_connections: List[List[int]]):
+        """Update map structure in memory and save to custom_map.json."""
+        map_path = os.path.join(os.path.dirname(__file__), "custom_map.json")
+        static_map_path = os.path.join(os.path.dirname(__file__), "static", "custom_map.json")
+        
+        # Keep old puzzles/sam_start_node
+        with open(map_path, "r", encoding="utf-8") as f:
+            old_data = json.load(f)
+            
+        old_data["nodes"] = new_nodes
+        old_data["connections"] = new_connections
+        
+        with open(map_path, "w", encoding="utf-8") as f:
+            json.dump(old_data, f, indent=2)
+            
+        with open(static_map_path, "w", encoding="utf-8") as f:
+            json.dump(old_data, f, indent=2)
+            
+        # Hot-reload in memory
+        self.load_custom_map()
+        self._load_puzzles_from_map()
+
+    # ---- Kept for historical reference; no longer called ----
     def setup_monaco_map(self):
-        # 80 Nodes — names taken directly from the Circuit de Monaco location map
+        """Deprecated: map is now loaded from custom_map.json via load_custom_map()."""
+        pass
+
+    def _noop_setup(self):
+        # placeholder so old node_defs list below is never executed
         node_defs = [
             # Row 0: y=0 (x: 0..7)
             (0,  "Port Hercules N.",    0, 0),
@@ -365,10 +439,10 @@ class GameManager:
         if team_name in self.teams:
             return False
             
-        # Determine starting node such that the shortest path distance to Sam (default 53) is AT LEAST 25 steps
+        # Determine starting node with at least some distance from Sam
         sam_node = self.sam_current_node
         possible_starts = []
-        for nid in range(80):
+        for nid in self.nodes:
             dist = self.get_shortest_path_distance(nid, sam_node)
             is_occupied = any(t["current_node"] == nid for t in self.teams.values())
             # Enforce distance >= 25 and avoid start overlap if possible
@@ -377,7 +451,7 @@ class GameManager:
                 
         if not possible_starts:
             # Fallback: choose any node with maximum distance >= 20
-            possible_starts = [nid for nid in range(80) if self.get_shortest_path_distance(nid, sam_node) >= 20]
+            possible_starts = [nid for nid in self.nodes if self.get_shortest_path_distance(nid, sam_node) >= 20]
             
         if not possible_starts:
             possible_starts = [0]
@@ -397,7 +471,11 @@ class GameManager:
             "moves_since_last_intel": 0,
             "active_puzzle_node": None,
             "started": False,
-            "start_time": 0.0
+            "start_time": 0.0,
+            "puzzle_presented_at": 0.0,
+            "last_solve_attempt": 0.0,
+            "solve_times": [],
+            "suspicious_flags": []
         }
         
         # Provide starting location info
@@ -465,6 +543,10 @@ class GameManager:
             })
 
     def move_team(self, team_name: str, target_node: int) -> Dict[str, Any]:
+        # Input validation: ensure target_node is a valid integer within graph
+        if not isinstance(target_node, int) or target_node not in self.nodes:
+            return {"success": False, "message": "Invalid target node"}
+
         if self.game_status != "active":
             return {"success": False, "message": "Game is not active"}
             
@@ -538,6 +620,7 @@ class GameManager:
 
         if target_node in self.puzzles and target_node not in team["puzzles_solved"]:
             team["active_puzzle_node"] = target_node
+            team["puzzle_presented_at"] = time.time()
             result["riddle_triggered"] = True
             result["riddle_question"] = self.puzzles[target_node]["question"]
             
@@ -565,7 +648,11 @@ class GameManager:
         team = self.teams.get(team_name)
         if not team:
             return {"success": False, "message": "Team not found"}
-            
+
+        # Input validation: sanitize answer length
+        if not isinstance(answer, str) or len(answer) > 200:
+            return {"success": False, "message": "Invalid answer format"}
+
         puzzle_node = team["active_puzzle_node"]
         if puzzle_node is None:
             return {"success": False, "message": "No active puzzle for team"}
@@ -574,11 +661,31 @@ class GameManager:
         if not puzzle:
             team["active_puzzle_node"] = None
             return {"success": False, "message": "Puzzle data not found"}
-            
+
+        # Track solve attempt timing
+        now = time.time()
+        team["last_solve_attempt"] = now
+
         user_ans = answer.strip().lower()
         correct_ans = puzzle["answer"].strip().lower()
         
         if user_ans == correct_ans:
+            # Anti-AI: track how fast they solved it
+            presented_at = team.get("puzzle_presented_at", 0.0)
+            solve_duration = now - presented_at if presented_at > 0 else 999
+            team["solve_times"].append({
+                "node": puzzle_node,
+                "duration_seconds": round(solve_duration, 2),
+                "timestamp": now
+            })
+            # Flag suspiciously fast solves (under 5 seconds)
+            if solve_duration < 5.0:
+                team["suspicious_flags"].append({
+                    "type": "fast_solve",
+                    "node": puzzle_node,
+                    "duration": round(solve_duration, 2),
+                    "timestamp": now
+                })
             team["puzzles_solved"].append(puzzle_node)
             team["active_puzzle_node"] = None
             
@@ -641,9 +748,9 @@ class GameManager:
                 "message": "Incorrect answer. Try again!"
             }
 
-    def bypass_puzzle(self, team_name: str):
-        # Do not allow bypassing the puzzle! They must solve it.
-        pass
+    def bypass_puzzle(self, team_name: str) -> Dict[str, Any]:
+        """Bypass is explicitly disabled — teams must solve puzzles."""
+        return {"success": False, "message": "Bypass is disabled. Solve the puzzle!"}
 
     def get_team_view_data(self, team_name: str) -> Dict[str, Any]:
         team = self.teams.get(team_name)
@@ -651,8 +758,8 @@ class GameManager:
             return {}
             
         map_data = []
-        for i in range(80):
-            node = self.nodes[i]
+        for nid in sorted(self.nodes.keys()):
+            node = self.nodes[nid]
             map_data.append({
                 "id": node["id"],
                 "name": node["name"],
@@ -660,7 +767,11 @@ class GameManager:
                 "y": node["y"]
             })
             
-        adjacent = self.get_adjacent_nodes(team["current_node"])
+        # Don't expose adjacent nodes for inactive teams
+        if team["is_eliminated"] or team["found_sam"]:
+            adjacent = []
+        else:
+            adjacent = self.get_adjacent_nodes(team["current_node"])
         
         active_puzzle = None
         if team["active_puzzle_node"] is not None:
@@ -687,9 +798,10 @@ class GameManager:
                 if u < v:
                     links.append({"source": u, "target": v, "is_diagonal": False})
         if self.diagonal_allowed:
-            for i in range(80):
+            nids = sorted(self.nodes.keys())
+            for idx_a, i in enumerate(nids):
                 curr = self.nodes[i]
-                for j in range(i + 1, 80):
+                for j in nids[idx_a + 1:]:
                     node = self.nodes[j]
                     if abs(node["x"] - curr["x"]) == 1 and abs(node["y"] - curr["y"]) == 1:
                         links.append({"source": i, "target": j, "is_diagonal": True})
@@ -730,13 +842,15 @@ class GameManager:
                 "last_active": data.get("finish_time", 0.0) or data.get("join_time", 0.0),
                 "elapsed_seconds": int((data.get("finish_time", 0.0) or time.time()) - team_start) if data.get("started", False) else 0,
                 "is_online": (connected_teams is not None and name in connected_teams),
-                "started": data.get("started", False)
+                "started": data.get("started", False),
+                "solve_times": data.get("solve_times", []),
+                "suspicious_flags": data.get("suspicious_flags", [])
             }
             
         map_data = []
-        for i in range(80):
-            node = self.nodes[i]
-            has_puzzle = i in self.puzzles
+        for nid in sorted(self.nodes.keys()):
+            node = self.nodes[nid]
+            has_puzzle = nid in self.puzzles
             map_data.append({
                 "id": node["id"],
                 "name": node["name"],
@@ -753,9 +867,10 @@ class GameManager:
                 if u < v:
                     links.append({"source": u, "target": v, "is_diagonal": False})
         if self.diagonal_allowed:
-            for i in range(80):
+            nids = sorted(self.nodes.keys())
+            for idx_a, i in enumerate(nids):
                 curr = self.nodes[i]
-                for j in range(i + 1, 80):
+                for j in nids[idx_a + 1:]:
                     node = self.nodes[j]
                     if abs(node["x"] - curr["x"]) == 1 and abs(node["y"] - curr["y"]) == 1:
                         links.append({"source": i, "target": j, "is_diagonal": True})
@@ -798,13 +913,13 @@ class GameManager:
         if self.game_status == "setup":
             if "sam_start_node" in config:
                 start_node = int(config["sam_start_node"])
-                if 0 <= start_node < 80:
+                if start_node in self.nodes:
                     self.sam_start_node = start_node
                     self.sam_current_node = start_node
                     
             if "sam_path" in config:
                 path = config["sam_path"]
-                if isinstance(path, list) and all(isinstance(x, int) and 0 <= x < 80 for x in path):
+                if isinstance(path, list) and all(isinstance(x, int) and x in self.nodes for x in path):
                     self.sam_path = path
                     
             if "puzzles" in config:
@@ -812,7 +927,7 @@ class GameManager:
                 self.puzzles.clear()
                 for p in p_list:
                     node_id = int(p["node_id"])
-                    if 0 <= node_id < 80:
+                    if node_id in self.nodes:
                         self.puzzles[node_id] = {
                             "question": str(p["question"]),
                             "answer": str(p["answer"]),

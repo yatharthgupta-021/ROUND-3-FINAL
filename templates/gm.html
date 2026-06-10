@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Find Sam - Game Master Dashboard</title>
     <link rel="stylesheet" href="/static/css/main.css?v=4.0">
     <style>
@@ -116,15 +117,34 @@
 
             <!-- Center Panel: Live Birds-Eye Map -->
             <div class="panel map-panel">
+                <!-- Map Editor Controls -->
+                <div class="glass-panel" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; margin-bottom: 12px; background: rgba(0,0,0,0.4); border-color: rgba(0, 240, 255, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 13px; font-weight: bold; color: var(--neon-blue); text-transform: uppercase;">Map Editor</span>
+                        <label class="switch" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="checkbox" id="chk-map-editor" style="cursor: pointer;">
+                            <span style="font-size: 12px; color: var(--text-secondary);">Enable Drag & Drop / Shift+Click</span>
+                        </label>
+                    </div>
+                    <button id="btn-save-map" class="btn btn-primary" style="width: auto; padding: 8px 16px; font-size: 12px; display: none;">Save Map Layout</button>
+                </div>
                 <div class="map-wrapper">
                     <!-- Dynamic SVG Map -->
-                    <svg id="map-svg" class="game-map" viewBox="0 0 1200 1000" preserveAspectRatio="xMidYMid meet">
+                    <svg id="map-svg" class="game-map" viewBox="0 0 1092 1092" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <filter id="node-shadow" x="-40%" y="-40%" width="180%" height="180%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="rgba(0,240,255,0.6)"/>
+                            </filter>
+                        </defs>
+                        <!-- Background map image -->
+                        <image href="/static/assets/background.png" x="0" y="0" width="1092" height="1092" preserveAspectRatio="xMidYMid meet" style="opacity:0.85;"/>
                         <g id="map-links-group"></g>
                         <g id="map-nodes-group"></g>
                         <g id="sam-marker-group"></g>
                         <g id="teams-markers-group"></g>
                     </svg>
                 </div>
+
             </div>
 
             <!-- Right Panel: Live Operatives Telemetry -->
