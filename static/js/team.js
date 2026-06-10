@@ -7,6 +7,13 @@ let elapsedSeconds = 0;
 let timerIntervalId = null;
 let winModalShown = false;
 
+// XSS prevention: escape HTML entities in user-supplied strings
+function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 // DOM Elements
 const ticketsVal = document.getElementById('val-tickets');
 const ticketsCard = document.getElementById('card-tickets');
@@ -477,19 +484,14 @@ if (intelModal) {
     });
 }
 
-// Bypass/Close Puzzle Modal
-btnBypassPuzzle.addEventListener('click', async () => {
-    try {
-        await fetch('/api/team/bypass', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ team_name: teamName })
-        });
-        puzzleModal.classList.remove('active');
-    } catch (err) {
-        console.error('Error bypassing puzzle:', err);
-    }
-});
+// Bypass/Close Puzzle Modal — endpoint returns 403, bypass is disabled
+// Button is removed from HTML, handler kept as no-op safety net
+if (btnBypassPuzzle) {
+    btnBypassPuzzle.addEventListener('click', () => {
+        // Bypass is disabled server-side
+        console.warn('Bypass is disabled.');
+    });
+}
 
 // Show final leaderboard overlays
 function showWinnerOverlay(winners) {
@@ -508,7 +510,7 @@ function showWinnerOverlay(winners) {
         
         tr.innerHTML = `
             <td>${rankText}</td>
-            <td style="${isCurrentTeam ? 'font-weight: bold; color: var(--neon-blue);' : ''}">${teamDisplayName}</td>
+            <td style="${isCurrentTeam ? 'font-weight: bold; color: var(--neon-blue);' : ''}">${escapeHTML(teamDisplayName)}</td>
             <td>${winner.duration_seconds}s</td>
             <td>${winner.tickets_left} tickets</td>
         `;

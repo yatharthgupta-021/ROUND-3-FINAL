@@ -1,7 +1,9 @@
 import os
+import re
 import time
 import asyncio
 import logging
+from collections import defaultdict
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
@@ -15,6 +17,45 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Find Sam - Multiplayer Mystery")
+
+# ── Security: Per-IP rate limiting ─────────────────────────────────────────────
+_ip_request_log: Dict[str, list] = defaultdict(list)
+RATE_LIMIT_WINDOW = 60   # seconds
+RATE_LIMIT_MAX = 120     # max requests per IP per window
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    client_ip = request.client.host if request.client else "unknown"
+    now = time.time()
+    # Prune old entries
+    _ip_request_log[client_ip] = [
+        t for t in _ip_request_log[client_ip] if now - t < RATE_LIMIT_WINDOW
+    ]
+    if len(_ip_request_log[client_ip]) >= RATE_LIMIT_MAX:
+        return JSONResponse(
+            {"detail": "Rate limit exceeded. Please slow down."},
+            status_code=429
+        )
+    _ip_request_log[client_ip].append(now)
+    response = await call_next(request)
+    return response
+
+# ── Security: CSP and hardening headers ────────────────────────────────────────
+@app.middleware("http")
+async def security_headers_middleware(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Content-Security-Policy"] = (
+        "default-src 'self'; "
+        "script-src 'self' 'unsafe-inline'; "
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+        "font-src 'self' https://fonts.gstatic.com; "
+        "img-src 'self' data:; "
+        "connect-src 'self' ws: wss:"
+    )
+    return response
 
 # Ensure static and templates dirs exist
 os.makedirs("static/css", exist_ok=True)
@@ -204,6 +245,12 @@ async def join_team(team_name: str = Form(...), start_node: int = Form(-1)):
     team_name = team_name.strip()
     if not team_name:
         return JSONResponse({"success": False, "message": "Invalid team name"}, status_code=400)
+
+    # Input validation: restrict team name to safe characters, max 30 chars
+    if len(team_name) > 30:
+        return JSONResponse({"success": False, "message": "Team name too long (max 30 characters)"}, status_code=400)
+    if not re.match(r'^[a-zA-Z0-9 _\-]+$', team_name):
+        return JSONResponse({"success": False, "message": "Team name can only contain letters, numbers, spaces, hyphens, and underscores"}, status_code=400)
     
     if game_manager.game_status == "ended":
         return JSONResponse({"success": False, "message": "Game has already ended"}, status_code=400)
@@ -277,10 +324,8 @@ async def solve_puzzle(solve: SolveModel):
 
 @app.post("/api/team/bypass")
 async def bypass_puzzle(bypass: BypassModel):
-    game_manager.bypass_puzzle(bypass.team_name)
-    game_manager.save_state(db_file)
-    await update_all_clients()
-    return {"success": True}
+    result = game_manager.bypass_puzzle(bypass.team_name)
+    return JSONResponse(result, status_code=403)
 
 @app.post("/api/team/start")
 async def start_team_mission(payload: StartTeamModel):

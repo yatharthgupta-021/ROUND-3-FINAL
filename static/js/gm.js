@@ -6,6 +6,13 @@ let elapsedSeconds = 0;
 let timerIntervalId = null;
 let pathRecording = [];
 
+// XSS prevention: escape HTML entities in user-supplied strings
+function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 // DOM Elements
 const statusBadge = document.getElementById('game-status-badge');
 const samCoordsBox = document.getElementById('sam-coords-box');
@@ -350,11 +357,11 @@ function renderTelemetry(data) {
         
         card.innerHTML = `
             <div class="team-card-header">
-                <span class="team-card-title">${name} ${details.is_online ? '<span class="status-dot online" style="color: var(--neon-green); margin-left: 6px; font-size: 14px; text-shadow: var(--shadow-glow-green);" title="Online">●</span>' : '<span class="status-dot offline" style="color: #555; margin-left: 6px; font-size: 14px;" title="Offline">●</span>'}</span>
+                <span class="team-card-title">${escapeHTML(name)} ${details.is_online ? '<span class="status-dot online" style="color: var(--neon-green); margin-left: 6px; font-size: 14px; text-shadow: var(--shadow-glow-green);" title="Online">●</span>' : '<span class="status-dot offline" style="color: #555; margin-left: 6px; font-size: 14px;" title="Offline">●</span>'}</span>
                 <span style="font-size: 11px; font-weight: 700; color: ${statusColor}; text-transform: uppercase;">${statusText}</span>
             </div>
             <div class="team-card-meta">
-                <span>Landmark: <strong>${getLandmarkName(details.current_node)} (Node ${details.current_node})</strong></span>
+                <span>Landmark: <strong>${escapeHTML(getLandmarkName(details.current_node))} (Node ${details.current_node})</strong></span>
                 <span>Tix: <strong>${details.tickets}</strong></span>
             </div>
             <div class="team-card-meta" style="margin-top: 4px;">
@@ -363,6 +370,7 @@ function renderTelemetry(data) {
             </div>
             <div class="team-card-meta" style="margin-top: 4px;">
                 <span>Moves: <strong>${details.history.length - 1}</strong></span>
+                ${details.suspicious_flags && details.suspicious_flags.length > 0 ? `<span style="color: var(--neon-pink); font-weight: bold;">⚠️ ${details.suspicious_flags.length} flag(s)</span>` : ''}
             </div>
         `;
         teamsTelemetryGrid.appendChild(card);
@@ -391,7 +399,7 @@ function renderLeaderboard(winners) {
         
         tr.innerHTML = `
             <td>${rankText}</td>
-            <td><strong>${winner.team_name}</strong></td>
+            <td><strong>${escapeHTML(winner.team_name)}</strong></td>
             <td>${winner.duration_seconds}s</td>
             <td>${winner.tickets_left}</td>
         `;

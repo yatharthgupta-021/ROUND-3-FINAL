@@ -2,6 +2,8 @@ import os
 import time
 import random
 import json
+import secrets
+import hashlib
 from typing import Dict, List, Set, Any, Optional
 
 class GameManager:
@@ -469,7 +471,11 @@ class GameManager:
             "moves_since_last_intel": 0,
             "active_puzzle_node": None,
             "started": False,
-            "start_time": 0.0
+            "start_time": 0.0,
+            "puzzle_presented_at": 0.0,
+            "last_solve_attempt": 0.0,
+            "solve_times": [],
+            "suspicious_flags": []
         }
         
         # Provide starting location info
@@ -537,6 +543,10 @@ class GameManager:
             })
 
     def move_team(self, team_name: str, target_node: int) -> Dict[str, Any]:
+        # Input validation: ensure target_node is a valid integer within graph
+        if not isinstance(target_node, int) or target_node not in self.nodes:
+            return {"success": False, "message": "Invalid target node"}
+
         if self.game_status != "active":
             return {"success": False, "message": "Game is not active"}
             
@@ -610,6 +620,7 @@ class GameManager:
 
         if target_node in self.puzzles and target_node not in team["puzzles_solved"]:
             team["active_puzzle_node"] = target_node
+            team["puzzle_presented_at"] = time.time()
             result["riddle_triggered"] = True
             result["riddle_question"] = self.puzzles[target_node]["question"]
             
@@ -637,7 +648,11 @@ class GameManager:
         team = self.teams.get(team_name)
         if not team:
             return {"success": False, "message": "Team not found"}
-            
+
+        # Input validation: sanitize answer length
+        if not isinstance(answer, str) or len(answer) > 200:
+            return {"success": False, "message": "Invalid answer format"}
+
         puzzle_node = team["active_puzzle_node"]
         if puzzle_node is None:
             return {"success": False, "message": "No active puzzle for team"}
@@ -646,11 +661,31 @@ class GameManager:
         if not puzzle:
             team["active_puzzle_node"] = None
             return {"success": False, "message": "Puzzle data not found"}
-            
+
+        # Track solve attempt timing
+        now = time.time()
+        team["last_solve_attempt"] = now
+
         user_ans = answer.strip().lower()
         correct_ans = puzzle["answer"].strip().lower()
         
         if user_ans == correct_ans:
+            # Anti-AI: track how fast they solved it
+            presented_at = team.get("puzzle_presented_at", 0.0)
+            solve_duration = now - presented_at if presented_at > 0 else 999
+            team["solve_times"].append({
+                "node": puzzle_node,
+                "duration_seconds": round(solve_duration, 2),
+                "timestamp": now
+            })
+            # Flag suspiciously fast solves (under 5 seconds)
+            if solve_duration < 5.0:
+                team["suspicious_flags"].append({
+                    "type": "fast_solve",
+                    "node": puzzle_node,
+                    "duration": round(solve_duration, 2),
+                    "timestamp": now
+                })
             team["puzzles_solved"].append(puzzle_node)
             team["active_puzzle_node"] = None
             
@@ -713,9 +748,9 @@ class GameManager:
                 "message": "Incorrect answer. Try again!"
             }
 
-    def bypass_puzzle(self, team_name: str):
-        # Do not allow bypassing the puzzle! They must solve it.
-        pass
+    def bypass_puzzle(self, team_name: str) -> Dict[str, Any]:
+        """Bypass is explicitly disabled — teams must solve puzzles."""
+        return {"success": False, "message": "Bypass is disabled. Solve the puzzle!"}
 
     def get_team_view_data(self, team_name: str) -> Dict[str, Any]:
         team = self.teams.get(team_name)
@@ -732,7 +767,11 @@ class GameManager:
                 "y": node["y"]
             })
             
-        adjacent = self.get_adjacent_nodes(team["current_node"])
+        # Don't expose adjacent nodes for inactive teams
+        if team["is_eliminated"] or team["found_sam"]:
+            adjacent = []
+        else:
+            adjacent = self.get_adjacent_nodes(team["current_node"])
         
         active_puzzle = None
         if team["active_puzzle_node"] is not None:
@@ -803,7 +842,9 @@ class GameManager:
                 "last_active": data.get("finish_time", 0.0) or data.get("join_time", 0.0),
                 "elapsed_seconds": int((data.get("finish_time", 0.0) or time.time()) - team_start) if data.get("started", False) else 0,
                 "is_online": (connected_teams is not None and name in connected_teams),
-                "started": data.get("started", False)
+                "started": data.get("started", False),
+                "solve_times": data.get("solve_times", []),
+                "suspicious_flags": data.get("suspicious_flags", [])
             }
             
         map_data = []
