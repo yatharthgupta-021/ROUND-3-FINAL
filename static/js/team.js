@@ -5,6 +5,7 @@ let ws = null;
 let currentGameState = null;
 let elapsedSeconds = 0;
 let timerIntervalId = null;
+let winModalShown = false;
 
 // DOM Elements
 const ticketsVal = document.getElementById('val-tickets');
@@ -125,8 +126,8 @@ function handleStateUpdate(data) {
         elapsedSeconds = data.elapsed_seconds;
         updateTimerDisplay(elapsedSeconds);
         
-        // Start or sync local ticking interval if active
-        if (data.game_status === 'active' && data.started) {
+        // Start or sync local ticking interval if active and team is still playing
+        if (data.game_status === 'active' && data.started && !data.found_sam && !data.is_eliminated) {
             if (!timerIntervalId) {
                 timerIntervalId = setInterval(() => {
                     elapsedSeconds += 1;
@@ -154,6 +155,25 @@ function handleStateUpdate(data) {
         statusBadge.textContent = 'MISSION RUNNING';
         statusBadge.className = 'game-badge badge-active';
         lobbyOverlay.style.display = 'none';
+    }
+    
+    // Trigger Win Modal
+    if (data.found_sam && !winModalShown) {
+        winModalShown = true;
+        const winModal = document.getElementById('win-modal');
+        const winFinalTime = document.getElementById('win-final-time');
+        const winFinalTickets = document.getElementById('win-final-tickets');
+        if (winFinalTime) {
+            const mins = Math.floor(data.elapsed_seconds / 60).toString().padStart(2, '0');
+            const secs = (data.elapsed_seconds % 60).toString().padStart(2, '0');
+            winFinalTime.textContent = `${mins}:${secs}`;
+        }
+        if (winFinalTickets) {
+            winFinalTickets.textContent = data.tickets;
+        }
+        if (winModal) {
+            winModal.classList.add('active');
+        }
     }
     
     // Update Operative stats
@@ -551,6 +571,16 @@ if (btnStartMission) {
             console.error('Error starting mission:', err);
             alert('Connection error. Please try again.');
         }
+    });
+}
+
+// ── Win Success Modal ─────────────────────────────────────────────────────────
+const btnCloseWin = document.getElementById('btn-close-win');
+const winModalEl = document.getElementById('win-modal');
+
+if (btnCloseWin && winModalEl) {
+    btnCloseWin.addEventListener('click', () => {
+        winModalEl.classList.remove('active');
     });
 }
 
