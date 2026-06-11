@@ -477,17 +477,9 @@ function renderMap(data) {
         circle.setAttribute('r', '14');
         g.appendChild(circle);
         
-        // Add text label
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('class', 'node-label');
-        text.setAttribute('x', coords.x);
-        text.setAttribute('y', coords.y + 4);
-        text.textContent = node.id;
-        g.appendChild(text);
-        
-        // Tooltip text for location name
+        // Tooltip text for location name (GM can hover to see name)
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        title.textContent = node.name;
+        title.textContent = `[${node.id}] ${node.name}`;
         g.appendChild(title);
         
         // Editor mode events

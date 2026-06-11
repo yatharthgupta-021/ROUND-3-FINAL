@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Find Sam - Team Screen</title>
-    <link rel="stylesheet" href="/static/css/main.css?v=5.0">
+    <link rel="stylesheet" href="/static/css/main.css?v=6.0">
 </head>
 <body>
     <div class="app-container">
         <!-- Header -->
         <header class="app-header glass-panel">
             <div class="logo">ROUND 3 — FIND SAM</div>
-            <div class="header-status" style="display: flex; align-items: center; gap: 12px;">
+            <div class="header-status">
+                <!-- Compact HUD pills -->
+                <div class="hud-pill" id="hud-tickets">
+                    <span class="hud-pill-icon">🎟</span>
+                    <span id="val-tickets" class="hud-pill-value">50</span>
+                </div>
+                <div class="hud-pill" id="hud-timer">
+                    <span class="hud-pill-icon">⏱</span>
+                    <span id="val-timer" class="hud-pill-value">00:00</span>
+                </div>
                 <button id="btn-circuit-map" class="btn btn-secondary" style="width:auto;padding:6px 12px;font-size:12px;border-color:var(--neon-blue);color:var(--neon-blue);margin:0;">🗺️ Circuit Map</button>
                 <button id="btn-rules" class="btn btn-secondary" style="width:auto;padding:6px 12px;font-size:12px;border-color:var(--f1-yellow);color:var(--f1-yellow);margin:0;">📖 Rule Book</button>
                 <span style="color:var(--text-secondary);font-size:14px;">TEAM: <strong style="color:var(--f1-yellow);" id="lbl-team-name">{{ team_name }}</strong></span>
@@ -22,39 +31,15 @@
 
         <!-- Game Interface Grid -->
         <div class="game-layout">
-            <!-- Left Panel: Stats and Controls -->
-            <div class="panel glass-panel">
-                <div class="panel-header">
-                    <h3>OPERATIVE STATS</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="hud-card glass-panel" id="card-tickets">
-                        <span class="hud-label">TICKETS REMAINING</span>
-                        <span class="hud-value" id="val-tickets">50</span>
-                    </div>
-                    <div class="hud-card glass-panel" id="card-timer" style="border-left:4px solid var(--f1-red);margin-bottom:16px;">
-                        <span class="hud-label">MISSION TIME ELAPSED</span>
-                        <span class="hud-value" id="val-timer" style="color:var(--f1-red);text-shadow:var(--shadow-glow-red);">00:00</span>
-                    </div>
-                    <div style="margin-bottom:20px;">
-                        <h4 style="font-size:12px;color:var(--neon-purple);text-transform:uppercase;margin-bottom:8px;">SECURITY CLEARANCE</h4>
-                        <p id="val-clearance" style="font-size:16px;font-weight:bold;background:rgba(189,0,255,0.05);padding:10px;border-radius:6px;border:1px solid rgba(189,0,255,0.3);text-shadow:var(--shadow-glow-purple);color:var(--neon-purple);">Level: 0 (LOCKED)</p>
-                    </div>
-                    <div style="margin-bottom:20px;">
-                        <h4 style="font-size:12px;color:var(--neon-blue);text-transform:uppercase;margin-bottom:8px;">CURRENT LANDMARK</h4>
-                        <p id="val-location" style="font-size:16px;font-weight:bold;background:rgba(0,0,0,0.3);padding:10px;border-radius:6px;border:1px solid var(--border-color);">Connecting...</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size:12px;color:var(--neon-blue);text-transform:uppercase;margin-bottom:8px;">SECTOR RECORD (HISTORY)</h4>
-                        <div class="scrollable" style="max-height:180px;overflow-y:auto;">
-                            <ul class="log-list" id="list-history"></ul>
-                        </div>
-                    </div>
+            <!-- Left Panel: Placeholder (reserved for future content) -->
+            <div class="panel glass-panel placeholder-panel" id="placeholder-panel">
+                <div class="placeholder-inner">
+                    <span class="placeholder-label">RESERVED</span>
                 </div>
             </div>
 
             <!-- Center Panel: Interactive Map -->
-            <div class="panel map-panel">
+            <div class="panel map-panel" id="map-panel-wrap">
                 <div class="map-wrapper">
                     <svg id="map-svg" class="game-map" viewBox="0 0 1092 1092" preserveAspectRatio="xMidYMid meet">
                         <defs>
@@ -73,35 +58,52 @@
                 <!-- Lobby Overlay (Pre-game) -->
                 <div id="lobby-overlay" class="glass-panel" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(5,5,8,0.95);border:none;text-align:center;z-index:100;padding:40px;overflow-y:auto;">
                     <h2 style="color:var(--neon-blue);margin-bottom:8px;font-size:28px;text-shadow:var(--shadow-glow-blue);text-transform:uppercase;">Mission Briefing</h2>
-                    <p style="color:var(--text-secondary);max-width:500px;line-height:1.6;margin-bottom:20px;font-size:14px;">Read the Mission Rule Book carefully. Deploy your team into the memory-lane grid when you are ready to begin:</p>
-                    <div class="glass-panel" style="max-width:500px;text-align:left;padding:20px;margin-bottom:25px;border:1px solid rgba(0,240,255,0.25);background:rgba(0,0,0,0.5);box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);">
-                        <h3 style="color:var(--f1-yellow);font-size:15px;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid rgba(255,199,0,0.2);padding-bottom:6px;">📖 Mission Rule Book</h3>
+                    <p style="color:var(--text-secondary);max-width:500px;line-height:1.6;margin-bottom:20px;font-size:14px;">Read the Mission Rule Book carefully. Deploy your team into the grid when ready to begin:</p>
+                    <div class="glass-panel" style="max-width:500px;text-align:left;padding:20px;margin-bottom:25px;border:1px solid rgba(0,240,255,0.25);background:rgba(0,0,0,0.5);">
+                        <h3 style="color:var(--f1-yellow);font-size:15px;margin-bottom:12px;text-transform:uppercase;border-bottom:1px solid rgba(255,199,0,0.2);padding-bottom:6px;">📖 Mission Rule Book</h3>
                         <ul style="padding-left:20px;font-size:13px;color:var(--text-secondary);line-height:1.6;list-style-type:square;">
                             <li style="margin-bottom:6px;"><strong>Objective</strong>: Find Sam and move onto his node to rescue him.</li>
                             <li style="margin-bottom:6px;"><strong>Movement</strong>: Click highlighted adjacent circles to move. Each move costs <strong>1 Ticket</strong> (starts at 50).</li>
                             <li style="margin-bottom:6px;"><strong>Decryption Lock</strong>: Landing on a puzzle node locks your team until you solve the riddle.</li>
                             <li style="margin-bottom:6px;"><strong>Dossier Clues</strong>: Solving riddles unlocks <strong>3 coordinate-based clues</strong> about Sam.</li>
-                            <li style="margin-bottom:6px;"><strong>Clearance Level 3</strong>: You must solve enough riddles to gain clearance before reaching Sam.</li>
+                            <li style="margin-bottom:6px;"><strong>Clearance Level 3</strong>: Solve enough riddles before reaching Sam.</li>
                         </ul>
                     </div>
-                    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
-                        <button id="btn-start-mission" class="btn btn-primary" style="width:auto;padding:16px 36px;font-size:16px;font-weight:bold;letter-spacing:1px;background:linear-gradient(135deg, var(--neon-blue), var(--neon-purple));border:1px solid var(--neon-blue);box-shadow:var(--shadow-glow-blue);">🚀 START MISSION</button>
-                    </div>
+                    <button id="btn-start-mission" class="btn btn-primary" style="width:auto;padding:16px 36px;font-size:16px;font-weight:bold;letter-spacing:1px;background:linear-gradient(135deg, var(--neon-blue), var(--neon-purple));border:1px solid var(--neon-blue);box-shadow:var(--shadow-glow-blue);">🚀 START MISSION</button>
                 </div>
             </div>
 
-            <!-- Right Panel: Intelligence Files (Clues) -->
-            <div class="panel glass-panel">
-                <div class="panel-header">
-                    <h3>INTEL DOSSIER</h3>
+            <!-- Bottom Row: Intel Dossier + Sector Record -->
+            <div class="bottom-row glass-panel">
+                <!-- Intel Dossier -->
+                <div class="bottom-section">
+                    <div class="bottom-section-header">
+                        <h3>INTEL DOSSIER</h3>
+                    </div>
+                    <div class="bottom-section-body scrollable">
+                        <ul class="clue-list" id="list-clues">
+                            <li class="clue-item system">Dossier initialized. Gather coordinates to trace Sam.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <ul class="clue-list" id="list-clues">
-                        <li class="clue-item system">Dossier initialized. Gather coordinates to trace Sam.</li>
-                    </ul>
+                <!-- Sector Record (History) -->
+                <div class="bottom-section" style="border-left: 1px solid var(--border-color);">
+                    <div class="bottom-section-header">
+                        <h3>SECTOR RECORD</h3>
+                    </div>
+                    <div class="bottom-section-body scrollable">
+                        <ul class="log-list" id="list-history"></ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Hidden elements kept for JS compatibility (not visible) -->
+    <div style="display:none;">
+        <span id="val-location"></span>
+        <span id="val-clearance"></span>
+        <div id="card-tickets"></div>
     </div>
 
     <!-- Puzzle/Riddle Trigger Modal -->
@@ -109,7 +111,7 @@
         <div class="modal-content glass-panel">
             <h2 class="modal-title">🔐 INTEL DECRYPTION KEY</h2>
             <div class="modal-body">
-                <p style="color:var(--text-secondary);margin-bottom:12px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">You have landed on a grid cell with secure communications. Decrypt to unlock Sam's location information:</p>
+                <p style="color:var(--text-secondary);margin-bottom:12px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">Decrypt to unlock Sam's location information:</p>
                 <div class="modal-puzzle-q" id="puzzle-question">Question goes here...</div>
                 <form id="puzzle-form">
                     <div class="form-group">
@@ -125,7 +127,7 @@
         </div>
     </div>
 
-    <!-- Intel Success Popup (replaces alert) -->
+    <!-- Intel Success Popup -->
     <div id="intel-modal" class="intel-modal-overlay">
         <div class="intel-modal-box">
             <div class="intel-modal-header">
@@ -155,7 +157,6 @@
             </div>
             <div style="color: var(--text-secondary); line-height: 1.6; font-size: 14px; margin-bottom: 24px; text-align: center;">
                 <p style="color: var(--text-primary); font-weight: bold; font-size: 16px; margin-bottom: 15px;">Congratulations, Operatives!</p>
-                <p style="margin-bottom: 10px;">You have successfully located <strong>Sam</strong> and stabilized the collapsing memory timeline inside Project Rewind.</p>
                 <div style="background: rgba(57, 255, 20, 0.05); border: 1px solid rgba(57, 255, 20, 0.2); border-radius: 8px; padding: 15px; margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                     <div>
                         <span style="font-size: 11px; text-transform: uppercase; color: var(--text-secondary); display: block;">Final Time</span>
@@ -206,13 +207,13 @@
         <div class="modal-content glass-panel" style="max-width:550px;">
             <h2 class="modal-title" style="color:var(--f1-yellow);border-bottom:1px solid var(--border-color);padding-bottom:8px;margin-bottom:16px;">📖 MISSION RULE BOOK</h2>
             <div class="modal-body" style="color:var(--text-secondary);line-height:1.6;font-size:14px;text-align:left;">
-                <p style="margin-bottom:12px;color:var(--text-primary);font-weight:bold;">Welcome Operatives! Your objective is to locate and rescue Sam before the timeline collapses.</p>
-                <ul style="padding-left:20px;margin-bottom:16px;list-style-type:square;color:var(--text-secondary);">
+                <p style="margin-bottom:12px;color:var(--text-primary);font-weight:bold;">Welcome Operatives! Locate and rescue Sam before the timeline collapses.</p>
+                <ul style="padding-left:20px;margin-bottom:16px;list-style-type:square;">
                     <li style="margin-bottom:8px;"><strong>Objective</strong>: Find Sam and move onto his node to rescue him.</li>
-                    <li style="margin-bottom:8px;"><strong>Movement</strong>: Click on highlighted adjacent circles to move. Each move consumes <strong>1 Ticket</strong> (you start with 50).</li>
-                    <li style="margin-bottom:8px;"><strong>Security Decryption Lock</strong>: If you land on a puzzle node (yellow circle), you are <strong>locked</strong> and cannot move until you solve the riddle.</li>
-                    <li style="margin-bottom:8px;"><strong>Dossier Clues</strong>: Decrypting a puzzle unlocks <strong>3 coordinate-based clues</strong> about Sam's location (added to your Intel Dossier on the right).</li>
-                    <li style="margin-bottom:8px;"><strong>Clearance Level 3</strong>: You need clearance level 3 before you can enter Sam's node.</li>
+                    <li style="margin-bottom:8px;"><strong>Movement</strong>: Click highlighted adjacent circles to move. Each move consumes <strong>1 Ticket</strong> (start with 50).</li>
+                    <li style="margin-bottom:8px;"><strong>Decryption Lock</strong>: Landing on a puzzle node locks you until the riddle is solved.</li>
+                    <li style="margin-bottom:8px;"><strong>Dossier Clues</strong>: Decrypting unlocks <strong>3 coordinate-based clues</strong> in your Intel Dossier.</li>
+                    <li style="margin-bottom:8px;"><strong>Clearance Level 3</strong>: Required before entering Sam's node.</li>
                 </ul>
                 <div class="modal-footer" style="margin-top:20px;display:flex;justify-content:flex-end;">
                     <button type="button" class="btn btn-primary" id="btn-close-rules" style="width:auto;padding:10px 20px;margin-top:0;">Got it</button>
@@ -222,7 +223,7 @@
     </div>
 
     <!-- Team Javascript Controller -->
-    <script src="/static/js/team.js?v=5.0"></script>
+    <script src="/static/js/team.js?v=6.0"></script>
     <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
