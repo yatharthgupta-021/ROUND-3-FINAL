@@ -1704,40 +1704,10 @@
       "norm_label": "btncloserules"
     },
     {
-      "label": "btnCircuitMap",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L515",
-      "_origin": "ast",
-      "id": "js_team_btncircuitmap",
-      "community": 1,
-      "norm_label": "btncircuitmap"
-    },
-    {
-      "label": "mapPopup",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L516",
-      "_origin": "ast",
-      "id": "js_team_mappopup",
-      "community": 1,
-      "norm_label": "mappopup"
-    },
-    {
-      "label": "btnCloseMapPopup",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L517",
-      "_origin": "ast",
-      "id": "js_team_btnclosemappopup",
-      "community": 1,
-      "norm_label": "btnclosemappopup"
-    },
-    {
       "label": "btnStartMission",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L528",
+      "source_location": "L516",
       "_origin": "ast",
       "id": "js_team_btnstartmission",
       "community": 1,
@@ -1747,7 +1717,7 @@
       "label": "btnCloseWin",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L552",
+      "source_location": "L540",
       "_origin": "ast",
       "id": "js_team_btnclosewin",
       "community": 1,
@@ -1757,7 +1727,7 @@
       "label": "winModalEl",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L553",
+      "source_location": "L541",
       "_origin": "ast",
       "id": "js_team_winmodalel",
       "community": 1,
@@ -2562,9 +2532,9 @@
       "source_file": "test_game.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_test_game_py",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "game"
     },
     {
       "relation": "contains",
@@ -2594,9 +2564,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "game"
     },
     {
       "relation": "method",
@@ -2978,9 +2948,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2988,9 +2958,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3009,9 +2979,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testantiaipuzzletiming",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3030,9 +3000,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testbypassdisabled",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3051,9 +3021,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testinputvalidation",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3072,9 +3042,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testsuspiciousflagsingmview",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3136,9 +3106,9 @@
       "source_file": "game.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_41",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "calls",
@@ -3157,9 +3127,9 @@
       "source_file": "game.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_73",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "references",
@@ -3178,9 +3148,9 @@
       "source_file": "game.py",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_84",
-      "target": "game_gamemanager_update_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_map"
     },
     {
       "relation": "references",
@@ -3189,9 +3159,9 @@
       "source_file": "game.py",
       "source_location": "L751",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_bypass_puzzle",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3254,9 +3224,9 @@
       "source_file": "game.py",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_107",
-      "target": "game_gamemanager_setup_monaco_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_monaco_map"
     },
     {
       "relation": "calls",
@@ -3330,9 +3300,9 @@
       "source_file": "game.py",
       "source_location": "L752",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_752",
-      "target": "game_gamemanager_bypass_puzzle",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_bypass_puzzle"
     },
     {
       "relation": "calls",
@@ -3501,9 +3471,9 @@
       "source_file": "main.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_rate_limit_middleware",
-      "confidence_score": 1.0
+      "target": "main_rate_limit_middleware"
     },
     {
       "relation": "contains",
@@ -3541,9 +3511,9 @@
       "source_file": "main.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_security_headers_middleware",
-      "confidence_score": 1.0
+      "target": "main_security_headers_middleware"
     },
     {
       "relation": "contains",
@@ -3652,9 +3622,9 @@
       "source_file": "main.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_rate_limit_middleware",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "references",
@@ -3696,9 +3666,9 @@
       "source_file": "main.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_security_headers_middleware",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "method",
@@ -4370,9 +4340,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_escapehtml",
-      "confidence_score": 1.0
+      "target": "js_gm_escapehtml"
     },
     {
       "relation": "contains",
@@ -4798,31 +4768,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "static/js/team.js",
-      "source_location": "L543",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "js_team",
-      "target": "js_team_btncircuitmap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
       "source_location": "L435",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "js_team",
       "target": "js_team_btncloseintel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L545",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "js_team",
-      "target": "js_team_btnclosemappopup"
     },
     {
       "relation": "contains",
@@ -4900,9 +4850,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_escapehtml",
-      "confidence_score": 1.0
+      "target": "js_team_escapehtml"
     },
     {
       "relation": "contains",
@@ -5043,16 +4993,6 @@
       "confidence_score": 1.0,
       "source": "js_team",
       "target": "js_team_mapnodesgroup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L544",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "js_team",
-      "target": "js_team_mappopup"
     },
     {
       "relation": "contains",
@@ -5315,9 +5255,9 @@
       "source_file": "test_game.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_test_game_py",
-      "target": "test_game_testfindsamgame",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame"
     },
     {
       "relation": "method",
@@ -5405,9 +5345,9 @@
       "source_file": "tests/test_graph.py",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_tests_test_graph_py",
-      "target": "tests_test_graph_get_distances",
-      "confidence_score": 1.0
+      "target": "tests_test_graph_get_distances"
     },
     {
       "relation": "contains",
@@ -5415,9 +5355,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "contains",
@@ -5425,9 +5365,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testadjacentnodehiding",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding"
     },
     {
       "relation": "contains",
@@ -5435,9 +5375,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testantiaipuzzletiming",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming"
     },
     {
       "relation": "contains",
@@ -5445,9 +5385,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testbypassdisabled",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testbypassdisabled"
     },
     {
       "relation": "contains",
@@ -5455,9 +5395,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testinputvalidation",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation"
     },
     {
       "relation": "contains",
@@ -5465,9 +5405,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testsuspiciousflagsingmview",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview"
     },
     {
       "relation": "rationale_for",
@@ -5475,9 +5415,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_1",
-      "target": "tests_test_security",
-      "confidence_score": 1.0
+      "target": "tests_test_security"
     },
     {
       "relation": "rationale_for",
@@ -5485,9 +5425,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_8",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "calls",
@@ -5496,9 +5436,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testadjacentnodehiding_setup",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "calls",
@@ -5507,9 +5447,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testantiaipuzzletiming_setup",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "calls",
@@ -5518,9 +5458,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation_setup",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "calls",
@@ -5529,9 +5469,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testsuspiciousflagsingmview_setup",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "method",
@@ -5539,9 +5479,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_setup",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_setup"
     },
     {
       "relation": "method",
@@ -5549,9 +5489,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string"
     },
     {
       "relation": "method",
@@ -5559,9 +5499,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id"
     },
     {
       "relation": "method",
@@ -5569,9 +5509,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id"
     },
     {
       "relation": "method",
@@ -5579,9 +5519,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer"
     },
     {
       "relation": "method",
@@ -5589,9 +5529,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testinputvalidation",
-      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer"
     },
     {
       "relation": "rationale_for",
@@ -5599,9 +5539,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_29",
-      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string"
     },
     {
       "relation": "rationale_for",
@@ -5609,9 +5549,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_35",
-      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id"
     },
     {
       "relation": "rationale_for",
@@ -5619,9 +5559,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_41",
-      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id"
     },
     {
       "relation": "rationale_for",
@@ -5629,9 +5569,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_47",
-      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer"
     },
     {
       "relation": "rationale_for",
@@ -5639,9 +5579,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_58",
-      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer"
     },
     {
       "relation": "method",
@@ -5649,9 +5589,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testbypassdisabled",
-      "target": "tests_test_security_testbypassdisabled_setup",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testbypassdisabled_setup"
     },
     {
       "relation": "method",
@@ -5659,9 +5599,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testbypassdisabled",
-      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure"
     },
     {
       "relation": "rationale_for",
@@ -5669,9 +5609,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_73",
-      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure"
     },
     {
       "relation": "method",
@@ -5679,9 +5619,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testantiaipuzzletiming",
-      "target": "tests_test_security_testantiaipuzzletiming_setup",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming_setup"
     },
     {
       "relation": "method",
@@ -5689,9 +5629,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testantiaipuzzletiming",
-      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged"
     },
     {
       "relation": "method",
@@ -5699,9 +5639,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testantiaipuzzletiming",
-      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged"
     },
     {
       "relation": "rationale_for",
@@ -5709,9 +5649,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_88",
-      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged"
     },
     {
       "relation": "rationale_for",
@@ -5719,9 +5659,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_118",
-      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged"
     },
     {
       "relation": "method",
@@ -5729,9 +5669,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "tests_test_security_testadjacentnodehiding_setup",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_setup"
     },
     {
       "relation": "method",
@@ -5739,9 +5679,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent"
     },
     {
       "relation": "method",
@@ -5749,9 +5689,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent"
     },
     {
       "relation": "method",
@@ -5759,9 +5699,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent"
     },
     {
       "relation": "rationale_for",
@@ -5769,9 +5709,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_144",
-      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent"
     },
     {
       "relation": "rationale_for",
@@ -5779,9 +5719,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_150",
-      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent"
     },
     {
       "relation": "rationale_for",
@@ -5789,9 +5729,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_156",
-      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent"
     },
     {
       "relation": "method",
@@ -5799,9 +5739,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testsuspiciousflagsingmview",
-      "target": "tests_test_security_testsuspiciousflagsingmview_setup",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview_setup"
     },
     {
       "relation": "method",
@@ -5809,9 +5749,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testsuspiciousflagsingmview",
-      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times"
     },
     {
       "relation": "method",
@@ -5819,9 +5759,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_testsuspiciousflagsingmview",
-      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags"
     },
     {
       "relation": "rationale_for",
@@ -5829,9 +5769,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_170",
-      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags"
     },
     {
       "relation": "rationale_for",
@@ -5839,9 +5779,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_185",
-      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times"
     },
     {
       "relation": "contains",
@@ -5849,9 +5789,9 @@
       "source_file": "tests/test_serpentine.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_tests_test_serpentine_py",
-      "target": "tests_test_serpentine_test_dists",
-      "confidence_score": 1.0
+      "target": "tests_test_serpentine_test_dists"
     },
     {
       "relation": "contains",
@@ -5859,9 +5799,9 @@
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_graphify",
-      "target": "rules_graphify_graphify",
-      "confidence_score": 1.0
+      "target": "rules_graphify_graphify"
     },
     {
       "relation": "contains",
@@ -5869,9 +5809,9 @@
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_graphify",
-      "target": "workflows_graphify_workflow_graphify",
-      "confidence_score": 1.0
+      "target": "workflows_graphify_workflow_graphify"
     },
     {
       "relation": "contains",
@@ -5879,9 +5819,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_find_sam_round_3_treasure_hunt",
-      "confidence_score": 1.0
+      "target": "readme_find_sam_round_3_treasure_hunt"
     },
     {
       "relation": "contains",
@@ -5889,9 +5829,9 @@
       "source_file": "README.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_free_deployment_options",
-      "confidence_score": 1.0
+      "target": "readme_free_deployment_options"
     },
     {
       "relation": "contains",
@@ -5899,9 +5839,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_gameplay_overview",
-      "confidence_score": 1.0
+      "target": "readme_gameplay_overview"
     },
     {
       "relation": "contains",
@@ -5909,9 +5849,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_project_structure",
-      "confidence_score": 1.0
+      "target": "readme_project_structure"
     },
     {
       "relation": "contains",
@@ -5919,9 +5859,9 @@
       "source_file": "README.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_running_locally",
-      "confidence_score": 1.0
+      "target": "readme_running_locally"
     },
     {
       "relation": "contains",
@@ -5929,9 +5869,9 @@
       "source_file": "README.md",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_running_tests",
-      "confidence_score": 1.0
+      "target": "readme_running_tests"
     },
     {
       "relation": "contains",
@@ -5939,9 +5879,9 @@
       "source_file": "README.md",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_security_anti_cheat",
-      "confidence_score": 1.0
+      "target": "readme_security_anti_cheat"
     },
     {
       "relation": "contains",
@@ -5949,9 +5889,9 @@
       "source_file": "README.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_find_sam_round_3_treasure_hunt",
-      "target": "readme_tech_stack",
-      "confidence_score": 1.0
+      "target": "readme_tech_stack"
     },
     {
       "relation": "contains",
@@ -5959,9 +5899,9 @@
       "source_file": "README.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_running_locally",
-      "target": "readme_1_clone_the_repo",
-      "confidence_score": 1.0
+      "target": "readme_1_clone_the_repo"
     },
     {
       "relation": "contains",
@@ -5969,9 +5909,9 @@
       "source_file": "README.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_running_locally",
-      "target": "readme_2_create_a_virtual_environment_install_dependencies",
-      "confidence_score": 1.0
+      "target": "readme_2_create_a_virtual_environment_install_dependencies"
     },
     {
       "relation": "contains",
@@ -5979,9 +5919,9 @@
       "source_file": "README.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_running_locally",
-      "target": "readme_3_start_the_server",
-      "confidence_score": 1.0
+      "target": "readme_3_start_the_server"
     },
     {
       "relation": "contains",
@@ -5989,9 +5929,9 @@
       "source_file": "README.md",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_running_locally",
-      "target": "readme_4_open_in_browser",
-      "confidence_score": 1.0
+      "target": "readme_4_open_in_browser"
     },
     {
       "relation": "contains",
@@ -5999,9 +5939,9 @@
       "source_file": "README.md",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_free_deployment_options",
-      "target": "readme_alternative_fly_io_https_fly_io",
-      "confidence_score": 1.0
+      "target": "readme_alternative_fly_io_https_fly_io"
     },
     {
       "relation": "contains",
@@ -6009,9 +5949,9 @@
       "source_file": "README.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_free_deployment_options",
-      "target": "readme_alternative_railway_https_railway_app",
-      "confidence_score": 1.0
+      "target": "readme_alternative_railway_https_railway_app"
     },
     {
       "relation": "contains",
@@ -6019,11 +5959,11 @@
       "source_file": "README.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_free_deployment_options",
-      "target": "readme_recommended_render_https_render_com",
-      "confidence_score": 1.0
+      "target": "readme_recommended_render_https_render_com"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1f4e8615d979676b139fe258080ee30ac5c10be4"
+  "built_at_commit": "4faa1c6caca4cfdaa51005c0d565a3108b4cfb70"
 }

@@ -22,7 +22,7 @@
                     <span class="hud-pill-icon">⏱</span>
                     <span id="val-timer" class="hud-pill-value">00:00</span>
                 </div>
-                <button id="btn-circuit-map" class="btn btn-secondary" style="width:auto;padding:6px 12px;font-size:12px;border-color:var(--neon-blue);color:var(--neon-blue);margin:0;">🗺️ Circuit Map</button>
+
                 <button id="btn-rules" class="btn btn-secondary" style="width:auto;padding:6px 12px;font-size:12px;border-color:var(--f1-yellow);color:var(--f1-yellow);margin:0;">📖 Rule Book</button>
                 <span style="color:var(--text-secondary);font-size:14px;">TEAM: <strong style="color:var(--f1-yellow);" id="lbl-team-name">{{ team_name }}</strong></span>
                 <span id="game-status-badge" class="game-badge badge-setup">SETUP LOBBY</span>
@@ -41,14 +41,14 @@
             <!-- Center Panel: Interactive Map -->
             <div class="panel map-panel" id="map-panel-wrap">
                 <div class="map-wrapper">
-                    <svg id="map-svg" class="game-map" viewBox="0 0 1092 1092" preserveAspectRatio="xMidYMid meet">
+                    <svg id="map-svg" class="game-map" viewBox="0 0 5194 2250" preserveAspectRatio="xMidYMid meet">
                         <defs>
                             <filter id="node-shadow" x="-40%" y="-40%" width="180%" height="180%">
                                 <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="rgba(0,240,255,0.6)"/>
                             </filter>
                         </defs>
                         <!-- Background map image -->
-                        <image href="/static/assets/background.png" x="0" y="0" width="1092" height="1092" preserveAspectRatio="xMidYMid meet" style="opacity:0.85;"/>
+                        <image href="/static/assets/background.png?v=3" x="0" y="0" width="5194" height="2250" preserveAspectRatio="xMidYMid meet" style="opacity:0.85;"/>
                         <g id="map-links-group"></g>
                         <g id="map-nodes-group"></g>
                         <g id="player-marker-group"></g>
@@ -174,13 +174,7 @@
         </div>
     </div>
 
-    <!-- Monaco Circuit Map Popup -->
-    <div id="map-popup" class="map-popup-overlay">
-        <div class="map-popup-box">
-            <button class="map-popup-close" id="btn-close-map-popup">✕</button>
-            <img src="/static/assets/circuit_de_monaco.jpg?v=2" alt="Circuit de Monaco — Location Map">
-        </div>
-    </div>
+
 
     <!-- Final Global Leaderboard Winner Announcement -->
     <div id="winner-overlay" class="announcement-overlay" style="display:none;">

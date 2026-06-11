@@ -59,12 +59,12 @@ const samMarkerGroup = document.getElementById('sam-marker-group');
 const teamsMarkersGroup = document.getElementById('teams-markers-group');
 
 // Node rendering: custom_map coords (x: 0-64, y: 0-50) mapped to
-// the background image canvas (1092 x 1092 SVG viewBox)
+// the background image canvas (5194 x 2250 SVG viewBox)
 const MAP_X_MAX = 64;
 const MAP_Y_MAX = 50;
-const SVG_W = 1092;
-const SVG_H = 1092;
-const MAP_PAD = 12;
+const SVG_W = 5194;
+const SVG_H = 2250;
+const MAP_PAD = 25;
 
 function getNodeCoords(node) {
     if (customNodesCoords[node.id]) {
@@ -443,11 +443,11 @@ function renderMap(data) {
             const previewLine = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             previewLine.setAttribute('cx', coords.x);
             previewLine.setAttribute('cy', coords.y);
-            previewLine.setAttribute('r', '24');
+            previewLine.setAttribute('r', '50');
             previewLine.setAttribute('fill', 'none');
             previewLine.setAttribute('stroke', '#bd00ff');
-            previewLine.setAttribute('stroke-width', '4');
-            previewLine.setAttribute('stroke-dasharray', '4 4');
+            previewLine.setAttribute('stroke-width', '8');
+            previewLine.setAttribute('stroke-dasharray', '8 8');
             mapLinksGroup.appendChild(previewLine);
         }
     }
@@ -460,7 +460,7 @@ function renderMap(data) {
         const coords = getNodeCoords(node);
         
         const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-        let classes = 'map-node';
+        let classes = 'map-node gm-node';
         
         // Is this node in Sam's path?
         const isSamPath = data.sam_path && data.sam_path.includes(node.id);
@@ -474,7 +474,7 @@ function renderMap(data) {
         circle.setAttribute('class', 'node-bg');
         circle.setAttribute('cx', coords.x);
         circle.setAttribute('cy', coords.y);
-        circle.setAttribute('r', '14');
+        circle.setAttribute('r', '28');
         g.appendChild(circle);
         
         // Tooltip text for location name (GM can hover to see name)
@@ -536,19 +536,19 @@ function renderMap(data) {
             pulse.setAttribute('class', 'beacon-pulse');
             pulse.setAttribute('cx', coords.x);
             pulse.setAttribute('cy', coords.y);
-            pulse.setAttribute('r', '22');
+            pulse.setAttribute('r', '48');
             
             const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             core.setAttribute('class', 'beacon-core');
             core.setAttribute('cx', coords.x);
             core.setAttribute('cy', coords.y);
-            core.setAttribute('r', '6');
+            core.setAttribute('r', '12');
             
             // Sam text overlay
             const samText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
             samText.setAttribute('class', 'sam-label');
             samText.setAttribute('x', coords.x);
-            samText.setAttribute('y', coords.y - 20);
+            samText.setAttribute('y', coords.y - 42);
             samText.textContent = 'SAM';
             
             beaconGroup.appendChild(pulse);
@@ -580,8 +580,8 @@ function renderMap(data) {
                 let offset_y = 0;
                 if (teamItems.length > 1) {
                     const angle = (idx * (2 * Math.PI)) / teamItems.length;
-                    offset_x = Math.cos(angle) * 12;
-                    offset_y = Math.sin(angle) * 12;
+                    offset_x = Math.cos(angle) * 25;
+                    offset_y = Math.sin(angle) * 25;
                 }
                 
                 let dotColor = 'var(--neon-blue)';
@@ -601,10 +601,10 @@ function renderMap(data) {
                 const teamDot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
                 teamDot.setAttribute('cx', baseCoords.x + offset_x);
                 teamDot.setAttribute('cy', baseCoords.y + offset_y);
-                teamDot.setAttribute('r', '5');
+                teamDot.setAttribute('r', '10');
                 teamDot.setAttribute('fill', dotColor);
                 teamDot.setAttribute('stroke', '#fff');
-                teamDot.setAttribute('stroke-width', '1.5');
+                teamDot.setAttribute('stroke-width', '3');
                 if (dotFilter !== 'none') {
                     teamDot.setAttribute('filter', dotFilter);
                 }
@@ -618,7 +618,7 @@ function renderMap(data) {
                 const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
                 label.setAttribute('class', 'teams-marker-label');
                 label.setAttribute('x', baseCoords.x + offset_x);
-                label.setAttribute('y', baseCoords.y + offset_y - 10);
+                label.setAttribute('y', baseCoords.y + offset_y - 22);
                 label.textContent = name.substring(0, 3).toUpperCase();
                 
                 teamsMarkersGroup.appendChild(teamDot);

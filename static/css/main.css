@@ -452,8 +452,8 @@ h1, h2, h3, .hud-value, .logo {
 }
 
 .map-wrapper {
-    /* Lock to 1:1 square so nodes align with background image exactly */
-    aspect-ratio: 1 / 1;
+    /* Lock to aspect ratio so nodes align with background image exactly */
+    aspect-ratio: 5194 / 2250;
     width: 100%;
     max-height: 100%;
     position: relative;
@@ -504,6 +504,13 @@ svg.game-map:active {
     stroke: rgba(0, 0, 0, 0.75);
     stroke-width: 2px;
     transition: all 0.3s;
+}
+
+.map-node.gm-node circle.node-bg {
+    fill: var(--neon-blue);
+    stroke: #fff;
+    stroke-width: 2px;
+    filter: drop-shadow(var(--shadow-glow-blue));
 }
 
 .map-node.accessible {

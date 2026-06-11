@@ -1,16 +1,16 @@
 # Graph Report - phase2-round3  (2026-06-11)
 
 ## Corpus Check
-- 14 files · ~173,601 words
+- 14 files · ~404,968 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 251 nodes · 342 edges · 20 communities (17 shown, 3 thin omitted)
+- 248 nodes · 339 edges · 20 communities (17 shown, 3 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1f4e8615`
+- Built from commit: `4faa1c6c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -68,7 +68,7 @@ Nodes (34): btnForceSamMove, btnResetGame, btnSaveMap, chkMapEditor, currentConn
 
 ### Community 1 - "Team Interface (JS)"
 Cohesion: 0.05
-Nodes (39): btnBypassPuzzle, btnCircuitMap, btnCloseIntel, btnCloseMapPopup, btnCloseRules, btnCloseWin, btnRules, btnStartMission (+31 more)
+Nodes (36): btnBypassPuzzle, btnCloseIntel, btnCloseRules, btnCloseWin, btnRules, btnStartMission, cluesList, fetchState() (+28 more)
 
 ### Community 2 - "Game Logic Engine"
 Cohesion: 0.13
@@ -119,7 +119,7 @@ Cohesion: 0.33
 Nodes (3): GM view should include suspicious_flags for each team., GM view should include solve_times for each team., TestSuspiciousFlagsInGMView
 
 ## Knowledge Gaps
-- **77 isolated node(s):** `nodes`, `connections`, `puzzles`, `sam_start_node`, `nodes` (+72 more)
+- **74 isolated node(s):** `nodes`, `connections`, `puzzles`, `sam_start_node`, `nodes` (+69 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -127,16 +127,16 @@ Nodes (3): GM view should include suspicious_flags for each team., GM view shoul
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `GameManager` connect `Game Logic Engine` to `FastAPI Main App`, `Websocket Manager`, `Game Unit Tests`, `Layout Tests`, `Community 12`, `Community 13`, `Community 14`, `Community 15`, `Community 16`?**
-  _High betweenness centrality (0.197) - this node is a cross-community bridge._
+  _High betweenness centrality (0.202) - this node is a cross-community bridge._
 - **Why does `TestInputValidation` connect `Layout Tests` to `Game Logic Engine`, `Community 12`, `Community 14`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
 - **Why does `TestFindSamGame` connect `Game Unit Tests` to `Game Logic Engine`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Are the 16 inferred relationships involving `GameManager` (e.g. with `BypassModel` and `ConfigureModel`) actually correct?**
   _`GameManager` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `nodes`, `connections`, `puzzles` to the rest of the system?**
-  _97 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _94 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `GM Interface (JS)` be split into smaller, more focused modules?**
   _Cohesion score 0.05758582502768549 - nodes in this community are weakly interconnected._
 - **Should `Team Interface (JS)` be split into smaller, more focused modules?**
-  _Cohesion score 0.04609929078014184 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.049494949494949494 - nodes in this community are weakly interconnected._

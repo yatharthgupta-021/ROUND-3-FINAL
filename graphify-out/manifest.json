@@ -10,13 +10,13 @@
     "semantic_hash": ""
   },
   "static/js/gm.js": {
-    "mtime": 1781182835.1034875,
-    "ast_hash": "5b5753545ad058bf6c7fc7afa38cbc72",
+    "mtime": 1781186259.1014233,
+    "ast_hash": "187d44fb9de963f7bf8529277650f10f",
     "semantic_hash": ""
   },
   "static/js/team.js": {
-    "mtime": 1781182804.423468,
-    "ast_hash": "eb2f5434e1bb4b49ed7ffd5703b2a7bb",
+    "mtime": 1781185562.4045527,
+    "ast_hash": "b3fd74eb314ab36bd62aa603de3a0510",
     "semantic_hash": ""
   },
   "test_game.py": {
@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "templates/gm.html": {
-    "mtime": 1781094097.8336499,
-    "ast_hash": "315c4ece5e601aa6afecc45eaf4ad8ec",
+    "mtime": 1781186140.7891326,
+    "ast_hash": "d6fa28e68d7d19eff23bf4c71acc4256",
     "semantic_hash": ""
   },
   "templates/index.html": {
@@ -70,13 +70,8 @@
     "semantic_hash": ""
   },
   "templates/team.html": {
-    "mtime": 1781182621.7589324,
-    "ast_hash": "04752dbbc4f312f4725e7ca442b101bf",
-    "semantic_hash": ""
-  },
-  "static/assets/circuit_de_monaco.jpg": {
-    "mtime": 1781002449.087813,
-    "ast_hash": "17b844ae6a8f83c37bb2dd922f2c6fe6",
+    "mtime": 1781186140.7372248,
+    "ast_hash": "4951cf668f755ec7b72b3d09ca274a5d",
     "semantic_hash": ""
   },
   "custom_map.json": {
@@ -94,14 +89,9 @@
     "ast_hash": "16543630c55905d517646a83dd5455e1",
     "semantic_hash": ""
   },
-  "background.png": {
-    "mtime": 1781090672.546087,
-    "ast_hash": "3a4878aa2f8c4850720a2d73d8492a84",
-    "semantic_hash": ""
-  },
   "static/assets/background.png": {
-    "mtime": 1781090672.546087,
-    "ast_hash": "3a4878aa2f8c4850720a2d73d8492a84",
+    "mtime": 1781183337.1269743,
+    "ast_hash": "d3bad584433577e868a1de9b5723a56a",
     "semantic_hash": ""
   }
 }

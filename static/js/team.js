@@ -38,12 +38,12 @@ const mapNodesGroup = document.getElementById('map-nodes-group');
 const playerMarkerGroup = document.getElementById('player-marker-group');
 
 // Node rendering: custom_map coords (x: 0-64, y: 0-50) mapped to
-// the background image canvas (1092 x 1092 SVG viewBox)
+// the background image canvas (5194 x 2250 SVG viewBox)
 const MAP_X_MAX = 64;   // max x coord in custom_map.json
 const MAP_Y_MAX = 50;   // max y coord in custom_map.json
-const SVG_W = 1092;
-const SVG_H = 1092;
-const MAP_PAD = 12;     // pixel padding so edge nodes don't touch border
+const SVG_W = 5194;
+const SVG_H = 2250;
+const MAP_PAD = 25;     // pixel padding so edge nodes don't touch border
 
 function getNodeCoords(node) {
     return {
@@ -288,7 +288,7 @@ function renderMap(data) {
         circle.setAttribute('class', 'node-bg');
         circle.setAttribute('cx', coords.x);
         circle.setAttribute('cy', coords.y);
-        circle.setAttribute('r', isCurrent ? '18' : '14');
+        circle.setAttribute('r', isCurrent ? '37' : '28');
         g.appendChild(circle);
         
         // Tooltip text (hover only, not rendered inline)
@@ -317,13 +317,13 @@ function renderMap(data) {
             pulse.setAttribute('class', 'beacon-pulse');
             pulse.setAttribute('cx', coords.x);
             pulse.setAttribute('cy', coords.y);
-            pulse.setAttribute('r', '22');
+            pulse.setAttribute('r', '48');
             
             const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             core.setAttribute('class', 'beacon-core');
             core.setAttribute('cx', coords.x);
             core.setAttribute('cy', coords.y);
-            core.setAttribute('r', '5');
+            core.setAttribute('r', '11');
             
             beaconGroup.appendChild(pulse);
             beaconGroup.appendChild(core);
@@ -511,18 +511,6 @@ if (btnRules && rulesModal && btnCloseRules) {
     });
 }
 
-// ── Circuit Map Popup ─────────────────────────────────────────────────────────
-const btnCircuitMap     = document.getElementById('btn-circuit-map');
-const mapPopup          = document.getElementById('map-popup');
-const btnCloseMapPopup  = document.getElementById('btn-close-map-popup');
-
-if (btnCircuitMap && mapPopup) {
-    btnCircuitMap.addEventListener('click', () => mapPopup.classList.add('active'));
-    btnCloseMapPopup.addEventListener('click', () => mapPopup.classList.remove('active'));
-    mapPopup.addEventListener('click', e => {
-        if (e.target === mapPopup) mapPopup.classList.remove('active');
-    });
-}
 
 // ── Start Mission Button ──────────────────────────────────────────────────────
 const btnStartMission = document.getElementById('btn-start-mission');
