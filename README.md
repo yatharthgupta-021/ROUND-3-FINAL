@@ -22,8 +22,10 @@ A real-time multiplayer mystery game built with **FastAPI**, **WebSockets**, and
 find_sam_game/
 ├── main.py              # FastAPI app — routes, WebSocket handlers, startup logic
 ├── game.py              # Core game engine — graph, Sam movement, puzzle logic
+├── custom_map.json      # Custom node layout mapping and configuration
 ├── game_state.json      # (auto-generated at runtime, not committed)
 ├── requirements.txt     # Python dependencies
+├── graphify-out/        # Graphify knowledge graph outputs
 ├── templates/           # Jinja2 HTML templates
 │   ├── index.html       # Team lobby / join page
 │   ├── team.html        # Team game view
@@ -70,38 +72,10 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## ☁️ Free Deployment Options
+## 🌐 Live Deployment
 
-This app uses **FastAPI + WebSockets** and requires a live Python server — it **cannot** be hosted on GitHub Pages (static only). Here are the best free options:
-
-### ✅ Recommended: [Render](https://render.com)
-
-1. Create a free account at [render.com](https://render.com)
-2. Click **New → Web Service** → connect your GitHub repo
-3. Set:
-   - **Runtime**: Python 3
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-4. Deploy — Render gives you a free `*.onrender.com` URL
-
-> ⚠️ Free Render instances spin down after 15 min of inactivity. For a live game event, upgrade to the $7/mo paid tier or keep the instance warm.
-
-### Alternative: [Railway](https://railway.app)
-
-1. Sign up at [railway.app](https://railway.app)
-2. Click **New Project → Deploy from GitHub Repo**
-3. Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-4. Railway gives $5 free credit/month (enough for ~500 hours)
-
-### Alternative: [Fly.io](https://fly.io)
-
-For more control, deploy with Docker:
-```bash
-# Install flyctl, then:
-fly launch
-fly deploy
-```
-Fly.io offers 3 free VMs with 256MB RAM.
+The game is currently deployed and playable at:
+**[https://phase2-round3.onrender.com/](https://phase2-round3.onrender.com/)**
 
 ---
 
