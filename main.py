@@ -289,18 +289,21 @@ async def start_game():
     await update_all_clients()
     return {"success": True}
 
-@app.post("/api/gm/reset")
-async def reset_game():
-    global game_manager
-    # Keep the network configuration and nodes, just reset state
-    game_manager = GameManager()
-    if os.path.exists(db_file):
-        try:
-            os.remove(db_file)
-        except Exception:
-            pass
-    await update_all_clients()
-    return {"success": True}
+@app.post("/api/gm/pause")
+async def pause_game():
+    if game_manager.pause_game():
+        game_manager.save_state(db_file)
+        await update_all_clients()
+        return {"success": True}
+    return JSONResponse({"success": False, "message": "Game must be active to pause"}, status_code=400)
+
+@app.post("/api/gm/resume")
+async def resume_game():
+    if game_manager.resume_game():
+        game_manager.save_state(db_file)
+        await update_all_clients()
+        return {"success": True}
+    return JSONResponse({"success": False, "message": "Game must be paused to resume"}, status_code=400)
 
 @app.post("/api/team/move")
 async def move_team(move: MoveModel):
