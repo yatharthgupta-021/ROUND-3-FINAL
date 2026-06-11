@@ -41,6 +41,12 @@
             margin-bottom: 15px;
             text-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
         }
+        .badge-paused {
+            background: rgba(255, 180, 171, 0.1);
+            color: #ffb4ab;
+            border-color: #ffb4ab;
+            text-shadow: 0 0 8px rgba(255, 180, 171, 0.6);
+        }
     </style>
 </head>
 <body>
@@ -110,7 +116,8 @@
                     <!-- Action buttons -->
                     <div class="gm-actions">
                         <button id="btn-force-sam-move" class="btn btn-secondary">Advance Sam 1 Step</button>
-                        <button id="btn-reset-game" class="btn btn-danger">Abort & Reset Grid</button>
+                        <button id="btn-pause-game" class="btn" style="border: 1px dashed #ffb4ab; color: #ffb4ab; background: transparent; box-shadow: 0 0 10px rgba(255, 180, 171, 0.2); text-shadow: 0 0 8px rgba(255, 180, 171, 0.8); font-family: 'Orbitron', sans-serif;">PAUSE MISSION</button>
+                        <button id="btn-resume-game" class="btn" style="display: none; border: 1px solid #00ffcc; color: #00ffcc; background: rgba(0, 255, 204, 0.1); box-shadow: 0 0 10px rgba(0, 255, 204, 0.3); text-shadow: 0 0 8px rgba(0, 255, 204, 0.8); font-family: 'Orbitron', sans-serif;">RESUME MISSION</button>
                     </div>
                 </div>
             </div>

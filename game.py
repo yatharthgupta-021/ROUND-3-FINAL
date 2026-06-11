@@ -14,6 +14,7 @@ class GameManager:
         self.sam_movement_interval = 90
         self.last_sam_move_time = 0.0
         self.start_time = 0.0  # Game start timestamp
+        self.pause_start_time = 0.0
         
         # Nodes and adjacency loaded from custom_map.json
         self.nodes: Dict[int, Dict[str, Any]] = {}
@@ -520,6 +521,34 @@ class GameManager:
             self.last_sam_move_time = time.time()
             self.sam_current_node = self.sam_start_node
 
+    def pause_game(self) -> bool:
+        if self.game_status == "active":
+            self.game_status = "paused"
+            self.pause_start_time = time.time()
+            return True
+        return False
+
+    def resume_game(self) -> bool:
+        if self.game_status == "paused":
+            pause_duration = time.time() - self.pause_start_time
+            self.start_time += pause_duration
+            self.last_sam_move_time += pause_duration
+            
+            for team in self.teams.values():
+                if team.get("start_time", 0.0) > 0.0:
+                    team["start_time"] += pause_duration
+                if team.get("join_time", 0.0) > 0.0:
+                    team["join_time"] += pause_duration
+                if team.get("puzzle_presented_at", 0.0) > 0.0:
+                    team["puzzle_presented_at"] += pause_duration
+                if team.get("last_solve_attempt", 0.0) > 0.0:
+                    team["last_solve_attempt"] += pause_duration
+                
+            self.game_status = "active"
+            self.pause_start_time = 0.0
+            return True
+        return False
+
     def handle_team_win(self, team_name: str):
         team = self.teams.get(team_name)
         if team and not team["found_sam"] and not team["is_eliminated"]:
@@ -790,7 +819,8 @@ class GameManager:
             elapsed_seconds = int(team["finish_time"] - team_start)
         else:
             team_start = team.get("start_time", 0.0)
-            elapsed_seconds = int(time.time() - team_start) if team_start > 0.0 else 0
+            now = self.pause_start_time if self.game_status == "paused" else time.time()
+            elapsed_seconds = int(now - team_start) if team_start > 0.0 else 0
             
         links = []
         for u in self.adj_list:
@@ -832,6 +862,7 @@ class GameManager:
         teams_data = {}
         for name, data in self.teams.items():
             team_start = data.get("start_time", 0.0) or self.start_time
+            now = self.pause_start_time if self.game_status == "paused" else time.time()
             teams_data[name] = {
                 "current_node": data["current_node"],
                 "history": data["history"],
@@ -840,7 +871,7 @@ class GameManager:
                 "found_sam": data["found_sam"],
                 "puzzles_solved_count": len(data["puzzles_solved"]),
                 "last_active": data.get("finish_time", 0.0) or data.get("join_time", 0.0),
-                "elapsed_seconds": int((data.get("finish_time", 0.0) or time.time()) - team_start) if data.get("started", False) else 0,
+                "elapsed_seconds": int((data.get("finish_time", 0.0) or now) - team_start) if data.get("started", False) else 0,
                 "is_online": (connected_teams is not None and name in connected_teams),
                 "started": data.get("started", False),
                 "solve_times": data.get("solve_times", []),
@@ -859,7 +890,8 @@ class GameManager:
                 "has_puzzle": has_puzzle
             })
             
-        elapsed_seconds = int(time.time() - self.start_time) if self.game_status == "active" else 0
+        now = self.pause_start_time if self.game_status == "paused" else time.time()
+        elapsed_seconds = int(now - self.start_time) if self.game_status in ("active", "paused") else 0
         
         links = []
         for u in self.adj_list:
@@ -887,7 +919,7 @@ class GameManager:
             },
             "sam_path": self.sam_path,
             "sam_movement_interval": self.sam_movement_interval,
-            "seconds_since_sam_move": int(time.time() - self.last_sam_move_time),
+            "seconds_since_sam_move": int((self.pause_start_time if self.game_status == "paused" else time.time()) - self.last_sam_move_time),
             "elapsed_seconds": elapsed_seconds,
             "teams": teams_data,
             "map_nodes": map_data,
@@ -945,6 +977,7 @@ class GameManager:
             "sam_path_index": self.sam_path_index,
             "sam_current_node": self.sam_current_node,
             "start_time": self.start_time,
+            "pause_start_time": self.pause_start_time,
             "teams": self.teams,
             "puzzles": self.puzzles,
             "winners": self.winners
@@ -964,6 +997,7 @@ class GameManager:
             self.sam_path_index = state["sam_path_index"]
             self.sam_current_node = state["sam_current_node"]
             self.start_time = state.get("start_time", 0.0)
+            self.pause_start_time = state.get("pause_start_time", 0.0)
             self.teams = state["teams"]
             self.puzzles = {int(k): v for k, v in state["puzzles"].items()}
             self.winners = state["winners"]

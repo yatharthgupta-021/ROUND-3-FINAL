@@ -22,7 +22,8 @@ const samIntervalInput = document.getElementById('sam_interval');
 const samPathInput = document.getElementById('sam_path_input');
 const recordPathChk = document.getElementById('chk-record-path');
 const btnForceSamMove = document.getElementById('btn-force-sam-move');
-const btnResetGame = document.getElementById('btn-reset-game');
+const btnPauseGame = document.getElementById('btn-pause-game');
+const btnResumeGame = document.getElementById('btn-resume-game');
 
 const teamsTelemetryGrid = document.getElementById('teams-telemetry-grid');
 const leaderboardBody = document.getElementById('leaderboard-body');
@@ -275,14 +276,26 @@ function handleStateUpdate(data) {
         statusBadge.textContent = 'SETUP MODE';
         statusBadge.className = 'game-badge badge-setup';
         enableConfigControls(true);
+        if (btnPauseGame) btnPauseGame.style.display = 'none';
+        if (btnResumeGame) btnResumeGame.style.display = 'none';
     } else if (data.game_status === 'active') {
         statusBadge.textContent = 'MISSION ACTIVE';
         statusBadge.className = 'game-badge badge-active';
         enableConfigControls(false);
+        if (btnPauseGame) btnPauseGame.style.display = 'block';
+        if (btnResumeGame) btnResumeGame.style.display = 'none';
+    } else if (data.game_status === 'paused') {
+        statusBadge.textContent = 'MISSION PAUSED';
+        statusBadge.className = 'game-badge badge-paused';
+        enableConfigControls(false);
+        if (btnPauseGame) btnPauseGame.style.display = 'none';
+        if (btnResumeGame) btnResumeGame.style.display = 'block';
     } else if (data.game_status === 'ended') {
         statusBadge.textContent = 'MISSION ENDED';
         statusBadge.className = 'game-badge badge-ended';
         enableConfigControls(false);
+        if (btnPauseGame) btnPauseGame.style.display = 'none';
+        if (btnResumeGame) btnResumeGame.style.display = 'none';
     }
     
     // Sync configurations to form fields
@@ -736,20 +749,25 @@ btnForceSamMove.addEventListener('click', () => {
     }
 });
 
-btnResetGame.addEventListener('click', async () => {
-    if (!confirm('Are you sure you want to abort the current operation and clear the network?')) return;
-    
-    try {
-        const response = await fetch('/api/gm/reset', { method: 'POST' });
-        if (response.ok) {
-            pathRecording = [];
-            recordPathChk.checked = false;
-            console.log('Network reset completed.');
+if (btnPauseGame) {
+    btnPauseGame.addEventListener('click', async () => {
+        try {
+            await fetch('/api/gm/pause', { method: 'POST' });
+        } catch (err) {
+            console.error(err);
         }
-    } catch (err) {
-        console.error(err);
-    }
-});
+    });
+}
+
+if (btnResumeGame) {
+    btnResumeGame.addEventListener('click', async () => {
+        try {
+            await fetch('/api/gm/resume', { method: 'POST' });
+        } catch (err) {
+            console.error(err);
+        }
+    });
+}
 
 function getLandmarkName(id) {
     if (currentGameState && currentGameState.map_nodes) {
