@@ -441,23 +441,7 @@ class GameManager:
             return False
             
         # Determine starting node with at least some distance from Sam
-        sam_node = self.sam_current_node
-        possible_starts = []
-        for nid in self.nodes:
-            dist = self.get_shortest_path_distance(nid, sam_node)
-            is_occupied = any(t["current_node"] == nid for t in self.teams.values())
-            # Enforce distance >= 25 and avoid start overlap if possible
-            if dist >= 25 and not is_occupied:
-                possible_starts.append(nid)
-                
-        if not possible_starts:
-            # Fallback: choose any node with maximum distance >= 20
-            possible_starts = [nid for nid in self.nodes if self.get_shortest_path_distance(nid, sam_node) >= 20]
-            
-        if not possible_starts:
-            possible_starts = [0]
-            
-        assigned_node = random.choice(possible_starts)
+        assigned_node = 54 # Port de Fontvieille
         
         self.teams[team_name] = {
             "tickets": 50,
@@ -479,12 +463,7 @@ class GameManager:
             "suspicious_flags": []
         }
         
-        # Provide starting location info
-        self.teams[team_name]["clues_received"].append({
-            "type": "system",
-            "text": f"📍 Project Rewind Deployed: Landed at '{self.nodes[assigned_node]['name']}' (Node {assigned_node}). Security Clearance Level 0.",
-            "timestamp": time.time()
-        })
+        # Start message removed to ensure only Q&A appears in dossier
         return True
 
     def remove_team(self, team_name: str):
@@ -638,15 +617,6 @@ class GameManager:
             })
             return result
 
-        # Check for Charles Leclerc cameo at Node 7 (Grand Hotel Hairpin Science Lab)
-        if target_node == 7:
-            team["clues_received"].append({
-                "type": "system",
-                "text": "🏎️ Charles Leclerc Monaco GP Crossover: You hear a screeching sound. Charles Leclerc zooms past in his red Ferrari SF-24, looks at you, and yells: 'No, no! I am trying to win the Monaco Grand Prix on May 26th, 2024, but there is a giant school desk and a memory core glitching in the middle of the track at the Grand Hotel Hairpin! My race engineer is just saying: We are checking! Help me stabilize the memory timeline so I can take the chequered flag!'",
-                "timestamp": time.time()
-            })
-            result["cameo_trigger"] = "charles_leclerc"
-
         if target_node in self.puzzles and target_node not in team["puzzles_solved"]:
             team["active_puzzle_node"] = target_node
             team["puzzle_presented_at"] = time.time()
@@ -656,20 +626,7 @@ class GameManager:
         # Process moves-based automatic clues (Every 3 moves)
         if team["moves_since_last_intel"] >= 3:
             team["moves_since_last_intel"] = 0
-            unsolved_nodes = [nid for nid in self.puzzles.keys() if nid not in team["puzzles_solved"]]
-            if unsolved_nodes:
-                hint_node_id = random.choice(unsolved_nodes)
-                hint_name = self.nodes[hint_node_id]["name"]
-                hint_msg = f"🔍 Signal Tracer: Go to '{hint_name}' (Node {hint_node_id}) to decrypt a school memory fragment."
-            else:
-                hint_msg = "🔍 Signal Tracer: Memory decryption complete. Go find Sam in the campus grid!"
-                
-            team["clues_received"].append({
-                "type": "intel_hint",
-                "text": hint_msg,
-                "timestamp": time.time()
-            })
-            result["new_clue"] = hint_msg
+            # Removed move-based location hints to keep dossier exclusively for Q&A
 
         return result
 
@@ -719,52 +676,13 @@ class GameManager:
             team["active_puzzle_node"] = None
             
             solved_count = len(team["puzzles_solved"])
-            sam_loc = self.nodes[self.sam_current_node]
-            sam_x = sam_loc["x"]
-            sam_y = sam_loc["y"]
             
-            # Generate pool of valid clues
-            clue_pool = []
-            
-            # 1. North/South half
-            clue_pool.append("The target is in the Northern region (Rows 0-3)." if sam_y < 4 else "The target is in the Southern region (Rows 4-7).")
-            # 2. East/West half
-            clue_pool.append("The target is in the Western region (Cols 0-4)." if sam_x < 5 else "The target is in the Eastern region (Cols 5-9).")
-            # 3. Row parity
-            clue_pool.append("The target's grid row index is even." if sam_y % 2 == 0 else "The target's grid row index is odd.")
-            # 4. Col parity
-            clue_pool.append("The target's grid column index is even." if sam_x % 2 == 0 else "The target's grid column index is odd.")
-            # 5. Coordinate sum parity
-            clue_pool.append("The sum of the target's grid coordinates (X + Y) is even." if (sam_x + sam_y) % 2 == 0 else "The sum of the target's grid coordinates (X + Y) is odd.")
-            # 6. Outer boundary check
-            clue_pool.append("The target is on the outer border of the campus grid." if (sam_x == 0 or sam_x == 9 or sam_y == 0 or sam_y == 7) else "The target is in the inner section of the campus grid (not on outer edges).")
-            # 7. Row range check
-            clue_pool.append("The target is located in the lower rows (Row 3 to 7)." if sam_y >= 3 else "The target is located in the upper rows (Row 0 to 4).")
-            # 8. Column range check
-            clue_pool.append("The target is located in the right-hand columns (Col 4 to 9)." if sam_x >= 4 else "The target is located in the left-hand columns (Col 0 to 5).")
-            # 9. Far-left check
-            clue_pool.append("The target is in the leftmost columns (Cols 0-2)." if sam_x <= 2 else "The target is not in the leftmost columns (Cols 0-2).")
-            # 10. Far-right check
-            clue_pool.append("The target is in the rightmost columns (Cols 7-9)." if sam_x >= 7 else "The target is not in the rightmost columns (Cols 7-9).")
-            # 11. Top rows check
-            clue_pool.append("The target is in the top rows (Rows 0-2)." if sam_y <= 2 else "The target is not in the top rows (Rows 0-2).")
-            # 12. Bottom rows check
-            clue_pool.append("The target is in the bottom rows (Rows 6-7)." if sam_y >= 6 else "The target is not in the bottom rows (Rows 6-7).")
-            
-            # Pick 3 random clues
-            random.seed(time.time() + solved_count)
-            selected = random.sample(clue_pool, min(3, len(clue_pool)))
-            
-            # Combined text for alert popup modal
-            clue_text = f"🔒 Decrypted Intel (Clearance Level: {solved_count}):\n" + "\n".join(f"- {c}" for c in selected)
-
-            # Append each clue as an individual entry to yield multiple separate items in team dossier
-            for idx, c in enumerate(selected):
-                team["clues_received"].append({
-                    "type": "intel",
-                    "text": f"🔒 Decrypted Intel {solved_count}.{idx + 1}: {c}",
-                    "timestamp": time.time()
-                })
+            clue_text = f"🔒 Decrypted Intel {solved_count}\nQ: {puzzle['question']}\nA: {correct_ans}"
+            team["clues_received"].append({
+                "type": "intel",
+                "text": clue_text,
+                "timestamp": time.time()
+            })
             
             return {
                 "success": True,

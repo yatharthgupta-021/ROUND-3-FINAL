@@ -47,7 +47,7 @@
       "label": "sam_start_node",
       "file_type": "code",
       "source_file": "custom_map.json",
-      "source_location": "L857",
+      "source_location": "L933",
       "_origin": "ast",
       "id": "custom_map_sam_start_node",
       "community": 17,
@@ -187,7 +187,7 @@
       "label": ".remove_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L490",
+      "source_location": "L469",
       "_origin": "ast",
       "id": "game_gamemanager_remove_team",
       "community": 2,
@@ -197,7 +197,7 @@
       "label": ".start_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L494",
+      "source_location": "L473",
       "_origin": "ast",
       "id": "game_gamemanager_start_team",
       "community": 2,
@@ -207,7 +207,7 @@
       "label": ".start_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L517",
+      "source_location": "L496",
       "_origin": "ast",
       "id": "game_gamemanager_start_game",
       "community": 2,
@@ -217,7 +217,7 @@
       "label": ".pause_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L524",
+      "source_location": "L503",
       "_origin": "ast",
       "id": "game_gamemanager_pause_game",
       "community": 2,
@@ -227,7 +227,7 @@
       "label": ".resume_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L531",
+      "source_location": "L510",
       "_origin": "ast",
       "id": "game_gamemanager_resume_game",
       "community": 2,
@@ -237,7 +237,7 @@
       "label": ".handle_team_win()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L552",
+      "source_location": "L531",
       "_origin": "ast",
       "id": "game_gamemanager_handle_team_win",
       "community": 2,
@@ -247,7 +247,7 @@
       "label": ".move_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L574",
+      "source_location": "L553",
       "_origin": "ast",
       "id": "game_gamemanager_move_team",
       "community": 2,
@@ -257,7 +257,7 @@
       "label": ".solve_puzzle()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L676",
+      "source_location": "L633",
       "_origin": "ast",
       "id": "game_gamemanager_solve_puzzle",
       "community": 2,
@@ -267,7 +267,7 @@
       "label": ".bypass_puzzle()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L780",
+      "source_location": "L698",
       "_origin": "ast",
       "id": "game_gamemanager_bypass_puzzle",
       "community": 2,
@@ -277,7 +277,7 @@
       "label": ".get_team_view_data()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L784",
+      "source_location": "L702",
       "_origin": "ast",
       "id": "game_gamemanager_get_team_view_data",
       "community": 2,
@@ -287,7 +287,7 @@
       "label": ".get_gm_view_data()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L861",
+      "source_location": "L779",
       "_origin": "ast",
       "id": "game_gamemanager_get_gm_view_data",
       "community": 2,
@@ -297,7 +297,7 @@
       "label": ".configure_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L931",
+      "source_location": "L849",
       "_origin": "ast",
       "id": "game_gamemanager_configure_game",
       "community": 2,
@@ -307,7 +307,7 @@
       "label": ".save_state()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L971",
+      "source_location": "L889",
       "_origin": "ast",
       "id": "game_gamemanager_save_state",
       "community": 2,
@@ -317,7 +317,7 @@
       "label": ".load_state()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L988",
+      "source_location": "L906",
       "_origin": "ast",
       "id": "game_gamemanager_load_state",
       "community": 2,
@@ -327,7 +327,7 @@
       "label": ".tick_sam_movement()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L1007",
+      "source_location": "L925",
       "_origin": "ast",
       "id": "game_gamemanager_tick_sam_movement",
       "community": 2,
@@ -337,7 +337,7 @@
       "label": ".update_puzzle_intel()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L1026",
+      "source_location": "L944",
       "_origin": "ast",
       "id": "game_gamemanager_update_puzzle_intel",
       "community": 2,
@@ -387,9 +387,9 @@
       "label": "Bypass is explicitly disabled \u2014 teams must solve puzzles.",
       "file_type": "rationale",
       "source_file": "game.py",
-      "source_location": "L781",
+      "source_location": "L699",
       "_origin": "ast",
-      "id": "game_rationale_781",
+      "id": "game_rationale_699",
       "community": 2,
       "norm_label": "bypass is explicitly disabled \u2014 teams must solve puzzles."
     },
@@ -877,7 +877,7 @@
       "label": "sam_start_node",
       "file_type": "code",
       "source_file": "static/custom_map.json",
-      "source_location": "L857",
+      "source_location": "L933",
       "_origin": "ast",
       "id": "static_custom_map_sam_start_node",
       "community": 10,
@@ -1627,7 +1627,7 @@
       "label": "drawLink()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L335",
+      "source_location": "L332",
       "_origin": "ast",
       "id": "js_team_drawlink",
       "community": 0,
@@ -1637,7 +1637,7 @@
       "label": "handleMove()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L355",
+      "source_location": "L352",
       "_origin": "ast",
       "id": "js_team_handlemove",
       "community": 0,
@@ -1647,7 +1647,7 @@
       "label": "intelModal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L409",
+      "source_location": "L406",
       "_origin": "ast",
       "id": "js_team_intelmodal",
       "community": 0,
@@ -1657,7 +1657,7 @@
       "label": "intelClueList",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L410",
+      "source_location": "L407",
       "_origin": "ast",
       "id": "js_team_intelcluelist",
       "community": 0,
@@ -1667,7 +1667,7 @@
       "label": "intelClearanceBdg",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L411",
+      "source_location": "L408",
       "_origin": "ast",
       "id": "js_team_intelclearancebdg",
       "community": 0,
@@ -1677,7 +1677,7 @@
       "label": "btnCloseIntel",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L412",
+      "source_location": "L409",
       "_origin": "ast",
       "id": "js_team_btncloseintel",
       "community": 0,
@@ -1687,7 +1687,7 @@
       "label": "showIntelModal()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L414",
+      "source_location": "L411",
       "_origin": "ast",
       "id": "js_team_showintelmodal",
       "community": 0,
@@ -1697,7 +1697,7 @@
       "label": "showWinnerOverlay()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L467",
+      "source_location": "L464",
       "_origin": "ast",
       "id": "js_team_showwinneroverlay",
       "community": 0,
@@ -1707,7 +1707,7 @@
       "label": "getLandmarkName()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L493",
+      "source_location": "L490",
       "_origin": "ast",
       "id": "js_team_getlandmarkname",
       "community": 0,
@@ -1717,7 +1717,7 @@
       "label": "btnRules",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L502",
+      "source_location": "L499",
       "_origin": "ast",
       "id": "js_team_btnrules",
       "community": 0,
@@ -1727,7 +1727,7 @@
       "label": "rulesModal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L503",
+      "source_location": "L500",
       "_origin": "ast",
       "id": "js_team_rulesmodal",
       "community": 0,
@@ -1737,7 +1737,7 @@
       "label": "btnCloseRules",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L504",
+      "source_location": "L501",
       "_origin": "ast",
       "id": "js_team_btncloserules",
       "community": 0,
@@ -1747,7 +1747,7 @@
       "label": "btnStartMission",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L516",
+      "source_location": "L513",
       "_origin": "ast",
       "id": "js_team_btnstartmission",
       "community": 0,
@@ -1757,7 +1757,7 @@
       "label": "btnCloseWin",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L540",
+      "source_location": "L537",
       "_origin": "ast",
       "id": "js_team_btnclosewin",
       "community": 0,
@@ -1767,7 +1767,7 @@
       "label": "winModalEl",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L541",
+      "source_location": "L538",
       "_origin": "ast",
       "id": "js_team_winmodalel",
       "community": 0,
@@ -2501,9 +2501,9 @@
       "source_file": "custom_map.json",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_connections",
-      "confidence_score": 1.0
+      "target": "custom_map_connections"
     },
     {
       "relation": "contains",
@@ -2511,9 +2511,9 @@
       "source_file": "custom_map.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_nodes",
-      "confidence_score": 1.0
+      "target": "custom_map_nodes"
     },
     {
       "relation": "contains",
@@ -2521,9 +2521,9 @@
       "source_file": "custom_map.json",
       "source_location": "L856",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_puzzles",
-      "confidence_score": 1.0
+      "target": "custom_map_puzzles"
     },
     {
       "relation": "contains",
@@ -2531,9 +2531,9 @@
       "source_file": "custom_map.json",
       "source_location": "L857",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_sam_start_node",
-      "confidence_score": 1.0
+      "target": "custom_map_sam_start_node"
     },
     {
       "relation": "imports_from",
@@ -2542,9 +2542,9 @@
       "source_file": "test_game.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_test_game_py",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "game"
     },
     {
       "relation": "contains",
@@ -2552,9 +2552,9 @@
       "source_file": "game.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "imports_from",
@@ -2563,9 +2563,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "game"
     },
     {
       "relation": "imports_from",
@@ -2574,9 +2574,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "game"
     },
     {
       "relation": "method",
@@ -2584,9 +2584,9 @@
       "source_file": "game.py",
       "source_location": "L437",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_add_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_add_team"
     },
     {
       "relation": "method",
@@ -2594,9 +2594,9 @@
       "source_file": "game.py",
       "source_location": "L780",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_bypass_puzzle",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_bypass_puzzle"
     },
     {
       "relation": "method",
@@ -2604,9 +2604,9 @@
       "source_file": "game.py",
       "source_location": "L931",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_configure_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_configure_game"
     },
     {
       "relation": "method",
@@ -2614,9 +2614,9 @@
       "source_file": "game.py",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "method",
@@ -2624,9 +2624,9 @@
       "source_file": "game.py",
       "source_location": "L861",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_gm_view_data",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_gm_view_data"
     },
     {
       "relation": "method",
@@ -2634,9 +2634,9 @@
       "source_file": "game.py",
       "source_location": "L270",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_shortest_path_distance",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_shortest_path_distance"
     },
     {
       "relation": "method",
@@ -2644,9 +2644,9 @@
       "source_file": "game.py",
       "source_location": "L784",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_team_view_data",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_team_view_data"
     },
     {
       "relation": "method",
@@ -2654,9 +2654,9 @@
       "source_file": "game.py",
       "source_location": "L552",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
     },
     {
       "relation": "method",
@@ -2664,9 +2664,9 @@
       "source_file": "game.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_init",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_init"
     },
     {
       "relation": "method",
@@ -2674,9 +2674,9 @@
       "source_file": "game.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "method",
@@ -2684,9 +2684,9 @@
       "source_file": "game.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "method",
@@ -2694,9 +2694,9 @@
       "source_file": "game.py",
       "source_location": "L988",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_state",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_state"
     },
     {
       "relation": "method",
@@ -2704,9 +2704,9 @@
       "source_file": "game.py",
       "source_location": "L574",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_move_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_move_team"
     },
     {
       "relation": "method",
@@ -2714,9 +2714,9 @@
       "source_file": "game.py",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_noop_setup",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_noop_setup"
     },
     {
       "relation": "method",
@@ -2724,9 +2724,9 @@
       "source_file": "game.py",
       "source_location": "L524",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_pause_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_pause_game"
     },
     {
       "relation": "method",
@@ -2734,9 +2734,9 @@
       "source_file": "game.py",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_remove_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_remove_team"
     },
     {
       "relation": "method",
@@ -2744,9 +2744,9 @@
       "source_file": "game.py",
       "source_location": "L531",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_resume_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_resume_game"
     },
     {
       "relation": "method",
@@ -2754,9 +2754,9 @@
       "source_file": "game.py",
       "source_location": "L971",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_save_state",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_save_state"
     },
     {
       "relation": "method",
@@ -2764,9 +2764,9 @@
       "source_file": "game.py",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_setup_monaco_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_monaco_map"
     },
     {
       "relation": "method",
@@ -2774,9 +2774,9 @@
       "source_file": "game.py",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_setup_story_puzzles",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_story_puzzles"
     },
     {
       "relation": "method",
@@ -2784,9 +2784,9 @@
       "source_file": "game.py",
       "source_location": "L676",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_solve_puzzle",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_solve_puzzle"
     },
     {
       "relation": "method",
@@ -2794,9 +2794,9 @@
       "source_file": "game.py",
       "source_location": "L517",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_start_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_start_game"
     },
     {
       "relation": "method",
@@ -2804,9 +2804,9 @@
       "source_file": "game.py",
       "source_location": "L494",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_start_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_start_team"
     },
     {
       "relation": "method",
@@ -2814,9 +2814,9 @@
       "source_file": "game.py",
       "source_location": "L1007",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_tick_sam_movement",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_tick_sam_movement"
     },
     {
       "relation": "method",
@@ -2824,9 +2824,9 @@
       "source_file": "game.py",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_update_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_map"
     },
     {
       "relation": "method",
@@ -2834,9 +2834,9 @@
       "source_file": "game.py",
       "source_location": "L1026",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_update_puzzle_intel",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_puzzle_intel"
     },
     {
       "relation": "imports",
@@ -2845,9 +2845,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2855,9 +2855,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_bypassmodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2865,9 +2865,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_configuremodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2875,9 +2875,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_connectionmanager",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2885,9 +2885,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_mapupdatemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2895,9 +2895,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_movemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2905,9 +2905,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_py_any",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2915,9 +2915,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_solvemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2925,9 +2925,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_startteammodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2935,9 +2935,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "request",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2945,9 +2945,9 @@
       "source_file": "test_game.py",
       "source_location": "L3",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "test_game_testfindsamgame",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -2967,9 +2967,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2977,9 +2977,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testadjacentnodehiding",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -2998,9 +2998,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testantiaipuzzletiming",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3019,9 +3019,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testbypassdisabled",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3040,9 +3040,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testinputvalidation",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3061,9 +3061,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L4",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_security_testsuspiciousflagsingmview",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3082,9 +3082,9 @@
       "source_file": "main.py",
       "source_location": "L13",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "websocket",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -3093,9 +3093,9 @@
       "source_file": "game.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_init",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "calls",
@@ -3104,9 +3104,9 @@
       "source_file": "game.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_init",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "calls",
@@ -3115,9 +3115,9 @@
       "source_file": "game.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "rationale_for",
@@ -3125,9 +3125,9 @@
       "source_file": "game.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_42",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "calls",
@@ -3136,9 +3136,9 @@
       "source_file": "game.py",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "rationale_for",
@@ -3146,9 +3146,9 @@
       "source_file": "game.py",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_74",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "references",
@@ -3157,9 +3157,9 @@
       "source_file": "game.py",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "rationale_for",
@@ -3167,9 +3167,9 @@
       "source_file": "game.py",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_85",
-      "target": "game_gamemanager_update_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_map"
     },
     {
       "relation": "references",
@@ -3178,9 +3178,9 @@
       "source_file": "game.py",
       "source_location": "L780",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_bypass_puzzle",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3189,9 +3189,9 @@
       "source_file": "game.py",
       "source_location": "L931",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_configure_game",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3200,9 +3200,9 @@
       "source_file": "game.py",
       "source_location": "L861",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_gm_view_data",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3211,9 +3211,9 @@
       "source_file": "game.py",
       "source_location": "L784",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_team_view_data",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3222,9 +3222,9 @@
       "source_file": "game.py",
       "source_location": "L574",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -3233,9 +3233,9 @@
       "source_file": "game.py",
       "source_location": "L676",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_solve_puzzle",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "rationale_for",
@@ -3243,9 +3243,9 @@
       "source_file": "game.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_rationale_108",
-      "target": "game_gamemanager_setup_monaco_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_monaco_map"
     },
     {
       "relation": "calls",
@@ -3254,9 +3254,9 @@
       "source_file": "game.py",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_shortest_path_distance",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -3265,9 +3265,9 @@
       "source_file": "game.py",
       "source_location": "L803",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_team_view_data",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -3276,9 +3276,9 @@
       "source_file": "game.py",
       "source_location": "L596",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -3287,9 +3287,9 @@
       "source_file": "game.py",
       "source_location": "L447",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_add_team",
-      "target": "game_gamemanager_get_shortest_path_distance",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_shortest_path_distance"
     },
     {
       "relation": "calls",
@@ -3298,9 +3298,9 @@
       "source_file": "game.py",
       "source_location": "L626",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
     },
     {
       "relation": "calls",
@@ -3309,17 +3309,17 @@
       "source_file": "game.py",
       "source_location": "L1022",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_tick_sam_movement",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "game.py",
-      "source_location": "L781",
+      "source_location": "L699",
       "weight": 1.0,
-      "source": "game_rationale_781",
+      "source": "game_rationale_699",
       "target": "game_gamemanager_bypass_puzzle",
       "confidence_score": 1.0
     },
@@ -3330,9 +3330,9 @@
       "source_file": "game.py",
       "source_location": "L1017",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_tick_sam_movement",
-      "target": "game_gamemanager_update_puzzle_intel",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_puzzle_intel"
     },
     {
       "relation": "contains",
@@ -3340,9 +3340,9 @@
       "source_file": "main.py",
       "source_location": "L329",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_bypass_puzzle",
-      "confidence_score": 1.0
+      "target": "main_bypass_puzzle"
     },
     {
       "relation": "contains",
@@ -3350,9 +3350,9 @@
       "source_file": "main.py",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_bypassmodel",
-      "confidence_score": 1.0
+      "target": "main_bypassmodel"
     },
     {
       "relation": "contains",
@@ -3360,9 +3360,9 @@
       "source_file": "main.py",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_configure_game",
-      "confidence_score": 1.0
+      "target": "main_configure_game"
     },
     {
       "relation": "contains",
@@ -3370,9 +3370,9 @@
       "source_file": "main.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_configuremodel",
-      "confidence_score": 1.0
+      "target": "main_configuremodel"
     },
     {
       "relation": "contains",
@@ -3380,9 +3380,9 @@
       "source_file": "main.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_connectionmanager",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager"
     },
     {
       "relation": "contains",
@@ -3390,9 +3390,9 @@
       "source_file": "main.py",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_gm",
-      "confidence_score": 1.0
+      "target": "main_get_gm"
     },
     {
       "relation": "contains",
@@ -3400,9 +3400,9 @@
       "source_file": "main.py",
       "source_location": "L234",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_gm_state",
-      "confidence_score": 1.0
+      "target": "main_get_gm_state"
     },
     {
       "relation": "contains",
@@ -3410,9 +3410,9 @@
       "source_file": "main.py",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_index",
-      "confidence_score": 1.0
+      "target": "main_get_index"
     },
     {
       "relation": "contains",
@@ -3420,9 +3420,9 @@
       "source_file": "main.py",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_robots_txt",
-      "confidence_score": 1.0
+      "target": "main_get_robots_txt"
     },
     {
       "relation": "contains",
@@ -3430,9 +3430,9 @@
       "source_file": "main.py",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_team",
-      "confidence_score": 1.0
+      "target": "main_get_team"
     },
     {
       "relation": "contains",
@@ -3440,9 +3440,9 @@
       "source_file": "main.py",
       "source_location": "L238",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_team_state",
-      "confidence_score": 1.0
+      "target": "main_get_team_state"
     },
     {
       "relation": "contains",
@@ -3450,9 +3450,9 @@
       "source_file": "main.py",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_join_team",
-      "confidence_score": 1.0
+      "target": "main_join_team"
     },
     {
       "relation": "contains",
@@ -3460,9 +3460,9 @@
       "source_file": "main.py",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_mapupdatemodel",
-      "confidence_score": 1.0
+      "target": "main_mapupdatemodel"
     },
     {
       "relation": "contains",
@@ -3470,9 +3470,9 @@
       "source_file": "main.py",
       "source_location": "L309",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_move_team",
-      "confidence_score": 1.0
+      "target": "main_move_team"
     },
     {
       "relation": "contains",
@@ -3480,9 +3480,9 @@
       "source_file": "main.py",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_movemodel",
-      "confidence_score": 1.0
+      "target": "main_movemodel"
     },
     {
       "relation": "contains",
@@ -3490,9 +3490,9 @@
       "source_file": "main.py",
       "source_location": "L293",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_pause_game",
-      "confidence_score": 1.0
+      "target": "main_pause_game"
     },
     {
       "relation": "contains",
@@ -3500,9 +3500,9 @@
       "source_file": "main.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_rate_limit_middleware",
-      "confidence_score": 1.0
+      "target": "main_rate_limit_middleware"
     },
     {
       "relation": "contains",
@@ -3510,9 +3510,9 @@
       "source_file": "main.py",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_resume_game",
-      "confidence_score": 1.0
+      "target": "main_resume_game"
     },
     {
       "relation": "contains",
@@ -3520,9 +3520,9 @@
       "source_file": "main.py",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_sam_tick_loop",
-      "confidence_score": 1.0
+      "target": "main_sam_tick_loop"
     },
     {
       "relation": "contains",
@@ -3530,9 +3530,9 @@
       "source_file": "main.py",
       "source_location": "L277",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_save_map",
-      "confidence_score": 1.0
+      "target": "main_save_map"
     },
     {
       "relation": "contains",
@@ -3540,9 +3540,9 @@
       "source_file": "main.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_security_headers_middleware",
-      "confidence_score": 1.0
+      "target": "main_security_headers_middleware"
     },
     {
       "relation": "contains",
@@ -3550,9 +3550,9 @@
       "source_file": "main.py",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_shutdown_event",
-      "confidence_score": 1.0
+      "target": "main_shutdown_event"
     },
     {
       "relation": "contains",
@@ -3560,9 +3560,9 @@
       "source_file": "main.py",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_solve_puzzle",
-      "confidence_score": 1.0
+      "target": "main_solve_puzzle"
     },
     {
       "relation": "contains",
@@ -3570,9 +3570,9 @@
       "source_file": "main.py",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_solvemodel",
-      "confidence_score": 1.0
+      "target": "main_solvemodel"
     },
     {
       "relation": "contains",
@@ -3580,9 +3580,9 @@
       "source_file": "main.py",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_start_game",
-      "confidence_score": 1.0
+      "target": "main_start_game"
     },
     {
       "relation": "contains",
@@ -3590,9 +3590,9 @@
       "source_file": "main.py",
       "source_location": "L334",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_start_team_mission",
-      "confidence_score": 1.0
+      "target": "main_start_team_mission"
     },
     {
       "relation": "contains",
@@ -3600,9 +3600,9 @@
       "source_file": "main.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_startteammodel",
-      "confidence_score": 1.0
+      "target": "main_startteammodel"
     },
     {
       "relation": "contains",
@@ -3610,9 +3610,9 @@
       "source_file": "main.py",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_startup_event",
-      "confidence_score": 1.0
+      "target": "main_startup_event"
     },
     {
       "relation": "contains",
@@ -3620,9 +3620,9 @@
       "source_file": "main.py",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "contains",
@@ -3630,9 +3630,9 @@
       "source_file": "main.py",
       "source_location": "L345",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_websocket_gm",
-      "confidence_score": 1.0
+      "target": "main_websocket_gm"
     },
     {
       "relation": "contains",
@@ -3640,9 +3640,9 @@
       "source_file": "main.py",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_websocket_team",
-      "confidence_score": 1.0
+      "target": "main_websocket_team"
     },
     {
       "relation": "references",
@@ -3651,9 +3651,9 @@
       "source_file": "main.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_rate_limit_middleware",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "references",
@@ -3662,9 +3662,9 @@
       "source_file": "main.py",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_get_gm",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "references",
@@ -3673,9 +3673,9 @@
       "source_file": "main.py",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_get_index",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "references",
@@ -3684,9 +3684,9 @@
       "source_file": "main.py",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_get_team",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "references",
@@ -3695,9 +3695,9 @@
       "source_file": "main.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_security_headers_middleware",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "request"
     },
     {
       "relation": "method",
@@ -3705,9 +3705,9 @@
       "source_file": "main.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_broadcast_to_all_teams",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_all_teams"
     },
     {
       "relation": "method",
@@ -3715,9 +3715,9 @@
       "source_file": "main.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_broadcast_to_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_gm"
     },
     {
       "relation": "method",
@@ -3725,9 +3725,9 @@
       "source_file": "main.py",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_connect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_gm"
     },
     {
       "relation": "method",
@@ -3735,9 +3735,9 @@
       "source_file": "main.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_connect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_team"
     },
     {
       "relation": "method",
@@ -3745,9 +3745,9 @@
       "source_file": "main.py",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_disconnect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_gm"
     },
     {
       "relation": "method",
@@ -3755,9 +3755,9 @@
       "source_file": "main.py",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_disconnect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_team"
     },
     {
       "relation": "method",
@@ -3765,9 +3765,9 @@
       "source_file": "main.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_init",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_init"
     },
     {
       "relation": "method",
@@ -3775,9 +3775,9 @@
       "source_file": "main.py",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_send_to_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_send_to_team"
     },
     {
       "relation": "references",
@@ -3786,9 +3786,9 @@
       "source_file": "main.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_connect_team",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "calls",
@@ -3797,9 +3797,9 @@
       "source_file": "main.py",
       "source_location": "L382",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_connectionmanager_connect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_team"
     },
     {
       "relation": "references",
@@ -3808,9 +3808,9 @@
       "source_file": "main.py",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_connect_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -3819,9 +3819,9 @@
       "source_file": "main.py",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_disconnect_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -3830,9 +3830,9 @@
       "source_file": "main.py",
       "source_location": "L345",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -3841,9 +3841,9 @@
       "source_file": "main.py",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "calls",
@@ -3852,9 +3852,9 @@
       "source_file": "main.py",
       "source_location": "L395",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_connectionmanager_disconnect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_team"
     },
     {
       "relation": "calls",
@@ -3863,9 +3863,9 @@
       "source_file": "main.py",
       "source_location": "L346",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_connectionmanager_connect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_gm"
     },
     {
       "relation": "calls",
@@ -3874,9 +3874,9 @@
       "source_file": "main.py",
       "source_location": "L371",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_connectionmanager_disconnect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_gm"
     },
     {
       "relation": "references",
@@ -3885,9 +3885,9 @@
       "source_file": "main.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_broadcast_to_gm",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "calls",
@@ -3896,9 +3896,9 @@
       "source_file": "main.py",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_broadcast_to_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_gm"
     },
     {
       "relation": "references",
@@ -3907,9 +3907,9 @@
       "source_file": "main.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_broadcast_to_all_teams",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "references",
@@ -3918,9 +3918,9 @@
       "source_file": "main.py",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_send_to_team",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "calls",
@@ -3929,9 +3929,9 @@
       "source_file": "main.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_send_to_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_send_to_team"
     },
     {
       "relation": "calls",
@@ -3940,9 +3940,9 @@
       "source_file": "main.py",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_broadcast_to_all_teams",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_all_teams"
     },
     {
       "relation": "calls",
@@ -3951,9 +3951,9 @@
       "source_file": "main.py",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_sam_tick_loop",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3962,9 +3962,9 @@
       "source_file": "main.py",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_startup_event",
-      "target": "main_sam_tick_loop",
-      "confidence_score": 1.0
+      "target": "main_sam_tick_loop"
     },
     {
       "relation": "calls",
@@ -3973,9 +3973,9 @@
       "source_file": "main.py",
       "source_location": "L271",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configure_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3984,9 +3984,9 @@
       "source_file": "main.py",
       "source_location": "L261",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_join_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3995,9 +3995,9 @@
       "source_file": "main.py",
       "source_location": "L313",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_move_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4006,9 +4006,9 @@
       "source_file": "main.py",
       "source_location": "L296",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_pause_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4017,9 +4017,9 @@
       "source_file": "main.py",
       "source_location": "L304",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_resume_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4028,9 +4028,9 @@
       "source_file": "main.py",
       "source_location": "L280",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_save_map",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4039,9 +4039,9 @@
       "source_file": "main.py",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solve_puzzle",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4050,9 +4050,9 @@
       "source_file": "main.py",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4061,9 +4061,9 @@
       "source_file": "main.py",
       "source_location": "L338",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_team_mission",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4072,9 +4072,9 @@
       "source_file": "main.py",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -4083,9 +4083,9 @@
       "source_file": "main.py",
       "source_location": "L383",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "references",
@@ -4094,9 +4094,9 @@
       "source_file": "main.py",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configure_game",
-      "target": "main_configuremodel",
-      "confidence_score": 1.0
+      "target": "main_configuremodel"
     },
     {
       "relation": "inherits",
@@ -4104,9 +4104,9 @@
       "source_file": "main.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configuremodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -4114,9 +4114,9 @@
       "source_file": "main.py",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_bypassmodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -4124,9 +4124,9 @@
       "source_file": "main.py",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_mapupdatemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -4134,9 +4134,9 @@
       "source_file": "main.py",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_movemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -4144,9 +4144,9 @@
       "source_file": "main.py",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solvemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -4154,9 +4154,9 @@
       "source_file": "main.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_startteammodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "references",
@@ -4165,9 +4165,9 @@
       "source_file": "main.py",
       "source_location": "L309",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_move_team",
-      "target": "main_movemodel",
-      "confidence_score": 1.0
+      "target": "main_movemodel"
     },
     {
       "relation": "references",
@@ -4176,9 +4176,9 @@
       "source_file": "main.py",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solve_puzzle",
-      "target": "main_solvemodel",
-      "confidence_score": 1.0
+      "target": "main_solvemodel"
     },
     {
       "relation": "references",
@@ -4187,9 +4187,9 @@
       "source_file": "main.py",
       "source_location": "L329",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_bypass_puzzle",
-      "target": "main_bypassmodel",
-      "confidence_score": 1.0
+      "target": "main_bypassmodel"
     },
     {
       "relation": "references",
@@ -4198,9 +4198,9 @@
       "source_file": "main.py",
       "source_location": "L334",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_team_mission",
-      "target": "main_startteammodel",
-      "confidence_score": 1.0
+      "target": "main_startteammodel"
     },
     {
       "relation": "references",
@@ -4209,9 +4209,9 @@
       "source_file": "main.py",
       "source_location": "L277",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_save_map",
-      "target": "main_mapupdatemodel",
-      "confidence_score": 1.0
+      "target": "main_mapupdatemodel"
     },
     {
       "relation": "contains",
@@ -4219,9 +4219,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_connections",
-      "confidence_score": 1.0
+      "target": "static_custom_map_connections"
     },
     {
       "relation": "contains",
@@ -4229,9 +4229,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_nodes",
-      "confidence_score": 1.0
+      "target": "static_custom_map_nodes"
     },
     {
       "relation": "contains",
@@ -4239,9 +4239,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L856",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_puzzles",
-      "confidence_score": 1.0
+      "target": "static_custom_map_puzzles"
     },
     {
       "relation": "contains",
@@ -4249,9 +4249,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L857",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_sam_start_node",
-      "confidence_score": 1.0
+      "target": "static_custom_map_sam_start_node"
     },
     {
       "relation": "contains",
@@ -4269,9 +4269,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_btnpausegame",
-      "confidence_score": 1.0
+      "target": "js_gm_btnpausegame"
     },
     {
       "relation": "contains",
@@ -4279,9 +4279,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_btnresumegame",
-      "confidence_score": 1.0
+      "target": "js_gm_btnresumegame"
     },
     {
       "relation": "contains",
@@ -5294,9 +5294,9 @@
       "source_file": "test_game.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "d_event_phase2_round3_phase2_round3_test_game_py",
-      "target": "test_game_testfindsamgame",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame"
     },
     {
       "relation": "method",
@@ -5304,9 +5304,9 @@
       "source_file": "test_game.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_setup",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_setup"
     },
     {
       "relation": "method",
@@ -5314,9 +5314,9 @@
       "source_file": "test_game.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_add_team",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_add_team"
     },
     {
       "relation": "method",
@@ -5324,9 +5324,9 @@
       "source_file": "test_game.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_adjacent_nodes"
     },
     {
       "relation": "method",
@@ -5334,9 +5334,9 @@
       "source_file": "test_game.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_clue_trigger_and_puzzle_decryption",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_clue_trigger_and_puzzle_decryption"
     },
     {
       "relation": "method",
@@ -5344,9 +5344,9 @@
       "source_file": "test_game.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_default_map_setup",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_default_map_setup"
     },
     {
       "relation": "method",
@@ -5354,9 +5354,9 @@
       "source_file": "test_game.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_game_states_and_movement",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_game_states_and_movement"
     },
     {
       "relation": "method",
@@ -5364,9 +5364,9 @@
       "source_file": "test_game.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_team_specific_start",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_team_specific_start"
     },
     {
       "relation": "method",
@@ -5374,9 +5374,9 @@
       "source_file": "test_game.py",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_win_condition",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_win_condition"
     },
     {
       "relation": "contains",
@@ -5394,9 +5394,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_add_test_puzzles",
-      "confidence_score": 1.0
+      "target": "tests_test_security_add_test_puzzles"
     },
     {
       "relation": "contains",
@@ -5404,9 +5404,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testadjacentnodehiding",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testadjacentnodehiding"
     },
     {
       "relation": "contains",
@@ -5414,9 +5414,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testantiaipuzzletiming",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testantiaipuzzletiming"
     },
     {
       "relation": "contains",
@@ -5424,9 +5424,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testbypassdisabled",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testbypassdisabled"
     },
     {
       "relation": "contains",
@@ -5434,9 +5434,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testinputvalidation",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testinputvalidation"
     },
     {
       "relation": "contains",
@@ -5444,9 +5444,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security",
-      "target": "tests_test_security_testsuspiciousflagsingmview",
-      "confidence_score": 1.0
+      "target": "tests_test_security_testsuspiciousflagsingmview"
     },
     {
       "relation": "rationale_for",
@@ -5454,9 +5454,9 @@
       "source_file": "tests/test_security.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_security_rationale_1",
-      "target": "tests_test_security",
-      "confidence_score": 1.0
+      "target": "tests_test_security"
     },
     {
       "relation": "rationale_for",
@@ -5838,9 +5838,9 @@
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_graphify",
-      "target": "rules_graphify_graphify",
-      "confidence_score": 1.0
+      "target": "rules_graphify_graphify"
     },
     {
       "relation": "contains",
@@ -5848,9 +5848,9 @@
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_graphify",
-      "target": "workflows_graphify_workflow_graphify",
-      "confidence_score": 1.0
+      "target": "workflows_graphify_workflow_graphify"
     },
     {
       "relation": "contains",
@@ -5858,9 +5858,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "readme_find_sam_round_3_treasure_hunt",
-      "confidence_score": 1.0
+      "target": "readme_find_sam_round_3_treasure_hunt"
     },
     {
       "relation": "contains",
@@ -5974,5 +5974,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "eb231092558296d723a543739b29414d55355958"
+  "built_at_commit": "36f3ed29cf33588eacb835a94783378395d0c035"
 }

@@ -291,10 +291,7 @@ function renderMap(data) {
         circle.setAttribute('r', isCurrent ? '37' : '28');
         g.appendChild(circle);
         
-        // Tooltip text (hover only, not rendered inline)
-        const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        title.textContent = node.name;
-        g.appendChild(title);
+        // Tooltip text removed to hide node names on hover
         
         // Add click events to move if adjacent
         if (isAdjacent && !data.is_eliminated && !data.found_sam && data.game_status === 'active' && data.started) {

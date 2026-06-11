@@ -1,23 +1,23 @@
 {
   "game.py": {
-    "mtime": 1781201991.3223517,
-    "ast_hash": "30c19269eba8f4e8cad7e677e32bb5e3",
+    "mtime": 1781218474.6099536,
+    "ast_hash": "9cf77dcc89744334359d978780a27105",
     "semantic_hash": ""
   },
   "main.py": {
-    "mtime": 1781202001.9798548,
+    "mtime": 1781209152.4050088,
     "ast_hash": "166443ea43f029cceae70a3c8f13ef5f",
     "semantic_hash": ""
   },
   "static/js/gm.js": {
-    "mtime": 1781202137.3603976,
+    "mtime": 1781209152.4412744,
     "ast_hash": "b023095f319ae93462ab95a537a55c51",
     "semantic_hash": ""
   },
   "static/js/team.js": {
-    "mtime": 1781185562.4045527,
-    "ast_hash": "b3fd74eb314ab36bd62aa603de3a0510",
-    "semantic_hash": "b3fd74eb314ab36bd62aa603de3a0510"
+    "mtime": 1781217370.101959,
+    "ast_hash": "ae63af23d868d804d99f156db4ac2847",
+    "semantic_hash": ""
   },
   "test_game.py": {
     "mtime": 1781002449.1065419,
@@ -40,17 +40,17 @@
     "semantic_hash": "7a0b37f725744247d228398aaf1c7875"
   },
   ".agents/rules/graphify.md": {
-    "mtime": 1781083431.6322212,
+    "mtime": 1781209152.3542156,
     "ast_hash": "f1e53ecc9194573d3c28fc116c743a2e",
     "semantic_hash": "f1e53ecc9194573d3c28fc116c743a2e"
   },
   ".agents/workflows/graphify.md": {
-    "mtime": 1781083431.6327415,
+    "mtime": 1781209152.3552783,
     "ast_hash": "0bc020d491fca99550c1ea3de0a5f862",
     "semantic_hash": "0bc020d491fca99550c1ea3de0a5f862"
   },
   "README.md": {
-    "mtime": 1781196961.7329824,
+    "mtime": 1781209152.3574078,
     "ast_hash": "1d53bb1f5ea476b2787c238b08254fa9",
     "semantic_hash": "1d53bb1f5ea476b2787c238b08254fa9"
   },
@@ -60,38 +60,43 @@
     "semantic_hash": "fe47a3b817b427eaf3d96bc68436f9c6"
   },
   "templates/gm.html": {
-    "mtime": 1781202115.8381834,
+    "mtime": 1781209152.447779,
     "ast_hash": "6702a94af9415cbe342104c82ce0e090",
     "semantic_hash": ""
   },
   "templates/index.html": {
-    "mtime": 1781083431.6463685,
+    "mtime": 1781209152.447779,
     "ast_hash": "0996e0c1e4ee12d27b789171dd7c9174",
     "semantic_hash": "0996e0c1e4ee12d27b789171dd7c9174"
   },
   "templates/team.html": {
-    "mtime": 1781186140.7372248,
-    "ast_hash": "4951cf668f755ec7b72b3d09ca274a5d",
-    "semantic_hash": "4951cf668f755ec7b72b3d09ca274a5d"
+    "mtime": 1781218534.767962,
+    "ast_hash": "8796dab4f276a2016922c87d83e8be76",
+    "semantic_hash": ""
   },
   "custom_map.json": {
-    "mtime": 1781203634.8527706,
-    "ast_hash": "f7ef4f7542df8f69d2790b23d36da706",
+    "mtime": 1781218506.8533494,
+    "ast_hash": "4a76f0f9aa16380037d1b149f5bfbb20",
     "semantic_hash": ""
   },
   "static/custom_map.json": {
-    "mtime": 1781203638.0562155,
-    "ast_hash": "f7ef4f7542df8f69d2790b23d36da706",
+    "mtime": 1781218506.8625646,
+    "ast_hash": "4a76f0f9aa16380037d1b149f5bfbb20",
     "semantic_hash": ""
   },
   "tests/test_security.py": {
-    "mtime": 1781122843.9349911,
+    "mtime": 1781209152.447779,
     "ast_hash": "16543630c55905d517646a83dd5455e1",
     "semantic_hash": "16543630c55905d517646a83dd5455e1"
   },
   "static/assets/background.png": {
-    "mtime": 1781183337.1269743,
+    "mtime": 1781209152.4369946,
     "ast_hash": "d3bad584433577e868a1de9b5723a56a",
     "semantic_hash": "d3bad584433577e868a1de9b5723a56a"
+  },
+  "static/assets/legends.png": {
+    "mtime": 1781211262.4976664,
+    "ast_hash": "778f521451892414485473e2816a7eb8",
+    "semantic_hash": ""
   }
 }

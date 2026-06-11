@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Find Sam - Team Screen</title>
-    <link rel="stylesheet" href="/static/css/main.css?v=6.0">
+    <link rel="stylesheet" href="/static/css/main.css?v=6.2">
 </head>
 <body>
     <div class="app-container">
@@ -84,14 +84,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Sector Record (History) -->
-                <div class="bottom-section" style="border-left: 1px solid var(--border-color);">
-                    <div class="bottom-section-header">
-                        <h3>SECTOR RECORD</h3>
-                    </div>
-                    <div class="bottom-section-body scrollable">
-                        <ul class="log-list" id="list-history"></ul>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -102,6 +95,7 @@
         <span id="val-location"></span>
         <span id="val-clearance"></span>
         <div id="card-tickets"></div>
+        <ul id="list-history"></ul>
     </div>
 
     <!-- Puzzle/Riddle Trigger Modal -->
@@ -215,7 +209,7 @@
     </div>
 
     <!-- Team Javascript Controller -->
-    <script src="/static/js/team.js?v=6.0"></script>
+    <script src="/static/js/team.js?v=6.1"></script>
     <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }

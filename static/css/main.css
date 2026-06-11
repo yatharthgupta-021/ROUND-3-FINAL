@@ -265,7 +265,7 @@ h1, h2, h3, .hud-value, .logo {
     grid-template-rows: 1fr 300px; /* Bottom row for legend */
     grid-template-areas:
         "map sidebar"
-        "legend legend";
+        "legend sidebar";
 }
 
 .team-layout .map-panel {
@@ -471,6 +471,7 @@ h1, h2, h3, .hud-value, .logo {
     border: 1px solid var(--border-color);
     font-size: 13px;
     line-height: 1.45;
+    white-space: pre-wrap;
 }
 
 .clue-item.intel {

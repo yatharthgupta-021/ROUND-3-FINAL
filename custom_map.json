@@ -2,487 +2,487 @@
   "nodes": [
     {
       "id": 0,
-      "name": "Auditorium Rainier III",
+      "name": "Node 0",
       "x": 3.0562301801856533,
       "y": 29.059126420454547
     },
     {
       "id": 1,
-      "name": "Monaco Le Grand Tour Stop",
+      "name": "Node 1",
       "x": 31.796167257970453,
       "y": 12.144432761452414
     },
     {
       "id": 2,
-      "name": "Casino de Monte-Carlo",
+      "name": "Node 2",
       "x": 11.442351677925739,
       "y": 11.506142356178978
     },
     {
       "id": 3,
-      "name": "Monsen Cathedral",
+      "name": "Node 3",
       "x": 17.033099849339035,
       "y": 37.83561567826704
     },
     {
       "id": 4,
-      "name": "Botanical Centre de Jardin Exotique",
+      "name": "Node 4",
       "x": 9.258466326059487,
       "y": 13.580585826526988
     },
     {
       "id": 5,
-      "name": "Chapiteau Espace Fontvieille",
+      "name": "Node 5",
       "x": 5.9389595280909795,
       "y": 39.11219648881392
     },
     {
       "id": 6,
-      "name": "Open Air Cinemas",
+      "name": "Node 6",
       "x": 23.75946794809487,
       "y": 43.420654296875
     },
     {
       "id": 7,
-      "name": "Cinema des Beaux-Arts",
+      "name": "Node 7",
       "x": 32.93178946345257,
       "y": 24.1123740456321
     },
     {
       "id": 8,
-      "name": "Prince's Car Collection",
+      "name": "Node 8",
       "x": 10.394087012781881,
       "y": 22.516650113192473
     },
     {
       "id": 9,
-      "name": "Sainte-Devote Church",
+      "name": "Node 9",
       "x": 27.34104053265941,
       "y": 14.910357388583096
     },
     {
       "id": 10,
-      "name": "Espace Leo Ferri",
+      "name": "Node 10",
       "x": 11.180285891329705,
       "y": 22.835793235085227
     },
     {
       "id": 11,
-      "name": "Francis Bacon MB Art Foundation",
+      "name": "Node 11",
       "x": 52.237339618973564,
       "y": 9.591270446777344
     },
     {
       "id": 12,
-      "name": "Grimaldi Forum Monaco",
+      "name": "Node 12",
       "x": 14.0630148595451,
       "y": 22.516650113192473
     },
     {
       "id": 13,
-      "name": "Oceanographical Institute of Monaco",
+      "name": "Node 13",
       "x": 21.662938617807153,
       "y": 41.8781211159446
     },
     {
       "id": 14,
-      "name": "Rainier III Seaelogical Garden",
+      "name": "Node 14",
       "x": 37.736337237558324,
       "y": 30.70804110440341
     },
     {
       "id": 15,
-      "name": "Jardin Exotique",
+      "name": "Node 15",
       "x": 46.82130273133748,
       "y": 16.931608720259234
     },
     {
       "id": 16,
-      "name": "Jardin Exotique (2)",
+      "name": "Node 16",
       "x": 17.207810373736393,
       "y": 19.43157958984375
     },
     {
       "id": 17,
-      "name": "Museum of Prehistoric Anthropology",
+      "name": "Node 17",
       "x": 10.044665204607309,
       "y": 13.474204323508523
     },
     {
       "id": 18,
-      "name": "Museum of Old Monaco",
+      "name": "Node 18",
       "x": 22.012359666601867,
       "y": 19.59115184437145
     },
     {
       "id": 19,
-      "name": "NMNM Villa Paloma",
+      "name": "Node 19",
       "x": 12.403261840250778,
       "y": 23.740040172230113
     },
     {
       "id": 20,
-      "name": "NMNM Villa Sauber",
+      "name": "Node 20",
       "x": 39.22138049183515,
       "y": 20.229442249644887
     },
     {
       "id": 21,
-      "name": "Audiovisual Museum",
+      "name": "Node 21",
       "x": 15.460702092243391,
       "y": 19.27200733531605
     },
     {
       "id": 22,
-      "name": "Museum of Stamps and Coins",
+      "name": "Node 22",
       "x": 11.791773486100311,
       "y": 23.846421675248582
     },
     {
       "id": 23,
-      "name": "Monaco Tourist Office",
+      "name": "Node 23",
       "x": 22.973269828926906,
       "y": 38.473907470703125
     },
     {
       "id": 24,
-      "name": "Tourist Office Railway Station",
+      "name": "Node 24",
       "x": 27.515752575816485,
       "y": 9.431697498668324
     },
     {
       "id": 25,
-      "name": "Prince's Palace",
+      "name": "Node 25",
       "x": 15.635412616640746,
       "y": 29.2186972878196
     },
     {
       "id": 26,
-      "name": "Princess Grace Irish Library",
+      "name": "Node 26",
       "x": 33.980055647356146,
       "y": 21.346450805664062
     },
     {
       "id": 27,
-      "name": "Princess Grace Rose Garden",
+      "name": "Node 27",
       "x": 7.948134355559875,
       "y": 37.941997181285515
     },
     {
       "id": 28,
-      "name": "Sporting Monte-Carlo",
+      "name": "Node 28",
       "x": 55.818915241057546,
       "y": 24.4315185546875
     },
     {
       "id": 29,
-      "name": "Quasi Anteinet I Exhibition Hall",
+      "name": "Node 29",
       "x": 23.14798035332426,
       "y": 33.20801058682528
     },
     {
       "id": 30,
-      "name": "Stade Louis II",
+      "name": "Node 30",
       "x": 9.782598658631414,
       "y": 38.89943348277699
     },
     {
       "id": 31,
-      "name": "Stade Louis II (2)",
+      "name": "Node 31",
       "x": 4.715983199479977,
       "y": 29.2186972878196
     },
     {
       "id": 32,
-      "name": "Fort Antoine Theatre",
+      "name": "Node 32",
       "x": 28.039885667768274,
       "y": 41.66535810990767
     },
     {
       "id": 33,
-      "name": "Princess Grace Theatre",
+      "name": "Node 33",
       "x": 33.63063156104199,
       "y": 24.963428844105113
     },
     {
       "id": 34,
-      "name": "Theatre des Varietes",
+      "name": "Node 34",
       "x": 20.61467243390358,
       "y": 27.622971968217332
     },
     {
       "id": 35,
-      "name": "Monaco Tourist Train",
+      "name": "Node 35",
       "x": 23.410046899300156,
       "y": 19.27200733531605
     },
     {
       "id": 36,
-      "name": "Monte-Carlo Country Club",
+      "name": "Node 36",
       "x": 63.1567724533437,
       "y": 18.686906294389203
     },
     {
       "id": 37,
-      "name": "Monte-Carlo Golf Club",
+      "name": "Node 37",
       "x": 45.248906493001556,
       "y": 0.8679713335904208
     },
     {
       "id": 38,
-      "name": "Princess Antoinette Mini Golf",
+      "name": "Node 38",
       "x": 14.150370881123639,
       "y": 10.921043395996094
     },
     {
       "id": 39,
-      "name": "Hercole Fitness Club",
+      "name": "Node 39",
       "x": 37.911049280715396,
       "y": 27.091064453125004
     },
     {
       "id": 40,
-      "name": "Stade Louis II Sports Hall",
+      "name": "Node 40",
       "x": 10.394087012781881,
       "y": 24.21875554865057
     },
     {
       "id": 41,
-      "name": "Tennis Club de Monaco",
+      "name": "Node 41",
       "x": 4.715983199479977,
       "y": 4.910475644198331
     },
     {
       "id": 42,
-      "name": "Yacht Club de Monaco",
+      "name": "Node 42",
       "x": 32.40765637150078,
       "y": 27.30382468483665
     },
     {
       "id": 43,
-      "name": "MenaMore Statlee",
+      "name": "Node 43",
       "x": 5.851603886202372,
       "y": 11.612523859197443
     },
     {
       "id": 44,
-      "name": "Monaco Grand Prix Route",
+      "name": "Node 44",
       "x": 34.59154172336703,
       "y": 23.101748379794035
     },
     {
       "id": 45,
-      "name": "Automobile Club de Monaco Store",
+      "name": "Node 45",
       "x": 24.63302208884137,
       "y": 17.782663518732246
     },
     {
       "id": 46,
-      "name": "AS Monaco Store",
+      "name": "Node 46",
       "x": 19.65376227157854,
       "y": 38.15476296164773
     },
     {
       "id": 47,
-      "name": "Fisherman's Cove",
+      "name": "Node 47",
       "x": 29.350216878888023,
       "y": 35.920745849609375
     },
     {
       "id": 48,
-      "name": "Eclee Albert II Olympic Pool",
+      "name": "Node 48",
       "x": 23.58475742369751,
       "y": 22.569840864701703
     },
     {
       "id": 49,
-      "name": "Saint Charles Peal",
+      "name": "Node 49",
       "x": 41.4052658437014,
       "y": 14.11249472878196
     },
     {
       "id": 50,
-      "name": "Larvetto Beach",
+      "name": "Node 50",
       "x": 51.101720451010884,
       "y": 20.12306074662642
     },
     {
       "id": 51,
-      "name": "Thermes Marins Monte-Carlo",
+      "name": "Node 51",
       "x": 20.96409500145801,
       "y": 41.71855024857955
     },
     {
       "id": 52,
-      "name": "Soinier III Nautical Stadium",
+      "name": "Node 52",
       "x": 26.81690744070762,
       "y": 38.580288973721586
     },
     {
       "id": 53,
-      "name": "Salarium",
+      "name": "Node 53",
       "x": 5.414826815829121,
       "y": 34.53778353604404
     },
     {
       "id": 54,
-      "name": "Port de Fontvieille",
+      "name": "Node 54",
       "x": 5.851603886202372,
       "y": 41.8781211159446
     },
     {
       "id": 55,
-      "name": "La Condamine Merket",
+      "name": "Node 55",
       "x": 14.936569000291602,
       "y": 4.4849492853338075
     },
     {
       "id": 56,
-      "name": "Monte-Carlo Market",
+      "name": "Node 56",
       "x": 41.4052658437014,
       "y": 26.186817515980117
     },
     {
       "id": 57,
-      "name": "Casino Gardens",
+      "name": "Node 57",
       "x": 37.64898425349922,
       "y": 25.22938121448864
     },
     {
       "id": 58,
-      "name": "Japanese Garden",
+      "name": "Node 58",
       "x": 44.98683842826594,
       "y": 22.03793057528409
     },
     {
       "id": 59,
-      "name": "Saint Martin Gardens",
+      "name": "Node 59",
       "x": 19.12963069838647,
       "y": 41.39940573952415
     },
     {
       "id": 60,
-      "name": "Place du Palais",
+      "name": "Node 60",
       "x": 16.50896675738725,
       "y": 29.271889426491477
     },
     {
       "id": 61,
-      "name": "Place d'Armes",
+      "name": "Node 61",
       "x": 23.060624331745725,
       "y": 4.6445204994895235
     },
     {
       "id": 62,
-      "name": "Boulevard des Moulins",
+      "name": "Node 62",
       "x": 55.38213817068429,
       "y": 18.314572420987215
     },
     {
       "id": 63,
-      "name": "Boulevard du Larvetto",
+      "name": "Node 63",
       "x": 36.600718069595644,
       "y": 25.495336359197445
     },
     {
       "id": 64,
-      "name": "Avenus Princesse Grace",
+      "name": "Node 64",
       "x": 22.885913807348366,
       "y": 40.3355879350142
     },
     {
       "id": 65,
-      "name": "Avenue Albert II",
+      "name": "Node 65",
       "x": 24.63302208884137,
       "y": 35.2292646928267
     },
     {
       "id": 66,
-      "name": "Quai des Etats-Unis",
+      "name": "Node 66",
       "x": 38.260470329510106,
       "y": 15.442264903675426
     },
     {
       "id": 67,
-      "name": "Avenues d'Ostende",
+      "name": "Node 67",
       "x": 9.520532112655522,
       "y": 22.516650113192473
     },
     {
       "id": 68,
-      "name": "Pelmont Hakpim",
+      "name": "Node 68",
       "x": 17.994010011664074,
       "y": 19.27200733531605
     },
     {
       "id": 69,
-      "name": "Port Hercule Breakwater",
+      "name": "Node 69",
       "x": 31.00996913880249,
       "y": 26.027243874289773
     },
     {
       "id": 70,
-      "name": "Tunnel Entrance",
+      "name": "Node 70",
       "x": 34.41683271772939,
       "y": 26.08043878728693
     },
     {
       "id": 71,
-      "name": "Morte-Carlo Harbour Front",
+      "name": "Node 71",
       "x": 31.097325160381025,
       "y": 22.623031616210938
     },
     {
       "id": 72,
-      "name": "Casino Square",
+      "name": "Node 72",
       "x": 36.33865000486003,
       "y": 15.442264903675426
     },
     {
       "id": 73,
-      "name": "Metropole Shopping Center",
+      "name": "Node 73",
       "x": 39.920222589424576,
       "y": 20.12306074662642
     },
     {
       "id": 74,
-      "name": "One Meets-Carlo",
+      "name": "Node 74",
       "x": 29.699637927682737,
       "y": 20.229442249644887
     },
     {
       "id": 75,
-      "name": "Mareterra Waterfront",
+      "name": "Node 75",
       "x": 58.526930647356146,
       "y": 21.71878606622869
     },
     {
       "id": 76,
-      "name": "karvette Promenade",
+      "name": "Node 76",
       "x": 19.56640776875972,
       "y": 35.44202769886364
     },
     {
       "id": 77,
-      "name": "Sporting Beach Area",
+      "name": "Node 77",
       "x": 46.122460633748055,
       "y": 20.60177751020952
     },
     {
       "id": 78,
-      "name": "Monaco-Ville Old Town",
+      "name": "Node 78",
       "x": 5.065405007654549,
       "y": 26.346391157670457
     },
     {
       "id": 79,
-      "name": "Pointe Neuse Vlawpoint",
+      "name": "Node 79",
       "x": 54.68328999805599,
       "y": 17.995426524769176
     },
     {
       "id": 80,
-      "name": "Cap d'Ail Border Point",
+      "name": "Node 80",
       "x": 39.920222589424576,
       "y": 26.45277266068892
     }
@@ -853,6 +853,82 @@
       17
     ]
   ],
-  "puzzles": [],
-  "sam_start_node": 0
+  "puzzles": [
+    {
+      "node_id": 14,
+      "question": "You have 8 identical-looking balls. One is heavier. Using a balance scale only twice, what is the maximum number of balls you can guarantee to identify the heavier ball from?",
+      "answer": "9"
+    },
+    {
+      "node_id": 3,
+      "question": "A room contains 100 prisoners. The first prisoner opens every locker. The second closes every second locker. The third toggles every third locker, and so on. How many lockers remain open?",
+      "answer": "10"
+    },
+    {
+      "node_id": 35,
+      "question": "A farmer has 17 sheep. All but 9 die. How many remain?",
+      "answer": "9"
+    },
+    {
+      "node_id": 31,
+      "question": "What is the smallest positive integer divisible by every integer from 1 to 10?",
+      "answer": "2520"
+    },
+    {
+      "node_id": 28,
+      "question": "A bat and a ball cost $1.10. The bat costs $1 more than the ball. How much does the ball cost (in cents)?",
+      "answer": "5"
+    },
+    {
+      "node_id": 17,
+      "question": "A clock shows 3:15. What is the smaller angle between the hands?",
+      "answer": "7.5"
+    },
+    {
+      "node_id": 13,
+      "question": "Which number comes next? 1, 11, 21, 1211, 111221, ?",
+      "answer": "312211"
+    },
+    {
+      "node_id": 69,
+      "question": "How many times does the digit 1 appear from 1 to 100 inclusive?",
+      "answer": "21"
+    },
+    {
+      "node_id": 11,
+      "question": "A cube has all faces painted. It is cut into 27 equal cubes. How many cubes have exactly two painted faces?",
+      "answer": "12"
+    },
+    {
+      "node_id": 54,
+      "question": "A man walks 1 km south, 1 km east, and 1 km north and returns to his starting point. Where is he?",
+      "answer": "Pole"
+    },
+    {
+      "node_id": 4,
+      "question": "A lily pad patch doubles in size every day. It covers a lake in 48 days. On which day was it half the lake?",
+      "answer": "47"
+    },
+    {
+      "node_id": 79,
+      "question": "How many zeros are at the end of 100 factorial?",
+      "answer": "24"
+    },
+    {
+      "node_id": 72,
+      "question": "If five machines make five gadgets in five minutes, how many minutes will 100 machines take to make 100 gadgets?",
+      "answer": "5"
+    },
+    {
+      "node_id": 27,
+      "question": "A sequence follows: 2, 6, 12, 20, 30, ?",
+      "answer": "42"
+    },
+    {
+      "node_id": 29,
+      "question": "A person looks at a photograph and says: 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the photograph?",
+      "answer": "Son"
+    }
+  ],
+  "sam_start_node": 71
 }
