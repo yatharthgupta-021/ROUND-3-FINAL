@@ -37,7 +37,7 @@
       "label": "puzzles",
       "file_type": "code",
       "source_file": "custom_map.json",
-      "source_location": "L1168",
+      "source_location": "L491",
       "_origin": "ast",
       "id": "custom_map_puzzles",
       "community": 7,
@@ -47,7 +47,7 @@
       "label": "sam_start_node",
       "file_type": "code",
       "source_file": "custom_map.json",
-      "source_location": "L1169",
+      "source_location": "L492",
       "_origin": "ast",
       "id": "custom_map_sam_start_node",
       "community": 7,
@@ -60,14 +60,14 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "game",
-      "community": 2,
+      "community": 14,
       "norm_label": "game.py"
     },
     {
       "label": "GameManager",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L7",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "game_gamemanager",
       "community": 2,
@@ -77,47 +77,47 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "game_gamemanager_init",
-      "community": 2,
+      "community": 15,
       "norm_label": ".__init__()"
     },
     {
       "label": ".load_custom_map()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "game_gamemanager_load_custom_map",
-      "community": 2,
+      "community": 15,
       "norm_label": ".load_custom_map()"
     },
     {
       "label": "._load_puzzles_from_map()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L70",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "game_gamemanager_load_puzzles_from_map",
-      "community": 2,
+      "community": 15,
       "norm_label": "._load_puzzles_from_map()"
     },
     {
       "label": ".update_map()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L81",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "game_gamemanager_update_map",
-      "community": 2,
+      "community": 15,
       "norm_label": ".update_map()"
     },
     {
       "label": "Any",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L81",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "game_py_any",
       "community": 2,
@@ -127,7 +127,7 @@
       "label": ".setup_monaco_map()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L104",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "game_gamemanager_setup_monaco_map",
       "community": 2,
@@ -137,7 +137,7 @@
       "label": "._noop_setup()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L108",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "game_gamemanager_noop_setup",
       "community": 2,
@@ -147,7 +147,7 @@
       "label": ".get_adjacent_nodes()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L250",
+      "source_location": "L252",
       "_origin": "ast",
       "id": "game_gamemanager_get_adjacent_nodes",
       "community": 2,
@@ -157,7 +157,7 @@
       "label": ".get_shortest_path_distance()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L267",
+      "source_location": "L269",
       "_origin": "ast",
       "id": "game_gamemanager_get_shortest_path_distance",
       "community": 2,
@@ -167,7 +167,7 @@
       "label": ".setup_story_puzzles()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L286",
+      "source_location": "L288",
       "_origin": "ast",
       "id": "game_gamemanager_setup_story_puzzles",
       "community": 2,
@@ -177,7 +177,7 @@
       "label": ".add_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L434",
+      "source_location": "L436",
       "_origin": "ast",
       "id": "game_gamemanager_add_team",
       "community": 2,
@@ -187,7 +187,7 @@
       "label": ".remove_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L483",
+      "source_location": "L489",
       "_origin": "ast",
       "id": "game_gamemanager_remove_team",
       "community": 2,
@@ -197,7 +197,7 @@
       "label": ".start_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L487",
+      "source_location": "L493",
       "_origin": "ast",
       "id": "game_gamemanager_start_team",
       "community": 2,
@@ -207,7 +207,7 @@
       "label": ".start_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L510",
+      "source_location": "L516",
       "_origin": "ast",
       "id": "game_gamemanager_start_game",
       "community": 2,
@@ -217,7 +217,7 @@
       "label": ".handle_team_win()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L517",
+      "source_location": "L523",
       "_origin": "ast",
       "id": "game_gamemanager_handle_team_win",
       "community": 2,
@@ -227,7 +227,7 @@
       "label": ".move_team()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L539",
+      "source_location": "L545",
       "_origin": "ast",
       "id": "game_gamemanager_move_team",
       "community": 2,
@@ -237,7 +237,7 @@
       "label": ".solve_puzzle()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L636",
+      "source_location": "L647",
       "_origin": "ast",
       "id": "game_gamemanager_solve_puzzle",
       "community": 2,
@@ -247,7 +247,7 @@
       "label": ".bypass_puzzle()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L716",
+      "source_location": "L751",
       "_origin": "ast",
       "id": "game_gamemanager_bypass_puzzle",
       "community": 2,
@@ -257,7 +257,7 @@
       "label": ".get_team_view_data()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L720",
+      "source_location": "L755",
       "_origin": "ast",
       "id": "game_gamemanager_get_team_view_data",
       "community": 2,
@@ -267,7 +267,7 @@
       "label": ".get_gm_view_data()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L792",
+      "source_location": "L831",
       "_origin": "ast",
       "id": "game_gamemanager_get_gm_view_data",
       "community": 2,
@@ -277,7 +277,7 @@
       "label": ".configure_game()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L858",
+      "source_location": "L899",
       "_origin": "ast",
       "id": "game_gamemanager_configure_game",
       "community": 2,
@@ -287,7 +287,7 @@
       "label": ".save_state()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L898",
+      "source_location": "L939",
       "_origin": "ast",
       "id": "game_gamemanager_save_state",
       "community": 2,
@@ -297,7 +297,7 @@
       "label": ".load_state()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L914",
+      "source_location": "L955",
       "_origin": "ast",
       "id": "game_gamemanager_load_state",
       "community": 2,
@@ -307,7 +307,7 @@
       "label": ".tick_sam_movement()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L932",
+      "source_location": "L973",
       "_origin": "ast",
       "id": "game_gamemanager_tick_sam_movement",
       "community": 2,
@@ -317,7 +317,7 @@
       "label": ".update_puzzle_intel()",
       "file_type": "code",
       "source_file": "game.py",
-      "source_location": "L951",
+      "source_location": "L992",
       "_origin": "ast",
       "id": "game_gamemanager_update_puzzle_intel",
       "community": 2,
@@ -327,41 +327,51 @@
       "label": "Load nodes and connections from custom_map.json.",
       "file_type": "rationale",
       "source_file": "game.py",
-      "source_location": "L39",
+      "source_location": "L41",
       "_origin": "ast",
-      "id": "game_rationale_39",
-      "community": 2,
+      "id": "game_rationale_41",
+      "community": 15,
       "norm_label": "load nodes and connections from custom_map.json."
     },
     {
       "label": "Populate self.puzzles from the raw puzzle list loaded by load_custom_map.",
       "file_type": "rationale",
       "source_file": "game.py",
-      "source_location": "L71",
+      "source_location": "L73",
       "_origin": "ast",
-      "id": "game_rationale_71",
-      "community": 2,
+      "id": "game_rationale_73",
+      "community": 15,
       "norm_label": "populate self.puzzles from the raw puzzle list loaded by load_custom_map."
     },
     {
       "label": "Update map structure in memory and save to custom_map.json.",
       "file_type": "rationale",
       "source_file": "game.py",
-      "source_location": "L82",
+      "source_location": "L84",
       "_origin": "ast",
-      "id": "game_rationale_82",
-      "community": 2,
+      "id": "game_rationale_84",
+      "community": 15,
       "norm_label": "update map structure in memory and save to custom_map.json."
     },
     {
       "label": "Deprecated: map is now loaded from custom_map.json via load_custom_map().",
       "file_type": "rationale",
       "source_file": "game.py",
-      "source_location": "L105",
+      "source_location": "L107",
       "_origin": "ast",
-      "id": "game_rationale_105",
+      "id": "game_rationale_107",
       "community": 2,
       "norm_label": "deprecated: map is now loaded from custom_map.json via load_custom_map()."
+    },
+    {
+      "label": "Bypass is explicitly disabled \u2014 teams must solve puzzles.",
+      "file_type": "rationale",
+      "source_file": "game.py",
+      "source_location": "L752",
+      "_origin": "ast",
+      "id": "game_rationale_752",
+      "community": 2,
+      "norm_label": "bypass is explicitly disabled \u2014 teams must solve puzzles."
     },
     {
       "label": "main.py",
@@ -374,10 +384,40 @@
       "norm_label": "main.py"
     },
     {
+      "label": "rate_limit_middleware()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "main_rate_limit_middleware",
+      "community": 3,
+      "norm_label": "rate_limit_middleware()"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "request",
+      "community": 3,
+      "norm_label": "request"
+    },
+    {
+      "label": "security_headers_middleware()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "main_security_headers_middleware",
+      "community": 3,
+      "norm_label": "security_headers_middleware()"
+    },
+    {
       "label": "ConnectionManager",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L39",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "main_connectionmanager",
       "community": 4,
@@ -387,7 +427,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L40",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "main_connectionmanager_init",
       "community": 4,
@@ -397,7 +437,7 @@
       "label": ".connect_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L46",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "main_connectionmanager_connect_team",
       "community": 4,
@@ -407,7 +447,7 @@
       "label": "WebSocket",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L46",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "websocket",
       "community": 4,
@@ -417,7 +457,7 @@
       "label": ".disconnect_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L50",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "main_connectionmanager_disconnect_team",
       "community": 4,
@@ -427,7 +467,7 @@
       "label": ".connect_gm()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L54",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "main_connectionmanager_connect_gm",
       "community": 4,
@@ -437,7 +477,7 @@
       "label": ".disconnect_gm()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L58",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "main_connectionmanager_disconnect_gm",
       "community": 4,
@@ -447,7 +487,7 @@
       "label": ".broadcast_to_gm()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L62",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "main_connectionmanager_broadcast_to_gm",
       "community": 4,
@@ -457,7 +497,7 @@
       "label": "Any",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L62",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "main_py_any",
       "community": 4,
@@ -467,7 +507,7 @@
       "label": ".send_to_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L69",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "main_connectionmanager_send_to_team",
       "community": 4,
@@ -477,7 +517,7 @@
       "label": ".broadcast_to_all_teams()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L77",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "main_connectionmanager_broadcast_to_all_teams",
       "community": 4,
@@ -487,7 +527,7 @@
       "label": "sam_tick_loop()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L87",
+      "source_location": "L128",
       "_origin": "ast",
       "id": "main_sam_tick_loop",
       "community": 3,
@@ -497,7 +537,7 @@
       "label": "startup_event()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L103",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "main_startup_event",
       "community": 3,
@@ -507,7 +547,7 @@
       "label": "shutdown_event()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L108",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "main_shutdown_event",
       "community": 3,
@@ -517,7 +557,7 @@
       "label": "update_all_clients()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L111",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "main_update_all_clients",
       "community": 3,
@@ -527,7 +567,7 @@
       "label": "ConfigureModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L145",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "main_configuremodel",
       "community": 3,
@@ -547,7 +587,7 @@
       "label": "MoveModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L154",
+      "source_location": "L195",
       "_origin": "ast",
       "id": "main_movemodel",
       "community": 3,
@@ -557,7 +597,7 @@
       "label": "SolveModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L158",
+      "source_location": "L199",
       "_origin": "ast",
       "id": "main_solvemodel",
       "community": 3,
@@ -567,7 +607,7 @@
       "label": "BypassModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L162",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "main_bypassmodel",
       "community": 3,
@@ -577,7 +617,7 @@
       "label": "StartTeamModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L165",
+      "source_location": "L206",
       "_origin": "ast",
       "id": "main_startteammodel",
       "community": 3,
@@ -587,7 +627,7 @@
       "label": "MapUpdateModel",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L168",
+      "source_location": "L209",
       "_origin": "ast",
       "id": "main_mapupdatemodel",
       "community": 3,
@@ -597,7 +637,7 @@
       "label": "get_robots_txt()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L174",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "main_get_robots_txt",
       "community": 3,
@@ -607,27 +647,17 @@
       "label": "get_index()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L178",
+      "source_location": "L219",
       "_origin": "ast",
       "id": "main_get_index",
       "community": 3,
       "norm_label": "get_index()"
     },
     {
-      "label": "Request",
-      "file_type": "code",
-      "source_file": "main.py",
-      "source_location": "L178",
-      "_origin": "ast",
-      "id": "request",
-      "community": 3,
-      "norm_label": "request"
-    },
-    {
       "label": "get_gm()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L182",
+      "source_location": "L223",
       "_origin": "ast",
       "id": "main_get_gm",
       "community": 3,
@@ -637,7 +667,7 @@
       "label": "get_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L186",
+      "source_location": "L227",
       "_origin": "ast",
       "id": "main_get_team",
       "community": 3,
@@ -647,7 +677,7 @@
       "label": "get_gm_state()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L193",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "main_get_gm_state",
       "community": 3,
@@ -657,7 +687,7 @@
       "label": "get_team_state()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L197",
+      "source_location": "L238",
       "_origin": "ast",
       "id": "main_get_team_state",
       "community": 3,
@@ -667,7 +697,7 @@
       "label": "join_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L203",
+      "source_location": "L244",
       "_origin": "ast",
       "id": "main_join_team",
       "community": 3,
@@ -677,7 +707,7 @@
       "label": "configure_game()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L220",
+      "source_location": "L267",
       "_origin": "ast",
       "id": "main_configure_game",
       "community": 3,
@@ -687,7 +717,7 @@
       "label": "save_map()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L230",
+      "source_location": "L277",
       "_origin": "ast",
       "id": "main_save_map",
       "community": 3,
@@ -697,7 +727,7 @@
       "label": "start_game()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L237",
+      "source_location": "L284",
       "_origin": "ast",
       "id": "main_start_game",
       "community": 3,
@@ -707,7 +737,7 @@
       "label": "reset_game()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L246",
+      "source_location": "L293",
       "_origin": "ast",
       "id": "main_reset_game",
       "community": 3,
@@ -717,7 +747,7 @@
       "label": "move_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L259",
+      "source_location": "L306",
       "_origin": "ast",
       "id": "main_move_team",
       "community": 3,
@@ -727,7 +757,7 @@
       "label": "solve_puzzle()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L269",
+      "source_location": "L316",
       "_origin": "ast",
       "id": "main_solve_puzzle",
       "community": 3,
@@ -737,7 +767,7 @@
       "label": "bypass_puzzle()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L279",
+      "source_location": "L326",
       "_origin": "ast",
       "id": "main_bypass_puzzle",
       "community": 3,
@@ -747,7 +777,7 @@
       "label": "start_team_mission()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L286",
+      "source_location": "L331",
       "_origin": "ast",
       "id": "main_start_team_mission",
       "community": 3,
@@ -757,7 +787,7 @@
       "label": "websocket_gm()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L297",
+      "source_location": "L342",
       "_origin": "ast",
       "id": "main_websocket_gm",
       "community": 4,
@@ -767,7 +797,7 @@
       "label": "websocket_team()",
       "file_type": "code",
       "source_file": "main.py",
-      "source_location": "L329",
+      "source_location": "L374",
       "_origin": "ast",
       "id": "main_websocket_team",
       "community": 4,
@@ -807,7 +837,7 @@
       "label": "puzzles",
       "file_type": "code",
       "source_file": "static/custom_map.json",
-      "source_location": "L1168",
+      "source_location": "L491",
       "_origin": "ast",
       "id": "static_custom_map_puzzles",
       "community": 8,
@@ -817,7 +847,7 @@
       "label": "sam_start_node",
       "file_type": "code",
       "source_file": "static/custom_map.json",
-      "source_location": "L1169",
+      "source_location": "L492",
       "_origin": "ast",
       "id": "static_custom_map_sam_start_node",
       "community": 8,
@@ -844,10 +874,20 @@
       "norm_label": "pathrecording"
     },
     {
-      "label": "statusBadge",
+      "label": "escapeHTML()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
       "source_location": "L10",
+      "_origin": "ast",
+      "id": "js_gm_escapehtml",
+      "community": 0,
+      "norm_label": "escapehtml()"
+    },
+    {
+      "label": "statusBadge",
+      "file_type": "code",
+      "source_file": "static/js/gm.js",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "js_gm_statusbadge",
       "community": 0,
@@ -857,7 +897,7 @@
       "label": "samCoordsBox",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L11",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "js_gm_samcoordsbox",
       "community": 0,
@@ -867,7 +907,7 @@
       "label": "diagonalChk",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L12",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "js_gm_diagonalchk",
       "community": 0,
@@ -877,7 +917,7 @@
       "label": "samStaticChk",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L13",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "js_gm_samstaticchk",
       "community": 0,
@@ -887,7 +927,7 @@
       "label": "samIntervalInput",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L14",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "js_gm_samintervalinput",
       "community": 0,
@@ -897,7 +937,7 @@
       "label": "samPathInput",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L15",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "js_gm_sampathinput",
       "community": 0,
@@ -907,7 +947,7 @@
       "label": "recordPathChk",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L16",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "js_gm_recordpathchk",
       "community": 0,
@@ -917,7 +957,7 @@
       "label": "btnForceSamMove",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L17",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "js_gm_btnforcesammove",
       "community": 0,
@@ -927,7 +967,7 @@
       "label": "btnResetGame",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L18",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "js_gm_btnresetgame",
       "community": 0,
@@ -937,7 +977,7 @@
       "label": "teamsTelemetryGrid",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L20",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "js_gm_teamstelemetrygrid",
       "community": 0,
@@ -947,7 +987,7 @@
       "label": "leaderboardBody",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L21",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "js_gm_leaderboardbody",
       "community": 0,
@@ -957,7 +997,7 @@
       "label": "chkMapEditor",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L24",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "js_gm_chkmapeditor",
       "community": 0,
@@ -967,7 +1007,7 @@
       "label": "btnSaveMap",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L25",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "js_gm_btnsavemap",
       "community": 0,
@@ -977,7 +1017,7 @@
       "label": "currentNodes",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L28",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "js_gm_currentnodes",
       "community": 0,
@@ -987,7 +1027,7 @@
       "label": "currentConnections",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L29",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "js_gm_currentconnections",
       "community": 0,
@@ -997,7 +1037,7 @@
       "label": "customNodesCoords",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L30",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "js_gm_customnodescoords",
       "community": 0,
@@ -1007,7 +1047,7 @@
       "label": "mapSvg",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L48",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "js_gm_mapsvg",
       "community": 0,
@@ -1017,7 +1057,7 @@
       "label": "mapLinksGroup",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L49",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "js_gm_maplinksgroup",
       "community": 0,
@@ -1027,7 +1067,7 @@
       "label": "mapNodesGroup",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L50",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "js_gm_mapnodesgroup",
       "community": 0,
@@ -1037,7 +1077,7 @@
       "label": "samMarkerGroup",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L51",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "js_gm_sammarkergroup",
       "community": 0,
@@ -1047,7 +1087,7 @@
       "label": "teamsMarkersGroup",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L52",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "js_gm_teamsmarkersgroup",
       "community": 0,
@@ -1057,7 +1097,7 @@
       "label": "getNodeCoords()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L62",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "js_gm_getnodecoords",
       "community": 0,
@@ -1067,7 +1107,7 @@
       "label": "pixelToJsonCoords()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L75",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "js_gm_pixeltojsoncoords",
       "community": 0,
@@ -1077,7 +1117,7 @@
       "label": "saveMapLayout()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L111",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "js_gm_savemaplayout",
       "community": 0,
@@ -1087,7 +1127,7 @@
       "label": "fetchState()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L150",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "js_gm_fetchstate",
       "community": 0,
@@ -1097,7 +1137,7 @@
       "label": "startPolling()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L162",
+      "source_location": "L169",
       "_origin": "ast",
       "id": "js_gm_startpolling",
       "community": 0,
@@ -1107,7 +1147,7 @@
       "label": "stopPolling()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L169",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "js_gm_stoppolling",
       "community": 0,
@@ -1117,7 +1157,7 @@
       "label": "connectWebSocket()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L180",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "js_gm_connectwebsocket",
       "community": 0,
@@ -1127,7 +1167,7 @@
       "label": "formatDuration()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L213",
+      "source_location": "L220",
       "_origin": "ast",
       "id": "js_gm_formatduration",
       "community": 0,
@@ -1137,7 +1177,7 @@
       "label": "updateTimerDisplay()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L220",
+      "source_location": "L227",
       "_origin": "ast",
       "id": "js_gm_updatetimerdisplay",
       "community": 0,
@@ -1147,7 +1187,7 @@
       "label": "handleStateUpdate()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L227",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "js_gm_handlestateupdate",
       "community": 0,
@@ -1157,7 +1197,7 @@
       "label": "enableConfigControls()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L317",
+      "source_location": "L324",
       "_origin": "ast",
       "id": "js_gm_enableconfigcontrols",
       "community": 0,
@@ -1167,7 +1207,7 @@
       "label": "renderTelemetry()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L325",
+      "source_location": "L332",
       "_origin": "ast",
       "id": "js_gm_rendertelemetry",
       "community": 0,
@@ -1177,7 +1217,7 @@
       "label": "renderLeaderboard()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L372",
+      "source_location": "L380",
       "_origin": "ast",
       "id": "js_gm_renderleaderboard",
       "community": 0,
@@ -1187,7 +1227,7 @@
       "label": "renderMap()",
       "file_type": "code",
       "source_file": "static/js/gm.js",
-      "source_location": "L403",
+      "source_location": "L411",
       "_origin": "ast",
       "id": "js_gm_rendermap",
       "community": 0,
@@ -1264,10 +1304,20 @@
       "norm_label": "teamname"
     },
     {
-      "label": "ticketsVal",
+      "label": "escapeHTML()",
       "file_type": "code",
       "source_file": "static/js/team.js",
       "source_location": "L11",
+      "_origin": "ast",
+      "id": "js_team_escapehtml",
+      "community": 1,
+      "norm_label": "escapehtml()"
+    },
+    {
+      "label": "ticketsVal",
+      "file_type": "code",
+      "source_file": "static/js/team.js",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "js_team_ticketsval",
       "community": 1,
@@ -1277,7 +1327,7 @@
       "label": "ticketsCard",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L12",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "js_team_ticketscard",
       "community": 1,
@@ -1287,7 +1337,7 @@
       "label": "locationVal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L13",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "js_team_locationval",
       "community": 1,
@@ -1297,7 +1347,7 @@
       "label": "historyList",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L14",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "js_team_historylist",
       "community": 1,
@@ -1307,7 +1357,7 @@
       "label": "cluesList",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L15",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "js_team_clueslist",
       "community": 1,
@@ -1317,7 +1367,7 @@
       "label": "statusBadge",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L16",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "js_team_statusbadge",
       "community": 1,
@@ -1327,7 +1377,7 @@
       "label": "lobbyOverlay",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L17",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "js_team_lobbyoverlay",
       "community": 1,
@@ -1337,7 +1387,7 @@
       "label": "puzzleModal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L18",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "js_team_puzzlemodal",
       "community": 1,
@@ -1347,7 +1397,7 @@
       "label": "puzzleQuestion",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L19",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "js_team_puzzlequestion",
       "community": 1,
@@ -1357,7 +1407,7 @@
       "label": "puzzleAnswerInput",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L20",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "js_team_puzzleanswerinput",
       "community": 1,
@@ -1367,7 +1417,7 @@
       "label": "puzzleError",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L21",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "js_team_puzzleerror",
       "community": 1,
@@ -1377,7 +1427,7 @@
       "label": "puzzleForm",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L22",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "js_team_puzzleform",
       "community": 1,
@@ -1387,7 +1437,7 @@
       "label": "btnBypassPuzzle",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L23",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "js_team_btnbypasspuzzle",
       "community": 1,
@@ -1397,7 +1447,7 @@
       "label": "winnerOverlay",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L24",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "js_team_winneroverlay",
       "community": 1,
@@ -1407,7 +1457,7 @@
       "label": "leaderboardBody",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L25",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "js_team_leaderboardbody",
       "community": 1,
@@ -1417,7 +1467,7 @@
       "label": "mapSvg",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L28",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "js_team_mapsvg",
       "community": 1,
@@ -1427,7 +1477,7 @@
       "label": "mapLinksGroup",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L29",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "js_team_maplinksgroup",
       "community": 1,
@@ -1437,7 +1487,7 @@
       "label": "mapNodesGroup",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L30",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "js_team_mapnodesgroup",
       "community": 1,
@@ -1447,7 +1497,7 @@
       "label": "playerMarkerGroup",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L31",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "js_team_playermarkergroup",
       "community": 1,
@@ -1457,27 +1507,27 @@
       "label": "getNodeCoords()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L41",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "js_team_getnodecoords",
-      "community": 6,
+      "community": 1,
       "norm_label": "getnodecoords()"
     },
     {
       "label": "fetchState()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L51",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "js_team_fetchstate",
-      "community": 6,
+      "community": 1,
       "norm_label": "fetchstate()"
     },
     {
       "label": "startPolling()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L63",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "js_team_startpolling",
       "community": 1,
@@ -1487,7 +1537,7 @@
       "label": "stopPolling()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L70",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "js_team_stoppolling",
       "community": 1,
@@ -1497,7 +1547,7 @@
       "label": "connectWebSocket()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L81",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "js_team_connectwebsocket",
       "community": 1,
@@ -1507,37 +1557,37 @@
       "label": "updateTimerDisplay()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L114",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "js_team_updatetimerdisplay",
-      "community": 6,
+      "community": 1,
       "norm_label": "updatetimerdisplay()"
     },
     {
       "label": "handleStateUpdate()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L123",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "js_team_handlestateupdate",
-      "community": 6,
+      "community": 1,
       "norm_label": "handlestateupdate()"
     },
     {
       "label": "renderMap()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L267",
+      "source_location": "L250",
       "_origin": "ast",
       "id": "js_team_rendermap",
-      "community": 6,
+      "community": 1,
       "norm_label": "rendermap()"
     },
     {
       "label": "drawLink()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L358",
+      "source_location": "L335",
       "_origin": "ast",
       "id": "js_team_drawlink",
       "community": 1,
@@ -1547,7 +1597,7 @@
       "label": "handleMove()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L378",
+      "source_location": "L355",
       "_origin": "ast",
       "id": "js_team_handlemove",
       "community": 1,
@@ -1557,7 +1607,7 @@
       "label": "intelModal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L432",
+      "source_location": "L409",
       "_origin": "ast",
       "id": "js_team_intelmodal",
       "community": 1,
@@ -1567,7 +1617,7 @@
       "label": "intelClueList",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L433",
+      "source_location": "L410",
       "_origin": "ast",
       "id": "js_team_intelcluelist",
       "community": 1,
@@ -1577,7 +1627,7 @@
       "label": "intelClearanceBdg",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L434",
+      "source_location": "L411",
       "_origin": "ast",
       "id": "js_team_intelclearancebdg",
       "community": 1,
@@ -1587,7 +1637,7 @@
       "label": "btnCloseIntel",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L435",
+      "source_location": "L412",
       "_origin": "ast",
       "id": "js_team_btncloseintel",
       "community": 1,
@@ -1597,7 +1647,7 @@
       "label": "showIntelModal()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L437",
+      "source_location": "L414",
       "_origin": "ast",
       "id": "js_team_showintelmodal",
       "community": 1,
@@ -1607,17 +1657,17 @@
       "label": "showWinnerOverlay()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L495",
+      "source_location": "L467",
       "_origin": "ast",
       "id": "js_team_showwinneroverlay",
-      "community": 6,
+      "community": 1,
       "norm_label": "showwinneroverlay()"
     },
     {
       "label": "getLandmarkName()",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L521",
+      "source_location": "L493",
       "_origin": "ast",
       "id": "js_team_getlandmarkname",
       "community": 1,
@@ -1627,7 +1677,7 @@
       "label": "btnRules",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L530",
+      "source_location": "L502",
       "_origin": "ast",
       "id": "js_team_btnrules",
       "community": 1,
@@ -1637,7 +1687,7 @@
       "label": "rulesModal",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L531",
+      "source_location": "L503",
       "_origin": "ast",
       "id": "js_team_rulesmodal",
       "community": 1,
@@ -1647,47 +1697,17 @@
       "label": "btnCloseRules",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L532",
+      "source_location": "L504",
       "_origin": "ast",
       "id": "js_team_btncloserules",
       "community": 1,
       "norm_label": "btncloserules"
     },
     {
-      "label": "btnCircuitMap",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L543",
-      "_origin": "ast",
-      "id": "js_team_btncircuitmap",
-      "community": 1,
-      "norm_label": "btncircuitmap"
-    },
-    {
-      "label": "mapPopup",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L544",
-      "_origin": "ast",
-      "id": "js_team_mappopup",
-      "community": 1,
-      "norm_label": "mappopup"
-    },
-    {
-      "label": "btnCloseMapPopup",
-      "file_type": "code",
-      "source_file": "static/js/team.js",
-      "source_location": "L545",
-      "_origin": "ast",
-      "id": "js_team_btnclosemappopup",
-      "community": 1,
-      "norm_label": "btnclosemappopup"
-    },
-    {
       "label": "btnStartMission",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L556",
+      "source_location": "L516",
       "_origin": "ast",
       "id": "js_team_btnstartmission",
       "community": 1,
@@ -1697,7 +1717,7 @@
       "label": "btnCloseWin",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L580",
+      "source_location": "L540",
       "_origin": "ast",
       "id": "js_team_btnclosewin",
       "community": 1,
@@ -1707,7 +1727,7 @@
       "label": "winModalEl",
       "file_type": "code",
       "source_file": "static/js/team.js",
-      "source_location": "L581",
+      "source_location": "L541",
       "_origin": "ast",
       "id": "js_team_winmodalel",
       "community": 1,
@@ -1719,8 +1739,8 @@
       "source_file": "test_game.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "test_game",
-      "community": 2,
+      "id": "d_event_phase2_round3_phase2_round3_test_game_py",
+      "community": 5,
       "norm_label": "test_game.py"
     },
     {
@@ -1819,7 +1839,7 @@
       "source_file": "tests/test_graph.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_test_graph",
+      "id": "d_event_phase2_round3_phase2_round3_tests_test_graph_py",
       "community": 9,
       "norm_label": "test_graph.py"
     },
@@ -1839,9 +1859,409 @@
       "source_file": "tests/test_layout.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_test_layout",
-      "community": 11,
+      "id": "d_event_phase2_round3_phase2_round3_tests_test_layout_py",
+      "community": 19,
       "norm_label": "test_layout.py"
+    },
+    {
+      "label": "test_security.py",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_security",
+      "community": 14,
+      "norm_label": "test_security.py"
+    },
+    {
+      "label": "_add_test_puzzles()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "tests_test_security_add_test_puzzles",
+      "community": 12,
+      "norm_label": "_add_test_puzzles()"
+    },
+    {
+      "label": "TestInputValidation",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation",
+      "community": 11,
+      "norm_label": "testinputvalidation"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_setup",
+      "community": 12,
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".test_move_invalid_node_type_string()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string",
+      "community": 11,
+      "norm_label": ".test_move_invalid_node_type_string()"
+    },
+    {
+      "label": ".test_move_negative_node_id()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_test_move_negative_node_id",
+      "community": 11,
+      "norm_label": ".test_move_negative_node_id()"
+    },
+    {
+      "label": ".test_move_out_of_range_node_id()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id",
+      "community": 11,
+      "norm_label": ".test_move_out_of_range_node_id()"
+    },
+    {
+      "label": ".test_solve_oversized_answer()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_test_solve_oversized_answer",
+      "community": 11,
+      "norm_label": ".test_solve_oversized_answer()"
+    },
+    {
+      "label": ".test_solve_non_string_answer()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "tests_test_security_testinputvalidation_test_solve_non_string_answer",
+      "community": 11,
+      "norm_label": ".test_solve_non_string_answer()"
+    },
+    {
+      "label": "TestBypassDisabled",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "tests_test_security_testbypassdisabled",
+      "community": 14,
+      "norm_label": "testbypassdisabled"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "tests_test_security_testbypassdisabled_setup",
+      "community": 14,
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".test_bypass_returns_failure()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "tests_test_security_testbypassdisabled_test_bypass_returns_failure",
+      "community": 14,
+      "norm_label": ".test_bypass_returns_failure()"
+    },
+    {
+      "label": "TestAntiAIPuzzleTiming",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "tests_test_security_testantiaipuzzletiming",
+      "community": 12,
+      "norm_label": "testantiaipuzzletiming"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "tests_test_security_testantiaipuzzletiming_setup",
+      "community": 12,
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".test_fast_solve_flagged()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged",
+      "community": 12,
+      "norm_label": ".test_fast_solve_flagged()"
+    },
+    {
+      "label": ".test_normal_solve_not_flagged()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged",
+      "community": 12,
+      "norm_label": ".test_normal_solve_not_flagged()"
+    },
+    {
+      "label": "TestAdjacentNodeHiding",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "tests_test_security_testadjacentnodehiding",
+      "community": 13,
+      "norm_label": "testadjacentnodehiding"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "tests_test_security_testadjacentnodehiding_setup",
+      "community": 13,
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".test_eliminated_team_gets_no_adjacent()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent",
+      "community": 13,
+      "norm_label": ".test_eliminated_team_gets_no_adjacent()"
+    },
+    {
+      "label": ".test_winner_team_gets_no_adjacent()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent",
+      "community": 13,
+      "norm_label": ".test_winner_team_gets_no_adjacent()"
+    },
+    {
+      "label": ".test_active_team_gets_adjacent()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent",
+      "community": 13,
+      "norm_label": ".test_active_team_gets_adjacent()"
+    },
+    {
+      "label": "TestSuspiciousFlagsInGMView",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "tests_test_security_testsuspiciousflagsingmview",
+      "community": 16,
+      "norm_label": "testsuspiciousflagsingmview"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "tests_test_security_testsuspiciousflagsingmview_setup",
+      "community": 16,
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".test_gm_view_includes_suspicious_flags()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags",
+      "community": 16,
+      "norm_label": ".test_gm_view_includes_suspicious_flags()"
+    },
+    {
+      "label": ".test_gm_view_includes_solve_times()",
+      "file_type": "code",
+      "source_file": "tests/test_security.py",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times",
+      "community": 16,
+      "norm_label": ".test_gm_view_includes_solve_times()"
+    },
+    {
+      "label": "Security-focused unit tests for Find Sam game.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_1",
+      "community": 14,
+      "norm_label": "security-focused unit tests for find sam game."
+    },
+    {
+      "label": "Add test puzzles to the game since custom_map.json may have none.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_8",
+      "community": 12,
+      "norm_label": "add test puzzles to the game since custom_map.json may have none."
+    },
+    {
+      "label": "target_node must be an integer, not a string.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_29",
+      "community": 11,
+      "norm_label": "target_node must be an integer, not a string."
+    },
+    {
+      "label": "Negative node IDs don't exist in the graph.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_35",
+      "community": 11,
+      "norm_label": "negative node ids don't exist in the graph."
+    },
+    {
+      "label": "Node IDs beyond the graph should be rejected.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_41",
+      "community": 11,
+      "norm_label": "node ids beyond the graph should be rejected."
+    },
+    {
+      "label": "Answers longer than 200 chars should be rejected.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_47",
+      "community": 11,
+      "norm_label": "answers longer than 200 chars should be rejected."
+    },
+    {
+      "label": "Answer must be a string.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_58",
+      "community": 11,
+      "norm_label": "answer must be a string."
+    },
+    {
+      "label": "bypass_puzzle should always return failure.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_73",
+      "community": 14,
+      "norm_label": "bypass_puzzle should always return failure."
+    },
+    {
+      "label": "Solving a puzzle in under 5 seconds should create a suspicious flag.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_88",
+      "community": 12,
+      "norm_label": "solving a puzzle in under 5 seconds should create a suspicious flag."
+    },
+    {
+      "label": "Solving a puzzle after 10+ seconds should NOT be flagged.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_118",
+      "community": 12,
+      "norm_label": "solving a puzzle after 10+ seconds should not be flagged."
+    },
+    {
+      "label": "Eliminated teams should not see adjacent nodes.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_144",
+      "community": 13,
+      "norm_label": "eliminated teams should not see adjacent nodes."
+    },
+    {
+      "label": "Teams that found Sam should not see adjacent nodes.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_150",
+      "community": 13,
+      "norm_label": "teams that found sam should not see adjacent nodes."
+    },
+    {
+      "label": "Active teams should see adjacent nodes.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_156",
+      "community": 13,
+      "norm_label": "active teams should see adjacent nodes."
+    },
+    {
+      "label": "GM view should include suspicious_flags for each team.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_170",
+      "community": 16,
+      "norm_label": "gm view should include suspicious_flags for each team."
+    },
+    {
+      "label": "GM view should include solve_times for each team.",
+      "file_type": "rationale",
+      "source_file": "tests/test_security.py",
+      "source_location": "L185",
+      "_origin": "ast",
+      "id": "tests_test_security_rationale_185",
+      "community": 16,
+      "norm_label": "gm view should include solve_times for each team."
     },
     {
       "label": "test_serpentine.py",
@@ -1849,7 +2269,7 @@
       "source_file": "tests/test_serpentine.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_test_serpentine",
+      "id": "d_event_phase2_round3_phase2_round3_tests_test_serpentine_py",
       "community": 10,
       "norm_label": "test_serpentine.py"
     },
@@ -1862,6 +2282,206 @@
       "id": "tests_test_serpentine_test_dists",
       "community": 10,
       "norm_label": "test_dists()"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "rules_graphify",
+      "community": 17,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "rules_graphify_graphify",
+      "community": 17,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "workflows_graphify",
+      "community": 18,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "workflows_graphify_workflow_graphify",
+      "community": 18,
+      "norm_label": "workflow: graphify"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 6,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Find Sam \u2014 Round 3: Treasure Hunt",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_find_sam_round_3_treasure_hunt",
+      "community": 6,
+      "norm_label": "find sam \u2014 round 3: treasure hunt"
+    },
+    {
+      "label": "\ud83c\udfae Gameplay Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "readme_gameplay_overview",
+      "community": 6,
+      "norm_label": "\ud83c\udfae gameplay overview"
+    },
+    {
+      "label": "\ud83d\uddc2 Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "readme_project_structure",
+      "community": 6,
+      "norm_label": "\ud83d\uddc2 project structure"
+    },
+    {
+      "label": "\ud83d\ude80 Running Locally",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "readme_running_locally",
+      "community": 6,
+      "norm_label": "\ud83d\ude80 running locally"
+    },
+    {
+      "label": "1. Clone the repo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "readme_1_clone_the_repo",
+      "community": 6,
+      "norm_label": "1. clone the repo"
+    },
+    {
+      "label": "2. Create a virtual environment & install dependencies",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "readme_2_create_a_virtual_environment_install_dependencies",
+      "community": 6,
+      "norm_label": "2. create a virtual environment & install dependencies"
+    },
+    {
+      "label": "3. Start the server",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "readme_3_start_the_server",
+      "community": 6,
+      "norm_label": "3. start the server"
+    },
+    {
+      "label": "4. Open in browser",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "readme_4_open_in_browser",
+      "community": 6,
+      "norm_label": "4. open in browser"
+    },
+    {
+      "label": "\u2601\ufe0f Free Deployment Options",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "readme_free_deployment_options",
+      "community": 6,
+      "norm_label": "\u2601\ufe0f free deployment options"
+    },
+    {
+      "label": "\u2705 Recommended: [Render](https://render.com)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "readme_recommended_render_https_render_com",
+      "community": 6,
+      "norm_label": "\u2705 recommended: [render](https://render.com)"
+    },
+    {
+      "label": "Alternative: [Railway](https://railway.app)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "readme_alternative_railway_https_railway_app",
+      "community": 6,
+      "norm_label": "alternative: [railway](https://railway.app)"
+    },
+    {
+      "label": "Alternative: [Fly.io](https://fly.io)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "readme_alternative_fly_io_https_fly_io",
+      "community": 6,
+      "norm_label": "alternative: [fly.io](https://fly.io)"
+    },
+    {
+      "label": "\ud83e\uddea Running Tests",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "readme_running_tests",
+      "community": 6,
+      "norm_label": "\ud83e\uddea running tests"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Security & Anti-Cheat",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "readme_security_anti_cheat",
+      "community": 6,
+      "norm_label": "\ud83d\udee1\ufe0f security & anti-cheat"
+    },
+    {
+      "label": "\ud83d\udee0 Tech Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L128",
+      "_origin": "ast",
+      "id": "readme_tech_stack",
+      "community": 6,
+      "norm_label": "\ud83d\udee0 tech stack"
     }
   ],
   "links": [
@@ -1871,9 +2491,9 @@
       "source_file": "custom_map.json",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_connections",
-      "confidence_score": 1.0
+      "target": "custom_map_connections"
     },
     {
       "relation": "contains",
@@ -1881,9 +2501,9 @@
       "source_file": "custom_map.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_nodes",
-      "confidence_score": 1.0
+      "target": "custom_map_nodes"
     },
     {
       "relation": "contains",
@@ -1891,9 +2511,9 @@
       "source_file": "custom_map.json",
       "source_location": "L1168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_puzzles",
-      "confidence_score": 1.0
+      "target": "custom_map_puzzles"
     },
     {
       "relation": "contains",
@@ -1901,30 +2521,9 @@
       "source_file": "custom_map.json",
       "source_location": "L1169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "custom_map",
-      "target": "custom_map_sam_start_node",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "game.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "game",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "main.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "main",
-      "target": "game",
-      "confidence_score": 1.0
+      "target": "custom_map_sam_start_node"
     },
     {
       "relation": "imports_from",
@@ -1933,9 +2532,41 @@
       "source_file": "test_game.py",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "test_game",
-      "target": "game",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_event_phase2_round3_phase2_round3_test_game_py",
+      "target": "game"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "game.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "game"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "game"
     },
     {
       "relation": "method",
@@ -1943,9 +2574,9 @@
       "source_file": "game.py",
       "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_add_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_add_team"
     },
     {
       "relation": "method",
@@ -1953,9 +2584,9 @@
       "source_file": "game.py",
       "source_location": "L716",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_bypass_puzzle",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_bypass_puzzle"
     },
     {
       "relation": "method",
@@ -1963,9 +2594,9 @@
       "source_file": "game.py",
       "source_location": "L858",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_configure_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_configure_game"
     },
     {
       "relation": "method",
@@ -1973,9 +2604,9 @@
       "source_file": "game.py",
       "source_location": "L250",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "method",
@@ -1983,9 +2614,9 @@
       "source_file": "game.py",
       "source_location": "L792",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_gm_view_data",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_gm_view_data"
     },
     {
       "relation": "method",
@@ -1993,9 +2624,9 @@
       "source_file": "game.py",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_shortest_path_distance",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_shortest_path_distance"
     },
     {
       "relation": "method",
@@ -2003,9 +2634,9 @@
       "source_file": "game.py",
       "source_location": "L720",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_get_team_view_data",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_team_view_data"
     },
     {
       "relation": "method",
@@ -2013,9 +2644,9 @@
       "source_file": "game.py",
       "source_location": "L517",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
     },
     {
       "relation": "method",
@@ -2023,9 +2654,9 @@
       "source_file": "game.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_init",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_init"
     },
     {
       "relation": "method",
@@ -2033,9 +2664,9 @@
       "source_file": "game.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "method",
@@ -2043,9 +2674,9 @@
       "source_file": "game.py",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "method",
@@ -2053,9 +2684,9 @@
       "source_file": "game.py",
       "source_location": "L914",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_load_state",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_state"
     },
     {
       "relation": "method",
@@ -2063,9 +2694,9 @@
       "source_file": "game.py",
       "source_location": "L539",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_move_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_move_team"
     },
     {
       "relation": "method",
@@ -2073,9 +2704,9 @@
       "source_file": "game.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_noop_setup",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_noop_setup"
     },
     {
       "relation": "method",
@@ -2083,9 +2714,9 @@
       "source_file": "game.py",
       "source_location": "L483",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_remove_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_remove_team"
     },
     {
       "relation": "method",
@@ -2093,9 +2724,9 @@
       "source_file": "game.py",
       "source_location": "L898",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_save_state",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_save_state"
     },
     {
       "relation": "method",
@@ -2103,9 +2734,9 @@
       "source_file": "game.py",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_setup_monaco_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_monaco_map"
     },
     {
       "relation": "method",
@@ -2113,9 +2744,9 @@
       "source_file": "game.py",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_setup_story_puzzles",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_setup_story_puzzles"
     },
     {
       "relation": "method",
@@ -2123,9 +2754,9 @@
       "source_file": "game.py",
       "source_location": "L636",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_solve_puzzle",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_solve_puzzle"
     },
     {
       "relation": "method",
@@ -2133,9 +2764,9 @@
       "source_file": "game.py",
       "source_location": "L510",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_start_game",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_start_game"
     },
     {
       "relation": "method",
@@ -2143,9 +2774,9 @@
       "source_file": "game.py",
       "source_location": "L487",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_start_team",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_start_team"
     },
     {
       "relation": "method",
@@ -2153,9 +2784,9 @@
       "source_file": "game.py",
       "source_location": "L932",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_tick_sam_movement",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_tick_sam_movement"
     },
     {
       "relation": "method",
@@ -2163,9 +2794,9 @@
       "source_file": "game.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_update_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_map"
     },
     {
       "relation": "method",
@@ -2173,9 +2804,9 @@
       "source_file": "game.py",
       "source_location": "L951",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager",
-      "target": "game_gamemanager_update_puzzle_intel",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_puzzle_intel"
     },
     {
       "relation": "imports",
@@ -2184,9 +2815,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2194,9 +2825,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_bypassmodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2204,9 +2835,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_configuremodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2214,9 +2845,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_connectionmanager",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2224,9 +2855,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_mapupdatemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2234,9 +2865,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_movemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2244,9 +2875,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_py_any",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -2265,9 +2896,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_solvemodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2275,9 +2906,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "main_startteammodel",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2285,20 +2916,9 @@
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "request",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "test_game.py",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "test_game",
-      "target": "game_gamemanager",
-      "confidence_score": 1.0
+      "target": "game_gamemanager"
     },
     {
       "relation": "uses",
@@ -2306,9 +2926,9 @@
       "source_file": "test_game.py",
       "source_location": "L3",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "test_game_testfindsamgame",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -2322,14 +2942,130 @@
       "target": "game_gamemanager"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "tests_test_security_testadjacentnodehiding",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_security.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding_setup",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "tests_test_security_testantiaipuzzletiming",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_security.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "tests_test_security_testantiaipuzzletiming_setup",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "tests_test_security_testbypassdisabled",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_security.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "tests_test_security_testbypassdisabled_setup",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_security.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tests_test_security_testinputvalidation_setup",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "tests_test_security_testsuspiciousflagsingmview",
+      "target": "game_gamemanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_security.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "tests_test_security_testsuspiciousflagsingmview_setup",
+      "target": "game_gamemanager"
+    },
+    {
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "main.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "websocket",
-      "target": "game_gamemanager",
-      "confidence_score": 0.5
+      "target": "game_gamemanager"
     },
     {
       "relation": "calls",
@@ -2338,9 +3074,9 @@
       "source_file": "game.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_init",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "calls",
@@ -2349,9 +3085,9 @@
       "source_file": "game.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_init",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "calls",
@@ -2360,19 +3096,19 @@
       "source_file": "game.py",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "game.py",
-      "source_location": "L39",
+      "source_location": "L41",
       "weight": 1.0,
-      "source": "game_rationale_39",
-      "target": "game_gamemanager_load_custom_map",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "game_rationale_41",
+      "target": "game_gamemanager_load_custom_map"
     },
     {
       "relation": "calls",
@@ -2381,19 +3117,19 @@
       "source_file": "game.py",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "game.py",
-      "source_location": "L71",
+      "source_location": "L73",
       "weight": 1.0,
-      "source": "game_rationale_71",
-      "target": "game_gamemanager_load_puzzles_from_map",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "game_rationale_73",
+      "target": "game_gamemanager_load_puzzles_from_map"
     },
     {
       "relation": "references",
@@ -2402,19 +3138,30 @@
       "source_file": "game.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_update_map",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "game.py",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0,
-      "source": "game_rationale_82",
-      "target": "game_gamemanager_update_map",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "game_rationale_84",
+      "target": "game_gamemanager_update_map"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "game.py",
+      "source_location": "L751",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_gamemanager_bypass_puzzle",
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -2423,9 +3170,9 @@
       "source_file": "game.py",
       "source_location": "L858",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_configure_game",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -2434,9 +3181,9 @@
       "source_file": "game.py",
       "source_location": "L792",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_gm_view_data",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -2445,9 +3192,9 @@
       "source_file": "game.py",
       "source_location": "L720",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_team_view_data",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -2456,9 +3203,9 @@
       "source_file": "game.py",
       "source_location": "L539",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "references",
@@ -2467,19 +3214,19 @@
       "source_file": "game.py",
       "source_location": "L636",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_solve_puzzle",
-      "target": "game_py_any",
-      "confidence_score": 1.0
+      "target": "game_py_any"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "game.py",
-      "source_location": "L105",
+      "source_location": "L107",
       "weight": 1.0,
-      "source": "game_rationale_105",
-      "target": "game_gamemanager_setup_monaco_map",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "game_rationale_107",
+      "target": "game_gamemanager_setup_monaco_map"
     },
     {
       "relation": "calls",
@@ -2488,9 +3235,9 @@
       "source_file": "game.py",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_shortest_path_distance",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -2499,9 +3246,9 @@
       "source_file": "game.py",
       "source_location": "L735",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_get_team_view_data",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -2510,9 +3257,9 @@
       "source_file": "game.py",
       "source_location": "L557",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_gamemanager_get_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_adjacent_nodes"
     },
     {
       "relation": "calls",
@@ -2521,9 +3268,9 @@
       "source_file": "game.py",
       "source_location": "L444",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_add_team",
-      "target": "game_gamemanager_get_shortest_path_distance",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_get_shortest_path_distance"
     },
     {
       "relation": "calls",
@@ -2532,9 +3279,9 @@
       "source_file": "game.py",
       "source_location": "L587",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_move_team",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
     },
     {
       "relation": "calls",
@@ -2543,9 +3290,19 @@
       "source_file": "game.py",
       "source_location": "L947",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_tick_sam_movement",
-      "target": "game_gamemanager_handle_team_win",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_handle_team_win"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "game.py",
+      "source_location": "L752",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "game_rationale_752",
+      "target": "game_gamemanager_bypass_puzzle"
     },
     {
       "relation": "calls",
@@ -2554,9 +3311,9 @@
       "source_file": "game.py",
       "source_location": "L942",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "game_gamemanager_tick_sam_movement",
-      "target": "game_gamemanager_update_puzzle_intel",
-      "confidence_score": 1.0
+      "target": "game_gamemanager_update_puzzle_intel"
     },
     {
       "relation": "contains",
@@ -2564,9 +3321,9 @@
       "source_file": "main.py",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_bypass_puzzle",
-      "confidence_score": 1.0
+      "target": "main_bypass_puzzle"
     },
     {
       "relation": "contains",
@@ -2574,9 +3331,9 @@
       "source_file": "main.py",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_bypassmodel",
-      "confidence_score": 1.0
+      "target": "main_bypassmodel"
     },
     {
       "relation": "contains",
@@ -2584,9 +3341,9 @@
       "source_file": "main.py",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_configure_game",
-      "confidence_score": 1.0
+      "target": "main_configure_game"
     },
     {
       "relation": "contains",
@@ -2594,9 +3351,9 @@
       "source_file": "main.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_configuremodel",
-      "confidence_score": 1.0
+      "target": "main_configuremodel"
     },
     {
       "relation": "contains",
@@ -2604,9 +3361,9 @@
       "source_file": "main.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_connectionmanager",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager"
     },
     {
       "relation": "contains",
@@ -2614,9 +3371,9 @@
       "source_file": "main.py",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_gm",
-      "confidence_score": 1.0
+      "target": "main_get_gm"
     },
     {
       "relation": "contains",
@@ -2624,9 +3381,9 @@
       "source_file": "main.py",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_gm_state",
-      "confidence_score": 1.0
+      "target": "main_get_gm_state"
     },
     {
       "relation": "contains",
@@ -2634,9 +3391,9 @@
       "source_file": "main.py",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_index",
-      "confidence_score": 1.0
+      "target": "main_get_index"
     },
     {
       "relation": "contains",
@@ -2644,9 +3401,9 @@
       "source_file": "main.py",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_robots_txt",
-      "confidence_score": 1.0
+      "target": "main_get_robots_txt"
     },
     {
       "relation": "contains",
@@ -2654,9 +3411,9 @@
       "source_file": "main.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_team",
-      "confidence_score": 1.0
+      "target": "main_get_team"
     },
     {
       "relation": "contains",
@@ -2664,9 +3421,9 @@
       "source_file": "main.py",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_get_team_state",
-      "confidence_score": 1.0
+      "target": "main_get_team_state"
     },
     {
       "relation": "contains",
@@ -2674,9 +3431,9 @@
       "source_file": "main.py",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_join_team",
-      "confidence_score": 1.0
+      "target": "main_join_team"
     },
     {
       "relation": "contains",
@@ -2684,9 +3441,9 @@
       "source_file": "main.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_mapupdatemodel",
-      "confidence_score": 1.0
+      "target": "main_mapupdatemodel"
     },
     {
       "relation": "contains",
@@ -2694,9 +3451,9 @@
       "source_file": "main.py",
       "source_location": "L259",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_move_team",
-      "confidence_score": 1.0
+      "target": "main_move_team"
     },
     {
       "relation": "contains",
@@ -2704,9 +3461,19 @@
       "source_file": "main.py",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_movemodel",
-      "confidence_score": 1.0
+      "target": "main_movemodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_rate_limit_middleware"
     },
     {
       "relation": "contains",
@@ -2714,9 +3481,9 @@
       "source_file": "main.py",
       "source_location": "L246",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_reset_game",
-      "confidence_score": 1.0
+      "target": "main_reset_game"
     },
     {
       "relation": "contains",
@@ -2724,9 +3491,9 @@
       "source_file": "main.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_sam_tick_loop",
-      "confidence_score": 1.0
+      "target": "main_sam_tick_loop"
     },
     {
       "relation": "contains",
@@ -2734,9 +3501,19 @@
       "source_file": "main.py",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_save_map",
-      "confidence_score": 1.0
+      "target": "main_save_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main",
+      "target": "main_security_headers_middleware"
     },
     {
       "relation": "contains",
@@ -2744,9 +3521,9 @@
       "source_file": "main.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_shutdown_event",
-      "confidence_score": 1.0
+      "target": "main_shutdown_event"
     },
     {
       "relation": "contains",
@@ -2754,9 +3531,9 @@
       "source_file": "main.py",
       "source_location": "L269",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_solve_puzzle",
-      "confidence_score": 1.0
+      "target": "main_solve_puzzle"
     },
     {
       "relation": "contains",
@@ -2764,9 +3541,9 @@
       "source_file": "main.py",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_solvemodel",
-      "confidence_score": 1.0
+      "target": "main_solvemodel"
     },
     {
       "relation": "contains",
@@ -2774,9 +3551,9 @@
       "source_file": "main.py",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_start_game",
-      "confidence_score": 1.0
+      "target": "main_start_game"
     },
     {
       "relation": "contains",
@@ -2784,9 +3561,9 @@
       "source_file": "main.py",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_start_team_mission",
-      "confidence_score": 1.0
+      "target": "main_start_team_mission"
     },
     {
       "relation": "contains",
@@ -2794,9 +3571,9 @@
       "source_file": "main.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_startteammodel",
-      "confidence_score": 1.0
+      "target": "main_startteammodel"
     },
     {
       "relation": "contains",
@@ -2804,9 +3581,9 @@
       "source_file": "main.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_startup_event",
-      "confidence_score": 1.0
+      "target": "main_startup_event"
     },
     {
       "relation": "contains",
@@ -2814,9 +3591,9 @@
       "source_file": "main.py",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "contains",
@@ -2824,9 +3601,9 @@
       "source_file": "main.py",
       "source_location": "L297",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_websocket_gm",
-      "confidence_score": 1.0
+      "target": "main_websocket_gm"
     },
     {
       "relation": "contains",
@@ -2834,9 +3611,64 @@
       "source_file": "main.py",
       "source_location": "L329",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_websocket_team",
-      "confidence_score": 1.0
+      "target": "main_websocket_team"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_rate_limit_middleware",
+      "target": "request"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_get_gm",
+      "target": "request"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_get_index",
+      "target": "request"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_get_team",
+      "target": "request"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_security_headers_middleware",
+      "target": "request"
     },
     {
       "relation": "method",
@@ -2844,9 +3676,9 @@
       "source_file": "main.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_broadcast_to_all_teams",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_all_teams"
     },
     {
       "relation": "method",
@@ -2854,9 +3686,9 @@
       "source_file": "main.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_broadcast_to_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_gm"
     },
     {
       "relation": "method",
@@ -2864,9 +3696,9 @@
       "source_file": "main.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_connect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_gm"
     },
     {
       "relation": "method",
@@ -2874,9 +3706,9 @@
       "source_file": "main.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_connect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_team"
     },
     {
       "relation": "method",
@@ -2884,9 +3716,9 @@
       "source_file": "main.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_disconnect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_gm"
     },
     {
       "relation": "method",
@@ -2894,9 +3726,9 @@
       "source_file": "main.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_disconnect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_team"
     },
     {
       "relation": "method",
@@ -2904,9 +3736,9 @@
       "source_file": "main.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_init",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_init"
     },
     {
       "relation": "method",
@@ -2914,9 +3746,9 @@
       "source_file": "main.py",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager",
-      "target": "main_connectionmanager_send_to_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_send_to_team"
     },
     {
       "relation": "references",
@@ -2925,9 +3757,9 @@
       "source_file": "main.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_connect_team",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "calls",
@@ -2936,9 +3768,9 @@
       "source_file": "main.py",
       "source_location": "L334",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_connectionmanager_connect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_team"
     },
     {
       "relation": "references",
@@ -2947,9 +3779,9 @@
       "source_file": "main.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_connect_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -2958,9 +3790,9 @@
       "source_file": "main.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_disconnect_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -2969,9 +3801,9 @@
       "source_file": "main.py",
       "source_location": "L297",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "references",
@@ -2980,9 +3812,9 @@
       "source_file": "main.py",
       "source_location": "L329",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "websocket",
-      "confidence_score": 1.0
+      "target": "websocket"
     },
     {
       "relation": "calls",
@@ -2991,9 +3823,9 @@
       "source_file": "main.py",
       "source_location": "L347",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_connectionmanager_disconnect_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_team"
     },
     {
       "relation": "calls",
@@ -3002,9 +3834,9 @@
       "source_file": "main.py",
       "source_location": "L298",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_connectionmanager_connect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_connect_gm"
     },
     {
       "relation": "calls",
@@ -3013,9 +3845,9 @@
       "source_file": "main.py",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_connectionmanager_disconnect_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_disconnect_gm"
     },
     {
       "relation": "references",
@@ -3024,9 +3856,9 @@
       "source_file": "main.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_broadcast_to_gm",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "calls",
@@ -3035,9 +3867,9 @@
       "source_file": "main.py",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_broadcast_to_gm",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_gm"
     },
     {
       "relation": "references",
@@ -3046,9 +3878,9 @@
       "source_file": "main.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_broadcast_to_all_teams",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "references",
@@ -3057,9 +3889,9 @@
       "source_file": "main.py",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_connectionmanager_send_to_team",
-      "target": "main_py_any",
-      "confidence_score": 1.0
+      "target": "main_py_any"
     },
     {
       "relation": "calls",
@@ -3068,9 +3900,9 @@
       "source_file": "main.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_send_to_team",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_send_to_team"
     },
     {
       "relation": "calls",
@@ -3079,9 +3911,9 @@
       "source_file": "main.py",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_update_all_clients",
-      "target": "main_connectionmanager_broadcast_to_all_teams",
-      "confidence_score": 1.0
+      "target": "main_connectionmanager_broadcast_to_all_teams"
     },
     {
       "relation": "calls",
@@ -3090,9 +3922,9 @@
       "source_file": "main.py",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_sam_tick_loop",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3101,9 +3933,9 @@
       "source_file": "main.py",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_startup_event",
-      "target": "main_sam_tick_loop",
-      "confidence_score": 1.0
+      "target": "main_sam_tick_loop"
     },
     {
       "relation": "calls",
@@ -3112,9 +3944,9 @@
       "source_file": "main.py",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_bypass_puzzle",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3123,9 +3955,9 @@
       "source_file": "main.py",
       "source_location": "L224",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configure_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3134,9 +3966,9 @@
       "source_file": "main.py",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_join_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3145,9 +3977,9 @@
       "source_file": "main.py",
       "source_location": "L263",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_move_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3156,9 +3988,9 @@
       "source_file": "main.py",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_reset_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3167,9 +3999,9 @@
       "source_file": "main.py",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_save_map",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3178,9 +4010,9 @@
       "source_file": "main.py",
       "source_location": "L273",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solve_puzzle",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3189,9 +4021,9 @@
       "source_file": "main.py",
       "source_location": "L242",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_game",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3200,9 +4032,9 @@
       "source_file": "main.py",
       "source_location": "L290",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_team_mission",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3211,9 +4043,9 @@
       "source_file": "main.py",
       "source_location": "L321",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_gm",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "calls",
@@ -3222,9 +4054,9 @@
       "source_file": "main.py",
       "source_location": "L335",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_websocket_team",
-      "target": "main_update_all_clients",
-      "confidence_score": 1.0
+      "target": "main_update_all_clients"
     },
     {
       "relation": "references",
@@ -3233,9 +4065,9 @@
       "source_file": "main.py",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configure_game",
-      "target": "main_configuremodel",
-      "confidence_score": 1.0
+      "target": "main_configuremodel"
     },
     {
       "relation": "inherits",
@@ -3243,9 +4075,9 @@
       "source_file": "main.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_configuremodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -3253,9 +4085,9 @@
       "source_file": "main.py",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_bypassmodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -3263,9 +4095,9 @@
       "source_file": "main.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_mapupdatemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -3273,9 +4105,9 @@
       "source_file": "main.py",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_movemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -3283,9 +4115,9 @@
       "source_file": "main.py",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solvemodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -3293,9 +4125,9 @@
       "source_file": "main.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_startteammodel",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "references",
@@ -3304,9 +4136,9 @@
       "source_file": "main.py",
       "source_location": "L259",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_move_team",
-      "target": "main_movemodel",
-      "confidence_score": 1.0
+      "target": "main_movemodel"
     },
     {
       "relation": "references",
@@ -3315,9 +4147,9 @@
       "source_file": "main.py",
       "source_location": "L269",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_solve_puzzle",
-      "target": "main_solvemodel",
-      "confidence_score": 1.0
+      "target": "main_solvemodel"
     },
     {
       "relation": "references",
@@ -3326,9 +4158,9 @@
       "source_file": "main.py",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_bypass_puzzle",
-      "target": "main_bypassmodel",
-      "confidence_score": 1.0
+      "target": "main_bypassmodel"
     },
     {
       "relation": "references",
@@ -3337,9 +4169,9 @@
       "source_file": "main.py",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_start_team_mission",
-      "target": "main_startteammodel",
-      "confidence_score": 1.0
+      "target": "main_startteammodel"
     },
     {
       "relation": "references",
@@ -3348,42 +4180,9 @@
       "source_file": "main.py",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_save_map",
-      "target": "main_mapupdatemodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "main.py",
-      "source_location": "L178",
-      "weight": 1.0,
-      "source": "main_get_index",
-      "target": "request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "main.py",
-      "source_location": "L182",
-      "weight": 1.0,
-      "source": "main_get_gm",
-      "target": "request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "main.py",
-      "source_location": "L186",
-      "weight": 1.0,
-      "source": "main_get_team",
-      "target": "request",
-      "confidence_score": 1.0
+      "target": "main_mapupdatemodel"
     },
     {
       "relation": "contains",
@@ -3391,9 +4190,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_connections",
-      "confidence_score": 1.0
+      "target": "static_custom_map_connections"
     },
     {
       "relation": "contains",
@@ -3401,9 +4200,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_nodes",
-      "confidence_score": 1.0
+      "target": "static_custom_map_nodes"
     },
     {
       "relation": "contains",
@@ -3411,9 +4210,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L1168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_puzzles",
-      "confidence_score": 1.0
+      "target": "static_custom_map_puzzles"
     },
     {
       "relation": "contains",
@@ -3421,9 +4220,9 @@
       "source_file": "static/custom_map.json",
       "source_location": "L1169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "static_custom_map",
-      "target": "static_custom_map_sam_start_node",
-      "confidence_score": 1.0
+      "target": "static_custom_map_sam_start_node"
     },
     {
       "relation": "contains",
@@ -3431,9 +4230,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_btnforcesammove",
-      "confidence_score": 1.0
+      "target": "js_gm_btnforcesammove"
     },
     {
       "relation": "contains",
@@ -3441,9 +4240,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_btnresetgame",
-      "confidence_score": 1.0
+      "target": "js_gm_btnresetgame"
     },
     {
       "relation": "contains",
@@ -3451,9 +4250,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_btnsavemap",
-      "confidence_score": 1.0
+      "target": "js_gm_btnsavemap"
     },
     {
       "relation": "contains",
@@ -3461,9 +4260,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_chkmapeditor",
-      "confidence_score": 1.0
+      "target": "js_gm_chkmapeditor"
     },
     {
       "relation": "contains",
@@ -3471,9 +4270,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_connectwebsocket",
-      "confidence_score": 1.0
+      "target": "js_gm_connectwebsocket"
     },
     {
       "relation": "contains",
@@ -3481,9 +4280,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_currentconnections",
-      "confidence_score": 1.0
+      "target": "js_gm_currentconnections"
     },
     {
       "relation": "contains",
@@ -3491,9 +4290,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_currentnodes",
-      "confidence_score": 1.0
+      "target": "js_gm_currentnodes"
     },
     {
       "relation": "contains",
@@ -3501,9 +4300,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_customnodescoords",
-      "confidence_score": 1.0
+      "target": "js_gm_customnodescoords"
     },
     {
       "relation": "contains",
@@ -3511,9 +4310,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_diagonalchk",
-      "confidence_score": 1.0
+      "target": "js_gm_diagonalchk"
     },
     {
       "relation": "contains",
@@ -3521,9 +4320,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L631",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_drawlink",
-      "confidence_score": 1.0
+      "target": "js_gm_drawlink"
     },
     {
       "relation": "contains",
@@ -3531,259 +4330,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L317",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_enableconfigcontrols",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L150",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_fetchstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L213",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_formatduration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L687",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_getadjacentnodes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L754",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_getlandmarkname",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L62",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_getnodecoords",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L698",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_handlenodepathclick",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L227",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_handlestateupdate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_leaderboardbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L49",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_maplinksgroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_mapnodesgroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_mapsvg",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_pathrecording",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L75",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_pixeltojsoncoords",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L645",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_postconfigure",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_recordpathchk",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L372",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_renderleaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L403",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_rendermap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L325",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_rendertelemetry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_samcoordsbox",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_samintervalinput",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_sammarkergroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_sampathinput",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_samstaticchk",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L111",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_savemaplayout",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/gm.js",
-      "source_location": "L162",
-      "weight": 1.0,
-      "source": "js_gm",
-      "target": "js_gm_startpolling",
-      "confidence_score": 1.0
+      "target": "js_gm_enableconfigcontrols"
     },
     {
       "relation": "contains",
@@ -3791,9 +4340,269 @@
       "source_file": "static/js/gm.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_statusbadge",
-      "confidence_score": 1.0
+      "target": "js_gm_escapehtml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_fetchstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_formatduration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L687",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_getadjacentnodes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L754",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_getlandmarkname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_getnodecoords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L698",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_handlenodepathclick"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L227",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_handlestateupdate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_leaderboardbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_maplinksgroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_mapnodesgroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_mapsvg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_pathrecording"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_pixeltojsoncoords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L645",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_postconfigure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_recordpathchk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L372",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_renderleaderboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L403",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_rendermap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L325",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_rendertelemetry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_samcoordsbox"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_samintervalinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_sammarkergroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_sampathinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_samstaticchk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_savemaplayout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_startpolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/gm.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_gm",
+      "target": "js_gm_statusbadge"
     },
     {
       "relation": "contains",
@@ -3801,9 +4610,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_stoppolling",
-      "confidence_score": 1.0
+      "target": "js_gm_stoppolling"
     },
     {
       "relation": "contains",
@@ -3811,9 +4620,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_teamsmarkersgroup",
-      "confidence_score": 1.0
+      "target": "js_gm_teamsmarkersgroup"
     },
     {
       "relation": "contains",
@@ -3821,9 +4630,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_teamstelemetrygrid",
-      "confidence_score": 1.0
+      "target": "js_gm_teamstelemetrygrid"
     },
     {
       "relation": "contains",
@@ -3831,9 +4640,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm",
-      "target": "js_gm_updatetimerdisplay",
-      "confidence_score": 1.0
+      "target": "js_gm_updatetimerdisplay"
     },
     {
       "relation": "calls",
@@ -3842,9 +4651,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_rendermap",
-      "target": "js_gm_getnodecoords",
-      "confidence_score": 1.0
+      "target": "js_gm_getnodecoords"
     },
     {
       "relation": "calls",
@@ -3853,9 +4662,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_fetchstate",
-      "target": "js_gm_handlestateupdate",
-      "confidence_score": 1.0
+      "target": "js_gm_handlestateupdate"
     },
     {
       "relation": "calls",
@@ -3864,9 +4673,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_updatetimerdisplay",
-      "target": "js_gm_formatduration",
-      "confidence_score": 1.0
+      "target": "js_gm_formatduration"
     },
     {
       "relation": "calls",
@@ -3875,9 +4684,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlestateupdate",
-      "target": "js_gm_updatetimerdisplay",
-      "confidence_score": 1.0
+      "target": "js_gm_updatetimerdisplay"
     },
     {
       "relation": "calls",
@@ -3886,9 +4695,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L270",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlestateupdate",
-      "target": "js_gm_enableconfigcontrols",
-      "confidence_score": 1.0
+      "target": "js_gm_enableconfigcontrols"
     },
     {
       "relation": "calls",
@@ -3897,9 +4706,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L311",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlestateupdate",
-      "target": "js_gm_renderleaderboard",
-      "confidence_score": 1.0
+      "target": "js_gm_renderleaderboard"
     },
     {
       "relation": "calls",
@@ -3908,9 +4717,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlestateupdate",
-      "target": "js_gm_rendermap",
-      "confidence_score": 1.0
+      "target": "js_gm_rendermap"
     },
     {
       "relation": "calls",
@@ -3919,9 +4728,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L308",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlestateupdate",
-      "target": "js_gm_rendertelemetry",
-      "confidence_score": 1.0
+      "target": "js_gm_rendertelemetry"
     },
     {
       "relation": "calls",
@@ -3930,9 +4739,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L717",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlenodepathclick",
-      "target": "js_gm_postconfigure",
-      "confidence_score": 1.0
+      "target": "js_gm_postconfigure"
     },
     {
       "relation": "calls",
@@ -3941,9 +4750,9 @@
       "source_file": "static/js/gm.js",
       "source_location": "L706",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_gm_handlenodepathclick",
-      "target": "js_gm_getadjacentnodes",
-      "confidence_score": 1.0
+      "target": "js_gm_getadjacentnodes"
     },
     {
       "relation": "contains",
@@ -3951,19 +4760,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btnbypasspuzzle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L543",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_btncircuitmap",
-      "confidence_score": 1.0
+      "target": "js_team_btnbypasspuzzle"
     },
     {
       "relation": "contains",
@@ -3971,19 +4770,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L435",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btncloseintel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L545",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_btnclosemappopup",
-      "confidence_score": 1.0
+      "target": "js_team_btncloseintel"
     },
     {
       "relation": "contains",
@@ -3991,9 +4780,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L532",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btncloserules",
-      "confidence_score": 1.0
+      "target": "js_team_btncloserules"
     },
     {
       "relation": "contains",
@@ -4001,9 +4790,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L580",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btnclosewin",
-      "confidence_score": 1.0
+      "target": "js_team_btnclosewin"
     },
     {
       "relation": "contains",
@@ -4011,9 +4800,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L530",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btnrules",
-      "confidence_score": 1.0
+      "target": "js_team_btnrules"
     },
     {
       "relation": "contains",
@@ -4021,9 +4810,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L556",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_btnstartmission",
-      "confidence_score": 1.0
+      "target": "js_team_btnstartmission"
     },
     {
       "relation": "contains",
@@ -4031,9 +4820,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_clueslist",
-      "confidence_score": 1.0
+      "target": "js_team_clueslist"
     },
     {
       "relation": "contains",
@@ -4041,9 +4830,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_connectwebsocket",
-      "confidence_score": 1.0
+      "target": "js_team_connectwebsocket"
     },
     {
       "relation": "contains",
@@ -4051,319 +4840,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L358",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_drawlink",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_fetchstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L521",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_getlandmarkname",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_getnodecoords",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L378",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_handlemove",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L123",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_handlestateupdate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_historylist",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L434",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_intelclearancebdg",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L433",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_intelcluelist",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L432",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_intelmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_leaderboardbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_lobbyoverlay",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_locationval",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_maplinksgroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_mapnodesgroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L544",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_mappopup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_mapsvg",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_playermarkergroup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_puzzleanswerinput",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_puzzleerror",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_puzzleform",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_puzzlemodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_puzzlequestion",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L267",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_rendermap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L531",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_rulesmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L437",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_showintelmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L495",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_showwinneroverlay",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_startpolling",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_statusbadge",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L70",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_stoppolling",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_teamname",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "static/js/team.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "js_team",
-      "target": "js_team_ticketscard",
-      "confidence_score": 1.0
+      "target": "js_team_drawlink"
     },
     {
       "relation": "contains",
@@ -4371,9 +4850,319 @@
       "source_file": "static/js/team.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_ticketsval",
-      "confidence_score": 1.0
+      "target": "js_team_escapehtml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_fetchstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L521",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_getlandmarkname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_getnodecoords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L378",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_handlemove"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_handlestateupdate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_historylist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L434",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_intelclearancebdg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L433",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_intelcluelist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L432",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_intelmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_leaderboardbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_lobbyoverlay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_locationval"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_maplinksgroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_mapnodesgroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_mapsvg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_playermarkergroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_puzzleanswerinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_puzzleerror"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_puzzleform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_puzzlemodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_puzzlequestion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_rendermap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L531",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_rulesmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L437",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_showintelmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L495",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_showwinneroverlay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_startpolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_statusbadge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_stoppolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_teamname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_ticketscard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "static/js/team.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_team",
+      "target": "js_team_ticketsval"
     },
     {
       "relation": "contains",
@@ -4381,9 +5170,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_updatetimerdisplay",
-      "confidence_score": 1.0
+      "target": "js_team_updatetimerdisplay"
     },
     {
       "relation": "contains",
@@ -4391,9 +5180,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L581",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_winmodalel",
-      "confidence_score": 1.0
+      "target": "js_team_winmodalel"
     },
     {
       "relation": "contains",
@@ -4401,9 +5190,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team",
-      "target": "js_team_winneroverlay",
-      "confidence_score": 1.0
+      "target": "js_team_winneroverlay"
     },
     {
       "relation": "calls",
@@ -4412,9 +5201,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L334",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team_rendermap",
-      "target": "js_team_getnodecoords",
-      "confidence_score": 1.0
+      "target": "js_team_getnodecoords"
     },
     {
       "relation": "calls",
@@ -4423,9 +5212,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team_fetchstate",
-      "target": "js_team_handlestateupdate",
-      "confidence_score": 1.0
+      "target": "js_team_handlestateupdate"
     },
     {
       "relation": "calls",
@@ -4434,9 +5223,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team_handlestateupdate",
-      "target": "js_team_updatetimerdisplay",
-      "confidence_score": 1.0
+      "target": "js_team_updatetimerdisplay"
     },
     {
       "relation": "calls",
@@ -4445,9 +5234,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L258",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team_handlestateupdate",
-      "target": "js_team_rendermap",
-      "confidence_score": 1.0
+      "target": "js_team_rendermap"
     },
     {
       "relation": "calls",
@@ -4456,9 +5245,9 @@
       "source_file": "static/js/team.js",
       "source_location": "L262",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_team_handlestateupdate",
-      "target": "js_team_showwinneroverlay",
-      "confidence_score": 1.0
+      "target": "js_team_showwinneroverlay"
     },
     {
       "relation": "contains",
@@ -4466,9 +5255,9 @@
       "source_file": "test_game.py",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "test_game",
-      "target": "test_game_testfindsamgame",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_event_phase2_round3_phase2_round3_test_game_py",
+      "target": "test_game_testfindsamgame"
     },
     {
       "relation": "method",
@@ -4476,9 +5265,9 @@
       "source_file": "test_game.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_setup",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_setup"
     },
     {
       "relation": "method",
@@ -4486,9 +5275,9 @@
       "source_file": "test_game.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_add_team",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_add_team"
     },
     {
       "relation": "method",
@@ -4496,9 +5285,9 @@
       "source_file": "test_game.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_adjacent_nodes",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_adjacent_nodes"
     },
     {
       "relation": "method",
@@ -4506,9 +5295,9 @@
       "source_file": "test_game.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_clue_trigger_and_puzzle_decryption",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_clue_trigger_and_puzzle_decryption"
     },
     {
       "relation": "method",
@@ -4516,9 +5305,9 @@
       "source_file": "test_game.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_default_map_setup",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_default_map_setup"
     },
     {
       "relation": "method",
@@ -4526,9 +5315,9 @@
       "source_file": "test_game.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_game_states_and_movement",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_game_states_and_movement"
     },
     {
       "relation": "method",
@@ -4536,9 +5325,9 @@
       "source_file": "test_game.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_team_specific_start",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_team_specific_start"
     },
     {
       "relation": "method",
@@ -4546,9 +5335,9 @@
       "source_file": "test_game.py",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_game_testfindsamgame",
-      "target": "test_game_testfindsamgame_test_win_condition",
-      "confidence_score": 1.0
+      "target": "test_game_testfindsamgame_test_win_condition"
     },
     {
       "relation": "contains",
@@ -4556,9 +5345,443 @@
       "source_file": "tests/test_graph.py",
       "source_location": "L181",
       "weight": 1.0,
-      "source": "tests_test_graph",
-      "target": "tests_test_graph_get_distances",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_event_phase2_round3_phase2_round3_tests_test_graph_py",
+      "target": "tests_test_graph_get_distances"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_testadjacentnodehiding"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_testantiaipuzzletiming"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_testbypassdisabled"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_testinputvalidation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security",
+      "target": "tests_test_security_testsuspiciousflagsingmview"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_1",
+      "target": "tests_test_security"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_8",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding_setup",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testantiaipuzzletiming_setup",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation_setup",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testsuspiciousflagsingmview_setup",
+      "target": "tests_test_security_add_test_puzzles"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_setup"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testinputvalidation",
+      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_29",
+      "target": "tests_test_security_testinputvalidation_test_move_invalid_node_type_string"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_35",
+      "target": "tests_test_security_testinputvalidation_test_move_negative_node_id"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_41",
+      "target": "tests_test_security_testinputvalidation_test_move_out_of_range_node_id"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_47",
+      "target": "tests_test_security_testinputvalidation_test_solve_oversized_answer"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_58",
+      "target": "tests_test_security_testinputvalidation_test_solve_non_string_answer"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testbypassdisabled",
+      "target": "tests_test_security_testbypassdisabled_setup"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testbypassdisabled",
+      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_73",
+      "target": "tests_test_security_testbypassdisabled_test_bypass_returns_failure"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testantiaipuzzletiming",
+      "target": "tests_test_security_testantiaipuzzletiming_setup"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testantiaipuzzletiming",
+      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testantiaipuzzletiming",
+      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_88",
+      "target": "tests_test_security_testantiaipuzzletiming_test_fast_solve_flagged"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_118",
+      "target": "tests_test_security_testantiaipuzzletiming_test_normal_solve_not_flagged"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding",
+      "target": "tests_test_security_testadjacentnodehiding_setup"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding",
+      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding",
+      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testadjacentnodehiding",
+      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_144",
+      "target": "tests_test_security_testadjacentnodehiding_test_eliminated_team_gets_no_adjacent"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_150",
+      "target": "tests_test_security_testadjacentnodehiding_test_winner_team_gets_no_adjacent"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_156",
+      "target": "tests_test_security_testadjacentnodehiding_test_active_team_gets_adjacent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testsuspiciousflagsingmview",
+      "target": "tests_test_security_testsuspiciousflagsingmview_setup"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testsuspiciousflagsingmview",
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_testsuspiciousflagsingmview",
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_170",
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_suspicious_flags"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_security.py",
+      "source_location": "L185",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_security_rationale_185",
+      "target": "tests_test_security_testsuspiciousflagsingmview_test_gm_view_includes_solve_times"
     },
     {
       "relation": "contains",
@@ -4566,11 +5789,181 @@
       "source_file": "tests/test_serpentine.py",
       "source_location": "L46",
       "weight": 1.0,
-      "source": "tests_test_serpentine",
-      "target": "tests_test_serpentine_test_dists",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_event_phase2_round3_phase2_round3_tests_test_serpentine_py",
+      "target": "tests_test_serpentine_test_dists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "rules_graphify",
+      "target": "rules_graphify_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "workflows_graphify",
+      "target": "workflows_graphify_workflow_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_find_sam_round_3_treasure_hunt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_free_deployment_options"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_gameplay_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_project_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_running_locally"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_running_tests"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_security_anti_cheat"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_find_sam_round_3_treasure_hunt",
+      "target": "readme_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_1_clone_the_repo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_2_create_a_virtual_environment_install_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_3_start_the_server"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_4_open_in_browser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_free_deployment_options",
+      "target": "readme_alternative_fly_io_https_fly_io"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_free_deployment_options",
+      "target": "readme_alternative_railway_https_railway_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_free_deployment_options",
+      "target": "readme_recommended_render_https_render_com"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "668df9d6c672750df5419825962a97f7128358cd"
+  "built_at_commit": "4faa1c6caca4cfdaa51005c0d565a3108b4cfb70"
 }

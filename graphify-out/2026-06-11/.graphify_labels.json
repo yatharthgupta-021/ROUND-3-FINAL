@@ -1,0 +1,22 @@
+{
+  "0": "GM Interface (JS)",
+  "1": "Team Interface (JS)",
+  "2": "Game Logic Engine",
+  "3": "FastAPI Main App",
+  "4": "Websocket Manager",
+  "5": "Game Unit Tests",
+  "6": "Team State Methods",
+  "7": "Custom Map Data",
+  "8": "Static Map Data",
+  "9": "Graph Tests",
+  "10": "Serpentine Tests",
+  "11": "Layout Tests",
+  "12": "Community 12",
+  "13": "Community 13",
+  "14": "Community 14",
+  "15": "Community 15",
+  "16": "Community 16",
+  "17": "Community 17",
+  "18": "Community 18",
+  "19": "Community 19"
+}

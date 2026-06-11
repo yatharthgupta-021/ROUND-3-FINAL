@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-06-11)
+# Graph Report - phase2-round3  (2026-06-11)
 
 ## Corpus Check
-- 20 files · ~174,044 words
+- 14 files · ~404,968 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 186 nodes · 263 edges · 12 communities (11 shown, 1 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.5)
+- 248 nodes · 339 edges · 20 communities (17 shown, 3 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `4faa1c6c`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_GM Interface (JS)|GM Interface (JS)]]
@@ -19,18 +24,26 @@
 - [[_COMMUNITY_Team State Methods|Team State Methods]]
 - [[_COMMUNITY_Custom Map Data|Custom Map Data]]
 - [[_COMMUNITY_Static Map Data|Static Map Data]]
+- [[_COMMUNITY_Layout Tests|Layout Tests]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `GameManager` - 40 edges
+1. `GameManager` - 50 edges
 2. `update_all_clients()` - 16 edges
 3. `ConnectionManager` - 10 edges
 4. `TestFindSamGame` - 10 edges
-5. `handleStateUpdate()` - 7 edges
-6. `Any` - 6 edges
-7. `WebSocket` - 6 edges
-8. `websocket_gm()` - 5 edges
-9. `websocket_team()` - 5 edges
-10. `handleStateUpdate()` - 5 edges
+5. `TestInputValidation` - 8 edges
+6. `Find Sam — Round 3: Treasure Hunt` - 8 edges
+7. `Any` - 7 edges
+8. `handleStateUpdate()` - 7 edges
+9. `Request` - 6 edges
+10. `WebSocket` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `BypassModel` --uses--> `GameManager`  [INFERRED]
@@ -47,7 +60,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (12 total, 1 thin omitted)
+## Communities (20 total, 3 thin omitted)
 
 ### Community 0 - "GM Interface (JS)"
 Cohesion: 0.06
@@ -55,23 +68,23 @@ Nodes (34): btnForceSamMove, btnResetGame, btnSaveMap, chkMapEditor, currentConn
 
 ### Community 1 - "Team Interface (JS)"
 Cohesion: 0.05
-Nodes (33): btnBypassPuzzle, btnCircuitMap, btnCloseIntel, btnCloseMapPopup, btnCloseRules, btnCloseWin, btnRules, btnStartMission (+25 more)
+Nodes (36): btnBypassPuzzle, btnCloseIntel, btnCloseRules, btnCloseWin, btnRules, btnStartMission, cluesList, fetchState() (+28 more)
 
 ### Community 2 - "Game Logic Engine"
-Cohesion: 0.10
-Nodes (6): GameManager, Any, Deprecated: map is now loaded from custom_map.json via load_custom_map()., Load nodes and connections from custom_map.json., Populate self.puzzles from the raw puzzle list loaded by load_custom_map., Update map structure in memory and save to custom_map.json.
+Cohesion: 0.13
+Nodes (4): GameManager, Any, Deprecated: map is now loaded from custom_map.json via load_custom_map()., Bypass is explicitly disabled — teams must solve puzzles.
 
 ### Community 3 - "FastAPI Main App"
 Cohesion: 0.13
-Nodes (23): BaseModel, bypass_puzzle(), BypassModel, configure_game(), ConfigureModel, get_gm(), get_index(), get_team() (+15 more)
+Nodes (25): BaseModel, bypass_puzzle(), BypassModel, configure_game(), ConfigureModel, get_gm(), get_index(), get_team() (+17 more)
 
 ### Community 4 - "Websocket Manager"
 Cohesion: 0.26
 Nodes (5): ConnectionManager, Any, websocket_gm(), websocket_team(), WebSocket
 
 ### Community 6 - "Team State Methods"
-Cohesion: 0.33
-Nodes (6): fetchState(), getNodeCoords(), handleStateUpdate(), renderMap(), showWinnerOverlay(), updateTimerDisplay()
+Cohesion: 0.12
+Nodes (15): 1. Clone the repo, 2. Create a virtual environment & install dependencies, 3. Start the server, 4. Open in browser, Alternative: [Fly.io](https://fly.io), Alternative: [Railway](https://railway.app), Find Sam — Round 3: Treasure Hunt, ☁️ Free Deployment Options (+7 more)
 
 ### Community 7 - "Custom Map Data"
 Cohesion: 0.40
@@ -81,25 +94,49 @@ Nodes (4): connections, nodes, puzzles, sam_start_node
 Cohesion: 0.40
 Nodes (4): connections, nodes, puzzles, sam_start_node
 
+### Community 11 - "Layout Tests"
+Cohesion: 0.18
+Nodes (6): target_node must be an integer, not a string., Negative node IDs don't exist in the graph., Node IDs beyond the graph should be rejected., Answers longer than 200 chars should be rejected., Answer must be a string., TestInputValidation
+
+### Community 12 - "Community 12"
+Cohesion: 0.22
+Nodes (5): _add_test_puzzles(), Solving a puzzle after 10+ seconds should NOT be flagged., Add test puzzles to the game since custom_map.json may have none., Solving a puzzle in under 5 seconds should create a suspicious flag., TestAntiAIPuzzleTiming
+
+### Community 13 - "Community 13"
+Cohesion: 0.25
+Nodes (4): Eliminated teams should not see adjacent nodes., Teams that found Sam should not see adjacent nodes., Active teams should see adjacent nodes., TestAdjacentNodeHiding
+
+### Community 14 - "Community 14"
+Cohesion: 0.29
+Nodes (3): Security-focused unit tests for Find Sam game., bypass_puzzle should always return failure., TestBypassDisabled
+
+### Community 15 - "Community 15"
+Cohesion: 0.33
+Nodes (3): Load nodes and connections from custom_map.json., Populate self.puzzles from the raw puzzle list loaded by load_custom_map., Update map structure in memory and save to custom_map.json.
+
+### Community 16 - "Community 16"
+Cohesion: 0.33
+Nodes (3): GM view should include suspicious_flags for each team., GM view should include solve_times for each team., TestSuspiciousFlagsInGMView
+
 ## Knowledge Gaps
-- **63 isolated node(s):** `nodes`, `connections`, `puzzles`, `sam_start_node`, `nodes` (+58 more)
+- **74 isolated node(s):** `nodes`, `connections`, `puzzles`, `sam_start_node`, `nodes` (+69 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `GameManager` connect `Game Logic Engine` to `FastAPI Main App`, `Websocket Manager`, `Game Unit Tests`?**
-  _High betweenness centrality (0.140) - this node is a cross-community bridge._
+- **Why does `GameManager` connect `Game Logic Engine` to `FastAPI Main App`, `Websocket Manager`, `Game Unit Tests`, `Layout Tests`, `Community 12`, `Community 13`, `Community 14`, `Community 15`, `Community 16`?**
+  _High betweenness centrality (0.202) - this node is a cross-community bridge._
+- **Why does `TestInputValidation` connect `Layout Tests` to `Game Logic Engine`, `Community 12`, `Community 14`?**
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
 - **Why does `TestFindSamGame` connect `Game Unit Tests` to `Game Logic Engine`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `ConnectionManager` connect `Websocket Manager` to `Game Logic Engine`, `FastAPI Main App`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Are the 11 inferred relationships involving `GameManager` (e.g. with `BypassModel` and `ConfigureModel`) actually correct?**
-  _`GameManager` has 11 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Are the 16 inferred relationships involving `GameManager` (e.g. with `BypassModel` and `ConfigureModel`) actually correct?**
+  _`GameManager` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `nodes`, `connections`, `puzzles` to the rest of the system?**
-  _67 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _94 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `GM Interface (JS)` be split into smaller, more focused modules?**
-  _Cohesion score 0.059233449477351915 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05758582502768549 - nodes in this community are weakly interconnected._
 - **Should `Team Interface (JS)` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.049494949494949494 - nodes in this community are weakly interconnected._

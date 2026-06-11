@@ -1,0 +1,107 @@
+{
+  "game.py": {
+    "mtime": 1781122580.2766478,
+    "ast_hash": "4a7010d90d3626cd76b5979ca8364614",
+    "semantic_hash": ""
+  },
+  "main.py": {
+    "mtime": 1781122631.515661,
+    "ast_hash": "2c1d86381f18b30a9847738ba2093c5f",
+    "semantic_hash": ""
+  },
+  "static/js/gm.js": {
+    "mtime": 1781182835.1034875,
+    "ast_hash": "5b5753545ad058bf6c7fc7afa38cbc72",
+    "semantic_hash": ""
+  },
+  "static/js/team.js": {
+    "mtime": 1781182804.423468,
+    "ast_hash": "eb2f5434e1bb4b49ed7ffd5703b2a7bb",
+    "semantic_hash": ""
+  },
+  "test_game.py": {
+    "mtime": 1781002449.1065419,
+    "ast_hash": "c39c32673ddabf4e02679d7f2cd35791",
+    "semantic_hash": ""
+  },
+  "tests/test_graph.py": {
+    "mtime": 1781002449.1105447,
+    "ast_hash": "71a38c2d64856e03b3c1e567e1d56479",
+    "semantic_hash": ""
+  },
+  "tests/test_layout.py": {
+    "mtime": 1781002449.112734,
+    "ast_hash": "3ce4bc729b844e77651855fa99249488",
+    "semantic_hash": ""
+  },
+  "tests/test_serpentine.py": {
+    "mtime": 1781002449.1157055,
+    "ast_hash": "7a0b37f725744247d228398aaf1c7875",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1781083431.6322212,
+    "ast_hash": "f1e53ecc9194573d3c28fc116c743a2e",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1781083431.6327415,
+    "ast_hash": "0bc020d491fca99550c1ea3de0a5f862",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1781123332.4475763,
+    "ast_hash": "1e9f8f182c1a78f03b5d2dd7673a2e6d",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1781002449.072417,
+    "ast_hash": "fe47a3b817b427eaf3d96bc68436f9c6",
+    "semantic_hash": ""
+  },
+  "templates/gm.html": {
+    "mtime": 1781094097.8336499,
+    "ast_hash": "315c4ece5e601aa6afecc45eaf4ad8ec",
+    "semantic_hash": ""
+  },
+  "templates/index.html": {
+    "mtime": 1781083431.6463685,
+    "ast_hash": "0996e0c1e4ee12d27b789171dd7c9174",
+    "semantic_hash": ""
+  },
+  "templates/team.html": {
+    "mtime": 1781182621.7589324,
+    "ast_hash": "04752dbbc4f312f4725e7ca442b101bf",
+    "semantic_hash": ""
+  },
+  "static/assets/circuit_de_monaco.jpg": {
+    "mtime": 1781002449.087813,
+    "ast_hash": "17b844ae6a8f83c37bb2dd922f2c6fe6",
+    "semantic_hash": ""
+  },
+  "custom_map.json": {
+    "mtime": 1781182547.6310189,
+    "ast_hash": "f0dbd902a5905bb586dd72437e8afe02",
+    "semantic_hash": ""
+  },
+  "static/custom_map.json": {
+    "mtime": 1781182547.680239,
+    "ast_hash": "f0dbd902a5905bb586dd72437e8afe02",
+    "semantic_hash": ""
+  },
+  "tests/test_security.py": {
+    "mtime": 1781122843.9349911,
+    "ast_hash": "16543630c55905d517646a83dd5455e1",
+    "semantic_hash": ""
+  },
+  "background.png": {
+    "mtime": 1781090672.546087,
+    "ast_hash": "3a4878aa2f8c4850720a2d73d8492a84",
+    "semantic_hash": ""
+  },
+  "static/assets/background.png": {
+    "mtime": 1781090672.546087,
+    "ast_hash": "3a4878aa2f8c4850720a2d73d8492a84",
+    "semantic_hash": ""
+  }
+}

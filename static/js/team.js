@@ -15,9 +15,9 @@ function escapeHTML(str) {
 }
 
 // DOM Elements
-const ticketsVal = document.getElementById('val-tickets');
-const ticketsCard = document.getElementById('card-tickets');
-const locationVal = document.getElementById('val-location');
+const ticketsVal = document.getElementById('val-tickets');       // now in header pill
+const ticketsCard = document.getElementById('card-tickets');     // hidden stub
+const locationVal = document.getElementById('val-location');     // hidden stub
 const historyList = document.getElementById('list-history');
 const cluesList = document.getElementById('list-clues');
 const statusBadge = document.getElementById('game-status-badge');
@@ -38,12 +38,12 @@ const mapNodesGroup = document.getElementById('map-nodes-group');
 const playerMarkerGroup = document.getElementById('player-marker-group');
 
 // Node rendering: custom_map coords (x: 0-64, y: 0-50) mapped to
-// the background image canvas (1092 x 1092 SVG viewBox)
+// the background image canvas (5194 x 2250 SVG viewBox)
 const MAP_X_MAX = 64;   // max x coord in custom_map.json
 const MAP_Y_MAX = 50;   // max y coord in custom_map.json
-const SVG_W = 1092;
-const SVG_H = 1092;
-const MAP_PAD = 12;     // pixel padding so edge nodes don't touch border
+const SVG_W = 5194;
+const SVG_H = 2250;
+const MAP_PAD = 25;     // pixel padding so edge nodes don't touch border
 
 function getNodeCoords(node) {
     return {
@@ -186,42 +186,18 @@ function handleStateUpdate(data) {
     }
     
     // Update Operative stats
-    ticketsVal.textContent = data.tickets;
+    if (ticketsVal) ticketsVal.textContent = data.tickets;
     if (data.is_eliminated) {
-        ticketsVal.textContent = 'OUT';
-        ticketsCard.style.borderColor = 'var(--neon-pink)';
-        ticketsVal.style.color = 'var(--neon-pink)';
-        ticketsVal.style.textShadow = '0 0 10px rgba(255, 0, 127, 0.4)';
+        if (ticketsVal) ticketsVal.textContent = 'OUT';
+        if (ticketsVal) ticketsVal.style.color = 'var(--neon-pink)';
     } else if (data.found_sam) {
-        ticketsCard.style.borderColor = 'var(--neon-green)';
-        ticketsVal.style.color = 'var(--neon-green)';
-        ticketsVal.style.textShadow = '0 0 10px rgba(57, 255, 20, 0.4)';
+        if (ticketsVal) ticketsVal.style.color = 'var(--neon-green)';
     } else {
-        ticketsCard.style.borderColor = 'var(--border-color)';
-        ticketsVal.style.color = 'var(--neon-blue)';
-        ticketsVal.style.textShadow = 'var(--shadow-glow-blue)';
+        if (ticketsVal) ticketsVal.style.color = 'var(--f1-yellow)';
     }
     
-    // Update Clearance Level HUD
-    const clearanceVal = document.getElementById('val-clearance');
-    if (clearanceVal && data.clearance_level !== undefined) {
-        const isUnlocked = data.clearance_level >= data.required_clearance;
-        clearanceVal.textContent = `Level: ${data.clearance_level} (${isUnlocked ? 'UNLOCKED' : 'LOCKED'})`;
-        if (isUnlocked) {
-            clearanceVal.style.color = 'var(--neon-green)';
-            clearanceVal.style.borderColor = 'rgba(57, 255, 20, 0.3)';
-            clearanceVal.style.background = 'rgba(57, 255, 20, 0.05)';
-            clearanceVal.style.textShadow = 'var(--shadow-glow-green)';
-        } else {
-            clearanceVal.style.color = 'var(--neon-purple)';
-            clearanceVal.style.borderColor = 'rgba(189, 0, 255, 0.3)';
-            clearanceVal.style.background = 'rgba(189, 0, 255, 0.05)';
-            clearanceVal.style.textShadow = 'var(--shadow-glow-purple)';
-        }
-    }
-    
-    // Set location labels
-    if (data.current_node !== undefined && data.map_nodes) {
+    // Update location label (hidden stub element)
+    if (locationVal && data.current_node !== undefined && data.map_nodes) {
         const currentNodeObj = data.map_nodes.find(n => n.id === data.current_node);
         locationVal.textContent = currentNodeObj ? currentNodeObj.name : `Node ${data.current_node}`;
     }
@@ -299,31 +275,25 @@ function renderMap(data) {
         const isAdjacent = data.adjacent_nodes && data.adjacent_nodes.includes(node.id);
         
         const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        // Class logic: current and adjacent get accessible styling; all others inaccessible
         let classes = 'map-node';
-        if (isCurrent) classes += ' current-location';
-        if (isAdjacent) classes += ' adjacent';
+        if (isCurrent) classes += ' current-location accessible';
+        else if (isAdjacent) classes += ' adjacent accessible';
+        // else: default inaccessible (transparent + black border)
         g.setAttribute('class', classes);
         g.setAttribute('id', `node-${node.id}`);
         
-        // Background Circle (smaller for dense map)
+        // Circle (transparent for inaccessible, filled for current/adjacent)
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('class', 'node-bg');
         circle.setAttribute('cx', coords.x);
         circle.setAttribute('cy', coords.y);
-        circle.setAttribute('r', isCurrent ? '18' : '14');
+        circle.setAttribute('r', isCurrent ? '37' : '28');
         g.appendChild(circle);
         
-        // Add text label
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('class', 'node-label');
-        text.setAttribute('x', coords.x);
-        text.setAttribute('y', coords.y + 4);
-        text.textContent = node.id;
-        g.appendChild(text);
-        
-        // Tooltip text for location name (on hover)
+        // Tooltip text (hover only, not rendered inline)
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        title.textContent = `${node.name}`;
+        title.textContent = node.name;
         g.appendChild(title);
         
         // Add click events to move if adjacent
@@ -347,13 +317,13 @@ function renderMap(data) {
             pulse.setAttribute('class', 'beacon-pulse');
             pulse.setAttribute('cx', coords.x);
             pulse.setAttribute('cy', coords.y);
-            pulse.setAttribute('r', '22');
+            pulse.setAttribute('r', '48');
             
             const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             core.setAttribute('class', 'beacon-core');
             core.setAttribute('cx', coords.x);
             core.setAttribute('cy', coords.y);
-            core.setAttribute('r', '5');
+            core.setAttribute('r', '11');
             
             beaconGroup.appendChild(pulse);
             beaconGroup.appendChild(core);
@@ -541,18 +511,6 @@ if (btnRules && rulesModal && btnCloseRules) {
     });
 }
 
-// ── Circuit Map Popup ─────────────────────────────────────────────────────────
-const btnCircuitMap     = document.getElementById('btn-circuit-map');
-const mapPopup          = document.getElementById('map-popup');
-const btnCloseMapPopup  = document.getElementById('btn-close-map-popup');
-
-if (btnCircuitMap && mapPopup) {
-    btnCircuitMap.addEventListener('click', () => mapPopup.classList.add('active'));
-    btnCloseMapPopup.addEventListener('click', () => mapPopup.classList.remove('active'));
-    mapPopup.addEventListener('click', e => {
-        if (e.target === mapPopup) mapPopup.classList.remove('active');
-    });
-}
 
 // ── Start Mission Button ──────────────────────────────────────────────────────
 const btnStartMission = document.getElementById('btn-start-mission');

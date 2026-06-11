@@ -242,17 +242,104 @@ h1, h2, h3, .hud-value, .logo {
 /* Dashboard / Game Layout */
 .game-layout {
     display: grid;
-    grid-template-columns: 280px 1fr 320px;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "placeholder map"
+        "bottom      bottom";
     flex: 1;
     gap: 16px;
-    overflow: hidden;
+    min-height: 0;
 }
 
 .panel {
     display: flex;
     flex-direction: column;
-    height: 100%;
     overflow: hidden;
+}
+
+.placeholder-panel {
+    grid-area: placeholder;
+    border: 1px dashed rgba(255,255,255,0.12);
+    background: rgba(10,10,14,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+    user-select: none;
+}
+
+/* Bottom row: Intel Dossier + Sector Record */
+.bottom-row {
+    grid-area: bottom;
+    display: flex;
+    height: 200px;
+    min-height: 160px;
+    overflow: hidden;
+}
+
+.bottom-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bottom-section-header {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.bottom-section-header h3 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--f1-yellow);
+    text-transform: uppercase;
+}
+
+.bottom-section-body {
+    padding: 10px 16px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* HUD pills in header */
+.hud-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,199,0,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hud-pill-icon {
+    font-size: 13px;
+}
+
+.hud-pill-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--f1-yellow);
+    text-shadow: var(--shadow-glow-yellow);
+    letter-spacing: 1px;
 }
 
 .panel-header {
@@ -357,18 +444,24 @@ h1, h2, h3, .hud-value, .logo {
 
 /* Map area */
 .map-panel {
+    grid-area: map;
     display: flex;
     flex-direction: column;
     position: relative;
+    min-height: 0;
 }
 
 .map-wrapper {
-    flex: 1;
+    /* Lock to aspect ratio so nodes align with background image exactly */
+    aspect-ratio: 5194 / 2250;
+    width: 100%;
+    max-height: 100%;
     position: relative;
     background: #0f1015;
     border-radius: 12px;
     border: 2px solid var(--border-color);
     overflow: hidden;
+    align-self: flex-start;
 }
 
 svg.game-map {
@@ -401,16 +494,33 @@ svg.game-map:active {
     opacity: 0.95;
 }
 
-/* Map Node */
+/* Map Node — inaccessible (default) */
 .map-node {
-    cursor: pointer;
+    cursor: default;
 }
 
 .map-node circle.node-bg {
-    fill: #14161d;
-    stroke: #ffc700;
-    stroke-width: 2.5px;
+    fill: transparent;
+    stroke: rgba(0, 0, 0, 0.75);
+    stroke-width: 2px;
     transition: all 0.3s;
+}
+
+.map-node.gm-node circle.node-bg {
+    fill: var(--neon-blue);
+    stroke: #fff;
+    stroke-width: 2px;
+    filter: drop-shadow(var(--shadow-glow-blue));
+}
+
+.map-node.accessible {
+    cursor: pointer;
+}
+
+.map-node.accessible circle.node-bg {
+    fill: rgba(20,22,29,0.6);
+    stroke: rgba(255,199,0,0.5);
+    stroke-width: 1.5px;
 }
 
 .map-node text.node-label {
@@ -923,9 +1033,63 @@ svg.game-map:active {
 @media(max-width: 1024px) {
     .game-layout {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "placeholder"
+            "map"
+            "bottom";
         height: auto;
         overflow: visible;
     }
+    
+    .app-container {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+    
+    .placeholder-panel {
+        height: 120px;
+    }
+    
+    .map-wrapper {
+        width: 100%;
+        max-height: none;
+    }
+    
+    .bottom-row {
+        height: auto;
+        min-height: 180px;
+        flex-direction: column;
+    }
+
+    .bottom-section + .bottom-section {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    svg.game-map {
+        touch-action: pan-x pan-y;
+    }
+    
+    .app-header {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+        padding: 10px 16px;
+    }
+    
+    .header-status {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+}
+
     
     .app-container {
         height: auto;
