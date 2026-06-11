@@ -50,14 +50,25 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Glassmorphism utility */
+/* F1 / Monaco utility (formerly Glassmorphism) */
 .glass-panel {
-    background: var(--card-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+    background: #0f1015;
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(232, 0, 45, 0.03) 0px, rgba(232, 0, 45, 0.03) 2px, transparent 2px, transparent 8px),
+        repeating-linear-gradient(-45deg, rgba(255, 199, 0, 0.03) 0px, rgba(255, 199, 0, 0.03) 2px, transparent 2px, transparent 8px);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 8px 24px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--f1-red) 0%, var(--f1-yellow) 100%);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 /* Typography and Headings */
@@ -242,28 +253,63 @@ h1, h2, h3, .hud-value, .logo {
 /* Dashboard / Game Layout */
 .game-layout {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-        "placeholder map"
-        "bottom      bottom";
-    flex: 1;
+    grid-template-columns: 280px 1fr 280px;
     gap: 16px;
+    flex: 1;
     min-height: 0;
+}
+
+/* Team Layout Override */
+.team-layout {
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 300px; /* Bottom row for legend */
+    grid-template-areas:
+        "map sidebar"
+        "legend legend";
+}
+
+.team-layout .map-panel {
+    grid-area: map;
+}
+
+.team-layout .placeholder-panel {
+    grid-area: legend;
+    background: #fff;
+}
+
+.team-layout .bottom-row {
+    grid-area: sidebar;
+    flex-direction: column;
+    height: 100%;
+}
+
+.team-layout .bottom-section {
+    border-left: none !important;
+    border-bottom: 1px solid var(--border-color);
+}
+.team-layout .bottom-section:last-child {
+    border-bottom: none;
 }
 
 .panel {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    animation: slideInUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .placeholder-panel {
     grid-area: placeholder;
-    border: 1px dashed rgba(255,255,255,0.12);
-    background: rgba(10,10,14,0.4);
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(10,10,14,0.9);
     align-items: center;
     justify-content: center;
+    animation-delay: 0.1s;
 }
 
 .placeholder-inner {
@@ -438,17 +484,21 @@ h1, h2, h3, .hud-value, .logo {
 }
 
 .clue-item.system {
-    border-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
     color: var(--text-secondary);
 }
 
-/* Map area */
+.bottom-section {
+    animation: slideInUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.3s;
+}
 .map-panel {
     grid-area: map;
     display: flex;
     flex-direction: column;
     position: relative;
     min-height: 0;
+    animation-delay: 0.2s;
 }
 
 .map-wrapper {
@@ -476,22 +526,25 @@ svg.game-map:active {
 
 /* SVG Map elements styling */
 .map-link {
-    stroke: rgba(232, 0, 45, 0.45);
-    stroke-width: 3px;
+    stroke: rgba(232, 0, 45, 0.8);
+    stroke-width: 6px;
     stroke-linecap: round;
     transition: stroke 0.3s;
+    filter: drop-shadow(0 0 6px rgba(232, 0, 45, 0.7));
 }
 
 .map-link.diagonal {
-    stroke: rgba(255, 199, 0, 0.4);
-    stroke-dasharray: 3 5;
-    stroke-width: 2px;
+    stroke: rgba(255, 199, 0, 0.8);
+    stroke-dasharray: 6 8;
+    stroke-width: 5px;
+    filter: drop-shadow(0 0 6px rgba(255, 199, 0, 0.7));
 }
 
 .map-link.visited {
     stroke: var(--neon-purple);
-    stroke-width: 8px;
-    opacity: 0.95;
+    stroke-width: 10px;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px var(--neon-purple));
 }
 
 /* Map Node — inaccessible (default) */
@@ -500,16 +553,17 @@ svg.game-map:active {
 }
 
 .map-node circle.node-bg {
-    fill: transparent;
-    stroke: rgba(0, 0, 0, 0.75);
-    stroke-width: 2px;
+    fill: rgba(0, 0, 0, 0.6);
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 3px;
     transition: all 0.3s;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
 }
 
 .map-node.gm-node circle.node-bg {
     fill: var(--neon-blue);
     stroke: #fff;
-    stroke-width: 2px;
+    stroke-width: 4px;
     filter: drop-shadow(var(--shadow-glow-blue));
 }
 
@@ -518,9 +572,16 @@ svg.game-map:active {
 }
 
 .map-node.accessible circle.node-bg {
-    fill: rgba(20,22,29,0.6);
-    stroke: rgba(255,199,0,0.5);
-    stroke-width: 1.5px;
+    fill: rgba(20,22,29,0.8);
+    stroke: rgba(255,199,0,0.9);
+    stroke-width: 4px;
+    filter: drop-shadow(0 0 8px rgba(255,199,0,0.8));
+    animation: pulseAccessible 2s infinite alternate;
+}
+
+@keyframes pulseAccessible {
+    0% { filter: drop-shadow(0 0 6px rgba(255,199,0,0.6)); }
+    100% { filter: drop-shadow(0 0 16px rgba(255,199,0,1)); }
 }
 
 .map-node text.node-label {
@@ -573,34 +634,38 @@ svg.game-map:active {
     stroke-linejoin: round;
 }
 
-/* Node States */
 .map-node:hover circle.node-bg {
-    fill: rgba(255, 199, 0, 0.2);
+    fill: rgba(255, 199, 0, 0.3);
     stroke: #fff;
+    stroke-width: 5px;
     filter: drop-shadow(var(--shadow-glow-yellow));
 }
 
 .map-node.visited circle.node-bg {
     stroke: var(--neon-purple);
-    fill: rgba(189, 0, 255, 0.15);
+    stroke-width: 4px;
+    fill: rgba(189, 0, 255, 0.25);
+    filter: drop-shadow(0 0 8px var(--neon-purple));
 }
 
 .map-node.adjacent circle.node-bg {
     stroke: #00f0ff;
-    stroke-width: 3px;
-    fill: rgba(0, 240, 255, 0.1);
+    stroke-width: 5px;
+    fill: rgba(0, 240, 255, 0.2);
+    filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.8));
 }
 
 .map-node.adjacent:hover circle.node-bg {
-    fill: rgba(0, 240, 255, 0.25);
-    stroke-width: 4px;
+    fill: rgba(0, 240, 255, 0.4);
+    stroke-width: 6px;
+    filter: drop-shadow(0 0 15px rgba(0, 240, 255, 1));
 }
 
 .map-node.current-location circle.node-bg {
-    fill: rgba(57, 255, 20, 0.15);
+    fill: rgba(57, 255, 20, 0.25);
     stroke: var(--neon-green);
-    stroke-width: 4px;
-    filter: drop-shadow(var(--shadow-glow-green));
+    stroke-width: 6px;
+    filter: drop-shadow(0 0 15px var(--neon-green));
 }
 
 .map-node.has-puzzle circle.node-puzzle-ring {
@@ -1040,6 +1105,15 @@ svg.game-map:active {
             "bottom";
         height: auto;
         overflow: visible;
+    }
+    
+    .team-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "map"
+            "legend"
+            "sidebar";
     }
     
     .app-container {
