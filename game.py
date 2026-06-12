@@ -70,16 +70,35 @@ class GameManager:
         # Store raw puzzle data for _load_puzzles_from_map
         self._raw_puzzles = data.get("puzzles", [])
 
+    def _normalize_puzzle(self, p: Dict[str, Any]) -> Dict[str, str]:
+        """Keep puzzle metadata in one consistent shape for API and saved state."""
+        normalized = {
+            "id": str(p.get("id", "")),
+            "question": str(p["question"]),
+            "answer": str(p["answer"]),
+            "category": str(p.get("category", "puzzle")),
+            "node_name": str(p.get("node_name", p.get("nodeName", ""))),
+            "evidence": str(p.get("evidence", "")),
+            "clue": str(p.get("clue", "")),
+            "location": str(p.get("location", "")),
+            "intel": str(p.get("intel", ""))
+        }
+        return normalized
+
     def _load_puzzles_from_map(self):
         """Populate self.puzzles from the raw puzzle list loaded by load_custom_map."""
+        self.puzzles.clear()
         for p in self._raw_puzzles:
             node_id = int(p["node_id"])
             if node_id in self.nodes:
-                self.puzzles[node_id] = {
-                    "question": str(p["question"]),
-                    "answer": str(p["answer"]),
-                    "intel": ""
-                }
+                self.puzzles[node_id] = self._normalize_puzzle(p)
+
+    def _merge_map_puzzles(self):
+        """Prefer current map question metadata while preserving live team state."""
+        for p in self._raw_puzzles:
+            node_id = int(p["node_id"])
+            if node_id in self.nodes:
+                self.puzzles[node_id] = self._normalize_puzzle(p)
 
     def update_map(self, new_nodes: List[Dict[str, Any]], new_connections: List[List[int]]):
         """Update map structure in memory and save to custom_map.json."""
@@ -285,6 +304,10 @@ class GameManager:
                     queue.append((neighbor, dist + 1))
                     
         return 999  # Unreachable
+
+    def _normalize_answer(self, value: str) -> str:
+        """Compare answers case-insensitively and tolerate extra spacing."""
+        return " ".join(value.strip().casefold().split())
 
     def setup_story_puzzles(self):
         # 25 HARDER puzzles: 3 Wordle grids, Atbash/Rail-fence ciphers, logic, hex, binary, coordinate rotation
@@ -652,8 +675,9 @@ class GameManager:
         now = time.time()
         team["last_solve_attempt"] = now
 
-        user_ans = answer.strip().lower()
-        correct_ans = puzzle["answer"].strip().lower()
+        user_ans = self._normalize_answer(answer)
+        correct_ans = self._normalize_answer(puzzle["answer"])
+        display_answer = puzzle["answer"].strip()
         
         if user_ans == correct_ans:
             # Anti-AI: track how fast they solved it
@@ -677,7 +701,19 @@ class GameManager:
             
             solved_count = len(team["puzzles_solved"])
             
-            clue_text = f"🔒 Decrypted Intel {solved_count}\nQ: {puzzle['question']}\nA: {correct_ans}"
+            clue_lines = [
+                f"Decrypted Intel {solved_count}",
+                f"Category: {puzzle.get('category', 'puzzle').title()}",
+                f"Q: {puzzle['question']}",
+                f"A: {display_answer}"
+            ]
+            if puzzle.get("evidence"):
+                clue_lines.append(f"Evidence: {puzzle['evidence']}")
+            if puzzle.get("clue"):
+                clue_lines.append(f"- {puzzle['clue']}")
+            if puzzle.get("location"):
+                clue_lines.append(f"Location Code: {puzzle['location']}")
+            clue_text = "\n".join(clue_lines)
             team["clues_received"].append({
                 "type": "intel",
                 "text": clue_text,
@@ -725,7 +761,11 @@ class GameManager:
             p_node = team["active_puzzle_node"]
             active_puzzle = {
                 "node_id": p_node,
-                "question": self.puzzles[p_node]["question"]
+                "question": self.puzzles[p_node]["question"],
+                "category": self.puzzles[p_node].get("category", "puzzle"),
+                "node_name": self.puzzles[p_node].get("node_name", ""),
+                "evidence": self.puzzles[p_node].get("evidence", ""),
+                "location": self.puzzles[p_node].get("location", "")
             }
             
         total_teams = len(self.teams)
@@ -843,7 +883,20 @@ class GameManager:
             "map_nodes": map_data,
             "links": links,
             "winners": self.winners,
-            "puzzles": [{"node_id": k, "question": v["question"], "answer": v["answer"]} for k, v in self.puzzles.items()]
+            "puzzles": [
+                {
+                    "node_id": k,
+                    "id": v.get("id", ""),
+                    "question": v["question"],
+                    "answer": v["answer"],
+                    "category": v.get("category", "puzzle"),
+                    "node_name": v.get("node_name", ""),
+                    "evidence": v.get("evidence", ""),
+                    "clue": v.get("clue", ""),
+                    "location": v.get("location", "")
+                }
+                for k, v in self.puzzles.items()
+            ]
         }
  
     def configure_game(self, config: Dict[str, Any]):
@@ -878,11 +931,7 @@ class GameManager:
                 for p in p_list:
                     node_id = int(p["node_id"])
                     if node_id in self.nodes:
-                        self.puzzles[node_id] = {
-                            "question": str(p["question"]),
-                            "answer": str(p["answer"]),
-                            "intel": ""
-                        }
+                        self.puzzles[node_id] = self._normalize_puzzle(p)
                         
         return True
 
@@ -917,7 +966,8 @@ class GameManager:
             self.start_time = state.get("start_time", 0.0)
             self.pause_start_time = state.get("pause_start_time", 0.0)
             self.teams = state["teams"]
-            self.puzzles = {int(k): v for k, v in state["puzzles"].items()}
+            self.puzzles = {int(k): self._normalize_puzzle(v) for k, v in state["puzzles"].items()}
+            self._merge_map_puzzles()
             self.winners = state["winners"]
         except FileNotFoundError:
             pass

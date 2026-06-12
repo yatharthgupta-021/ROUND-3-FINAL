@@ -736,6 +736,11 @@ svg.game-map:active {
     pointer-events: auto;
 }
 
+#puzzle-modal.modal-overlay {
+    background: rgba(5, 5, 8, 0.34);
+    backdrop-filter: none;
+}
+
 .modal-content {
     width: 100%;
     max-width: 500px;

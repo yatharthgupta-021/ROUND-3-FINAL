@@ -20,13 +20,13 @@
     },
     {
       "id": 3,
-      "name": "Node 3",
+      "name": "Prisoner Lockers",
       "x": 17.033099849339035,
       "y": 37.83561567826704
     },
     {
       "id": 4,
-      "name": "Node 4",
+      "name": "Lily Pad",
       "x": 9.258466326059487,
       "y": 13.580585826526988
     },
@@ -68,7 +68,7 @@
     },
     {
       "id": 11,
-      "name": "Node 11",
+      "name": "Painted Cube",
       "x": 52.237339618973564,
       "y": 9.591270446777344
     },
@@ -80,13 +80,13 @@
     },
     {
       "id": 13,
-      "name": "Node 13",
+      "name": "Number Sequence",
       "x": 21.662938617807153,
       "y": 41.8781211159446
     },
     {
       "id": 14,
-      "name": "Node 14",
+      "name": "Ball Weight Puzzle",
       "x": 37.736337237558324,
       "y": 30.70804110440341
     },
@@ -98,55 +98,55 @@
     },
     {
       "id": 16,
-      "name": "Node 16",
+      "name": "Circuit de Monaco",
       "x": 17.207810373736393,
       "y": 19.43157958984375
     },
     {
       "id": 17,
-      "name": "Node 17",
+      "name": "Clock Angle",
       "x": 10.044665204607309,
       "y": 13.474204323508523
     },
     {
       "id": 18,
-      "name": "Node 18",
+      "name": "La Condamine",
       "x": 22.012359666601867,
       "y": 19.59115184437145
     },
     {
       "id": 19,
-      "name": "Node 19",
+      "name": "Port Hercule",
       "x": 12.403261840250778,
       "y": 23.740040172230113
     },
     {
       "id": 20,
-      "name": "Node 20",
+      "name": "Exotic Garden",
       "x": 39.22138049183515,
       "y": 20.229442249644887
     },
     {
       "id": 21,
-      "name": "Node 21",
+      "name": "Bateau Bus",
       "x": 15.460702092243391,
       "y": 19.27200733531605
     },
     {
       "id": 22,
-      "name": "Node 22",
+      "name": "Yacht Club de Monaco",
       "x": 11.791773486100311,
       "y": 23.846421675248582
     },
     {
       "id": 23,
-      "name": "Node 23",
+      "name": "Palace of Monaco",
       "x": 22.973269828926906,
       "y": 38.473907470703125
     },
     {
       "id": 24,
-      "name": "Node 24",
+      "name": "Monaco-Ville",
       "x": 27.515752575816485,
       "y": 9.431697498668324
     },
@@ -158,37 +158,37 @@
     },
     {
       "id": 26,
-      "name": "Node 26",
+      "name": "Waterfront/Harbor District",
       "x": 33.980055647356146,
       "y": 21.346450805664062
     },
     {
       "id": 27,
-      "name": "Node 27",
+      "name": "Number Pattern",
       "x": 7.948134355559875,
       "y": 37.941997181285515
     },
     {
       "id": 28,
-      "name": "Node 28",
+      "name": "Bat and Ball",
       "x": 55.818915241057546,
       "y": 24.4315185546875
     },
     {
       "id": 29,
-      "name": "Node 29",
+      "name": "Photograph Riddle",
       "x": 23.14798035332426,
       "y": 33.20801058682528
     },
     {
       "id": 30,
-      "name": "Node 30",
+      "name": "Harborfront Hotel",
       "x": 9.782598658631414,
       "y": 38.89943348277699
     },
     {
       "id": 31,
-      "name": "Node 31",
+      "name": "Divisible Number",
       "x": 4.715983199479977,
       "y": 29.2186972878196
     },
@@ -212,7 +212,7 @@
     },
     {
       "id": 35,
-      "name": "Node 35",
+      "name": "Farmer's Sheep",
       "x": 23.410046899300156,
       "y": 19.27200733531605
     },
@@ -326,7 +326,7 @@
     },
     {
       "id": 54,
-      "name": "Node 54",
+      "name": "Walking Puzzle",
       "x": 5.851603886202372,
       "y": 41.8781211159446
     },
@@ -416,7 +416,7 @@
     },
     {
       "id": 69,
-      "name": "Node 69",
+      "name": "Digit Count",
       "x": 31.00996913880249,
       "y": 26.027243874289773
     },
@@ -434,7 +434,7 @@
     },
     {
       "id": 72,
-      "name": "Node 72",
+      "name": "Machine Rate",
       "x": 36.33865000486003,
       "y": 15.442264903675426
     },
@@ -476,7 +476,7 @@
     },
     {
       "id": 79,
-      "name": "Node 79",
+      "name": "Factorial Zeros",
       "x": 54.68328999805599,
       "y": 17.995426524769176
     },
@@ -855,80 +855,241 @@
   ],
   "puzzles": [
     {
+      "id": "P1",
       "node_id": 14,
       "question": "You have 8 identical-looking balls. One is heavier. Using a balance scale only twice, what is the maximum number of balls you can guarantee to identify the heavier ball from?",
-      "answer": "9"
+      "answer": "9",
+      "category": "puzzle",
+      "node_name": "Ball Weight Puzzle"
     },
     {
+      "id": "P2",
       "node_id": 3,
       "question": "A room contains 100 prisoners. The first prisoner opens every locker. The second closes every second locker. The third toggles every third locker, and so on. How many lockers remain open?",
-      "answer": "10"
+      "answer": "10",
+      "category": "puzzle",
+      "node_name": "Prisoner Lockers"
     },
     {
+      "id": "P3",
       "node_id": 35,
       "question": "A farmer has 17 sheep. All but 9 die. How many remain?",
-      "answer": "9"
+      "answer": "9",
+      "category": "puzzle",
+      "node_name": "Farmer's Sheep"
     },
     {
+      "id": "P4",
       "node_id": 31,
       "question": "What is the smallest positive integer divisible by every integer from 1 to 10?",
-      "answer": "2520"
+      "answer": "2520",
+      "category": "puzzle",
+      "node_name": "Divisible Number"
     },
     {
+      "id": "P5",
       "node_id": 28,
       "question": "A bat and a ball cost $1.10. The bat costs $1 more than the ball. How much does the ball cost (in cents)?",
-      "answer": "5"
+      "answer": "5",
+      "category": "puzzle",
+      "node_name": "Bat and Ball"
     },
     {
+      "id": "P6",
       "node_id": 17,
       "question": "A clock shows 3:15. What is the smaller angle between the hands?",
-      "answer": "7.5"
+      "answer": "7.5",
+      "category": "puzzle",
+      "node_name": "Clock Angle"
     },
     {
+      "id": "P7",
       "node_id": 13,
       "question": "Which number comes next? 1, 11, 21, 1211, 111221, ?",
-      "answer": "312211"
+      "answer": "312211",
+      "category": "puzzle",
+      "node_name": "Number Sequence"
     },
     {
+      "id": "P8",
       "node_id": 69,
       "question": "How many times does the digit 1 appear from 1 to 100 inclusive?",
-      "answer": "21"
+      "answer": "21",
+      "category": "puzzle",
+      "node_name": "Digit Count"
     },
     {
+      "id": "P9",
       "node_id": 11,
       "question": "A cube has all faces painted. It is cut into 27 equal cubes. How many cubes have exactly two painted faces?",
-      "answer": "12"
+      "answer": "12",
+      "category": "puzzle",
+      "node_name": "Painted Cube"
     },
     {
+      "id": "P10",
       "node_id": 54,
       "question": "A man walks 1 km south, 1 km east, and 1 km north and returns to his starting point. Where is he?",
-      "answer": "Pole"
+      "answer": "Pole",
+      "category": "puzzle",
+      "node_name": "Walking Puzzle"
     },
     {
+      "id": "P11",
       "node_id": 4,
       "question": "A lily pad patch doubles in size every day. It covers a lake in 48 days. On which day was it half the lake?",
-      "answer": "47"
+      "answer": "47",
+      "category": "puzzle",
+      "node_name": "Lily Pad"
     },
     {
+      "id": "P12",
       "node_id": 79,
       "question": "How many zeros are at the end of 100 factorial?",
-      "answer": "24"
+      "answer": "24",
+      "category": "puzzle",
+      "node_name": "Factorial Zeros"
     },
     {
+      "id": "P13",
       "node_id": 72,
       "question": "If five machines make five gadgets in five minutes, how many minutes will 100 machines take to make 100 gadgets?",
-      "answer": "5"
+      "answer": "5",
+      "category": "puzzle",
+      "node_name": "Machine Rate"
     },
     {
+      "id": "P14",
       "node_id": 27,
       "question": "A sequence follows: 2, 6, 12, 20, 30, ?",
-      "answer": "42"
+      "answer": "42",
+      "category": "puzzle",
+      "node_name": "Number Pattern"
     },
     {
+      "id": "P15",
       "node_id": 29,
       "question": "A person looks at a photograph and says: 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the photograph?",
-      "answer": "Son"
+      "answer": "Son",
+      "category": "puzzle",
+      "node_name": "Photograph Riddle"
+    },
+    {
+      "id": "Q1",
+      "node_id": 16,
+      "question": "Investigators recovered a voice memo: 'I wanted to walk the entire thing before I saw anything else.' What was Sam walking?",
+      "answer": "CIRCUIT DE MONACO",
+      "category": "investigation",
+      "node_name": "Circuit de Monaco",
+      "evidence": "Audio Recording",
+      "clue": "The journey began with racing.",
+      "location": "Red 8"
+    },
+    {
+      "id": "Q2",
+      "node_id": 18,
+      "question": "Sam's notebook says: 'Everything seems to pass through here eventually.' Which district connects the harbor, Monaco-Ville, and the Grand Prix circuit?",
+      "answer": "LA CONDAMINE",
+      "category": "investigation",
+      "node_name": "La Condamine",
+      "evidence": "Notebook Entry",
+      "clue": "This district became a recurring part of his movements.",
+      "location": "Yellow 39"
+    },
+    {
+      "id": "Q3",
+      "node_id": 19,
+      "question": "A photograph contains Grand Prix barriers, yacht masts, and harbor water. Which Monaco location contains all three?",
+      "answer": "PORT HERCULE",
+      "category": "investigation",
+      "node_name": "Port Hercule",
+      "evidence": "Photograph Analysis",
+      "clue": "His interest in Formula 1 and Monaco's waterfront met in the same place.",
+      "location": "Yellow 33"
+    },
+    {
+      "id": "Q4",
+      "node_id": 20,
+      "question": "Sam circled an attraction on his map and wrote: 'Best place to understand the city.' Which attraction?",
+      "answer": "EXOTIC GARDEN",
+      "category": "investigation",
+      "node_name": "Exotic Garden",
+      "evidence": "Tourist Map",
+      "clue": "Before choosing where to go next, he studied Monaco from above.",
+      "location": "Yellow 22"
+    },
+    {
+      "id": "Q5",
+      "node_id": 21,
+      "question": "Sam crossed Port Hercule using Monaco's small harbor shuttle. What form of transport did he use?",
+      "answer": "BATEAU BUS",
+      "category": "investigation",
+      "node_name": "Bateau Bus",
+      "evidence": "Transport Receipt",
+      "clue": "He deliberately viewed Monaco from the water.",
+      "location": "Yellow 25"
+    },
+    {
+      "id": "Q6",
+      "node_id": 22,
+      "question": "A witness saw Sam watching yachts before entering a large modern waterfront building. Which building?",
+      "answer": "YACHT CLUB DE MONACO",
+      "category": "investigation",
+      "node_name": "Yacht Club de Monaco",
+      "evidence": "Witness Statement",
+      "clue": "The yachts had become a destination rather than a backdrop.",
+      "location": "Red 5"
+    },
+    {
+      "id": "Q7",
+      "node_id": 23,
+      "question": "A sketch shows water, yacht masts, Monaco Rock, and a large historic building above everything else. Which landmark is at the highest point?",
+      "answer": "PALACE OF MONACO",
+      "category": "investigation",
+      "node_name": "Palace of Monaco",
+      "evidence": "Sketchbook Page",
+      "clue": "He wanted a place where the harbor and Monaco's history could be seen together.",
+      "location": "Yellow 37"
+    },
+    {
+      "id": "Q8",
+      "node_id": 24,
+      "question": "Sam wrote: 'The oldest part of Monaco feels like a different country.' What is Monaco's historic quarter called?",
+      "answer": "MONACO-VILLE",
+      "category": "investigation",
+      "node_name": "Monaco-Ville",
+      "evidence": "Postcard",
+      "clue": "His route expanded beyond the harbor and into Monaco's past.",
+      "location": "Red 14"
+    },
+    {
+      "id": "Q9",
+      "node_id": 26,
+      "question": "Sam's final-day movements were all near Port Hercule, Yacht Club, harbor promenades, and waterfront restaurants. What feature was he consistently seeking?",
+      "answer": "Waterfront",
+      "category": "investigation",
+      "node_name": "Waterfront/Harbor District",
+      "evidence": "Investigation Report",
+      "clue": "His final movements became increasingly concentrated near the water.",
+      "location": "Blue 3"
+    },
+    {
+      "id": "Q10",
+      "node_id": 30,
+      "question": "By the end, Sam was choosing locations overlooking the harbor. He was looking for somewhere to stay. What type of location was he ultimately seeking?",
+      "answer": "HARBORFRONT HOTEL",
+      "category": "investigation",
+      "node_name": "Harborfront Hotel",
+      "evidence": "Investigation Summary",
+      "clue": "The final destination was a hotel overlooking Port Hercule.",
+      "location": "Blue 1"
     }
   ],
+  "final_destination": {
+    "name": "PORT PALACE",
+    "code": "Blue 8, E3",
+    "question": "Using all evidence, identify Sam's final destination (Hotel name and location code):",
+    "answer": "PORT PALACE BLUE 8 E3"
+  },
   "sam_start_node": 71
 }

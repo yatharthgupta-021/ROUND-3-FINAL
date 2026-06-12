@@ -229,7 +229,24 @@ function handleStateUpdate(data) {
     
     // Trigger Decrypter Puzzle Modal
     if (data.active_puzzle) {
-        puzzleQuestion.textContent = data.active_puzzle.question;
+        const puzzleDetails = [];
+        if (data.active_puzzle.category) {
+            puzzleDetails.push(data.active_puzzle.category.toUpperCase());
+        }
+        if (data.active_puzzle.node_name) {
+            puzzleDetails.push(data.active_puzzle.node_name);
+        }
+        if (data.active_puzzle.evidence) {
+            puzzleDetails.push(`Evidence: ${data.active_puzzle.evidence}`);
+        }
+        if (data.active_puzzle.location) {
+            puzzleDetails.push(`Location Code: ${data.active_puzzle.location}`);
+        }
+
+        puzzleQuestion.textContent = [
+            puzzleDetails.join(' | '),
+            data.active_puzzle.question
+        ].filter(Boolean).join('\n\n');
         puzzleError.style.display = 'none';
         puzzleAnswerInput.value = '';
         puzzleModal.classList.add('active');
@@ -294,7 +311,7 @@ function renderMap(data) {
         // Tooltip text removed to hide node names on hover
         
         // Add click events to move if adjacent
-        if (isAdjacent && !data.is_eliminated && !data.found_sam && data.game_status === 'active' && data.started) {
+        if (isAdjacent && !data.active_puzzle && !data.is_eliminated && !data.found_sam && data.game_status === 'active' && data.started) {
             g.addEventListener('click', () => handleMove(node.id));
         }
         
@@ -351,6 +368,7 @@ function drawLink(coordsA, coordsB, isDiagonal, idA, idB, data) {
 // Move Team via API call
 async function handleMove(nodeId) {
     if (!currentGameState || currentGameState.game_status !== 'active' || !currentGameState.started) return;
+    if (currentGameState.active_puzzle) return;
     
     try {
         const response = await fetch('/api/team/move', {
@@ -419,9 +437,9 @@ function showIntelModal(intelText) {
 
     lines.forEach(line => {
         const trimmed = line.trim();
-        if (trimmed.startsWith('🔒')) {
+        if (trimmed.includes('Decrypted Intel') || trimmed.includes('Clearance Level')) {
             // Extract clearance level e.g. "Clearance Level: 2"
-            const match = trimmed.match(/Clearance Level:?\s*(\d+)/i);
+            const match = trimmed.match(/(?:Decrypted Intel|Clearance Level):?\s*(\d+)/i);
             if (match) clearanceText = `Clearance Level ${match[1]} Unlocked`;
         } else if (trimmed.startsWith('-')) {
             clueLines.push(trimmed.replace(/^-\s*/, ''));
