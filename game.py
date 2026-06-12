@@ -103,7 +103,6 @@ class GameManager:
     def update_map(self, new_nodes: List[Dict[str, Any]], new_connections: List[List[int]]):
         """Update map structure in memory and save to custom_map.json."""
         map_path = os.path.join(os.path.dirname(__file__), "custom_map.json")
-        static_map_path = os.path.join(os.path.dirname(__file__), "static", "custom_map.json")
         
         # Keep old puzzles/sam_start_node
         with open(map_path, "r", encoding="utf-8") as f:
@@ -113,9 +112,6 @@ class GameManager:
         old_data["connections"] = new_connections
         
         with open(map_path, "w", encoding="utf-8") as f:
-            json.dump(old_data, f, indent=2)
-            
-        with open(static_map_path, "w", encoding="utf-8") as f:
             json.dump(old_data, f, indent=2)
             
         # Hot-reload in memory

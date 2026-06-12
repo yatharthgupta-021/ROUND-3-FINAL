@@ -4,12 +4,14 @@ import time
 import asyncio
 import logging
 from collections import defaultdict
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Form, HTTPException
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Form, HTTPException, Depends
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
 from typing import Dict, List, Set, Any
+import secrets
 from game import GameManager
 
 # Setup logging
@@ -219,8 +221,18 @@ async def get_robots_txt():
 async def get_index(request: Request):
     return templates.TemplateResponse(request=request, name="index.html")
 
+security = HTTPBasic()
+def verify_gm(credentials: HTTPBasicCredentials = Depends(security)):
+    if not secrets.compare_digest(credentials.password, "ratikagr"):
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
+
 @app.get("/gm", response_class=HTMLResponse)
-async def get_gm(request: Request):
+async def get_gm(request: Request, username: str = Depends(verify_gm)):
     return templates.TemplateResponse(request=request, name="gm.html")
 
 @app.get("/team/{team_name}", response_class=HTMLResponse)
@@ -251,6 +263,19 @@ async def join_team(team_name: str = Form(...), start_node: int = Form(-1)):
         return JSONResponse({"success": False, "message": "Team name too long (max 30 characters)"}, status_code=400)
     if not re.match(r'^[a-zA-Z0-9 _\-]+$', team_name):
         return JSONResponse({"success": False, "message": "Team name can only contain letters, numbers, spaces, hyphens, and underscores"}, status_code=400)
+
+    allowed_teams = {
+        "GoodSport", "Frustrated freshers", "Shabang", "Team VVinners", "Scythe", 
+        "The Pro-Crastinators", "Gain eager", "Mohit K N", "PaneerTikka", "Momo", 
+        "The classics", "Samarth", "Double trouble", "Triple trouble", "Wunderfools", 
+        "Men of the match", "RadSinisterXypth", "We Love Pravalika", "The Clueless", 
+        "NDND", "Sharath Raghavendra", "baksnan", "Kitty", "IMPOSTERS", "Team kanyarasi", 
+        "Crazzzee", "Delulu", "404", "Namune"
+    }
+    allowed_teams_lower = {t.lower().strip() for t in allowed_teams}
+
+    if team_name.lower().strip() not in allowed_teams_lower:
+        return JSONResponse({"success": False, "message": "Unauthorized team name. Please use your registered team name."}, status_code=403)
     
     if game_manager.game_status == "ended":
         return JSONResponse({"success": False, "message": "Game has already ended"}, status_code=400)
