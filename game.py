@@ -740,9 +740,12 @@ class GameManager:
         map_data = []
         for nid in sorted(self.nodes.keys()):
             node = self.nodes[nid]
+            name = node["name"]
+            if nid in self.puzzles and nid not in team.get("puzzles_solved", []):
+                name = f"Location {nid}"
             map_data.append({
                 "id": node["id"],
-                "name": node["name"],
+                "name": name,
                 "x": node["x"],
                 "y": node["y"]
             })
@@ -760,7 +763,6 @@ class GameManager:
                 "node_id": p_node,
                 "question": self.puzzles[p_node]["question"],
                 "category": self.puzzles[p_node].get("category", "puzzle"),
-                "node_name": self.puzzles[p_node].get("node_name", ""),
                 "evidence": self.puzzles[p_node].get("evidence", ""),
                 "location": self.puzzles[p_node].get("location", "")
             }
@@ -796,7 +798,10 @@ class GameManager:
             "tickets": team["tickets"],
             "current_node": team["current_node"],
             "adjacent_nodes": adjacent,
-            "history": [self.nodes[nid]["name"] for nid in team["history"]],
+            "history": [
+                self.nodes[nid]["name"] if (nid not in self.puzzles or nid in team.get("puzzles_solved", [])) else f"Location {nid}"
+                for nid in team["history"]
+            ],
             "clues": team["clues_received"],
             "active_puzzle": active_puzzle,
             "is_eliminated": team["is_eliminated"],
