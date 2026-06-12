@@ -77,6 +77,14 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 The game is currently deployed and playable at:
 **[https://phase2-round3.onrender.com/](https://phase2-round3.onrender.com/)**
 
+### Deploying to Render
+1. Create a new **Web Service** on Render and connect your GitHub repository.
+2. Set the Environment to **Python**.
+3. Use the following build and start commands:
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
+4. *(Optional but recommended)* Attach a **Persistent Disk** to your Render deployment and set the mount path (e.g., `/var/data`). If you do this, you'll need to modify the `db_file` path in `main.py` to point to the persistent disk so the game state survives server restarts.
+
 ---
 
 ## 🧪 Running Tests
