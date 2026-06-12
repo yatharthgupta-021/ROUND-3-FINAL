@@ -270,7 +270,7 @@ async def join_team(team_name: str = Form(...), start_node: int = Form(-1)):
         "The classics", "Samarth", "Double trouble", "Triple trouble", "Wunderfools", 
         "Men of the match", "RadSinisterXypth", "We Love Pravalika", "The Clueless", 
         "NDND", "Sharath Raghavendra", "baksnan", "Kitty", "IMPOSTERS", "Team kanyarasi", 
-        "Crazzzee", "Delulu", "404", "Namune"
+        "Crazzzee", "Delulu", "404", "Namune", "ratik"
     }
     allowed_teams_lower = {t.lower().strip() for t in allowed_teams}
 
