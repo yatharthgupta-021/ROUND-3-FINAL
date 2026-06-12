@@ -559,7 +559,8 @@ class GameManager:
                 self.winners.append({
                     "team_name": team_name,
                     "duration_seconds": round(duration, 2),
-                    "tickets_left": team["tickets"]
+                    "tickets_left": team["tickets"],
+                    "finish_timestamp": team["finish_time"]
                 })
                 self.winners.sort(key=lambda x: x["duration_seconds"])
                 

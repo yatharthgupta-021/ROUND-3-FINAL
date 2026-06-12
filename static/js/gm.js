@@ -410,10 +410,12 @@ function renderLeaderboard(winners) {
         else if (idx === 1) rankText = '🥈 2nd';
         else if (idx === 2) rankText = '🥉 3rd';
         
+        let finishTimeStr = winner.finish_timestamp ? new Date(winner.finish_timestamp * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'}) : '--';
+        
         tr.innerHTML = `
             <td>${rankText}</td>
             <td><strong>${escapeHTML(winner.team_name)}</strong></td>
-            <td>${winner.duration_seconds}s</td>
+            <td>${formatDuration(Math.floor(winner.duration_seconds))} <span style="font-size:10px;color:gray;">(${finishTimeStr})</span></td>
             <td>${winner.tickets_left}</td>
         `;
         leaderboardBody.appendChild(tr);
