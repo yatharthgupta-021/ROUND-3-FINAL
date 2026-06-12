@@ -982,8 +982,7 @@
       "category": "investigation",
       "node_name": "Circuit de Monaco",
       "evidence": "Audio Recording",
-      "clue": "The journey began with racing.",
-      "location": "Red 8"
+      "clue": "The journey began with racing."
     },
     {
       "id": "Q2",
@@ -993,8 +992,7 @@
       "category": "investigation",
       "node_name": "La Condamine",
       "evidence": "Notebook Entry",
-      "clue": "This district became a recurring part of his movements.",
-      "location": "Yellow 39"
+      "clue": "This district became a recurring part of his movements."
     },
     {
       "id": "Q3",
@@ -1004,8 +1002,7 @@
       "category": "investigation",
       "node_name": "Port Hercule",
       "evidence": "Photograph Analysis",
-      "clue": "His interest in Formula 1 and Monaco's waterfront met in the same place.",
-      "location": "Yellow 33"
+      "clue": "His interest in Formula 1 and Monaco's waterfront met in the same place."
     },
     {
       "id": "Q4",
@@ -1015,8 +1012,7 @@
       "category": "investigation",
       "node_name": "Exotic Garden",
       "evidence": "Tourist Map",
-      "clue": "Before choosing where to go next, he studied Monaco from above.",
-      "location": "Yellow 22"
+      "clue": "Before choosing where to go next, he studied Monaco from above."
     },
     {
       "id": "Q5",
@@ -1026,8 +1022,7 @@
       "category": "investigation",
       "node_name": "Bateau Bus",
       "evidence": "Transport Receipt",
-      "clue": "He deliberately viewed Monaco from the water.",
-      "location": "Yellow 25"
+      "clue": "He deliberately viewed Monaco from the water."
     },
     {
       "id": "Q6",
@@ -1037,8 +1032,7 @@
       "category": "investigation",
       "node_name": "Yacht Club de Monaco",
       "evidence": "Witness Statement",
-      "clue": "The yachts had become a destination rather than a backdrop.",
-      "location": "Red 5"
+      "clue": "The yachts had become a destination rather than a backdrop."
     },
     {
       "id": "Q7",
@@ -1048,8 +1042,7 @@
       "category": "investigation",
       "node_name": "Palace of Monaco",
       "evidence": "Sketchbook Page",
-      "clue": "He wanted a place where the harbor and Monaco's history could be seen together.",
-      "location": "Yellow 37"
+      "clue": "He wanted a place where the harbor and Monaco's history could be seen together."
     },
     {
       "id": "Q8",
@@ -1059,8 +1052,7 @@
       "category": "investigation",
       "node_name": "Monaco-Ville",
       "evidence": "Postcard",
-      "clue": "His route expanded beyond the harbor and into Monaco's past.",
-      "location": "Red 14"
+      "clue": "His route expanded beyond the harbor and into Monaco's past."
     },
     {
       "id": "Q9",
@@ -1070,8 +1062,7 @@
       "category": "investigation",
       "node_name": "Waterfront/Harbor District",
       "evidence": "Investigation Report",
-      "clue": "His final movements became increasingly concentrated near the water.",
-      "location": "Blue 3"
+      "clue": "His final movements became increasingly concentrated near the water."
     },
     {
       "id": "Q10",
@@ -1081,8 +1072,7 @@
       "category": "investigation",
       "node_name": "Harborfront Hotel",
       "evidence": "Investigation Summary",
-      "clue": "The final destination was a hotel overlooking Port Hercule.",
-      "location": "Blue 1"
+      "clue": "The final destination was a hotel overlooking Port Hercule."
     }
   ],
   "final_destination": {
